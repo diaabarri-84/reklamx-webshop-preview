@@ -1,0 +1,772 @@
+[
+  {
+    "family": "RX Inter",
+    "label": "Inter",
+    "slug": "inter",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "inter-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Montserrat",
+    "label": "Montserrat",
+    "slug": "montserrat",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "montserrat-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "montserrat-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "montserrat-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Roboto",
+    "label": "Roboto",
+    "slug": "roboto",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "roboto-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "roboto-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "roboto-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Open Sans",
+    "label": "Open Sans",
+    "slug": "open-sans",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "open-sans-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "open-sans-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "open-sans-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Lato",
+    "label": "Lato",
+    "slug": "lato",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "lato-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "lato-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "lato-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Poppins",
+    "label": "Poppins",
+    "slug": "poppins",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "poppins-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "poppins-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "poppins-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Raleway",
+    "label": "Raleway",
+    "slug": "raleway",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "raleway-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "raleway-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "raleway-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Nunito",
+    "label": "Nunito",
+    "slug": "nunito",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "nunito-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "nunito-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "nunito-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Work Sans",
+    "label": "Work Sans",
+    "slug": "work-sans",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "work-sans-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "work-sans-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "work-sans-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Source Sans 3",
+    "label": "Source Sans 3",
+    "slug": "source-sans-3",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "source-sans-3-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "source-sans-3-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "source-sans-3-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Oswald",
+    "label": "Oswald",
+    "slug": "oswald",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": false,
+    "faces": [
+      {
+        "file": "oswald-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "oswald-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      }
+    ]
+  },
+  {
+    "family": "RX Archivo",
+    "label": "Archivo",
+    "slug": "archivo",
+    "category": "sans",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "archivo-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "archivo-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "archivo-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Bebas Neue",
+    "label": "Bebas Neue",
+    "slug": "bebas-neue",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "bebas-neue-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Anton",
+    "label": "Anton",
+    "slug": "anton",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "anton-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Archivo Black",
+    "label": "Archivo Black",
+    "slug": "archivo-black",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "archivo-black-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Righteous",
+    "label": "Righteous",
+    "slug": "righteous",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "righteous-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Fredoka",
+    "label": "Fredoka",
+    "slug": "fredoka",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": false,
+    "faces": [
+      {
+        "file": "fredoka-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "fredoka-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      }
+    ]
+  },
+  {
+    "family": "RX Abril Fatface",
+    "label": "Abril Fatface",
+    "slug": "abril-fatface",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "abril-fatface-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Alfa Slab One",
+    "label": "Alfa Slab One",
+    "slug": "alfa-slab-one",
+    "category": "display",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "alfa-slab-one-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Playfair Display",
+    "label": "Playfair Display",
+    "slug": "playfair-display",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "playfair-display-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "playfair-display-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "playfair-display-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Merriweather",
+    "label": "Merriweather",
+    "slug": "merriweather",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "merriweather-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "merriweather-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "merriweather-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Lora",
+    "label": "Lora",
+    "slug": "lora",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "lora-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "lora-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "lora-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Libre Baskerville",
+    "label": "Libre Baskerville",
+    "slug": "libre-baskerville",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "libre-baskerville-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "libre-baskerville-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "libre-baskerville-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX EB Garamond",
+    "label": "EB Garamond",
+    "slug": "eb-garamond",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "eb-garamond-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "eb-garamond-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "eb-garamond-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX DM Serif Display",
+    "label": "DM Serif Display",
+    "slug": "dm-serif-display",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": true,
+    "faces": [
+      {
+        "file": "dm-serif-display-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "dm-serif-display-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Cormorant Garamond",
+    "label": "Cormorant Garamond",
+    "slug": "cormorant-garamond",
+    "category": "serif",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "cormorant-garamond-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "cormorant-garamond-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "cormorant-garamond-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Roboto Slab",
+    "label": "Roboto Slab",
+    "slug": "roboto-slab",
+    "category": "serif",
+    "licence": "Apache-2.0",
+    "bold": true,
+    "italic": false,
+    "faces": [
+      {
+        "file": "roboto-slab-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "roboto-slab-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      }
+    ]
+  },
+  {
+    "family": "RX Dancing Script",
+    "label": "Dancing Script",
+    "slug": "dancing-script",
+    "category": "script",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": false,
+    "faces": [
+      {
+        "file": "dancing-script-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "dancing-script-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      }
+    ]
+  },
+  {
+    "family": "RX Pacifico",
+    "label": "Pacifico",
+    "slug": "pacifico",
+    "category": "script",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "pacifico-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Great Vibes",
+    "label": "Great Vibes",
+    "slug": "great-vibes",
+    "category": "script",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "great-vibes-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Caveat",
+    "label": "Caveat",
+    "slug": "caveat",
+    "category": "script",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": false,
+    "faces": [
+      {
+        "file": "caveat-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "caveat-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      }
+    ]
+  },
+  {
+    "family": "RX Satisfy",
+    "label": "Satisfy",
+    "slug": "satisfy",
+    "category": "script",
+    "licence": "Apache-2.0",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "satisfy-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Lobster",
+    "label": "Lobster",
+    "slug": "lobster",
+    "category": "script",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "lobster-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Shadows Into Light",
+    "label": "Shadows Into Light",
+    "slug": "shadows-into-light",
+    "category": "script",
+    "licence": "OFL-1.1",
+    "bold": false,
+    "italic": false,
+    "faces": [
+      {
+        "file": "shadows-into-light-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "family": "RX Space Mono",
+    "label": "Space Mono",
+    "slug": "space-mono",
+    "category": "mono",
+    "licence": "OFL-1.1",
+    "bold": true,
+    "italic": true,
+    "faces": [
+      {
+        "file": "space-mono-latin-400-normal.woff2",
+        "style": "normal",
+        "weight": "400"
+      },
+      {
+        "file": "space-mono-latin-700-normal.woff2",
+        "style": "normal",
+        "weight": "700"
+      },
+      {
+        "file": "space-mono-latin-400-italic.woff2",
+        "style": "italic",
+        "weight": "400"
+      }
+    ]
+  }
+]

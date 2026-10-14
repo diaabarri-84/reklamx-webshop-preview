@@ -1,0 +1,729 @@
+[
+  {
+    "id": "prod-street-sign-windtalker",
+    "name": "Windtalker City Pavement Sign",
+    "nameI18n": {
+      "sv": "Windtalker City gatupratare",
+      "da": "Windtalker City kundestopper",
+      "no": "Windtalker City gateskilt"
+    },
+    "description": "A water-fillable pavement sign for shopfronts and entrances: the Windtalker City frame has a weighted base you fill with water or sand on site and an aluminium snap frame that opens on all four sides, so the printed insert can be changed in seconds. Choose a silver or black frame in A0, A1, B1 or B2, printed on one or both sides in full colour. An optional top card above the frame gives extra height for a logo or a headline.",
+    "descriptionI18n": {
+      "sv": "En vattenfyllbar gatupratare för butiksentréer och trottoarer: Windtalker City har en tyngdfot som du fyller med vatten eller sand på plats och en aluminiumsnäppram som öppnas på alla fyra sidor, så att trycket kan bytas på några sekunder. Välj silverfärgad eller svart ram i A0, A1, B1 eller B2, tryckt på en eller två sidor i fyrfärg. En toppskylt ovanför ramen ger extra höjd för logotyp eller rubrik.",
+      "da": "Et vandfyldbart gadeskilt til butiksfacader og fortove: Windtalker City har en vægtfod, du fylder med vand eller sand på stedet, og en aluminiumssnapramme, der åbnes på alle fire sider, så trykket kan skiftes på få sekunder. Vælg sølvfarvet eller sort ramme i A0, A1, B1 eller B2, trykt på en eller to sider i firfarvet tryk. Et topskilt over rammen giver ekstra højde til logo eller overskrift.",
+      "no": "Et vannfyllbart gateskilt for butikkfasader og fortau: Windtalker City har en vektfot du fyller med vann eller sand på stedet, og en aluminiumssnappramme som åpnes på alle fire sider, slik at trykket kan byttes på få sekunder. Velg sølvfarget eller sort ramme i A0, A1, B1 eller B2, trykt på én eller to sider i firefarget trykk. Et toppskilt over rammen gir ekstra høyde til logo eller overskrift."
+    },
+    "categoryId": "exhibition",
+    "basePrice": 1487,
+    "images": [
+      "/product-art/streetsign-1.svg",
+      "/product-art/streetsign-2.svg",
+      "/product-art/streetsign-3.svg",
+      "/product-art/streetsign-4.svg"
+    ],
+    "options": [],
+    "isWeb2Print": true,
+    "minQuantity": 1,
+    "maxQuantity": 100,
+    "customUploadRules": {
+      "enabled": false,
+      "minPrice": 950,
+      "allowedFormats": ["pdf", "ai", "eps", "svg", "jpg", "jpeg", "png", "tiff"],
+      "maxFileSizeMb": 100
+    },
+    "pricingRules": {
+      "baseSetupFee": 219,
+      "priceCalculationType": "tiered_volume",
+      "volumeDiscounts": [
+        { "minQuantity": 10, "discountPercentage": 3.5 },
+        { "minQuantity": 15, "discountPercentage": 6.5 },
+        { "minQuantity": 30, "discountPercentage": 10 },
+        { "minQuantity": 50, "discountPercentage": 14 }
+      ]
+    },
+    "deliverySpeedOptions": [
+      { "id": "standard", "name": "Standard Delivery", "deliveryDays": "5 Business Days", "priceSurcharge": 0 },
+      { "id": "fast", "name": "Fast Production", "deliveryDays": "3 Business Days", "priceSurcharge": 95 },
+      { "id": "express", "name": "Express Production", "deliveryDays": "2 Business Days", "priceSurcharge": 195 }
+    ],
+    "features": [
+      "Weighted base you fill with water or sand on site",
+      "Aluminium snap frame opens on all four sides — change the poster in seconds",
+      "Silver or black frame in A0, A1, B1 and B2",
+      "Full colour insert, single or double sided",
+      "Optional top card above the frame for a logo or headline"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "Tyngdfot som du fyller med vatten eller sand på plats",
+        "Aluminiumsnäppram som öppnas på alla fyra sidor — byt affisch på några sekunder",
+        "Silverfärgad eller svart ram i A0, A1, B1 och B2",
+        "Fyrfärgstryck, enkel- eller dubbelsidigt",
+        "Valfri toppskylt ovanför ramen för logotyp eller rubrik"
+      ],
+      "da": [
+        "Vægtfod, du fylder med vand eller sand på stedet",
+        "Aluminiumssnapramme, der åbnes på alle fire sider — skift plakat på få sekunder",
+        "Sølvfarvet eller sort ramme i A0, A1, B1 og B2",
+        "Firfarvet tryk, enkelt- eller dobbeltsidet",
+        "Valgfrit topskilt over rammen til logo eller overskrift"
+      ],
+      "no": [
+        "Vektfot du fyller med vann eller sand på stedet",
+        "Aluminiumssnappramme som åpnes på alle fire sider — bytt plakat på få sekunder",
+        "Sølvfarget eller sort ramme i A0, A1, B1 og B2",
+        "Firefarget trykk, en- eller tosidig",
+        "Valgfritt toppskilt over rammen til logo eller overskrift"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Frame model",
+        "value": "Windtalker City, water-fillable base",
+        "labelI18n": { "sv": "Rammodell", "da": "Rammemodel", "no": "Rammemodell" },
+        "valueI18n": {
+          "sv": "Windtalker City, vattenfyllbar fot",
+          "da": "Windtalker City, vandfyldbar fod",
+          "no": "Windtalker City, vannfyllbar fot"
+        }
+      },
+      {
+        "label": "Frame colour",
+        "value": "Silver anodised or black",
+        "labelI18n": { "sv": "Ramfärg", "da": "Rammefarve", "no": "Rammefarge" },
+        "valueI18n": {
+          "sv": "Silveranodiserad eller svart",
+          "da": "Sølvanodiseret eller sort",
+          "no": "Sølvanodisert eller sort"
+        }
+      },
+      {
+        "label": "Poster formats",
+        "value": "A0, A1, B1 and B2",
+        "labelI18n": { "sv": "Affischformat", "da": "Plakatformater", "no": "Plakatformater" },
+        "valueI18n": { "sv": "A0, A1, B1 och B2", "da": "A0, A1, B1 og B2", "no": "A0, A1, B1 og B2" }
+      },
+      {
+        "label": "Frame opening",
+        "value": "Snap frame, opens on all four sides",
+        "labelI18n": { "sv": "Ramöppning", "da": "Rammeåbning", "no": "Rammeåpning" },
+        "valueI18n": {
+          "sv": "Snäppram, öppnas på alla fyra sidor",
+          "da": "Snapramme, åbnes på alle fire sider",
+          "no": "Snappramme, åpnes på alle fire sider"
+        }
+      },
+      {
+        "label": "Printing",
+        "value": "Full colour CMYK, single or double sided",
+        "labelI18n": { "sv": "Tryck", "da": "Tryk", "no": "Trykk" },
+        "valueI18n": {
+          "sv": "Fyrfärg CMYK, enkel- eller dubbelsidigt",
+          "da": "Firfarvet CMYK, enkelt- eller dobbeltsidet",
+          "no": "Firefarget CMYK, en- eller tosidig"
+        }
+      },
+      {
+        "label": "Insert material",
+        "value": "Rigid board — Forex PVC foam as standard",
+        "labelI18n": { "sv": "Material i insatsen", "da": "Materiale i indlægget", "no": "Materiale i innlegget" },
+        "valueI18n": {
+          "sv": "Styv skiva — Forex PVC-skum som standard",
+          "da": "Stiv plade — Forex PVC-skum som standard",
+          "no": "Stiv plate — Forex PVC-skum som standard"
+        }
+      },
+      {
+        "label": "Ballast",
+        "value": "Filled on site with water or sand",
+        "labelI18n": { "sv": "Vikt i foten", "da": "Vægt i foden", "no": "Vekt i foten" },
+        "valueI18n": {
+          "sv": "Fylls på plats med vatten eller sand",
+          "da": "Fyldes på stedet med vand eller sand",
+          "no": "Fylles på stedet med vann eller sand"
+        }
+      },
+      {
+        "label": "Supplied as",
+        "value": "Frame, base and printed insert",
+        "labelI18n": { "sv": "Levereras som", "da": "Leveres som", "no": "Leveres som" },
+        "valueI18n": {
+          "sv": "Ram, fot och tryckt insats",
+          "da": "Ramme, fod og trykt indlæg",
+          "no": "Ramme, fot og trykt innlegg"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "How do I fill the base?",
+        "a": "The base has a screw cap on the top. Fill it with water in mild weather, or with sand if the sign stands out over winter — water expands when it freezes and can split the base.",
+        "qI18n": {
+          "sv": "Hur fyller jag foten?",
+          "da": "Hvordan fylder jeg foden?",
+          "no": "Hvordan fyller jeg foten?"
+        },
+        "aI18n": {
+          "sv": "Foten har en skruvkork på ovansidan. Fyll med vatten i milt väder, eller med sand om skylten står ute över vintern — vatten utvidgar sig när det fryser och kan spräcka foten.",
+          "da": "Foden har en skruelåg på oversiden. Fyld den med vand i mildt vejr, eller med sand hvis skiltet står ude hen over vinteren — vand udvider sig, når det fryser, og kan sprænge foden.",
+          "no": "Foten har en skrukork på oversiden. Fyll med vann i mildt vær, eller med sand hvis skiltet står ute gjennom vinteren — vann utvider seg når det fryser og kan sprenge foten."
+        }
+      },
+      {
+        "q": "Can I order replacement prints later?",
+        "a": "Yes. Choose \"Printed graphic only\" under the display set contents and we produce the insert on its own, cut to the same format as the frame you already have.",
+        "qI18n": {
+          "sv": "Kan jag beställa nya tryck i efterhand?",
+          "da": "Kan jeg bestille nye tryk senere?",
+          "no": "Kan jeg bestille nye trykk senere?"
+        },
+        "aI18n": {
+          "sv": "Ja. Välj ”Endast tryckt grafik” under displayens innehåll, så tillverkar vi enbart insatsen, skuren i samma format som ramen du redan har.",
+          "da": "Ja. Vælg ”Kun trykt grafik” under displayets indhold, så producerer vi kun indlægget, skåret i samme format som den ramme, du allerede har.",
+          "no": "Ja. Velg «Kun trykt grafikk» under displayets innhold, så produserer vi bare innlegget, skåret i samme format som rammen du allerede har."
+        }
+      },
+      {
+        "q": "Which file should I send?",
+        "a": "A print-ready PDF in CMYK at the chosen poster size with 3 mm bleed. For a double-sided sign put both sides in one PDF with the front as page 1.",
+        "qI18n": {
+          "sv": "Vilken fil ska jag skicka?",
+          "da": "Hvilken fil skal jeg sende?",
+          "no": "Hvilken fil skal jeg sende?"
+        },
+        "aI18n": {
+          "sv": "En tryckfärdig PDF i CMYK i valt affischformat med 3 mm utfall. För en dubbelsidig skylt lägger du båda sidorna i samma PDF med framsidan som sida 1.",
+          "da": "En trykklar PDF i CMYK i det valgte plakatformat med 3 mm beskæring. Til et dobbeltsidet skilt lægger du begge sider i samme PDF med forsiden som side 1.",
+          "no": "En trykkeklar PDF i CMYK i valgt plakatformat med 3 mm utfall. For et tosidig skilt legger du begge sider i samme PDF med forsiden som side 1."
+        }
+      },
+      {
+        "q": "Will the print survive rain?",
+        "a": "The insert sits behind the snap frame's clear cover sheet, which keeps most weather off it. If the sign stands out permanently, add a weatherproof laminate under the protective coating option.",
+        "qI18n": {
+          "sv": "Klarar trycket regn?",
+          "da": "Kan trykket klare regn?",
+          "no": "Tåler trykket regn?"
+        },
+        "aI18n": {
+          "sv": "Insatsen sitter bakom snäppramens klara skyddsark, som håller det mesta av vädret borta. Står skylten ute permanent lägger du till ett väderbeständigt laminat under skyddande ytbehandling.",
+          "da": "Indlægget sidder bag snaprammens klare beskyttelsesark, som holder det meste af vejret ude. Står skiltet ude permanent, tilføjer du en vejrbestandig laminering under beskyttende overfladebehandling.",
+          "no": "Innlegget sitter bak snapprammens klare beskyttelsesark, som holder det meste av været ute. Står skiltet ute permanent, legger du til et værbestandig laminat under beskyttende overflatebehandling."
+        }
+      },
+      {
+        "q": "How much wind can it take?",
+        "a": "A filled base holds the sign steady in normal conditions, but no pavement sign is storm-proof. Take it in when a gale is forecast.",
+        "qI18n": {
+          "sv": "Hur mycket vind tål den?",
+          "da": "Hvor meget vind kan den tåle?",
+          "no": "Hvor mye vind tåler det?"
+        },
+        "aI18n": {
+          "sv": "En fylld fot håller skylten stabil under normala förhållanden, men ingen gatupratare är stormsäker. Ta in den när det är kuling i prognosen.",
+          "da": "En fyldt fod holder skiltet stabilt under normale forhold, men ingen kundestopper er stormsikker. Tag det ind, når der er kuling i vejrudsigten.",
+          "no": "En fylt fot holder skiltet stabilt under normale forhold, men ingen gateskilt er stormsikkert. Ta det inn når det er kuling i varselet."
+        }
+      }
+    ],
+    "enabledFieldIds": [
+      "poster_size",
+      "printed_sides",
+      "print_colour_mode",
+      "rigid_board_material",
+      "rigid_material_thickness",
+      "outdoor_protective_coating",
+      "display_set_contents",
+      "artwork_supply_method",
+      "artwork_resolution",
+      "artwork_bleed_margin",
+      "artwork_check_service",
+      "production_delivery_speed",
+      "delivery_method"
+    ]
+  },
+  {
+    "id": "prod-window-decals",
+    "name": "Window Decals",
+    "nameI18n": {
+      "sv": "Fönsterdekaler",
+      "da": "Vinduesdekaler",
+      "no": "Vindusdekaler"
+    },
+    "description": "Self-adhesive window decals printed in full colour and cut to your own size, from 10 cm up to shop-window scale. Choose white film for solid colour or transparent film so the glass shows through, a monomer vinyl for a season or a PVC-free film for a longer installation, and add gloss or matte lamination where the decal takes knocks. As standard the adhesive is on the back, so the decal goes on the outside of the glass and reads from the street — face adhesive for application from indoors is available too.",
+    "descriptionI18n": {
+      "sv": "Självhäftande fönsterdekaler i fyrfärgstryck, skurna i valfritt mått från 10 cm upp till skyltfönsterstorlek. Välj vit folie för täckande färg eller transparent folie där glaset syns igenom, monomer vinyl för en säsong eller PVC-fri folie för längre installationer, och lägg till blank eller matt laminering där dekalen utsätts för slitage. Som standard sitter limmet på baksidan, så dekalen monteras på glasets utsida och läses från gatan — lim på framsidan för montering inifrån går också att välja.",
+      "da": "Selvklæbende vinduesdekaler i firfarvet tryk, skåret i frit mål fra 10 cm og op til butiksvinduesstørrelse. Vælg hvid folie til dækkende farve eller transparent folie, hvor glasset ses igennem, monomer vinyl til en sæson eller PVC-fri folie til længere installationer, og tilføj blank eller mat laminering, hvor dekalen udsættes for slid. Som standard sidder limen på bagsiden, så dekalen monteres på glassets yderside og læses fra gaden — lim på forsiden til montering indefra kan også vælges.",
+      "no": "Selvklebende vindusdekaler i firefarget trykk, skåret i fritt mål fra 10 cm og opp til utstillingsvindusstørrelse. Velg hvit folie for dekkende farge eller transparent folie der glasset synes gjennom, monomer vinyl for en sesong eller PVC-fri folie for lengre installasjoner, og legg til blank eller matt laminering der dekalen utsettes for slitasje. Som standard sitter limet på baksiden, så dekalen monteres på utsiden av glasset og leses fra gaten — lim på forsiden for montering innenfra kan også velges."
+    },
+    "categoryId": "labels",
+    "basePrice": 49,
+    "images": [
+      "/product-art/windowdecal-1.svg",
+      "/product-art/windowdecal-2.svg",
+      "/product-art/windowdecal-3.svg",
+      "/product-art/windowdecal-4.svg"
+    ],
+    "options": [],
+    "isWeb2Print": true,
+    "minQuantity": 1,
+    "maxQuantity": 500,
+    "customUploadRules": {
+      "enabled": true,
+      "minPrice": 149,
+      "pricePerSqm": 465,
+      "maxWidthCm": 165,
+      "maxHeightCm": 1500,
+      "allowedFormats": ["pdf", "ai", "eps", "svg", "jpg", "jpeg", "png", "tiff"],
+      "maxFileSizeMb": 100
+    },
+    "pricingRules": {
+      "baseSetupFee": 39,
+      "priceCalculationType": "tiered_volume",
+      "volumeDiscounts": [
+        { "minQuantity": 5, "discountPercentage": 6 },
+        { "minQuantity": 10, "discountPercentage": 12 },
+        { "minQuantity": 25, "discountPercentage": 18 },
+        { "minQuantity": 50, "discountPercentage": 25 },
+        { "minQuantity": 100, "discountPercentage": 32 }
+      ]
+    },
+    "deliverySpeedOptions": [
+      { "id": "standard", "name": "Standard Delivery", "deliveryDays": "5 Business Days", "priceSurcharge": 0 },
+      { "id": "fast", "name": "Fast Production", "deliveryDays": "3 Business Days", "priceSurcharge": 95 },
+      { "id": "express", "name": "Express Production", "deliveryDays": "2 Business Days", "priceSurcharge": 195 }
+    ],
+    "features": [
+      "Cut to your own size — 10 cm up to full shop-window scale",
+      "White or transparent film, printed in full colour",
+      "Rectangle, rounded corners, circle or your own contour",
+      "Monomer vinyl for up to a year, PVC-free film for longer installations",
+      "Back adhesive for the outside of the glass, face adhesive for indoor application",
+      "Optional gloss or matte lamination for scratch protection"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "Skärs i valfritt mått — från 10 cm upp till helt skyltfönster",
+        "Vit eller transparent folie, tryckt i fyrfärg",
+        "Rektangel, rundade hörn, cirkel eller egen kontur",
+        "Monomer vinyl i upp till ett år, PVC-fri folie för längre installationer",
+        "Lim på baksidan för glasets utsida, lim på framsidan för montering inifrån",
+        "Blank eller matt laminering som repskydd om du vill"
+      ],
+      "da": [
+        "Skæres i frit mål — fra 10 cm op til et helt butiksvindue",
+        "Hvid eller transparent folie, trykt i firfarvet",
+        "Rektangel, afrundede hjørner, cirkel eller egen kontur",
+        "Monomer vinyl i op til et år, PVC-fri folie til længere installationer",
+        "Lim på bagsiden til glassets yderside, lim på forsiden til montering indefra",
+        "Blank eller mat laminering som ridsebeskyttelse, hvis du ønsker det"
+      ],
+      "no": [
+        "Skjæres i fritt mål — fra 10 cm opp til et helt utstillingsvindu",
+        "Hvit eller transparent folie, trykt i firefarge",
+        "Rektangel, avrundede hjørner, sirkel eller egen kontur",
+        "Monomer vinyl i opptil ett år, PVC-fri folie for lengre installasjoner",
+        "Lim på baksiden for utsiden av glasset, lim på forsiden for montering innenfra",
+        "Blank eller matt laminering som ripebeskyttelse hvis du vil"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Size range",
+        "value": "10–165 cm wide, 10–1500 cm high",
+        "labelI18n": { "sv": "Måttintervall", "da": "Målinterval", "no": "Målintervall" },
+        "valueI18n": {
+          "sv": "10–165 cm bred, 10–1500 cm hög",
+          "da": "10–165 cm bred, 10–1500 cm høj",
+          "no": "10–165 cm bred, 10–1500 cm høy"
+        }
+      },
+      {
+        "label": "Materials",
+        "value": "Matte monomer PVC, Easy DOT self-adhesive film, PVC-free film",
+        "labelI18n": { "sv": "Material", "da": "Materialer", "no": "Materialer" },
+        "valueI18n": {
+          "sv": "Matt monomer PVC, Easy DOT självhäftande folie, PVC-fri folie",
+          "da": "Mat monomer PVC, Easy DOT selvklæbende folie, PVC-fri folie",
+          "no": "Matt monomer PVC, Easy DOT selvklebende folie, PVC-fri folie"
+        }
+      },
+      {
+        "label": "Film colour",
+        "value": "White or transparent",
+        "labelI18n": { "sv": "Foliefärg", "da": "Foliefarve", "no": "Foliefarge" },
+        "valueI18n": { "sv": "Vit eller transparent", "da": "Hvid eller transparent", "no": "Hvit eller transparent" }
+      },
+      {
+        "label": "Expected life",
+        "value": "Monomer PVC up to 1 year outdoors; PVC-free film for longer installations",
+        "labelI18n": { "sv": "Förväntad livslängd", "da": "Forventet levetid", "no": "Forventet levetid" },
+        "valueI18n": {
+          "sv": "Monomer PVC upp till 1 år utomhus, PVC-fri folie för längre installationer",
+          "da": "Monomer PVC op til 1 år udendørs, PVC-fri folie til længere installationer",
+          "no": "Monomer PVC opptil 1 år utendørs, PVC-fri folie for lengre installasjoner"
+        }
+      },
+      {
+        "label": "Shapes",
+        "value": "Rectangle, square, rounded corners, circle, custom contour",
+        "labelI18n": { "sv": "Former", "da": "Former", "no": "Former" },
+        "valueI18n": {
+          "sv": "Rektangel, kvadrat, rundade hörn, cirkel, egen kontur",
+          "da": "Rektangel, kvadrat, afrundede hjørner, cirkel, egen kontur",
+          "no": "Rektangel, kvadrat, avrundede hjørner, sirkel, egen kontur"
+        }
+      },
+      {
+        "label": "Adhesive",
+        "value": "Back adhesive as standard — applied to the outside of the glass",
+        "labelI18n": { "sv": "Lim", "da": "Lim", "no": "Lim" },
+        "valueI18n": {
+          "sv": "Lim på baksidan som standard — monteras på glasets utsida",
+          "da": "Lim på bagsiden som standard — monteres på glassets yderside",
+          "no": "Lim på baksiden som standard — monteres på utsiden av glasset"
+        }
+      },
+      {
+        "label": "Finish",
+        "value": "No lamination, gloss lamination or matte lamination",
+        "labelI18n": { "sv": "Ytfinish", "da": "Overfladefinish", "no": "Overflatefinish" },
+        "valueI18n": {
+          "sv": "Ingen laminering, blank laminering eller matt laminering",
+          "da": "Ingen laminering, blank laminering eller mat laminering",
+          "no": "Ingen laminering, blank laminering eller matt laminering"
+        }
+      },
+      {
+        "label": "Pricing",
+        "value": "By the square metre, plus a one-off setup fee per order line",
+        "labelI18n": { "sv": "Prissättning", "da": "Prissætning", "no": "Prissetting" },
+        "valueI18n": {
+          "sv": "Per kvadratmeter, plus en engångsavgift för uppstart per orderrad",
+          "da": "Pr. kvadratmeter, plus et engangsopstartsgebyr pr. ordrelinje",
+          "no": "Per kvadratmeter, pluss et engangs oppstartsgebyr per ordrelinje"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "What size can I order?",
+        "a": "Anything from 10 cm on the short side up to 165 cm wide, and up to 15 metres high off the roll. Pick \"Custom size\" in the size field and type your width and height in centimetres — the price follows the area.",
+        "qI18n": {
+          "sv": "Vilka mått kan jag beställa?",
+          "da": "Hvilke mål kan jeg bestille?",
+          "no": "Hvilke mål kan jeg bestille?"
+        },
+        "aI18n": {
+          "sv": "Allt från 10 cm på kortsidan upp till 165 cm brett, och upp till 15 meter högt från rullen. Välj ”Eget mått” i storleksfältet och skriv in bredd och höjd i centimeter — priset följer ytan.",
+          "da": "Alt fra 10 cm på den korte led op til 165 cm bredt og op til 15 meter højt fra rullen. Vælg ”Eget mål” i størrelsesfeltet, og skriv bredde og højde i centimeter — prisen følger arealet.",
+          "no": "Alt fra 10 cm på kortsiden opp til 165 cm bredt, og opptil 15 meter høyt fra rullen. Velg «Eget mål» i størrelsesfeltet og skriv bredde og høyde i centimeter — prisen følger arealet."
+        }
+      },
+      {
+        "q": "White or transparent film — which one?",
+        "a": "White film blocks the glass and holds colour exactly as printed. Transparent film lets the background through, which suits logos and lettering, but light colours read weakly against a bright interior.",
+        "qI18n": {
+          "sv": "Vit eller transparent folie — vilken ska jag välja?",
+          "da": "Hvid eller transparent folie — hvad skal jeg vælge?",
+          "no": "Hvit eller transparent folie — hva skal jeg velge?"
+        },
+        "aI18n": {
+          "sv": "Vit folie täcker glaset och håller färgen precis som den är tryckt. Transparent folie släpper igenom bakgrunden, vilket passar logotyper och text, men ljusa färger syns svagt mot en ljus interiör.",
+          "da": "Hvid folie dækker glasset og holder farven præcis som trykt. Transparent folie lader baggrunden komme igennem, hvilket passer til logoer og tekst, men lyse farver læses svagt mod et lyst interiør.",
+          "no": "Hvit folie dekker glasset og holder fargen akkurat som trykt. Transparent folie slipper bakgrunnen gjennom, noe som passer logoer og tekst, men lyse farger leses svakt mot et lyst interiør."
+        }
+      },
+      {
+        "q": "Which side of the glass does it go on?",
+        "a": "As supplied the adhesive is on the back, so the decal goes on the outside of the glass and is read from outside. If you need to apply it from indoors, choose face adhesive — we mirror the print so it still reads correctly from the street.",
+        "qI18n": {
+          "sv": "På vilken sida av glaset sätts den?",
+          "da": "På hvilken side af glasset sættes den?",
+          "no": "På hvilken side av glasset settes den?"
+        },
+        "aI18n": {
+          "sv": "Som standard sitter limmet på baksidan, så dekalen sätts på glasets utsida och läses utifrån. Behöver du montera inifrån väljer du lim på framsidan — då speglar vi trycket så att det ändå läses rätt från gatan.",
+          "da": "Som standard sidder limen på bagsiden, så dekalen sættes på glassets yderside og læses udefra. Skal du montere indefra, vælger du lim på forsiden — så spejlvender vi trykket, så det stadig læses rigtigt fra gaden.",
+          "no": "Som standard sitter limet på baksiden, så dekalen settes på utsiden av glasset og leses utenfra. Må du montere innenfra, velger du lim på forsiden — da speilvender vi trykket slik at det fortsatt leses riktig fra gaten."
+        }
+      },
+      {
+        "q": "How long will it last?",
+        "a": "Matte monomer PVC is rated for about a year outdoors. Easy DOT film is repositionable and meant for indoor glass. PVC-free film is the choice for an installation you expect to leave up. A laminate extends any of the three.",
+        "qI18n": {
+          "sv": "Hur länge håller den?",
+          "da": "Hvor længe holder den?",
+          "no": "Hvor lenge holder den?"
+        },
+        "aI18n": {
+          "sv": "Matt monomer PVC är angiven för ungefär ett år utomhus. Easy DOT-folie går att flytta om och är avsedd för glas inomhus. PVC-fri folie är valet för en installation som ska sitta kvar. Ett laminat förlänger alla tre.",
+          "da": "Mat monomer PVC er angivet til omkring et år udendørs. Easy DOT-folie kan flyttes om og er beregnet til glas indendørs. PVC-fri folie er valget til en installation, der skal blive siddende. En laminering forlænger alle tre.",
+          "no": "Matt monomer PVC er angitt for omtrent ett år utendørs. Easy DOT-folie kan flyttes på og er ment for glass innendørs. PVC-fri folie er valget for en installasjon som skal bli sittende. Et laminat forlenger alle tre."
+        }
+      },
+      {
+        "q": "How do I apply it?",
+        "a": "Clean the glass with a non-greasy cleaner, tape the decal along the top edge to position it, then peel the backing away a little at a time and press from the centre outwards with a squeegee. For larger pieces, wet application with a drop of washing-up liquid in water gives you time to reposition.",
+        "qI18n": {
+          "sv": "Hur monterar jag den?",
+          "da": "Hvordan monterer jeg den?",
+          "no": "Hvordan monterer jeg den?"
+        },
+        "aI18n": {
+          "sv": "Rengör glaset med ett fettfritt rengöringsmedel, tejpa dekalen längs överkanten för att placera den, dra sedan av skyddspapperet lite i taget och tryck från mitten och utåt med en rakel. På större dekaler ger våtmontering med en droppe diskmedel i vatten dig tid att justera läget.",
+          "da": "Rengør glasset med et fedtfrit rengøringsmiddel, tape dekalen langs overkanten for at placere den, træk derefter beskyttelsespapiret af lidt ad gangen, og tryk fra midten og udad med en rakel. På større dekaler giver vådmontering med en dråbe opvaskemiddel i vand dig tid til at justere placeringen.",
+          "no": "Rengjør glasset med et fettfritt rengjøringsmiddel, tape dekalen langs overkanten for å plassere den, trekk deretter av beskyttelsespapiret litt om gangen og trykk fra midten og utover med en rakel. På større dekaler gir våtmontering med en dråpe oppvaskmiddel i vann deg tid til å justere plasseringen."
+        }
+      }
+    ],
+    "enabledFieldIds": [
+      "sticker_label_size",
+      "product_shape",
+      "sticker_cut_type",
+      "self_adhesive_material",
+      "sticker_adhesive_side",
+      "print_colour_mode",
+      "sticker_finish",
+      "artwork_dieline",
+      "artwork_supply_method",
+      "artwork_resolution",
+      "artwork_check_service",
+      "production_delivery_speed",
+      "delivery_method"
+    ]
+  },
+  {
+    "id": "prod-wall-calendar",
+    "name": "Wall Calendars",
+    "nameI18n": {
+      "sv": "Väggkalendrar",
+      "da": "Vægkalendere",
+      "no": "Veggkalendere"
+    },
+    "description": "Spiral-bound wall calendars printed in full colour from your own artwork, in A3, A4, A5 or A6, portrait or landscape. Choose 12, 13 or 14 sheets — twelve months plus a cover and, if you want one, a year-planner page — on 250 g glossy, 250 g silk matt, 250 g uncoated offset or 300 g Sto Top. Print one side or both, and pick a silver, black or white spiral to match the design.",
+    "descriptionI18n": {
+      "sv": "Spiralbundna väggkalendrar tryckta i fyrfärg efter ditt eget original, i A3, A4, A5 eller A6, stående eller liggande. Välj 12, 13 eller 14 blad — tolv månader plus omslag och, om du vill, ett årsplaneringsblad — på 250 g blankt, 250 g silkesmatt, 250 g obestruket offset eller 300 g Sto Top. Tryck på en eller båda sidorna och välj silverfärgad, svart eller vit spiral som passar formgivningen.",
+      "da": "Spiralindbundne vægkalendere trykt i firfarvet efter dit eget originalmateriale, i A3, A4, A5 eller A6, stående eller liggende. Vælg 12, 13 eller 14 blade — tolv måneder plus omslag og, hvis du ønsker det, et årsplanlægningsblad — på 250 g blankt, 250 g silkemat, 250 g ubestrøget offset eller 300 g Sto Top. Tryk på én eller begge sider, og vælg sølvfarvet, sort eller hvid spiral, der passer til designet.",
+      "no": "Spiralinnbundne veggkalendere trykt i firefarge etter ditt eget originalmateriale, i A3, A4, A5 eller A6, stående eller liggende. Velg 12, 13 eller 14 blad — tolv måneder pluss omslag og, hvis du vil, et årsplanleggingsblad — på 250 g blankt, 250 g silkematt, 250 g ubestrøket offset eller 300 g Sto Top. Trykk på én eller begge sider, og velg sølvfarget, sort eller hvit spiral som passer designet."
+    },
+    "categoryId": "cards",
+    "basePrice": 27,
+    "images": [
+      "/product-art/wallcalendar-1.svg",
+      "/product-art/wallcalendar-2.svg",
+      "/product-art/wallcalendar-3.svg",
+      "/product-art/wallcalendar-4.svg"
+    ],
+    "options": [],
+    "isWeb2Print": true,
+    "minQuantity": 1,
+    "maxQuantity": 1000,
+    "customUploadRules": {
+      "enabled": false,
+      "minPrice": 18,
+      "allowedFormats": ["pdf", "ai", "eps", "svg", "jpg", "jpeg", "png", "tiff"],
+      "maxFileSizeMb": 100
+    },
+    "pricingRules": {
+      "baseSetupFee": 258,
+      "priceCalculationType": "tiered_volume",
+      "volumeDiscounts": [
+        { "minQuantity": 5, "discountPercentage": 20 },
+        { "minQuantity": 25, "discountPercentage": 29 },
+        { "minQuantity": 50, "discountPercentage": 31 },
+        { "minQuantity": 250, "discountPercentage": 40 }
+      ]
+    },
+    "deliverySpeedOptions": [
+      { "id": "standard", "name": "Standard Delivery", "deliveryDays": "5 Business Days", "priceSurcharge": 0 },
+      { "id": "fast", "name": "Fast Production", "deliveryDays": "3 Business Days", "priceSurcharge": 95 },
+      { "id": "express", "name": "Express Production", "deliveryDays": "2 Business Days", "priceSurcharge": 195 }
+    ],
+    "features": [
+      "A3, A4, A5 or A6 — portrait or landscape",
+      "12, 13 or 14 sheets, printed one side or both",
+      "250 g glossy, silk matt or uncoated offset, or 300 g Sto Top",
+      "Silver, black or white wire spiral",
+      "Full colour on every sheet, from your own PDF"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "A3, A4, A5 eller A6 — stående eller liggande",
+        "12, 13 eller 14 blad, tryckta på en eller båda sidorna",
+        "250 g blankt, silkesmatt eller obestruket offset, eller 300 g Sto Top",
+        "Silverfärgad, svart eller vit spiral",
+        "Fyrfärg på varje blad, från din egen PDF"
+      ],
+      "da": [
+        "A3, A4, A5 eller A6 — stående eller liggende",
+        "12, 13 eller 14 blade, trykt på én eller begge sider",
+        "250 g blankt, silkemat eller ubestrøget offset, eller 300 g Sto Top",
+        "Sølvfarvet, sort eller hvid spiral",
+        "Firfarvet på hvert blad, fra din egen PDF"
+      ],
+      "no": [
+        "A3, A4, A5 eller A6 — stående eller liggende",
+        "12, 13 eller 14 blad, trykt på én eller begge sider",
+        "250 g blankt, silkematt eller ubestrøket offset, eller 300 g Sto Top",
+        "Sølvfarget, sort eller hvit spiral",
+        "Firefarget på hvert blad, fra din egen PDF"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Formats",
+        "value": "A3, A4, A5 and A6",
+        "labelI18n": { "sv": "Format", "da": "Formater", "no": "Formater" },
+        "valueI18n": { "sv": "A3, A4, A5 och A6", "da": "A3, A4, A5 og A6", "no": "A3, A4, A5 og A6" }
+      },
+      {
+        "label": "Orientation",
+        "value": "Portrait or landscape",
+        "labelI18n": { "sv": "Orientering", "da": "Orientering", "no": "Orientering" },
+        "valueI18n": { "sv": "Stående eller liggande", "da": "Stående eller liggende", "no": "Stående eller liggende" }
+      },
+      {
+        "label": "Number of sheets",
+        "value": "12, 13 or 14",
+        "labelI18n": { "sv": "Antal blad", "da": "Antal blade", "no": "Antall blad" },
+        "valueI18n": { "sv": "12, 13 eller 14", "da": "12, 13 eller 14", "no": "12, 13 eller 14" }
+      },
+      {
+        "label": "Paper",
+        "value": "250 g glossy, 250 g silk matt, 250 g uncoated offset or 300 g Sto Top",
+        "labelI18n": { "sv": "Papper", "da": "Papir", "no": "Papir" },
+        "valueI18n": {
+          "sv": "250 g blankt, 250 g silkesmatt, 250 g obestruket offset eller 300 g Sto Top",
+          "da": "250 g blankt, 250 g silkemat, 250 g ubestrøget offset eller 300 g Sto Top",
+          "no": "250 g blankt, 250 g silkematt, 250 g ubestrøket offset eller 300 g Sto Top"
+        }
+      },
+      {
+        "label": "Printing",
+        "value": "Full colour CMYK, single or double sided",
+        "labelI18n": { "sv": "Tryck", "da": "Tryk", "no": "Trykk" },
+        "valueI18n": {
+          "sv": "Fyrfärg CMYK, enkel- eller dubbelsidigt",
+          "da": "Firfarvet CMYK, enkelt- eller dobbeltsidet",
+          "no": "Firefarget CMYK, en- eller tosidig"
+        }
+      },
+      {
+        "label": "Binding",
+        "value": "Wire spiral — silver, black or white",
+        "labelI18n": { "sv": "Bindning", "da": "Indbinding", "no": "Innbinding" },
+        "valueI18n": {
+          "sv": "Metallspiral — silverfärgad, svart eller vit",
+          "da": "Metalspiral — sølvfarvet, sort eller hvid",
+          "no": "Metallspiral — sølvfarget, sort eller hvit"
+        }
+      },
+      {
+        "label": "Minimum order",
+        "value": "1 calendar",
+        "labelI18n": { "sv": "Minsta beställning", "da": "Mindste bestilling", "no": "Minste bestilling" },
+        "valueI18n": { "sv": "1 kalender", "da": "1 kalender", "no": "1 kalender" }
+      },
+      {
+        "label": "Artwork",
+        "value": "One print-ready PDF with all pages in order",
+        "labelI18n": { "sv": "Original", "da": "Originalmateriale", "no": "Originalmateriale" },
+        "valueI18n": {
+          "sv": "En tryckfärdig PDF med alla sidor i rätt ordning",
+          "da": "Én trykklar PDF med alle sider i rigtig rækkefølge",
+          "no": "Én trykkeklar PDF med alle sider i riktig rekkefølge"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many sheets do I need?",
+        "a": "Twelve sheets gives you one per month. Thirteen adds a printed cover that hangs in front of January. Fourteen leaves room for a year planner or a back page with your contact details.",
+        "qI18n": {
+          "sv": "Hur många blad behöver jag?",
+          "da": "Hvor mange blade har jeg brug for?",
+          "no": "Hvor mange blad trenger jeg?"
+        },
+        "aI18n": {
+          "sv": "Tolv blad ger ett per månad. Tretton lägger till ett tryckt omslag som hänger framför januari. Fjorton ger plats för en årsplanering eller ett slutblad med dina kontaktuppgifter.",
+          "da": "Tolv blade giver ét pr. måned. Tretten tilføjer et trykt omslag, der hænger foran januar. Fjorten giver plads til en årsplanlægning eller et bagblad med dine kontaktoplysninger.",
+          "no": "Tolv blad gir ett per måned. Tretten legger til et trykt omslag som henger foran januar. Fjorten gir plass til en årsplanlegging eller et bakblad med kontaktopplysningene dine."
+        }
+      },
+      {
+        "q": "Should I print both sides?",
+        "a": "Single sided is the usual choice and keeps the price down. Print both sides when you want something on the reverse of each sheet — extra photographs, notes, or an image that shows once the sheet is flipped over.",
+        "qI18n": {
+          "sv": "Ska jag trycka på båda sidorna?",
+          "da": "Skal jeg trykke på begge sider?",
+          "no": "Skal jeg trykke på begge sider?"
+        },
+        "aI18n": {
+          "sv": "Enkelsidigt är det vanliga valet och håller nere priset. Tryck på båda sidorna när du vill ha något på baksidan av varje blad — fler bilder, anteckningsutrymme eller ett motiv som syns när bladet vikts över.",
+          "da": "Enkeltsidet er det almindelige valg og holder prisen nede. Tryk på begge sider, når du vil have noget på bagsiden af hvert blad — flere billeder, notatplads eller et motiv, der ses, når bladet er vendt om.",
+          "no": "Ensidig er det vanlige valget og holder prisen nede. Trykk på begge sider når du vil ha noe på baksiden av hvert blad — flere bilder, notatplass eller et motiv som synes når bladet er vendt over."
+        }
+      },
+      {
+        "q": "How do I set the file up?",
+        "a": "One PDF, pages in reading order, CMYK, 3 mm bleed on every edge and images at 300 DPI. Keep text and logos at least 10 mm clear of the bound edge — that strip is taken by the spiral punching.",
+        "qI18n": {
+          "sv": "Hur ska filen se ut?",
+          "da": "Hvordan skal filen sættes op?",
+          "no": "Hvordan skal filen settes opp?"
+        },
+        "aI18n": {
+          "sv": "En PDF, sidorna i läsordning, CMYK, 3 mm utfall runt om och bilder i 300 DPI. Håll text och logotyper minst 10 mm från bindningskanten — den remsan tas av spiralstansningen.",
+          "da": "Én PDF, siderne i læserækkefølge, CMYK, 3 mm beskæring hele vejen rundt og billeder i 300 DPI. Hold tekst og logoer mindst 10 mm fra indbindingskanten — den strimmel går til spiralstansningen.",
+          "no": "Én PDF, sidene i lesrekkefølge, CMYK, 3 mm utfall rundt og bilder i 300 DPI. Hold tekst og logoer minst 10 mm fra innbindingskanten — den stripen går med til spiralstansingen."
+        }
+      },
+      {
+        "q": "Can I have a different picture every month?",
+        "a": "Yes, and that is the normal case. Each sheet is a separate page in your PDF, so twelve months can be twelve different images at no extra cost.",
+        "qI18n": {
+          "sv": "Kan jag ha en ny bild varje månad?",
+          "da": "Kan jeg have et nyt billede hver måned?",
+          "no": "Kan jeg ha et nytt bilde hver måned?"
+        },
+        "aI18n": {
+          "sv": "Ja, och det är det normala. Varje blad är en egen sida i din PDF, så tolv månader kan vara tolv olika bilder utan extra kostnad.",
+          "da": "Ja, og det er det normale. Hvert blad er en selvstændig side i din PDF, så tolv måneder kan være tolv forskellige billeder uden ekstra omkostning.",
+          "no": "Ja, og det er det normale. Hvert blad er en egen side i PDF-en din, så tolv måneder kan være tolv ulike bilder uten ekstra kostnad."
+        }
+      },
+      {
+        "q": "Which paper should I choose?",
+        "a": "250 g glossy makes photographs pop. 250 g silk matt is easier on the eye under office lighting and shows fewer fingerprints. 250 g uncoated offset takes a pen, so the calendar can be written on. 300 g Sto Top is the stiffest of the four and hangs flattest.",
+        "qI18n": {
+          "sv": "Vilket papper ska jag välja?",
+          "da": "Hvilket papir skal jeg vælge?",
+          "no": "Hvilket papir skal jeg velge?"
+        },
+        "aI18n": {
+          "sv": "250 g blankt lyfter fotografier. 250 g silkesmatt är skonsammare för ögat i kontorsbelysning och visar färre fingeravtryck. 250 g obestruket offset går att skriva på med penna. 300 g Sto Top är styvast av de fyra och hänger planast.",
+          "da": "250 g blankt løfter fotografier. 250 g silkemat er mere skånsomt for øjet i kontorbelysning og viser færre fingeraftryk. 250 g ubestrøget offset kan skrives på med pen. 300 g Sto Top er det stiveste af de fire og hænger fladest.",
+          "no": "250 g blankt løfter fotografier. 250 g silkematt er skånsommere for øyet i kontorbelysning og viser færre fingeravtrykk. 250 g ubestrøket offset kan skrives på med penn. 300 g Sto Top er stivest av de fire og henger flatest."
+        }
+      }
+    ],
+    "enabledFieldIds": [
+      "standard_paper_format",
+      "print_orientation",
+      "paper_material_family",
+      "paper_weight_gsm",
+      "printed_sides",
+      "print_colour_mode",
+      "binding_type",
+      "binding_edge",
+      "bundling",
+      "artwork_supply_method",
+      "artwork_resolution",
+      "artwork_bleed_margin",
+      "artwork_check_service",
+      "production_delivery_speed",
+      "delivery_method"
+    ]
+  }
+]

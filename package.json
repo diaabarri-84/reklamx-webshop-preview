@@ -1,0 +1,70 @@
+{
+  "name": "reklamx",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "check:dates": "node scripts/check-date-locales.mjs",
+    "test:units": "node scripts/test-option-tree.mjs && node scripts/test-home-sections.mjs && node scripts/test-goal-amount.mjs && node scripts/test-quota-clock.mjs && node scripts/test-charge-once.mjs && node scripts/test-library-apply.mjs && node scripts/test-owner-order.mjs && node scripts/test-delivery-address.mjs && node scripts/test-order-queue.mjs && node scripts/test-print-fit.mjs && node scripts/test-order-money.mjs && node scripts/test-shipping.mjs && node scripts/test-shapes.mjs && node scripts/test-page-order.mjs && node scripts/test-suggestions.mjs && node scripts/test-design.mjs && node scripts/test-design-schema.mjs && node scripts/test-design-doc.mjs && node scripts/test-design-objects.mjs && node scripts/test-print-file.mjs && node scripts/test-design-refit.mjs && node scripts/test-qr-payload.mjs && node scripts/test-proof-checks.mjs && node scripts/test-element-names.mjs && node scripts/test-starter-templates.mjs && node scripts/test-ai-images.mjs && node scripts/test-design-later.mjs && node scripts/test-template-order.mjs && node scripts/test-order-stages.mjs && node scripts/test-order-mail-wording.mjs && node scripts/test-production-speed.mjs && node scripts/test-pdf-boxes.mjs && node scripts/test-supplier-search.mjs && node scripts/test-pricing.mjs && node scripts/test-supplier-feed.mjs && node scripts/test-catalogue-query.mjs && node scripts/test-private-address.mjs && node scripts/test-category-tree.mjs && node scripts/test-order-costs.mjs && node scripts/test-vat-regime.mjs && node scripts/test-credit-note.mjs && node scripts/test-easygifts.mjs && node scripts/test-to-shop-product.mjs && node scripts/test-resync.mjs && node scripts/test-admin-auth.mjs && node scripts/test-report-days.mjs && node scripts/test-coupon-status.mjs && node scripts/test-coupon-rules.mjs && node scripts/test-loyalty.mjs && node scripts/test-promediaplus.mjs && node scripts/test-midocean.mjs && node scripts/review2-adversarial.mjs && node scripts/test-cart-snapshot.mjs && node scripts/test-checkout-draft.mjs && node scripts/test-cart-beacon.mjs && node scripts/test-ai-provider.mjs && node scripts/test-artwork.mjs && node scripts/test-print-size.mjs && node scripts/test-seo-clear.mjs && node scripts/test-seo-price.mjs && node scripts/test-supplier-index-run.mjs && node scripts/test-upload-type.mjs",
+    "check:models": "node scripts/check-ai-models.mjs --warn-if-unchecked",
+    "verify": "npm run typecheck && npm run check:i18n && npm run check:dates && npm run test:units && npm run check:models && npm run build",
+    "smoke": "node scripts/smoke.mjs",
+    "test:db": "node scripts/test-doc-store.mjs"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "@google/genai": "^1.29.0",
+    "@mollie/api-client": "^4.6.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "fabric": "^7.2.0",
+    "firebase": "^12.11.0",
+    "firebase-admin": "^14.2.0",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "mysql2": "^3.24.5",
+    "nodemailer": "^9.0.5",
+    "pdfjs-dist": "^6.2.108",
+    "qrcode": "^1.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-helmet-async": "^3.0.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.14.0",
+    "recharts": "^3.8.1",
+    "tailwind-merge": "^3.5.0",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@types/nodemailer": "^8.0.1",
+    "@types/qrcode": "^1.5.6",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.28.1",
+    "mysql-memory-server": "^1.17.0",
+    "playwright": "^1.62.1",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  },
+  "overrides": {
+    "jwks-rsa": {
+      "jose": "^5.10.0"
+    }
+  }
+}

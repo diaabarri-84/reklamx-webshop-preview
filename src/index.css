@@ -1,0 +1,317 @@
+/* The webfont is requested from index.html, not from here.
+ *
+ * An @import inside a stylesheet is fetched in SERIES: the browser must
+ * download this file, parse it, and only then discover the Google URL, connect
+ * to a second origin and fetch the CSS, before it can even start on the woff2.
+ * A <link> in the document head starts all of that immediately, next to the
+ * preconnects that skip the handshake. Same font, several hundred milliseconds
+ * earlier on a cold visit — and the text is what people came for.
+ *
+ * Outfit went with it: it was declared here and downloaded on every first
+ * visit, and NOTHING in the shop ever used it. Every element measured — body,
+ * headings, the nav — computes to Inter. */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Global primary color overrides (#bb965b gold/champagne theme) */
+  --color-orange-50: #faf7f2;
+  --color-orange-100: #f4edd2;
+  --color-orange-200: #e8d9aa;
+  --color-orange-300: #dbc27f;
+  --color-orange-400: #cbac6a;
+  --color-orange-500: #bb965b;
+  --color-orange-600: #bb965b;
+  --color-orange-700: #9c7b44;
+  --color-orange-800: #7d6035;
+  --color-orange-900: #624b2a;
+  --color-orange-950: #3b2a15;
+
+  --color-amber-500: #bb965b;
+  --color-amber-600: #bb965b;
+
+  --color-brand: #bb965b;
+}
+
+
+/*
+ * PRINTING A DOCUMENT.
+ *
+ * The invoice, receipt, job sheet and packing slip are modals rendered INSIDE
+ * the dashboard, and window.print() prints the page — so the whole staff screen
+ * came out behind them, sidebar, order queue and all. Everything is hidden and
+ * only the open sheet is made visible again; `visibility` rather than `display`
+ * so the sheet keeps the layout it was designed in.
+ *
+ * print-color-adjust matters here: the despatch banner on the packing slip is a
+ * solid green block, and browsers drop background colours from print by default.
+ */
+@media print {
+  /*
+   * SCOPED WITH :has(), and that is not decoration.
+   *
+   * A bare `body * { visibility: hidden }` would apply to EVERY page in the
+   * shop, so a customer pressing Ctrl+P on the checkout, a product page or the
+   * terms would print a blank sheet. The rules only bite when a printable
+   * document is actually open. A browser without :has() ignores the whole block
+   * and prints the page as it always did — the safe way to fail.
+   */
+  /*
+   * Transitions off FIRST, and this one is not tidiness either.
+   *
+   * The production sidebar carries `transition-all duration-500`, and
+   * `visibility` is a transitionable property — so switching to print media
+   * faded it out over half a second instead of hiding it, and a print fired
+   * inside that window put the sidebar on the paper. Caught by
+   * an end-to-end check, which read the computed style right after switching
+   * media and saw it still visible.
+   */
+  body:has(.rx-print-sheet) *,
+  body:has(.rx-print-sheet) *::before,
+  body:has(.rx-print-sheet) *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /*
+   * display:none, NOT visibility:hidden — the difference is the whole bug.
+   *
+   * The first version hid the page behind the sheet with visibility:hidden.
+   * Hidden content still OCCUPIES LAYOUT, and in print the modal overlay goes
+   * static and flows AFTER the whole dashboard — so the sheet started ~4300px
+   * down the document. Staff printed a work order and got blank pages first
+   * (the invisible dashboard), with the actual sheet on page five. The client
+   * reported it as "printing produces empty information", and he was right:
+   * measured on the live site, page one of the PDF was pure white.
+   *
+   * position:absolute on the sheet could not save it either: the overlay's
+   * backdrop-filter establishes a containing block, so top:0 anchored the
+   * sheet to the overlay — 4300px down — not to the page.
+   *
+   * So: everything that neither contains the sheet nor belongs to it leaves
+   * the LAYOUT entirely, the sheet's own ancestor chain is stripped of the
+   * things that clip, pad or reposition it, and the sheet flows statically
+   * from the very first page.
+   */
+  body:has(.rx-print-sheet) :not(:has(.rx-print-sheet)):not(.rx-print-sheet):not(.rx-print-sheet *) {
+    display: none !important;
+  }
+
+  body:has(.rx-print-sheet) :has(.rx-print-sheet) {
+    /* Full page width, too. Each document opens in a window capped at
+       max-w-2xl…4xl — 504 to 672 px at the printed type size — and nothing here
+       lifted the cap, so the receipt printed as a narrow column down the middle
+       of the A4 sheet, and every document was laid out narrower (so taller)
+       than the 718 px src/lib/printFit.ts measures it at. Block, not the flex
+       or grid it is on screen, so no track or centring can narrow it again. */
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    position: static !important;
+    overflow: visible !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    transform: none !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  body:has(.rx-print-sheet) {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .rx-print-sheet {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* ONE A4 PAGE — src/lib/printFit.ts measures the sheet just before printing
+     and sets --rx-print-zoom when it would run onto a second page (1 otherwise).
+     The zoom is on the sheet's CHILDREN, never the sheet: the sheet itself stays
+     at zoom 1, so its height can be measured the same way in every browser
+     (WebKit reports a zoomed element's own box unzoomed). */
+  .rx-print-sheet > :not(.rx-fullsize) {
+    zoom: var(--rx-print-zoom, 1);
+  }
+  /* …and what must keep its real size inside a zoomed part: a barcode a scanner
+     has to read, a box someone has to sign. */
+  .rx-print-sheet .rx-unzoom {
+    zoom: calc(1 / var(--rx-print-zoom, 1));
+  }
+  /* Two documents open at once each start a page of their own. */
+  .rx-print-sheet[data-rx-break] {
+    break-before: page;
+  }
+
+  /*
+   * PAPER TYPE SIZE. The documents are drawn for a screen, in rem; at the
+   * browser's 16px a one-line invoice was a little over one page and a one-item
+   * job sheet about one and a half. Three quarters of that is still a normal
+   * printed size (an 8–10 pt body), and it fits an ordinary order on one sheet
+   * before any zoom is needed. Only when a document is open — a customer
+   * printing a product page gets the page as it was.
+   */
+  html:has(.rx-print-sheet) {
+    font-size: 12px !important;
+  }
+
+  /* Never cut a line of a table, a picture or a signing box across two pages,
+     for the rare order that still runs long at the smallest zoom. */
+  .rx-print-sheet tr,
+  .rx-print-sheet img,
+  .rx-print-sheet .rx-keep {
+    break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
+
+/*
+ * A DOCUMENT LAYS ITSELF OUT BY ITS OWN WIDTH, not the window's: the classes
+ * inside a sheet are container variants (@lg: …), never sm:/md:. A window
+ * breakpoint is decided by the browser window while the sheet is measured and by
+ * the PAGE when it prints — on a phone, or with the browser's text size set
+ * larger, the two differed and the measurement no longer described the paper.
+ * The sheet is 718 px in both, and its root type is 12 px in both, so a
+ * container query answers the same way in both.
+ */
+.rx-print-sheet {
+  container-type: inline-size;
+}
+
+/*
+ * THE MEASURING MOMENT (src/lib/printFit.ts). For the instant before printing,
+ * the screen takes the paper's metrics — the printed width (190 mm), the printed
+ * root size, no padding round the sheet — so the height read is the height that
+ * will print. The class is removed again in the same task, so nothing flickers.
+ */
+html.rx-printing {
+  font-size: 12px !important;
+}
+html.rx-printing .rx-print-sheet {
+  width: 718px !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+html.rx-printing .rx-print-sheet > :not(.rx-fullsize) {
+  zoom: var(--rx-print-zoom, 1);
+}
+html.rx-printing .rx-print-sheet .rx-unzoom {
+  zoom: calc(1 / var(--rx-print-zoom, 1));
+}
+/* What paper leaves out, the measurement must not count (the job sheet's
+   preview and download links, one row per item). */
+html.rx-printing .rx-print-sheet .print\:hidden {
+  display: none !important;
+}
+
+/*
+ * A FIELD IS NEVER THE SAME COLOUR AS WHAT IS BEHIND IT — 15.1.3.
+ *
+ * Tailwind v4's preflight sets `background-color: transparent` on every input,
+ * select and textarea. On a white card that is invisible and harmless — the
+ * card shows through. On a DARK panel it means the field paints nothing, so a
+ * field carrying `text-gray-900` inside a `bg-gray-900` bar renders its text in
+ * exactly the colour behind it: contrast 1.00:1, digits that cannot be seen at
+ * all. That is what the supplier picker's margin box did, and there was no way
+ * to tell an empty box from a full one.
+ *
+ * The two bars are fixed at their call sites (BAR_FIELD in
+ * src/components/Admin/darkBar.ts); this is the floor under them, so the NEXT
+ * dark panel cannot repeat it.
+ *
+ * Deliberately at specificity 0 inside `@layer base` and wrapped in `:where()`:
+ * every Tailwind utility still wins, so a field that is meant to be tinted,
+ * translucent or dark stays exactly as its classes say. The excluded types are
+ * the ones that draw themselves — a checkbox, a radio, a slider, a colour
+ * swatch and a file button all lose their appearance if given a background.
+ * The selector shape matches the phone rule below it rather than inventing a
+ * second convention in the same file.
+ */
+@layer base {
+  input:where(:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='file']):not([type='submit']):not([type='button']):not([type='reset'])),
+  select,
+  textarea {
+    background-color: #fff;
+    color: var(--color-gray-900);
+  }
+}
+
+/*
+ * PHONE INPUTS, AND WHY THEY ARE 16px HERE AND NOWHERE ELSE.
+ *
+ * Safari on iOS zooms the whole page in the moment a visitor taps a form field
+ * whose text is smaller than 16px — and then leaves it zoomed, so the header
+ * runs off the side and the rest of the form has to be panned to. Every field
+ * in this shop is `text-sm` (14px) by design, so every field did it: the
+ * checkout address block, the sign-in pills, the contact form.
+ *
+ * The usual "fix" is `maximum-scale=1` in the viewport meta, which also takes
+ * away pinch-zoom — punishing anyone who needs to magnify anything, to spare
+ * them an effect they never asked for either. Raising the font instead removes
+ * the trigger and keeps zoom working.
+ *
+ * Scoped to coarse pointers at phone widths: a mouse never triggers the zoom,
+ * and the compact 14px fields are kept everywhere a mouse is used.
+ */
+@media (pointer: coarse) and (max-width: 767px) {
+  input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/*
+ * Safari inflates text in some blocks when a phone is turned to landscape.
+ * The layout is already responsive; it does not need help guessing.
+ */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* The About hero's drifting colour (AboutUsPage.tsx): three blurred brand-colour
+   circles, each on its own slow loop, so the field never repeats exactly. */
+@keyframes rx-drift-a { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(18%, 12%) scale(1.15); } }
+@keyframes rx-drift-b { 0%, 100% { transform: translate(0, 0) scale(1.05); } 50% { transform: translate(-16%, 14%) scale(0.92); } }
+@keyframes rx-drift-c { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(10%, -18%) scale(1.2); } }
+.rx-blob { will-change: transform; }
+.rx-blob-a { animation: rx-drift-a 22s ease-in-out infinite; }
+.rx-blob-b { animation: rx-drift-b 27s ease-in-out infinite; }
+.rx-blob-c { animation: rx-drift-c 31s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .rx-blob { animation: none; } }
+
+/*
+ * THE STOREFRONT ZOOMS WITH THE SCREEN (2026-10-14).
+ *
+ * The layout is 80rem (1280px) wide. On a bigger monitor it used to sit in a
+ * column with half the screen empty around it. From a 1446px-wide window up,
+ * the root size grows with the window, and because every size on the page is
+ * in rem (scripts: the px→rem pass of the same day) the whole page grows with
+ * it — the same proportions, just larger — until the content takes ~88% of the
+ * width, as on HelloPrint. Capped at 1.5×. Below 1446px nothing changes.
+ * Breakpoints are unaffected: media queries measure rem from the browser's own
+ * 16px, not from this. Toggled per page by FluidScale in App.tsx.
+ */
+html.rx-fluid {
+  font-size: clamp(16px, calc(100vw / 90.375), 24px);
+}

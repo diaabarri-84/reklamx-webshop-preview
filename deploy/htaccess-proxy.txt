@@ -1,0 +1,22 @@
+# Apache → Node. Copy this into the subdomain's document root as `.htaccess`
+# (usually /home/shopreklam/public_html/.htaccess for shop.reklamx.se).
+#
+# It hands every request to the Node process listening on 127.0.0.1:3060.
+# If the host does not allow the [P] proxy flag, use cPanel's own
+# "Setup Node.js App" instead — see README-DEPLOY.md, option B.
+
+RewriteEngine On
+
+# Always https. Mollie will not call an http webhook, and Firebase auth
+# refuses to run on one.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Let the certificate renewal challenge through untouched.
+RewriteRule ^\.well-known/ - [L]
+
+RewriteRule ^(.*)$ http://127.0.0.1:3060/$1 [P,L]
+
+# Pass the real visitor address and scheme through, so rate limiting and the
+# order log do not see every request as coming from the server itself.
+RequestHeader set X-Forwarded-Proto "https"

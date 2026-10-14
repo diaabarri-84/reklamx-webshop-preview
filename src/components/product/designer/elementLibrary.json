@@ -1,0 +1,3862 @@
+[
+ {
+  "id": "social-facebook",
+  "lib": "social",
+  "category": "socials",
+  "label": "Facebook",
+  "keywords": [
+   "facebook",
+   "facebook",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Facebook",
+    "keywords": []
+   },
+   "da": {
+    "label": "Facebook",
+    "keywords": []
+   },
+   "no": {
+    "label": "Facebook",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-instagram",
+  "lib": "social",
+  "category": "socials",
+  "label": "Instagram",
+  "keywords": [
+   "instagram",
+   "instagram",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Instagram",
+    "keywords": []
+   },
+   "da": {
+    "label": "Instagram",
+    "keywords": []
+   },
+   "no": {
+    "label": "Instagram",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-whatsapp",
+  "lib": "social",
+  "category": "socials",
+  "label": "WhatsApp",
+  "keywords": [
+   "whatsapp",
+   "whatsapp",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "WhatsApp",
+    "keywords": []
+   },
+   "da": {
+    "label": "WhatsApp",
+    "keywords": []
+   },
+   "no": {
+    "label": "WhatsApp",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-x",
+  "lib": "social",
+  "category": "socials",
+  "label": "X",
+  "keywords": [
+   "x",
+   "x",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "X",
+    "keywords": []
+   },
+   "da": {
+    "label": "X",
+    "keywords": []
+   },
+   "no": {
+    "label": "X",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-youtube",
+  "lib": "social",
+  "category": "socials",
+  "label": "YouTube",
+  "keywords": [
+   "youtube",
+   "youtube",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "YouTube",
+    "keywords": []
+   },
+   "da": {
+    "label": "YouTube",
+    "keywords": []
+   },
+   "no": {
+    "label": "YouTube",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-tiktok",
+  "lib": "social",
+  "category": "socials",
+  "label": "TikTok",
+  "keywords": [
+   "tiktok",
+   "tiktok",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "TikTok",
+    "keywords": []
+   },
+   "da": {
+    "label": "TikTok",
+    "keywords": []
+   },
+   "no": {
+    "label": "TikTok",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-pinterest",
+  "lib": "social",
+  "category": "socials",
+  "label": "Pinterest",
+  "keywords": [
+   "pinterest",
+   "pinterest",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Pinterest",
+    "keywords": []
+   },
+   "da": {
+    "label": "Pinterest",
+    "keywords": []
+   },
+   "no": {
+    "label": "Pinterest",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-snapchat",
+  "lib": "social",
+  "category": "socials",
+  "label": "Snapchat",
+  "keywords": [
+   "snapchat",
+   "snapchat",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Snapchat",
+    "keywords": []
+   },
+   "da": {
+    "label": "Snapchat",
+    "keywords": []
+   },
+   "no": {
+    "label": "Snapchat",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-telegram",
+  "lib": "social",
+  "category": "socials",
+  "label": "Telegram",
+  "keywords": [
+   "telegram",
+   "telegram",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Telegram",
+    "keywords": []
+   },
+   "da": {
+    "label": "Telegram",
+    "keywords": []
+   },
+   "no": {
+    "label": "Telegram",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-messenger",
+  "lib": "social",
+  "category": "socials",
+  "label": "Messenger",
+  "keywords": [
+   "messenger",
+   "messenger",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Messenger",
+    "keywords": []
+   },
+   "da": {
+    "label": "Messenger",
+    "keywords": []
+   },
+   "no": {
+    "label": "Messenger",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 0C5.24 0 0 4.952 0 11.64c0 3.499 1.434 6.521 3.769 8.61a.96.96 0 0 1 .323.683l.065 2.135a.96.96 0 0 0 1.347.85l2.381-1.053a.96.96 0 0 1 .641-.046A13 13 0 0 0 12 23.28c6.76 0 12-4.952 12-11.64S18.76 0 12 0m6.806 7.44c.522-.03.971.567.63 1.094l-4.178 6.457a.707.707 0 0 1-.977.208l-3.87-2.504a.44.44 0 0 0-.49.007l-4.363 3.01c-.637.438-1.415-.317-.995-.966l4.179-6.457a.706.706 0 0 1 .977-.21l3.87 2.505c.15.097.344.094.491-.007l4.362-3.008a.7.7 0 0 1 .364-.13\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-threads",
+  "lib": "social",
+  "category": "socials",
+  "label": "Threads",
+  "keywords": [
+   "threads",
+   "threads",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Threads",
+    "keywords": []
+   },
+   "da": {
+    "label": "Threads",
+    "keywords": []
+   },
+   "no": {
+    "label": "Threads",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-behance",
+  "lib": "social",
+  "category": "socials",
+  "label": "Behance",
+  "keywords": [
+   "behance",
+   "behance",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Behance",
+    "keywords": []
+   },
+   "da": {
+    "label": "Behance",
+    "keywords": []
+   },
+   "no": {
+    "label": "Behance",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-dribbble",
+  "lib": "social",
+  "category": "socials",
+  "label": "Dribbble",
+  "keywords": [
+   "dribbble",
+   "dribbble",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Dribbble",
+    "keywords": []
+   },
+   "da": {
+    "label": "Dribbble",
+    "keywords": []
+   },
+   "no": {
+    "label": "Dribbble",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-spotify",
+  "lib": "social",
+  "category": "socials",
+  "label": "Spotify",
+  "keywords": [
+   "spotify",
+   "spotify",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Spotify",
+    "keywords": []
+   },
+   "da": {
+    "label": "Spotify",
+    "keywords": []
+   },
+   "no": {
+    "label": "Spotify",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "social-tripadvisor",
+  "lib": "social",
+  "category": "socials",
+  "label": "Tripadvisor",
+  "keywords": [
+   "tripadvisor",
+   "tripadvisor",
+   "social"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Tripadvisor",
+    "keywords": []
+   },
+   "da": {
+    "label": "Tripadvisor",
+    "keywords": []
+   },
+   "no": {
+    "label": "Tripadvisor",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "icon-phone",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Phone",
+  "keywords": [
+   "telephone",
+   "call"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Telefon",
+    "keywords": [
+     "ringa",
+     "samtal"
+    ]
+   },
+   "da": {
+    "label": "Telefon",
+    "keywords": [
+     "ringe",
+     "opkald"
+    ]
+   },
+   "no": {
+    "label": "Telefon",
+    "keywords": [
+     "ringe",
+     "samtale"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-smartphone",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Mobile",
+  "keywords": [
+   "mobile",
+   "cell"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Mobil",
+    "keywords": [
+     "mobiltelefon",
+     "smartphone"
+    ]
+   },
+   "da": {
+    "label": "Mobil",
+    "keywords": [
+     "mobiltelefon",
+     "smartphone"
+    ]
+   },
+   "no": {
+    "label": "Mobil",
+    "keywords": [
+     "mobiltelefon",
+     "smarttelefon"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><rect rx=\"2\" ry=\"2\" x=\"5\" y=\"2\" width=\"14\" height=\"20\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 18h.01\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-mail",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "E-mail",
+  "keywords": [
+   "email",
+   "envelope"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "E-post",
+    "keywords": [
+     "mejl",
+     "kuvert"
+    ]
+   },
+   "da": {
+    "label": "E-mail",
+    "keywords": [
+     "mail",
+     "kuvert"
+    ]
+   },
+   "no": {
+    "label": "E-post",
+    "keywords": [
+     "epost",
+     "konvolutt"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect rx=\"2\" x=\"2\" y=\"4\" width=\"20\" height=\"16\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-at-sign",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "At sign",
+  "keywords": [
+   "email"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Snabel-a",
+    "keywords": [
+     "e-post",
+     "mejl"
+    ]
+   },
+   "da": {
+    "label": "Snabel-a",
+    "keywords": [
+     "e-mail",
+     "mail"
+    ]
+   },
+   "no": {
+    "label": "Krøllalfa",
+    "keywords": [
+     "e-post",
+     "epost"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-globe",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Website",
+  "keywords": [
+   "web",
+   "internet"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Webbplats",
+    "keywords": [
+     "webb",
+     "internet",
+     "hemsida"
+    ]
+   },
+   "da": {
+    "label": "Hjemmeside",
+    "keywords": [
+     "web",
+     "internet",
+     "website"
+    ]
+   },
+   "no": {
+    "label": "Nettside",
+    "keywords": [
+     "nett",
+     "internett",
+     "hjemmeside"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2 12h20\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-link",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Link",
+  "keywords": [
+   "url"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Länk",
+    "keywords": [
+     "url",
+     "webbadress"
+    ]
+   },
+   "da": {
+    "label": "Link",
+    "keywords": [
+     "url",
+     "webadresse"
+    ]
+   },
+   "no": {
+    "label": "Lenke",
+    "keywords": [
+     "url",
+     "nettadresse"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-map-pin",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Address",
+  "keywords": [
+   "location",
+   "pin"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Adress",
+    "keywords": [
+     "plats",
+     "nål"
+    ]
+   },
+   "da": {
+    "label": "Adresse",
+    "keywords": [
+     "sted",
+     "placering"
+    ]
+   },
+   "no": {
+    "label": "Adresse",
+    "keywords": [
+     "sted",
+     "plassering"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"10\" r=\"3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-map",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Map",
+  "keywords": [
+   "location"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Karta",
+    "keywords": [
+     "plats",
+     "vägbeskrivning"
+    ]
+   },
+   "da": {
+    "label": "Landkort",
+    "keywords": [
+     "sted",
+     "vejvisning"
+    ]
+   },
+   "no": {
+    "label": "Kart",
+    "keywords": [
+     "sted",
+     "veibeskrivelse"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 5.764v15\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 3.236v15\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-clock",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Opening hours",
+  "keywords": [
+   "time",
+   "hours"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Öppettider",
+    "keywords": [
+     "tid",
+     "klocka"
+    ]
+   },
+   "da": {
+    "label": "Åbningstider",
+    "keywords": [
+     "tid",
+     "ur"
+    ]
+   },
+   "no": {
+    "label": "Åpningstider",
+    "keywords": [
+     "tid",
+     "klokke"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 6v6l4 2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-calendar",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Calendar",
+  "keywords": [
+   "date"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kalender",
+    "keywords": [
+     "datum"
+    ]
+   },
+   "da": {
+    "label": "Kalender",
+    "keywords": [
+     "dato"
+    ]
+   },
+   "no": {
+    "label": "Kalender",
+    "keywords": [
+     "dato"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M8 2v3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 2v3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect rx=\"2\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M3 9h18\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-user",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Person",
+  "keywords": [
+   "contact"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Person",
+    "keywords": [
+     "kontakt"
+    ]
+   },
+   "da": {
+    "label": "Person",
+    "keywords": [
+     "kontakt"
+    ]
+   },
+   "no": {
+    "label": "Person",
+    "keywords": [
+     "kontakt"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"7\" r=\"4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-users",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "People",
+  "keywords": [
+   "team"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Personer",
+    "keywords": [
+     "team",
+     "grupp"
+    ]
+   },
+   "da": {
+    "label": "Personer",
+    "keywords": [
+     "team",
+     "gruppe"
+    ]
+   },
+   "no": {
+    "label": "Personer",
+    "keywords": [
+     "team",
+     "gruppe"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 3.128a4 4 0 0 1 0 7.744\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"9\" cy=\"7\" r=\"4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-building-2",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Office",
+  "keywords": [
+   "company",
+   "building"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kontor",
+    "keywords": [
+     "företag",
+     "byggnad"
+    ]
+   },
+   "da": {
+    "label": "Kontor",
+    "keywords": [
+     "firma",
+     "virksomhed",
+     "bygning"
+    ]
+   },
+   "no": {
+    "label": "Kontor",
+    "keywords": [
+     "firma",
+     "bedrift",
+     "bygning"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M10 12h4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M10 8h4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 21v-3a2 2 0 0 0-4 0v3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-house",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Home",
+  "keywords": [
+   "house"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Hem",
+    "keywords": [
+     "hus",
+     "bostad"
+    ]
+   },
+   "da": {
+    "label": "Hjem",
+    "keywords": [
+     "hus",
+     "bolig"
+    ]
+   },
+   "no": {
+    "label": "Hjem",
+    "keywords": [
+     "hus",
+     "bolig"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-briefcase",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Business",
+  "keywords": [
+   "work"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Företag",
+    "keywords": [
+     "arbete",
+     "jobb",
+     "portfölj"
+    ]
+   },
+   "da": {
+    "label": "Forretning",
+    "keywords": [
+     "arbejde",
+     "job",
+     "mappe"
+    ]
+   },
+   "no": {
+    "label": "Forretning",
+    "keywords": [
+     "arbeid",
+     "jobb",
+     "dokumentmappe",
+     "stresskoffert"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect rx=\"2\" x=\"2\" y=\"6\" width=\"20\" height=\"14\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-store",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Shop",
+  "keywords": [
+   "store"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Butik",
+    "keywords": [
+     "affär"
+    ]
+   },
+   "da": {
+    "label": "Butik",
+    "keywords": [
+     "forretning"
+    ]
+   },
+   "no": {
+    "label": "Butikk",
+    "keywords": [
+     "forretning"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-shopping-cart",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Cart",
+  "keywords": [
+   "shop"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kundvagn",
+    "keywords": [
+     "handla",
+     "butik"
+    ]
+   },
+   "da": {
+    "label": "Indkøbsvogn",
+    "keywords": [
+     "handle",
+     "butik",
+     "kurv"
+    ]
+   },
+   "no": {
+    "label": "Handlekurv",
+    "keywords": [
+     "handle",
+     "butikk",
+     "vogn"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"18\" cy=\"20\" r=\"2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"8\" cy=\"20\" r=\"2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-truck",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Delivery",
+  "keywords": [
+   "shipping"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Leverans",
+    "keywords": [
+     "frakt",
+     "lastbil"
+    ]
+   },
+   "da": {
+    "label": "Levering",
+    "keywords": [
+     "fragt",
+     "lastbil"
+    ]
+   },
+   "no": {
+    "label": "Levering",
+    "keywords": [
+     "frakt",
+     "lastebil"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 18H9\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"17\" cy=\"18\" r=\"2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"7\" cy=\"18\" r=\"2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-printer",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Print",
+  "keywords": [
+   "printer"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Tryck",
+    "keywords": [
+     "skrivare",
+     "utskrift"
+    ]
+   },
+   "da": {
+    "label": "Tryk",
+    "keywords": [
+     "printer",
+     "udskrift"
+    ]
+   },
+   "no": {
+    "label": "Trykk",
+    "keywords": [
+     "skriver",
+     "utskrift"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect rx=\"1\" x=\"6\" y=\"14\" width=\"12\" height=\"8\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-wifi",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Wi-Fi",
+  "keywords": [
+   "internet"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Wi-Fi",
+    "keywords": [
+     "wifi",
+     "internet",
+     "trådlöst"
+    ]
+   },
+   "da": {
+    "label": "Wi-Fi",
+    "keywords": [
+     "wifi",
+     "internet",
+     "trådløst"
+    ]
+   },
+   "no": {
+    "label": "Wi-Fi",
+    "keywords": [
+     "wifi",
+     "internett",
+     "trådløst"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 20h.01\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2 8.82a15 15 0 0 1 20 0\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 12.859a10 10 0 0 1 14 0\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8.5 16.429a5 5 0 0 1 7 0\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-car",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Car",
+  "keywords": [
+   "parking"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Bil",
+    "keywords": [
+     "parkering"
+    ]
+   },
+   "da": {
+    "label": "Bil",
+    "keywords": [
+     "parkering"
+    ]
+   },
+   "no": {
+    "label": "Bil",
+    "keywords": [
+     "parkering"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"7\" cy=\"17\" r=\"2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 17h6\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"17\" cy=\"17\" r=\"2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-star",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Star",
+  "keywords": [
+   "rating"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Stjärna",
+    "keywords": [
+     "betyg"
+    ]
+   },
+   "da": {
+    "label": "Stjerne",
+    "keywords": [
+     "bedømmelse"
+    ]
+   },
+   "no": {
+    "label": "Stjerne",
+    "keywords": [
+     "vurdering"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-heart",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Heart",
+  "keywords": [
+   "love"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-thumbs-up",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Thumbs up",
+  "keywords": [
+   "like"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Tummen upp",
+    "keywords": [
+     "gilla"
+    ]
+   },
+   "da": {
+    "label": "Tommel op",
+    "keywords": [
+     "synes godt om"
+    ]
+   },
+   "no": {
+    "label": "Tommel opp",
+    "keywords": [
+     "liker"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7 10v12\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-circle-check",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Check",
+  "keywords": [
+   "ok",
+   "done"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Bock",
+    "keywords": [
+     "ok",
+     "klar",
+     "godkänd"
+    ]
+   },
+   "da": {
+    "label": "Flueben",
+    "keywords": [
+     "ok",
+     "færdig",
+     "godkendt"
+    ]
+   },
+   "no": {
+    "label": "Hake",
+    "keywords": [
+     "ok",
+     "ferdig",
+     "godkjent"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"m16 9-5.5 5.5L8 12\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-award",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Award",
+  "keywords": [
+   "prize"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Utmärkelse",
+    "keywords": [
+     "pris",
+     "medalj"
+    ]
+   },
+   "da": {
+    "label": "Udmærkelse",
+    "keywords": [
+     "pris",
+     "medalje"
+    ]
+   },
+   "no": {
+    "label": "Utmerkelse",
+    "keywords": [
+     "pris",
+     "medalje"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"8\" r=\"6\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-gift",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Gift",
+  "keywords": [
+   "present"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Present",
+    "keywords": [
+     "gåva",
+     "paket"
+    ]
+   },
+   "da": {
+    "label": "Gave",
+    "keywords": [
+     "pakke"
+    ]
+   },
+   "no": {
+    "label": "Gave",
+    "keywords": [
+     "pakke"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 7v14\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect rx=\"1\" x=\"3\" y=\"7\" width=\"18\" height=\"4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-tag",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Tag",
+  "keywords": [
+   "price",
+   "label"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Etikett",
+    "keywords": [
+     "pris",
+     "märke"
+    ]
+   },
+   "da": {
+    "label": "Etiket",
+    "keywords": [
+     "pris",
+     "mærke"
+    ]
+   },
+   "no": {
+    "label": "Etikett",
+    "keywords": [
+     "pris",
+     "merke"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-percent",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Percent",
+  "keywords": [
+   "sale",
+   "discount"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Procent",
+    "keywords": [
+     "rea",
+     "rabatt"
+    ]
+   },
+   "da": {
+    "label": "Procent",
+    "keywords": [
+     "udsalg",
+     "rabat"
+    ]
+   },
+   "no": {
+    "label": "Prosent",
+    "keywords": [
+     "salg",
+     "rabatt"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><line x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"6.5\" cy=\"6.5\" r=\"2.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"17.5\" cy=\"17.5\" r=\"2.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-camera",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Camera",
+  "keywords": [
+   "photo"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kamera",
+    "keywords": [
+     "foto",
+     "bild"
+    ]
+   },
+   "da": {
+    "label": "Kamera",
+    "keywords": [
+     "foto",
+     "billede"
+    ]
+   },
+   "no": {
+    "label": "Kamera",
+    "keywords": [
+     "foto",
+     "bilde"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"13\" r=\"3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-coffee",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Coffee",
+  "keywords": [
+   "cafe"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kaffe",
+    "keywords": [
+     "kafé",
+     "fika"
+    ]
+   },
+   "da": {
+    "label": "Kaffe",
+    "keywords": [
+     "café"
+    ]
+   },
+   "no": {
+    "label": "Kaffe",
+    "keywords": [
+     "kafé"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M10 2v2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 2v2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 2v2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-utensils",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Restaurant",
+  "keywords": [
+   "food",
+   "cutlery"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Restaurang",
+    "keywords": [
+     "mat",
+     "bestick"
+    ]
+   },
+   "da": {
+    "label": "Restaurant",
+    "keywords": [
+     "mad",
+     "bestik"
+    ]
+   },
+   "no": {
+    "label": "Restaurant",
+    "keywords": [
+     "mat",
+     "bestikk"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7 2v20\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-scissors",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Scissors",
+  "keywords": [
+   "hair",
+   "salon"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Sax",
+    "keywords": [
+     "frisör",
+     "hår",
+     "salong"
+    ]
+   },
+   "da": {
+    "label": "Saks",
+    "keywords": [
+     "frisør",
+     "hår",
+     "salon"
+    ]
+   },
+   "no": {
+    "label": "Saks",
+    "keywords": [
+     "frisør",
+     "hår",
+     "salong"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"6\" cy=\"6\" r=\"3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8.12 8.12 12 12\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 4 8.12 15.88\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"6\" cy=\"18\" r=\"3\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14.8 14.8 20 20\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "icon-leaf",
+  "lib": "icon",
+  "category": "contacts",
+  "label": "Leaf",
+  "keywords": [
+   "eco",
+   "nature"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Löv",
+    "keywords": [
+     "eko",
+     "natur",
+     "miljö"
+    ]
+   },
+   "da": {
+    "label": "Blad",
+    "keywords": [
+     "øko",
+     "natur",
+     "miljø"
+    ]
+   },
+   "no": {
+    "label": "Blad",
+    "keywords": [
+     "øko",
+     "natur",
+     "miljø"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "emoji-1f600",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Grinning",
+  "keywords": [
+   "grinning",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Flinande",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Grinende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Glisende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><circle cx=\"18\" cy=\"18\" r=\"18\" fill=\"#FFCC4D\"/><path d=\"M18 21c-3.623 0-6.027-.422-9-1-.679-.131-2 0-2 2 0 4 4.595 9 11 9 6.404 0 11-5 11-9 0-2-1.321-2.132-2-2-2.973.578-5.377 1-9 1z\" fill=\"#664500\"/><path d=\"M9 22s3 1 9 1 9-1 9-1-2 4-9 4-9-4-9-4z\" fill=\"#FFF\"/><ellipse cx=\"12\" cy=\"13.5\" rx=\"2.5\" ry=\"3.5\" fill=\"#664500\"/><ellipse cx=\"24\" cy=\"13.5\" rx=\"2.5\" ry=\"3.5\" fill=\"#664500\"/></svg>"
+ },
+ {
+  "id": "emoji-1f603",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Smile",
+  "keywords": [
+   "smile",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Leende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Smilende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Smilende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18-9.94 0-18-8.059-18-18C0 8.06 8.06 0 18 0c9.941 0 18 8.06 18 18\" fill=\"#FFCC4D\"/><ellipse cx=\"11.5\" cy=\"12.5\" rx=\"2.5\" ry=\"5.5\" fill=\"#664500\"/><ellipse cx=\"24.5\" cy=\"12.5\" rx=\"2.5\" ry=\"5.5\" fill=\"#664500\"/><path d=\"M18 22c-3.623 0-6.027-.422-9-1-.679-.131-2 0-2 2 0 4 4.595 9 11 9 6.404 0 11-5 11-9 0-2-1.321-2.132-2-2-2.973.578-5.377 1-9 1z\" fill=\"#664500\"/><path d=\"M9 23s3 1 9 1 9-1 9-1-2 4-9 4-9-4-9-4z\" fill=\"#FFF\"/></svg>"
+ },
+ {
+  "id": "emoji-1f604",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Big smile",
+  "keywords": [
+   "big smile",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Stort leende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Stort smil",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Stort smil",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18-9.94 0-18-8.059-18-18C0 8.06 8.06 0 18 0c9.941 0 18 8.06 18 18\" fill=\"#FFCC4D\"/><path d=\"M28.457 17.797c-.06-.135-1.499-3.297-4.457-3.297-2.957 0-4.397 3.162-4.457 3.297a.503.503 0 0 0 .755.605c.012-.009 1.262-.902 3.702-.902 2.426 0 3.674.881 3.702.901a.498.498 0 0 0 .755-.604zm-12 0c-.06-.135-1.499-3.297-4.457-3.297-2.957 0-4.397 3.162-4.457 3.297a.499.499 0 0 0 .754.605C8.31 18.393 9.559 17.5 12 17.5c2.426 0 3.674.881 3.702.901a.498.498 0 0 0 .755-.604zM18 22c-3.623 0-6.027-.422-9-1-.679-.131-2 0-2 2 0 4 4.595 9 11 9 6.404 0 11-5 11-9 0-2-1.321-2.132-2-2-2.973.578-5.377 1-9 1z\" fill=\"#664500\"/><path d=\"M9 23s3 1 9 1 9-1 9-1-2 4-9 4-9-4-9-4z\" fill=\"#FFF\"/></svg>"
+ },
+ {
+  "id": "emoji-1f601",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Beaming",
+  "keywords": [
+   "beaming",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Strålande",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Strålende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Strålende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18-9.94 0-18-8.059-18-18C0 8.06 8.06 0 18 0c9.941 0 18 8.06 18 18\" fill=\"#FFCC4D\"/><path d=\"M16 18c-.419 0-.809-.265-.949-.684C14.848 16.717 14.034 15 13 15c-1.062 0-1.888 1.827-2.051 2.316a1 1 0 1 1-1.897-.633C9.177 16.307 10.356 13 13 13s3.823 3.307 3.949 3.684A1 1 0 0 1 16 18zm10 0a.999.999 0 0 1-.948-.684C24.849 16.717 24.033 15 23 15c-1.062 0-1.889 1.827-2.052 2.316a1 1 0 0 1-1.897-.633C19.177 16.307 20.355 13 23 13s3.823 3.307 3.948 3.684A1 1 0 0 1 26 18zm-8 4c-3.623 0-6.027-.422-9-1-.679-.131-2 0-2 2 0 4 4.595 9 11 9 6.404 0 11-5 11-9 0-2-1.321-2.132-2-2-2.973.578-5.377 1-9 1z\" fill=\"#664500\"/><path d=\"M9 23s3 1 9 1 9-1 9-1-1.344 6.75-9 6.75S9 23 9 23z\" fill=\"#FFF\"/><path d=\"M18 27.594c-3.596 0-6.272-.372-7.937-.745l-.825-1.871c.823.312 3.889.897 8.763.897 4.954 0 8.037-.616 8.864-.938l-.701 1.842c-1.634.38-4.419.815-8.164.815z\" fill=\"#664500\"/></svg>"
+ },
+ {
+  "id": "emoji-1f60a",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Blush",
+  "keywords": [
+   "blush",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Rodnande",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Rødmende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Rødmende",
+    "keywords": [
+     "glad",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18 8.059 0 18 0s18 8.059 18 18\" fill=\"#FFCC4D\"/><circle cx=\"7\" cy=\"18\" r=\"5\" fill=\"#FF7892\"/><circle cx=\"29\" cy=\"18\" r=\"5\" fill=\"#FF7892\"/><path d=\"M27.335 21.629a.501.501 0 0 0-.635-.029c-.039.029-3.922 2.9-8.7 2.9-4.766 0-8.662-2.871-8.7-2.9a.5.5 0 0 0-.729.657C8.7 22.472 11.788 27.5 18 27.5s9.301-5.028 9.429-5.243a.499.499 0 0 0-.094-.628zM7.999 15a1 1 0 0 1-.893-1.448C7.158 13.448 8.424 11 12 11c3.577 0 4.842 2.449 4.894 2.553a1 1 0 0 1-1.783.906C15.068 14.379 14.281 13 12 13c-2.317 0-3.099 1.433-3.106 1.447a.998.998 0 0 1-.895.553zm20.002 0a1 1 0 0 1-.896-.553C27.08 14.401 26.299 13 24 13s-3.08 1.401-3.112 1.46c-.26.481-.859.67-1.345.42a.994.994 0 0 1-.438-1.328C19.157 13.449 20.423 11 24 11s4.843 2.449 4.895 2.553A1 1 0 0 1 28.001 15z\" fill=\"#664500\"/></svg>"
+ },
+ {
+  "id": "emoji-1f60d",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Heart eyes",
+  "keywords": [
+   "heart eyes",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Hjärtögon",
+    "keywords": [
+     "kär",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Hjerteøjne",
+    "keywords": [
+     "forelsket",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Hjerteøyne",
+    "keywords": [
+     "forelsket",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18 8.059 0 18 0s18 8.059 18 18\" fill=\"#FFCC4D\"/><path d=\"M18 21.849c-2.966 0-4.935-.346-7.369-.819-.557-.106-1.638 0-1.638 1.638 0 3.275 3.763 7.369 9.007 7.369s9.007-4.094 9.007-7.369c0-1.638-1.082-1.745-1.638-1.638-2.434.473-4.402.819-7.369.819\" fill=\"#664500\"/><path d=\"M16.65 3.281a4.666 4.666 0 0 0-8.884.254 4.666 4.666 0 0 0-4.225-.58A4.67 4.67 0 0 0 .692 8.911c.122.344.284.663.472.958 1.951 3.582 7.588 6.1 11.001 6.131 2.637-2.167 5.446-7.665 4.718-11.677a4.712 4.712 0 0 0-.233-1.042zm2.7 0a4.67 4.67 0 0 1 5.956-2.85 4.67 4.67 0 0 1 2.929 3.104 4.666 4.666 0 0 1 4.225-.58 4.671 4.671 0 0 1 2.85 5.956 4.72 4.72 0 0 1-.473.958c-1.951 3.582-7.588 6.1-11.002 6.131-2.637-2.167-5.445-7.665-4.717-11.677.037-.348.112-.698.232-1.042z\" fill=\"#DD2E44\"/></svg>"
+ },
+ {
+  "id": "emoji-1f60e",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Sunglasses",
+  "keywords": [
+   "sunglasses",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Solglasögon",
+    "keywords": [
+     "cool",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Solbriller",
+    "keywords": [
+     "cool",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Solbriller",
+    "keywords": [
+     "kul",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18 8.059 0 18 0s18 8.059 18 18\" fill=\"#FFCC4D\"/><path d=\"M1.24 11.018c.24.239 1.438.957 1.677 1.675.24.717.72 4.784 2.158 5.981 1.483 1.232 7.077.774 8.148.24 2.397-1.195 2.691-4.531 3.115-6.221.239-.957 1.677-.957 1.677-.957s1.438 0 1.678.956c.424 1.691.72 5.027 3.115 6.221 1.072.535 6.666.994 8.151-.238 1.436-1.197 1.915-5.264 2.155-5.982.238-.717 1.438-1.435 1.677-1.674.241-.239.241-1.196 0-1.436-.479-.478-6.134-.904-12.223-.239-1.215.133-1.677.478-4.554.478-2.875 0-3.339-.346-4.553-.478-6.085-.666-11.741-.24-12.221.238-.239.239-.239 1.197 0 1.436z\" fill=\"#292F33\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"/><path d=\"M27.335 23.629a.501.501 0 0 0-.635-.029c-.039.029-3.922 2.9-8.7 2.9-4.766 0-8.662-2.871-8.7-2.9a.5.5 0 0 0-.729.657C8.7 24.472 11.788 29.5 18 29.5s9.301-5.028 9.429-5.243a.499.499 0 0 0-.094-.628z\" fill=\"#664500\"/></svg>"
+ },
+ {
+  "id": "emoji-1f929",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Star struck",
+  "keywords": [
+   "star struck",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Stjärnögon",
+    "keywords": [
+     "imponerad",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Stjerneøjne",
+    "keywords": [
+     "imponeret",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Stjerneøyne",
+    "keywords": [
+     "imponert",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18 8.059 0 18 0s18 8.059 18 18\" fill=\"#FFCC4D\"/><path d=\"M18 21c-3.623 0-6.027-.422-9-1-.679-.131-2 0-2 2 0 4 4.595 9 11 9 6.404 0 11-5 11-9 0-2-1.321-2.132-2-2-2.973.578-5.377 1-9 1z\" fill=\"#664500\"/><path d=\"M9 22s3 1 9 1 9-1 9-1-2 4-9 4-9-4-9-4z\" fill=\"#FFF\"/><path d=\"m15.682 4.413-4.542.801L8.8.961a1.252 1.252 0 0 0-2.331.411l-.745 4.797-4.542.801a1.25 1.25 0 0 0-.318 2.361l4.07 1.932-.748 4.812a1.253 1.253 0 0 0 1.235 1.442c.327 0 .65-.128.891-.372l3.512-3.561 4.518 2.145a1.25 1.25 0 0 0 1.631-1.731L13.625 9.73l3.165-3.208a1.252 1.252 0 0 0-1.108-2.109zm4.636 0 4.542.801L27.2.961a1.251 1.251 0 0 1 2.33.411l.745 4.797 4.542.801c.536.094.949.524 1.021 1.063s-.211 1.063-.703 1.297l-4.07 1.932.748 4.812a1.253 1.253 0 0 1-1.235 1.442c-.327 0-.65-.128-.891-.372l-3.512-3.561-4.518 2.145a1.25 1.25 0 0 1-1.631-1.731l2.348-4.267-3.165-3.208a1.252 1.252 0 0 1-.217-1.459 1.259 1.259 0 0 1 1.326-.65z\" fill=\"#E95F28\"/></svg>"
+ },
+ {
+  "id": "emoji-1f602",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Tears of joy",
+  "keywords": [
+   "tears of joy",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Glädjetårar",
+    "keywords": [
+     "skratt",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Glædestårer",
+    "keywords": [
+     "grin",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Gledestårer",
+    "keywords": [
+     "latter",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 18c0 9.941-8.059 18-18 18-9.94 0-18-8.059-18-18C0 8.06 8.06 0 18 0c9.941 0 18 8.06 18 18\" fill=\"#FFCC4D\"/><path d=\"M28.457 17.797c-.06-.135-1.499-3.297-4.457-3.297-2.957 0-4.397 3.162-4.457 3.297a.503.503 0 0 0 .755.605c.012-.009 1.262-.902 3.702-.902 2.426 0 3.674.881 3.702.901a.498.498 0 0 0 .755-.604zm-12 0c-.06-.135-1.499-3.297-4.457-3.297-2.957 0-4.397 3.162-4.457 3.297a.499.499 0 0 0 .754.605C8.31 18.393 9.559 17.5 12 17.5c2.426 0 3.674.881 3.702.901a.498.498 0 0 0 .755-.604zM31 16c-.396 0-.772-.238-.929-.629-1.778-4.445-6.223-5.381-6.268-5.391a1 1 0 1 1 .393-1.961c.226.045 5.556 1.168 7.732 6.608A1 1 0 0 1 31 16zM5 16a1 1 0 0 1-.928-1.372c2.176-5.44 7.506-6.563 7.732-6.608a1 1 0 0 1 .396 1.96c-.185.038-4.506.98-6.271 5.391A1.002 1.002 0 0 1 5 16zm13 6c-3.623 0-6.027-.422-9-1-.679-.131-2 0-2 2 0 4 4.595 9 11 9 6.404 0 11-5 11-9 0-2-1.321-2.132-2-2-2.973.578-5.377 1-9 1z\" fill=\"#664500\"/><path d=\"M9 23s3 1 9 1 9-1 9-1-2 4-9 4-9-4-9-4z\" fill=\"#FFF\"/><path d=\"M10.847 28.229a5 5 0 0 1-9.693-2.461c.679-2.677 6.337-8.708 7.307-8.462.97.247 3.065 8.247 2.386 10.923zm14.286 0a5 5 0 0 0 6.077 3.615 4.998 4.998 0 0 0 3.616-6.076c-.68-2.677-6.338-8.708-7.308-8.462-.968.247-3.064 8.247-2.385 10.923z\" fill=\"#5DADEC\"/></svg>"
+ },
+ {
+  "id": "emoji-1f973",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Party",
+  "keywords": [
+   "party",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Fest",
+    "keywords": [
+     "kalas",
+     "smiley"
+    ]
+   },
+   "da": {
+    "label": "Fest",
+    "keywords": [
+     "fejring",
+     "smiley"
+    ]
+   },
+   "no": {
+    "label": "Fest",
+    "keywords": [
+     "feiring",
+     "smiley"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><circle cx=\"17\" cy=\"19\" r=\"17\" fill=\"#FFCC4D\"/><ellipse cx=\"17.999\" cy=\"26\" rx=\"2\" ry=\"2.5\" fill=\"#664500\"/><path d=\"M8.111 21.383a1 1 0 0 1-.845-1.533c.916-1.453 3.701-3.938 7.69-2.962a1 1 0 0 1-.476 1.942c-3.604-.882-5.502 2.056-5.521 2.086a1.001 1.001 0 0 1-.848.467zm11.973-3.742a1 1 0 0 1-.634-1.774c3.176-2.604 6.762-1.562 8.215-.646a1 1 0 0 1-1.064 1.694c-.138-.084-3.052-1.823-5.884.499a.992.992 0 0 1-.633.227z\" fill=\"#664500\"/><path d=\"M13.346 31.273a.75.75 0 0 1-.722-.954c.437-1.54.258-3.029-.49-4.086-.497-.702-1.205-1.131-1.943-1.178-.414-.025-.728-.382-.702-.795s.381-.751.795-.701c1.193.074 2.313.733 3.073 1.807 1.011 1.429 1.27 3.383.709 5.361a.749.749 0 0 1-.72.546zm11.037-3.061a.744.744 0 0 1-.412-.124c-1.167-.77-1.82-2.117-1.792-3.695.029-1.635.809-3.153 1.984-3.869a.748.748 0 0 1 1.03.251.748.748 0 0 1-.251 1.03c-.735.448-1.244 1.499-1.264 2.614-.02 1.055.389 1.936 1.118 2.417a.75.75 0 0 1-.413 1.376z\" fill=\"#E2A62D\"/><path d=\"M17.179 2.72a.325.325 0 0 0-.189-.091S1.066-.394.377.214C-.311.823.74 16.998.74 16.998c.005.081.023.15.067.199.604.684 4.758-2.004 9.279-6.001 4.522-3.998 7.697-7.792 7.093-8.476z\" fill=\"#DD2E44\"/><path d=\"M.349.271a.486.486 0 0 0-.038.123C.47 1.765 2.006 13.046 2.963 16.572c1.436-.803 2.895-1.894 4.609-3.253C6.116 10.654 1.158.146.349.271z\" fill=\"#EA596E\"/><path d=\"m29.902 29.229-10.573-1.303c-1.13-.102-3.117-.112-3.015-1.902.093-1.623 2.04-1.373 3.479-1.16l10.638 1.774-.529 2.591z\" fill=\"#3B88C3\"/><path d=\"m30.43 26.639-4.222-.724c-.494-.089-.934.647-.956 1.426-.025.866.227 1.304.726 1.406l4.144.512.308-2.62z\" fill=\"#88C9F9\"/><path d=\"m34.918 26.341-2.622 2.411-4.687-5.097 2.622-2.411a3.372 3.372 0 0 1 4.751.199l.135.147a3.373 3.373 0 0 1-.199 4.751z\" fill=\"#3B88C3\"/><ellipse cx=\"29.952\" cy=\"26.203\" rx=\"2.77\" ry=\"3.462\" transform=\"rotate(-42.597 29.954 26.205)\" fill=\"#88C9F9\"/><ellipse cx=\"29.952\" cy=\"26.203\" rx=\"1.385\" ry=\"2.077\" transform=\"rotate(-42.597 29.954 26.205)\" fill=\"#269\"/><circle cx=\"2.5\" cy=\"33.5\" r=\"1.5\" fill=\"#55ACEE\"/><circle cx=\"29\" cy=\"2\" r=\"2\" fill=\"#55ACEE\"/><path d=\"M4.864 29.246 2.526 23.63.412 29.675zM26 5l-4 1 1-4z\" fill=\"#EA596E\"/><path d=\"M31.999 13 36 7.999 33 6z\" fill=\"#77B255\"/></svg>"
+ },
+ {
+  "id": "emoji-1f44d",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Thumbs up",
+  "keywords": [
+   "thumbs up",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Tummen upp",
+    "keywords": [
+     "gilla"
+    ]
+   },
+   "da": {
+    "label": "Tommel op",
+    "keywords": [
+     "synes godt om"
+    ]
+   },
+   "no": {
+    "label": "Tommel opp",
+    "keywords": [
+     "liker"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M34.956 17.916c0-.503-.12-.975-.321-1.404-1.341-4.326-7.619-4.01-16.549-4.221-1.493-.035-.639-1.798-.115-5.668.341-2.517-1.282-6.382-4.01-6.382-4.498 0-.171 3.548-4.148 12.322-2.125 4.688-6.875 2.062-6.875 6.771v10.719c0 1.833.18 3.595 2.758 3.885C8.195 34.219 7.633 36 11.238 36h18.044a3.337 3.337 0 0 0 3.333-3.334c0-.762-.267-1.456-.698-2.018 1.02-.571 1.72-1.649 1.72-2.899 0-.76-.266-1.454-.696-2.015 1.023-.57 1.725-1.649 1.725-2.901 0-.909-.368-1.733-.961-2.336a3.311 3.311 0 0 0 1.251-2.581z\" fill=\"#FFDB5E\"/><path d=\"M23.02 21.249h8.604c1.17 0 2.268-.626 2.866-1.633a.876.876 0 0 0-1.506-.892 1.588 1.588 0 0 1-1.361.775h-8.81c-.873 0-1.583-.71-1.583-1.583s.71-1.583 1.583-1.583H28.7a.875.875 0 0 0 0-1.75h-5.888a3.337 3.337 0 0 0-3.333 3.333c0 1.025.475 1.932 1.205 2.544a3.32 3.32 0 0 0-.998 2.373c0 1.028.478 1.938 1.212 2.549a3.318 3.318 0 0 0 .419 5.08 3.305 3.305 0 0 0-.852 2.204 3.337 3.337 0 0 0 3.333 3.333h5.484a3.35 3.35 0 0 0 2.867-1.632.875.875 0 0 0-1.504-.894 1.594 1.594 0 0 1-1.363.776h-5.484c-.873 0-1.583-.71-1.583-1.583s.71-1.583 1.583-1.583h6.506a3.35 3.35 0 0 0 2.867-1.633.875.875 0 1 0-1.504-.894 1.572 1.572 0 0 1-1.363.777h-7.063a1.585 1.585 0 0 1 0-3.167h8.091a3.35 3.35 0 0 0 2.867-1.632.875.875 0 0 0-1.504-.894 1.573 1.573 0 0 1-1.363.776H23.02a1.585 1.585 0 0 1 0-3.167z\" fill=\"#EE9547\"/></svg>"
+ },
+ {
+  "id": "emoji-1f44f",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Clapping",
+  "keywords": [
+   "clapping",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Applåd",
+    "keywords": [
+     "klappa händerna"
+    ]
+   },
+   "da": {
+    "label": "Klapsalve",
+    "keywords": [
+     "klappe"
+    ]
+   },
+   "no": {
+    "label": "Applaus",
+    "keywords": [
+     "klappe"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M32.302 24.347c-.695-1.01-.307-2.47-.48-4.082-.178-2.63-1.308-5.178-3.5-7.216l-7.466-6.942s-1.471-1.369-2.841.103c-1.368 1.471.104 2.84.104 2.84l3.154 2.934 2.734 2.542s-.685.736-3.711-2.078l-10.22-9.506s-1.473-1.368-2.842.104c-1.368 1.471.103 2.84.103 2.84l9.664 8.989c-.021-.02-.731.692-.744.68L5.917 5.938s-1.472-1.369-2.841.103c-1.369 1.472.103 2.84.103 2.84L13.52 18.5c.012.012-.654.764-.634.783l-8.92-8.298s-1.472-1.369-2.841.103c-1.369 1.472.103 2.841.103 2.841l9.484 8.82c.087.081-.5.908-.391 1.009l-6.834-6.356s-1.472-1.369-2.841.104c-1.369 1.472.103 2.841.103 2.841L11.896 30.71c1.861 1.731 3.772 2.607 6.076 2.928.469.065 1.069.065 1.315.096.777.098 1.459.374 2.372.934 1.175.72 2.938 1.02 3.951-.063l3.454-3.695 3.189-3.412c1.012-1.082.831-2.016.049-3.151z\" fill=\"#EF9645\"/><path d=\"M1.956 35.026a.999.999 0 0 1-.707-1.707L4.8 29.77a.999.999 0 1 1 1.414 1.414l-3.551 3.55a.996.996 0 0 1-.707.292zm6.746.922a.999.999 0 0 1-.944-1.33l.971-2.773a1 1 0 1 1 1.887.66l-.971 2.773a1 1 0 0 1-.943.67zm-7.667-7.667a1.001 1.001 0 0 1-.333-1.943l2.495-.881a1 1 0 1 1 .666 1.886l-2.495.881a1.001 1.001 0 0 1-.333.057zm29.46-21.767a1 1 0 0 1-.707-1.708l3.552-3.55a1 1 0 0 1 1.414 1.415l-3.552 3.55a.993.993 0 0 1-.707.293zm-4.164-1.697a1 1 0 0 1-.944-1.331l.97-2.773a1 1 0 0 1 1.888.66l-.97 2.773a1 1 0 0 1-.944.671zm6.143 5.774a1.001 1.001 0 0 1-.333-1.943l2.494-.881a1 1 0 1 1 .666 1.886l-2.494.881a1.001 1.001 0 0 1-.333.057z\" fill=\"#FA743E\"/><path d=\"M35.39 23.822c-.661-1.032-.224-2.479-.342-4.096-.09-2.634-1.133-5.219-3.255-7.33l-7.228-7.189s-1.424-1.417-2.843.008c-1.417 1.424.008 2.842.008 2.842l3.054 3.039 2.646 2.632s-.71.712-3.639-2.202c-2.931-2.915-9.894-9.845-9.894-9.845s-1.425-1.417-2.843.008c-1.418 1.424.007 2.841.007 2.841l9.356 9.31c-.02-.02-.754.667-.767.654L9.64 4.534s-1.425-1.418-2.843.007c-1.417 1.425.007 2.842.007 2.842l10.011 9.962c.012.012-.68.741-.66.761L7.52 9.513s-1.425-1.417-2.843.008.007 2.843.007 2.843l9.181 9.135c.084.083-.53.891-.425.996l-6.616-6.583s-1.425-1.417-2.843.008.007 2.843.007 2.843l10.79 10.732c1.802 1.793 3.682 2.732 5.974 3.131.467.081 1.067.101 1.311.14.773.124 1.445.423 2.34 1.014 1.15.759 2.902 1.118 3.951.07l3.577-3.576 3.302-3.302c1.049-1.05.9-1.99.157-3.15z\" fill=\"#FFDB5E\"/></svg>"
+ },
+ {
+  "id": "emoji-1f64c",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Raised hands",
+  "keywords": [
+   "raised hands",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Händerna i luften",
+    "keywords": [
+     "hurra"
+    ]
+   },
+   "da": {
+    "label": "Hænderne i vejret",
+    "keywords": [
+     "hurra"
+    ]
+   },
+   "no": {
+    "label": "Hendene i været",
+    "keywords": [
+     "hurra"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M3 26h8v10H3zm22 0h8v10h-8z\" fill=\"#FFDC5D\"/><path d=\"M33 28.72s-3 2-8 1v-5h8v4zm-30 0s3 2 8 1v-5H3v4z\" fill=\"#F9CA55\"/><path d=\"M3.983 18.604h8v8h-8zm20.023-.5h8v8h-8z\" fill=\"#EF9645\"/><path d=\"M.373 11.835S.376 10.61 1.6 10.613c1.226.004 1.222 1.229 1.222 1.229l-.019 5.684a5.66 5.66 0 0 1 .613-.241l.025-7.889s.004-1.225 1.227-1.221c1.224.003 1.221 1.229 1.221 1.229l-.021 7.42c.199-.018.404-.032.61-.042l.028-8.602s.003-1.225 1.228-1.22c1.225.004 1.22 1.229 1.22 1.229l-.028 8.6c.21.012.412.033.614.052l.025-8.039s.004-1.225 1.227-1.22c1.224.003 1.219 1.227 1.219 1.227l-.024 8.501-.003.681v.611c-3.674-.009-6.133 3.042-6.144 6.104 0 .612.612.616.612.616.01-3.678 2.467-6.115 6.142-6.104l1.801-4.188s.395-1.159 1.556-.762c1.158.392.765 1.553.765 1.553l-.893 3.105c-.354 1.234-.685 2.476-.859 3.744A7.353 7.353 0 0 1 7.665 29C3.61 28.983.33 25.685.343 21.63a6.16 6.16 0 0 1 .034-.61l-.032-.004.028-9.181zm35.244 0s-.003-1.225-1.227-1.222c-1.226.004-1.223 1.229-1.223 1.229l.019 5.684a5.644 5.644 0 0 0-.612-.241l-.025-7.889s-.004-1.225-1.227-1.221c-1.225.003-1.222 1.229-1.222 1.229l.022 7.42a14.492 14.492 0 0 0-.61-.042l-.027-8.602s-.004-1.225-1.229-1.22c-1.225.004-1.22 1.229-1.22 1.229l.028 8.6c-.21.012-.412.033-.614.052l-.025-8.039s-.005-1.225-1.228-1.22c-1.224.003-1.219 1.227-1.219 1.227l.024 8.501.003.681v.611c3.674-.009 6.133 3.042 6.145 6.104 0 .612-.612.616-.612.616-.011-3.678-2.468-6.115-6.142-6.104l-1.801-4.188s-.394-1.159-1.556-.762c-1.157.392-.765 1.553-.765 1.553l.893 3.105c.354 1.234.685 2.476.859 3.744A7.353 7.353 0 0 0 28.325 29c4.055-.017 7.336-3.315 7.322-7.37a6.16 6.16 0 0 0-.034-.61l.032-.004-.028-9.181z\" fill=\"#FFDC5D\"/><path d=\"M23.541 6.458a1 1 0 0 1-.79-1.611L25.73.992a1 1 0 1 1 1.582 1.223L24.333 6.07a.995.995 0 0 1-.792.388zm-11.02 0a.999.999 0 0 1-.792-.389L8.75 2.215A1.001 1.001 0 0 1 10.334.992l2.979 3.855a1.001 1.001 0 0 1-.792 1.611zM18 6a1 1 0 0 1-1-1V1a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1z\" fill=\"#5DADEC\"/></svg>"
+ },
+ {
+  "id": "emoji-1f64f",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Thank you",
+  "keywords": [
+   "thank you",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Tack",
+    "keywords": [
+     "tacksam"
+    ]
+   },
+   "da": {
+    "label": "Tak",
+    "keywords": [
+     "taknemmelig"
+    ]
+   },
+   "no": {
+    "label": "Takk",
+    "keywords": [
+     "takknemlig"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M30 22c-3 0-6.688 7.094-7 10-.421 3.915 2 4 2 4h11V26s-3.438-4-6-4z\" fill=\"#50A5E6\"/><ellipse cx=\"27.574\" cy=\"28.489\" rx=\"5.848\" ry=\"1.638\" transform=\"rotate(-60 27.574 28.49)\" fill=\"#1C6399\"/><path d=\"M20.086 0c1.181 0 2.138.957 2.138 2.138 0 .789.668 10.824.668 10.824L17.948 18V2.138C17.948.957 18.905 0 20.086 0z\" fill=\"#F9CA55\"/><path d=\"M18.875 4.323c0-1.099.852-1.989 1.903-1.989 1.051 0 1.903.891 1.903 1.989 0 0 .535 5.942 1.192 9.37.878 1.866 1.369 4.682 1.261 6.248.054.398 5.625 5.006 5.625 5.006-.281 1.813-2.259 6.155-4.759 8.159l-3.521-2.924c-2.885-.404-4.458-3.331-4.458-4.264 0-2.984.854-21.595.854-21.595z\" fill=\"#FFDC5D\"/><path d=\"M6 22c3 0 6.688 7.094 7 10 .421 3.915-2 4-2 4H0V26s3.438-4 6-4z\" fill=\"#50A5E6\"/><ellipse cx=\"8.426\" cy=\"28.489\" rx=\"1.638\" ry=\"5.848\" transform=\"rotate(-30 8.424 28.489)\" fill=\"#1C6399\"/><path d=\"M16.061.011a2.115 2.115 0 0 0-2.333 2.103c0 .78-.184 10.319-.184 10.319L17.895 18l.062-15.765c0-1.106-.795-2.114-1.896-2.224z\" fill=\"#F9CA55\"/><path d=\"M17.125 4.323c0-1.099-.852-1.989-1.903-1.989-1.051 0-1.903.891-1.903 1.989 0 0-.535 5.942-1.192 9.37-.878 1.866-1.369 4.682-1.261 6.248-.054.398-5.625 5.006-5.625 5.006C5.522 26.76 7.5 31.102 10 33.106l3.521-2.924c2.885-.404 4.458-3.331 4.458-4.264 0-2.984-.854-21.595-.854-21.595z\" fill=\"#FFDC5D\"/><path d=\"M17.958 25.823a.75.75 0 0 1-.75-.75V2.792a.75.75 0 0 1 1.5 0v22.282a.749.749 0 0 1-.75.749z\" fill=\"#F9CA55\"/></svg>"
+ },
+ {
+  "id": "emoji-2764",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Red heart",
+  "keywords": [
+   "red heart",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Rött hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Rødt hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Rødt hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z\" fill=\"#DD2E44\"/></svg>"
+ },
+ {
+  "id": "emoji-1f499",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Blue heart",
+  "keywords": [
+   "blue heart",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Blått hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Blåt hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Blått hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z\" fill=\"#5DADEC\"/></svg>"
+ },
+ {
+  "id": "emoji-1f49a",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Green heart",
+  "keywords": [
+   "green heart",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Grönt hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Grønt hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Grønt hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z\" fill=\"#78B159\"/></svg>"
+ },
+ {
+  "id": "emoji-1f49b",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Yellow heart",
+  "keywords": [
+   "yellow heart",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Gult hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Gult hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Gult hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z\" fill=\"#FDCB58\"/></svg>"
+ },
+ {
+  "id": "emoji-1f9e1",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Orange heart",
+  "keywords": [
+   "orange heart",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Orange hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Orange hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Oransje hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z\" fill=\"#F4900C\"/></svg>"
+ },
+ {
+  "id": "emoji-1f49c",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Purple heart",
+  "keywords": [
+   "purple heart",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Lila hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Lilla hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Lilla hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z\" fill=\"#AA8ED6\"/></svg>"
+ },
+ {
+  "id": "emoji-2b50",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Star",
+  "keywords": [
+   "star",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Stjärna",
+    "keywords": []
+   },
+   "da": {
+    "label": "Stjerne",
+    "keywords": []
+   },
+   "no": {
+    "label": "Stjerne",
+    "keywords": []
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008 1.971 1.971 0 0 1-.721-2.194l3.034-9.792-8.062-5.681a1.98 1.98 0 0 1-.708-2.203 1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681 3.034 9.792a1.97 1.97 0 0 1-.72 2.194 1.957 1.957 0 0 1-1.16.379z\" fill=\"#FFAC33\"/></svg>"
+ },
+ {
+  "id": "emoji-1f31f",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Glowing star",
+  "keywords": [
+   "glowing star",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Glittrande stjärna",
+    "keywords": [
+     "stjärna"
+    ]
+   },
+   "da": {
+    "label": "Glitrende stjerne",
+    "keywords": [
+     "stjerne"
+    ]
+   },
+   "no": {
+    "label": "Glitrende stjerne",
+    "keywords": [
+     "stjerne"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M28.84 17.638c-.987 1.044-1.633 3.067-1.438 4.493l.892 6.441c.197 1.427-.701 2.087-1.996 1.469l-5.851-2.796c-1.295-.62-3.408-.611-4.7.018l-5.826 2.842c-1.291.629-2.193-.026-2.007-1.452l.843-6.449c.186-1.427-.475-3.444-1.47-4.481l-4.494-4.688c-.996-1.037-.655-2.102.755-2.365l6.37-1.188c1.41-.263 3.116-1.518 3.793-2.789L16.762.956c.675-1.271 1.789-1.274 2.473-.009L22.33 6.66c.686 1.265 2.4 2.507 3.814 2.758l6.378 1.141c1.412.252 1.761 1.314.774 2.359l-4.456 4.72z\" fill=\"#FFAC33\"/><path d=\"M9.783 2.181c1.023 1.413 2.446 4.917 1.717 5.447-.728.531-3.607-1.91-4.63-3.323-1.022-1.413-.935-2.668-.131-3.254.804-.587 2.02-.282 3.044 1.13zm19.348 2.124C28.109 5.718 25.23 8.16 24.5 7.627c-.729-.53.695-4.033 1.719-5.445C27.242.768 28.457.463 29.262 1.051c.803.586.89 1.841-.131 3.254zM16.625 33.291c-.001-1.746.898-5.421 1.801-5.421.897 0 1.798 3.675 1.797 5.42 0 1.747-.804 2.712-1.8 2.71-.994.002-1.798-.962-1.798-2.709zm16.179-9.262c-1.655-.539-4.858-2.533-4.579-3.395.277-.858 4.037-.581 5.69-.041 1.655.54 2.321 1.605 2.013 2.556-.308.95-1.469 1.42-3.124.88zM2.083 20.594c1.655-.54 5.414-.817 5.694.044.276.857-2.928 2.854-4.581 3.392-1.654.54-2.818.07-3.123-.88-.308-.95.354-2.015 2.01-2.556z\" fill=\"#FFD983\"/></svg>"
+ },
+ {
+  "id": "emoji-2728",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Sparkles",
+  "keywords": [
+   "sparkles",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Gnistor",
+    "keywords": [
+     "glitter"
+    ]
+   },
+   "da": {
+    "label": "Gnister",
+    "keywords": [
+     "glimmer"
+    ]
+   },
+   "no": {
+    "label": "Gnister",
+    "keywords": [
+     "glitter"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"m34.347 16.893-8.899-3.294-3.323-10.891a1 1 0 0 0-1.912 0l-3.322 10.891-8.9 3.294a1 1 0 0 0 0 1.876l8.895 3.293 3.324 11.223a1 1 0 0 0 1.918-.001l3.324-11.223 8.896-3.293a.998.998 0 0 0-.001-1.875z\" fill=\"#FFAC33\"/><path d=\"m14.347 27.894-2.314-.856-.9-3.3a.998.998 0 0 0-1.929-.001l-.9 3.3-2.313.856a1 1 0 0 0 0 1.876l2.301.853.907 3.622a1 1 0 0 0 1.94-.001l.907-3.622 2.301-.853a.997.997 0 0 0 0-1.874zM10.009 6.231l-2.364-.875-.876-2.365a.999.999 0 0 0-1.876 0l-.875 2.365-2.365.875a1 1 0 0 0 0 1.876l2.365.875.875 2.365a1 1 0 0 0 1.876 0l.875-2.365 2.365-.875a1 1 0 0 0 0-1.876z\" fill=\"#FFCC4D\"/></svg>"
+ },
+ {
+  "id": "emoji-1f525",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Fire",
+  "keywords": [
+   "fire",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Eld",
+    "keywords": [
+     "låga",
+     "het"
+    ]
+   },
+   "da": {
+    "label": "Ild",
+    "keywords": [
+     "flamme",
+     "hot",
+     "varm",
+     "hed"
+    ]
+   },
+   "no": {
+    "label": "Ild",
+    "keywords": [
+     "flamme",
+     "het"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M35 19a16.96 16.96 0 0 0-1.04-5.868c-.46 5.389-3.333 8.157-6.335 6.868-2.812-1.208-.917-5.917-.777-8.164.236-3.809-.012-8.169-6.931-11.794 2.875 5.5.333 8.917-2.333 9.125-2.958.231-5.667-2.542-4.667-7.042-3.238 2.386-3.332 6.402-2.333 9 1.042 2.708-.042 4.958-2.583 5.208-2.84.28-4.418-3.041-2.963-8.333A16.936 16.936 0 0 0 1 19c0 9.389 7.611 17 17 17s17-7.611 17-17z\" fill=\"#F4900C\"/><path d=\"M28.394 23.999c.148 3.084-2.561 4.293-4.019 3.709-2.106-.843-1.541-2.291-2.083-5.291s-2.625-5.083-5.708-6c2.25 6.333-1.247 8.667-3.08 9.084-1.872.426-3.753-.001-3.968-4.007A11.964 11.964 0 0 0 6 30c0 .368.023.73.055 1.09C9.125 34.124 13.342 36 18 36s8.875-1.876 11.945-4.91c.032-.36.055-.722.055-1.09 0-2.187-.584-4.236-1.606-6.001z\" fill=\"#FFCC4D\"/></svg>"
+ },
+ {
+  "id": "emoji-1f389",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Party popper",
+  "keywords": [
+   "party popper",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Konfetti",
+    "keywords": [
+     "fest",
+     "firande"
+    ]
+   },
+   "da": {
+    "label": "Konfetti",
+    "keywords": [
+     "fest",
+     "fejring"
+    ]
+   },
+   "no": {
+    "label": "Konfetti",
+    "keywords": [
+     "fest",
+     "feiring"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M11.626 7.488a1.413 1.413 0 0 0-.268.395l-.008-.008L.134 33.141l.011.011c-.208.403.14 1.223.853 1.937.713.713 1.533 1.061 1.936.853l.01.01L28.21 24.735l-.008-.009c.147-.07.282-.155.395-.269 1.562-1.562-.971-6.627-5.656-11.313-4.687-4.686-9.752-7.218-11.315-5.656z\" fill=\"#DD2E44\"/><path d=\"M13 12 .416 32.506l-.282.635.011.011c-.208.403.14 1.223.853 1.937.232.232.473.408.709.557L17 17l-4-5z\" fill=\"#EA596E\"/><path d=\"M23.012 13.066c4.67 4.672 7.263 9.652 5.789 11.124-1.473 1.474-6.453-1.118-11.126-5.788-4.671-4.672-7.263-9.654-5.79-11.127 1.474-1.473 6.454 1.119 11.127 5.791z\" fill=\"#A0041E\"/><path d=\"M18.59 13.609a.99.99 0 0 1-.734.215c-.868-.094-1.598-.396-2.109-.873-.541-.505-.808-1.183-.735-1.862.128-1.192 1.324-2.286 3.363-2.066.793.085 1.147-.17 1.159-.292.014-.121-.277-.446-1.07-.532-.868-.094-1.598-.396-2.11-.873-.541-.505-.809-1.183-.735-1.862.13-1.192 1.325-2.286 3.362-2.065.578.062.883-.057 1.012-.134.103-.063.144-.123.148-.158.012-.121-.275-.446-1.07-.532a.998.998 0 0 1-.886-1.102.997.997 0 0 1 1.101-.886c2.037.219 2.973 1.542 2.844 2.735-.13 1.194-1.325 2.286-3.364 2.067-.578-.063-.88.057-1.01.134-.103.062-.145.123-.149.157-.013.122.276.446 1.071.532 2.037.22 2.973 1.542 2.844 2.735-.129 1.192-1.324 2.286-3.362 2.065-.578-.062-.882.058-1.012.134-.104.064-.144.124-.148.158-.013.121.276.446 1.07.532a1 1 0 0 1 .52 1.773z\" fill=\"#AA8DD8\"/><path d=\"M30.661 22.857c1.973-.557 3.334.323 3.658 1.478.324 1.154-.378 2.615-2.35 3.17-.77.216-1.001.584-.97.701.034.118.425.312 1.193.095 1.972-.555 3.333.325 3.657 1.479.326 1.155-.378 2.614-2.351 3.17-.769.216-1.001.585-.967.702.033.117.423.311 1.192.095a1 1 0 1 1 .54 1.925c-1.971.555-3.333-.323-3.659-1.479-.324-1.154.379-2.613 2.353-3.169.77-.217 1.001-.584.967-.702-.032-.117-.422-.312-1.19-.096-1.974.556-3.334-.322-3.659-1.479-.325-1.154.378-2.613 2.351-3.17.768-.215.999-.585.967-.701-.034-.118-.423-.312-1.192-.096a1 1 0 1 1-.54-1.923z\" fill=\"#77B255\"/><path d=\"M23.001 20.16a1.001 1.001 0 0 1-.626-1.781c.218-.175 5.418-4.259 12.767-3.208a1 1 0 1 1-.283 1.979c-6.493-.922-11.187 2.754-11.233 2.791a.999.999 0 0 1-.625.219z\" fill=\"#AA8DD8\"/><path d=\"M5.754 16a1 1 0 0 1-.958-1.287c1.133-3.773 2.16-9.794.898-11.364-.141-.178-.354-.353-.842-.316-.938.072-.849 2.051-.848 2.071a1 1 0 1 1-1.994.149c-.103-1.379.326-4.035 2.692-4.214 1.056-.08 1.933.287 2.552 1.057 2.371 2.951-.036 11.506-.542 13.192a1 1 0 0 1-.958.712z\" fill=\"#77B255\"/><circle cx=\"25.5\" cy=\"9.5\" r=\"1.5\" fill=\"#5C913B\"/><circle cx=\"2\" cy=\"18\" r=\"2\" fill=\"#9266CC\"/><circle cx=\"32.5\" cy=\"19.5\" r=\"1.5\" fill=\"#5C913B\"/><circle cx=\"23.5\" cy=\"31.5\" r=\"1.5\" fill=\"#5C913B\"/><circle cx=\"28\" cy=\"4\" r=\"2\" fill=\"#FFCC4D\"/><circle cx=\"32.5\" cy=\"8.5\" r=\"1.5\" fill=\"#FFCC4D\"/><circle cx=\"29.5\" cy=\"12.5\" r=\"1.5\" fill=\"#FFCC4D\"/><circle cx=\"7.5\" cy=\"23.5\" r=\"1.5\" fill=\"#FFCC4D\"/></svg>"
+ },
+ {
+  "id": "emoji-1f381",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Gift",
+  "keywords": [
+   "gift",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Present",
+    "keywords": [
+     "gåva",
+     "paket"
+    ]
+   },
+   "da": {
+    "label": "Gave",
+    "keywords": [
+     "pakke"
+    ]
+   },
+   "no": {
+    "label": "Gave",
+    "keywords": [
+     "pakke"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M33 31c0 2.2-1.8 4-4 4H7c-2.2 0-4-1.8-4-4V14c0-2.2 1.8-4 4-4h22c2.2 0 4 1.8 4 4v17z\" fill=\"#FDD888\"/><path d=\"M36 11c0 2.2-1.8 4-4 4H4c-2.2 0-4-1.8-4-4s1.8-4 4-4h28c2.2 0 4 1.8 4 4z\" fill=\"#FDD888\"/><path d=\"M3 15h30v2H3z\" fill=\"#FCAB40\"/><path d=\"M19 3h-2a3 3 0 0 0-3 3v29h8V6a3 3 0 0 0-3-3z\" fill=\"#DA2F47\"/><path d=\"M16 7c1.1 0 1.263-.516.361-1.147L9.639 1.147a1.795 1.795 0 0 0-2.631.589L4.992 5.264C4.446 6.219 4.9 7 6 7h10zm4 0c-1.1 0-1.263-.516-.361-1.147l6.723-4.706a1.796 1.796 0 0 1 2.631.589l2.016 3.527C31.554 6.219 31.1 7 30 7H20z\" fill=\"#DA2F47\"/></svg>"
+ },
+ {
+  "id": "emoji-1f388",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Balloon",
+  "keywords": [
+   "balloon",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Ballong",
+    "keywords": [
+     "kalas"
+    ]
+   },
+   "da": {
+    "label": "Ballon",
+    "keywords": [
+     "fest"
+    ]
+   },
+   "no": {
+    "label": "Ballong",
+    "keywords": [
+     "fest"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M27.999 36a1 1 0 0 1-.969-.758c-.036-.136-.926-3.436-4.273-4.272C18.054 29.794 18 23.277 18 23a1 1 0 0 1 .998-.999c.554.034 1 .445 1.002.997 0 .053.054 5.234 3.242 6.032 4.53 1.132 5.682 5.54 5.727 5.728a.998.998 0 0 1-.97 1.242z\" fill=\"#FCAB40\"/><path d=\"M18 25c-1.1 0-1.598-.805-1.105-1.789l1.211-2.422c.492-.984 1.297-.984 1.789 0l1.211 2.422C21.598 24.195 21.1 25 20 25h-2z\" fill=\"#BB1A34\"/><path d=\"M28 9c0 6-7 12-9 12s-9-6-9-12c0-5.799 4.582-9 9-9s9 3.201 9 9z\" fill=\"#BB1A34\"/><path d=\"M20 22h-2a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2z\" fill=\"#FCAB40\"/></svg>"
+ },
+ {
+  "id": "emoji-1f382",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Birthday cake",
+  "keywords": [
+   "birthday cake",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Födelsedagstårta",
+    "keywords": [
+     "tårta",
+     "födelsedag"
+    ]
+   },
+   "da": {
+    "label": "Fødselsdagskage",
+    "keywords": [
+     "kage",
+     "fødselsdag"
+    ]
+   },
+   "no": {
+    "label": "Bursdagskake",
+    "keywords": [
+     "kake",
+     "bursdag"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><ellipse cx=\"18\" cy=\"26\" rx=\"18\" ry=\"10\" fill=\"#8899A6\"/><ellipse cx=\"18\" cy=\"24.25\" rx=\"18\" ry=\"10\" fill=\"#CCD6DD\"/><path d=\"M32.675 23.685c0 4.26-6.57 7.712-14.675 7.712S3.325 27.945 3.325 23.685c0-4.258 6.57-7.711 14.675-7.711 8.104 0 14.675 3.453 14.675 7.711z\" fill=\"#DD2E44\"/><path d=\"M32.233 22.543c0 9.854-28.466 9.854-28.466 0v-8.759h28.466v8.759z\" fill=\"#F4ABBA\"/><path d=\"M17.984 18.166c-8.984 0-14.218-4.132-14.218-4.132s-.016.924-.016 1.685c0 0 .032 4.898 2.572 4.898 2.459 0 2.28 2.348 3.834 2.591 1.541.241 1.712-.938 3.625-.938s2.25 2.106 4.203 2.106c2.289 0 2.477-2.106 4.389-2.106s2.132 1.224 3.386.885c1.507-.408.814-2.537 3.887-2.537 2.54 0 2.603-4.648 2.603-4.648 0-.76-.017-1.935-.017-1.935s-5.263 4.131-14.248 4.131z\" fill=\"#DD2E44\"/><path d=\"M32.675 12.737c0 4.259-6.57 7.712-14.675 7.712S3.325 16.996 3.325 12.737 9.895 5.025 18 5.025c8.104 0 14.675 3.453 14.675 7.712z\" fill=\"#EA596E\"/><path d=\"M25.664 13.784c-.605 0-1.095-.49-1.095-1.095V5.025a1.095 1.095 0 1 1 2.19 0v7.664c0 .605-.49 1.095-1.095 1.095z\" fill=\"#FFF8E8\"/><path d=\"M25.664 6.667c-1.162 0-2.076-.532-2.445-1.423-.32-.773-.479-2.45 2.058-4.986a.547.547 0 0 1 .774 0c2.537 2.537 2.378 4.213 2.058 4.986-.369.891-1.283 1.423-2.445 1.423z\" fill=\"#FAAA35\"/><path d=\"M18 17.068c-.605 0-1.095-.49-1.095-1.095V8.31a1.095 1.095 0 1 1 2.19 0v7.664c0 .604-.49 1.094-1.095 1.094z\" fill=\"#FFF8E8\"/><path d=\"M18 9.952c-1.162 0-2.076-.532-2.445-1.423-.321-.773-.479-2.45 2.058-4.986a.547.547 0 0 1 .774 0c2.537 2.537 2.378 4.213 2.058 4.986-.369.891-1.283 1.423-2.445 1.423z\" fill=\"#FAAA35\"/><path d=\"M10.336 13.784c-.605 0-1.095-.49-1.095-1.095V5.025a1.095 1.095 0 1 1 2.19 0v7.664c0 .605-.49 1.095-1.095 1.095z\" fill=\"#FFF8E8\"/><path d=\"M10.336 6.667c-1.162 0-2.076-.532-2.445-1.423-.321-.773-.479-2.45 2.058-4.986a.547.547 0 0 1 .774 0c2.537 2.537 2.378 4.213 2.058 4.986-.369.891-1.283 1.423-2.445 1.423z\" fill=\"#FAAA35\"/></svg>"
+ },
+ {
+  "id": "emoji-1f3c6",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Trophy",
+  "keywords": [
+   "trophy",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Pokal",
+    "keywords": [
+     "vinnare"
+    ]
+   },
+   "da": {
+    "label": "Pokal",
+    "keywords": [
+     "vinder"
+    ]
+   },
+   "no": {
+    "label": "Pokal",
+    "keywords": [
+     "vinner"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M5.123 5h6C12.227 5 13 4.896 13 6V4c0-1.104-.773-2-1.877-2h-8c-2 0-3.583 2.125-3 5 0 0 1.791 9.375 1.917 9.958C2.373 18.5 4.164 20 6.081 20h6.958c1.105 0-.039-1.896-.039-3v-2c0 1.104-.773 2-1.877 2h-4c-1.104 0-1.833-1.042-2-2S3.539 7.667 3.539 7.667C3.206 5.75 4.018 5 5.123 5zm25.812 0h-6C23.831 5 22 4.896 22 6V4c0-1.104 1.831-2 2.935-2h8c2 0 3.584 2.125 3 5 0 0-1.633 9.419-1.771 10-.354 1.5-2.042 3-4 3h-7.146C21.914 20 22 18.104 22 17v-2c0 1.104 1.831 2 2.935 2h4c1.104 0 1.834-1.042 2-2s1.584-7.333 1.584-7.333C32.851 5.75 32.04 5 30.935 5zM20.832 22c0-6.958-2.709 0-2.709 0s-3-6.958-3 0-3.291 10-3.291 10h12.292c-.001 0-3.292-3.042-3.292-10z\" fill=\"#FFAC33\"/><path d=\"M29.123 6.577c0 6.775-6.77 18.192-11 18.192-4.231 0-11-11.417-11-18.192 0-5.195 1-6.319 3-6.319 1.374 0 6.025-.027 8-.027l7-.001c2.917-.001 4 .684 4 6.347z\" fill=\"#FFCC4D\"/><path d=\"M27 33c0 1.104.227 2-.877 2h-16C9.018 35 9 34.104 9 33v-1c0-1.104 1.164-2 2.206-2h13.917c1.042 0 1.877.896 1.877 2v1z\" fill=\"#C1694F\"/><path d=\"M29 34.625c0 .76.165 1.375-1.252 1.375H8.498C7.206 36 7 35.385 7 34.625v-.25C7 33.615 7.738 33 8.498 33h19.25c.759 0 1.252.615 1.252 1.375v.25z\" fill=\"#C1694F\"/></svg>"
+ },
+ {
+  "id": "emoji-1f947",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Gold medal",
+  "keywords": [
+   "gold medal",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Guldmedalj",
+    "keywords": [
+     "medalj",
+     "vinnare"
+    ]
+   },
+   "da": {
+    "label": "Guldmedalje",
+    "keywords": [
+     "medalje",
+     "vinder"
+    ]
+   },
+   "no": {
+    "label": "Gullmedalje",
+    "keywords": [
+     "medalje",
+     "vinner"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"m18 8-7-8H0l14 17 11.521-4.75z\" fill=\"#55ACEE\"/><path d=\"m25 0-7 8 5.39 7.312 1.227-1.489L36 0z\" fill=\"#3B88C3\"/><path d=\"M23.205 16.026c.08-.217.131-.448.131-.693a2 2 0 0 0-2-2h-6.667a2 2 0 0 0-2 2c0 .245.05.476.131.693-3.258 1.826-5.464 5.307-5.464 9.307C7.335 31.224 12.111 36 18.002 36s10.667-4.776 10.667-10.667c0-4-2.206-7.481-5.464-9.307z\" fill=\"#FFAC33\"/><path d=\"M19.404 18.6h-1.721l-2.73 2.132a.528.528 0 0 0-.112.28v1.178c0 .186.15.354.337.354h1.795v8.414c0 .188.15.355.355.355h2.076c.186 0 .336-.168.336-.355V18.954c0-.186-.149-.354-.336-.354z\" fill=\"#9E5200\"/></svg>"
+ },
+ {
+  "id": "emoji-1f4cd",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Pin",
+  "keywords": [
+   "pin",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Nål",
+    "keywords": [
+     "plats",
+     "adress"
+    ]
+   },
+   "da": {
+    "label": "Kortnål",
+    "keywords": [
+     "sted",
+     "adresse"
+    ]
+   },
+   "no": {
+    "label": "Nål",
+    "keywords": [
+     "sted",
+     "adresse"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><ellipse cx=\"18\" cy=\"34.5\" rx=\"4\" ry=\"1.5\" fill=\"#292F33\"/><path d=\"M14.339 10.725S16.894 34.998 18.001 35c1.106.001 3.66-24.275 3.66-24.275h-7.322z\" fill=\"#99AAB5\"/><circle cx=\"18\" cy=\"8\" r=\"8\" fill=\"#DD2E44\"/></svg>"
+ },
+ {
+  "id": "emoji-1f4de",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Telephone",
+  "keywords": [
+   "telephone",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Telefonlur",
+    "keywords": [
+     "telefon",
+     "ringa"
+    ]
+   },
+   "da": {
+    "label": "Telefonrør",
+    "keywords": [
+     "telefon",
+     "ringe"
+    ]
+   },
+   "no": {
+    "label": "Telefonrør",
+    "keywords": [
+     "telefon",
+     "ringe"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"m34.06 26.407-3.496-3.496a4.942 4.942 0 0 0-8.34 2.528c-5.765-1.078-11.372-6.662-11.721-11.653a4.908 4.908 0 0 0 2.586-1.36 4.943 4.943 0 0 0 0-6.99L9.594 1.94a4.943 4.943 0 0 0-6.99 0C-7.882 12.426 23.574 43.882 34.06 33.396a4.944 4.944 0 0 0 0-6.989z\" fill=\"#31373D\"/></svg>"
+ },
+ {
+  "id": "emoji-2709",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Envelope",
+  "keywords": [
+   "envelope",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kuvert",
+    "keywords": [
+     "brev",
+     "e-post"
+    ]
+   },
+   "da": {
+    "label": "Kuvert",
+    "keywords": [
+     "brev",
+     "post"
+    ]
+   },
+   "no": {
+    "label": "Konvolutt",
+    "keywords": [
+     "brev",
+     "post"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z\" fill=\"#CCD6DD\"/><path d=\"M11.95 17.636.637 28.949c-.027.028-.037.063-.06.091.34.57.814 1.043 1.384 1.384.029-.023.063-.033.09-.06L13.365 19.05a1 1 0 0 0-1.415-1.414M35.423 29.04c-.021-.028-.033-.063-.06-.09L24.051 17.636a1 1 0 1 0-1.415 1.414l11.313 11.314c.026.026.062.037.09.06a3.978 3.978 0 0 0 1.384-1.384\" fill=\"#99AAB5\"/><path d=\"M32 5H4a4 4 0 0 0-4 4v1.03l14.528 14.496a4.882 4.882 0 0 0 6.884 0L36 10.009V9a4 4 0 0 0-4-4z\" fill=\"#99AAB5\"/><path d=\"M32 5H4A3.992 3.992 0 0 0 .405 7.275l14.766 14.767a4 4 0 0 0 5.657 0L35.595 7.275A3.991 3.991 0 0 0 32 5z\" fill=\"#E1E8ED\"/></svg>"
+ },
+ {
+  "id": "emoji-1f4a1",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Light bulb",
+  "keywords": [
+   "light bulb",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Glödlampa",
+    "keywords": [
+     "idé"
+    ]
+   },
+   "da": {
+    "label": "Elpære",
+    "keywords": [
+     "idé"
+    ]
+   },
+   "no": {
+    "label": "Lyspære",
+    "keywords": [
+     "idé"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M29 11.06c0 6.439-5 7.439-5 13.44 0 3.098-3.123 3.359-5.5 3.359-2.053 0-6.586-.779-6.586-3.361C11.914 18.5 7 17.5 7 11.06 7 5.029 12.285.14 18.083.14 23.883.14 29 5.029 29 11.06z\" fill=\"#FFD983\"/><path d=\"M22.167 32.5c0 .828-2.234 2.5-4.167 2.5-1.933 0-4.167-1.672-4.167-2.5 0-.828 2.233-.5 4.167-.5 1.933 0 4.167-.328 4.167.5z\" fill=\"#CCD6DD\"/><path d=\"M22.707 10.293a.999.999 0 0 0-1.414 0L18 13.586l-3.293-3.293a.999.999 0 1 0-1.414 1.414L17 15.414V26a1 1 0 1 0 2 0V15.414l3.707-3.707a.999.999 0 0 0 0-1.414z\" fill=\"#FFCC4D\"/><path d=\"M24 31a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6h12v6z\" fill=\"#99AAB5\"/><path d=\"M11.999 32a1 1 0 0 1-.163-1.986l12-2a.994.994 0 0 1 1.15.822.999.999 0 0 1-.822 1.15l-12 2a.927.927 0 0 1-.165.014zm0-4a1 1 0 0 1-.163-1.986l12-2a.995.995 0 0 1 1.15.822.999.999 0 0 1-.822 1.15l-12 2a.927.927 0 0 1-.165.014z\" fill=\"#CCD6DD\"/></svg>"
+ },
+ {
+  "id": "emoji-2705",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Check mark",
+  "keywords": [
+   "check mark",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Bock",
+    "keywords": [
+     "klar",
+     "ok"
+    ]
+   },
+   "da": {
+    "label": "Flueben",
+    "keywords": [
+     "færdig",
+     "ok"
+    ]
+   },
+   "no": {
+    "label": "Hake",
+    "keywords": [
+     "ferdig",
+     "ok"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M36 32a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28z\" fill=\"#77B255\"/><path d=\"M29.28 6.362a2.502 2.502 0 0 0-3.458.736L14.936 23.877l-5.029-4.65a2.5 2.5 0 1 0-3.394 3.671l7.209 6.666c.48.445 1.09.665 1.696.665.673 0 1.534-.282 2.099-1.139.332-.506 12.5-19.27 12.5-19.27a2.5 2.5 0 0 0-.737-3.458z\" fill=\"#FFF\"/></svg>"
+ },
+ {
+  "id": "emoji-2600",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Sun",
+  "keywords": [
+   "sun",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Sol",
+    "keywords": [
+     "sommar"
+    ]
+   },
+   "da": {
+    "label": "Sol",
+    "keywords": [
+     "sommer"
+    ]
+   },
+   "no": {
+    "label": "Sol",
+    "keywords": [
+     "sommer"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828 2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0 0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0 0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0 0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0 0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z\" fill=\"#FFAC33\"/><circle cx=\"18\" cy=\"18\" r=\"10\" fill=\"#FFAC33\"/></svg>"
+ },
+ {
+  "id": "emoji-1f338",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Blossom",
+  "keywords": [
+   "blossom",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Körsbärsblom",
+    "keywords": [
+     "blomma",
+     "vår"
+    ]
+   },
+   "da": {
+    "label": "Kirsebærblomst",
+    "keywords": [
+     "blomst",
+     "forår"
+    ]
+   },
+   "no": {
+    "label": "Kirsebærblomst",
+    "keywords": [
+     "blomst",
+     "vår"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M31.298 20.807c4.197-1.363 5.027-3.182 4.191-6.416-.952.308-2.105-.001-2.272-.518-.168-.513.581-1.443 1.533-1.753-1.223-3.107-2.964-4.089-7.161-2.727-1.606.522-3.238 1.492-4.655 2.635C23.582 10.327 24 8.475 24 6.786c0-4.412-1.473-5.765-4.807-5.968 0 1-.652 2-1.193 2s-1.194-1-1.194-2C13.472 1.021 12 2.374 12 6.786c0 1.689.417 3.541 1.066 5.241-1.416-1.142-3.049-2.111-4.655-2.633-4.197-1.364-5.938-.381-7.162 2.727.951.31 1.701 1.238 1.534 1.753-.167.515-1.32.826-2.271.518-.837 3.233-.005 5.052 4.19 6.415 1.606.521 3.497.697 5.314.605-1.524.994-2.95 2.247-3.943 3.613-2.594 3.57-2.197 5.53.381 7.654.588-.809 1.703-1.235 2.142-.917.438.317.378 1.511-.21 2.32 2.816 1.795 4.803 1.565 7.396-2.003.993-1.366 1.743-3.111 2.218-4.867.475 1.757 1.226 3.501 2.218 4.867 2.594 3.57 4.58 3.798 7.397 2.003-.587-.81-.649-2.002-.21-2.321.437-.317 1.553.107 2.142.917 2.577-2.123 2.973-4.083.381-7.653-.993-1.366-2.42-2.619-3.943-3.613 1.816.092 3.706-.084 5.313-.605zM18 20.337c-.162-.292-.353-.538-.588-.709-.234-.171-.528-.276-.856-.341.228-.244.403-.502.493-.778.09-.275.1-.587.059-.919.302.141.602.228.892.228s.59-.087.894-.229c-.041.332-.031.644.059.919.09.276.265.534.492.778-.327.065-.621.17-.855.341-.236.172-.428.418-.59.71z\" fill=\"#F4ABBA\"/><path d=\"M16.795 18.685a1 1 0 0 1-1.193.76l-5.858-1.302a1 1 0 1 1 .434-1.952l5.857 1.302c.54.12.88.653.76 1.192zm.976.218a1 1 0 0 1 1.193-.76l5.857 1.302a1 1 0 1 1-.433 1.952l-5.857-1.302a.998.998 0 0 1-.76-1.192z\" fill=\"#FFF\"/><path d=\"M17.771 18.903a1 1 0 0 1-1.38-.308l-3.221-5.061a.999.999 0 1 1 1.687-1.073l3.222 5.062a1.001 1.001 0 0 1-.308 1.38zm.797 1.252a1 1 0 0 1 1.38.307l3.223 5.062a1 1 0 0 1-1.689 1.074l-3.221-5.062a1.003 1.003 0 0 1 .307-1.381z\" fill=\"#FFF\"/><path d=\"M17.988 17.927a1 1 0 0 1-.759-1.193l1.302-5.857a1 1 0 1 1 1.951.434l-1.301 5.857a1 1 0 0 1-1.193.759zm-.217.976a.998.998 0 0 1 .759 1.192l-1.3 5.857a1 1 0 0 1-1.954-.433l1.303-5.857a.998.998 0 0 1 1.192-.759z\" fill=\"#FFF\"/><path d=\"M17.771 18.902a.999.999 0 0 1 .307-1.38l5.062-3.221a.999.999 0 1 1 1.073 1.687l-5.062 3.221a.998.998 0 0 1-1.38-.307z\" fill=\"#FFF\"/><path d=\"M17.771 18.902a1 1 0 0 1-.307 1.381l-5.062 3.222a1 1 0 1 1-1.074-1.688l5.062-3.222a1.002 1.002 0 0 1 1.381.307z\" fill=\"#FFF\"/><path d=\"M22.012 25.566a2.001 2.001 0 1 1 2.146 3.376 2.001 2.001 0 0 1-2.146-3.376zM14.55 13.841a2 2 0 1 1-2.148-3.373 2 2 0 0 1 2.148 3.373zm1.92 10.918a2.002 2.002 0 1 1-.867 3.906 2.002 2.002 0 0 1 .867-3.906zm3.037-13.665a2 2 0 1 1 .868-3.905 2 2 0 1 1-.868 3.905zm-6.013 10.53a2 2 0 1 1-3.375 2.15 2 2 0 0 1 3.375-2.15zm9.339-5.943a2 2 0 1 1 3.377-2.147 2 2 0 0 1-3.377 2.147zm.795 4.524a2.002 2.002 0 0 1 2.387-1.52 2 2 0 1 1-2.387 1.52zm-12.69-2.821a2 2 0 1 1-3.905-.868 2 2 0 0 1 3.905.868z\" fill=\"#EA596E\"/><circle cx=\"18\" cy=\"18.818\" r=\"4\" fill=\"#FFCC4D\"/></svg>"
+ },
+ {
+  "id": "emoji-1f33f",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Herb",
+  "keywords": [
+   "herb",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Ört",
+    "keywords": [
+     "växt",
+     "grön"
+    ]
+   },
+   "da": {
+    "label": "Krydderurt",
+    "keywords": [
+     "plante",
+     "grøn"
+    ]
+   },
+   "no": {
+    "label": "Urt",
+    "keywords": [
+     "plante",
+     "grønn"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M20.917 22.502c-2.706-.331-3.895-1.852-6.273-4.889 3.039-2.376 4.559-3.565 7.266-3.235 2.71.332 5.25 2.016 6.273 4.889-1.683 2.543-4.557 3.563-7.266 3.235zm-5.959 8.814c-2.549-.187-3.733-1.553-6.098-4.288 2.735-2.364 4.102-3.547 6.652-3.364 2.551.185 5.009 1.644 6.098 4.287-1.459 2.458-4.1 3.548-6.652 3.365zm-6.22-15.707c1.338 1.631 1.191 3.117.898 6.088-2.97-.294-4.456-.44-5.795-2.071-1.339-1.634-1.861-3.935-.898-6.088 2.301-.524 4.456.439 5.795 2.071zm21.116-5.448c-2.435 1.02-4.16.314-7.613-1.097 1.411-3.453 2.118-5.18 4.549-6.203 2.434-1.021 5.378-.826 7.612 1.096-.194 2.944-2.117 5.181-4.548 6.204zM17.103 6.608c.874 2.869-.124 4.742-2.119 8.488-3.745-1.996-5.619-2.994-6.494-5.864-.876-2.872-.315-6.18 2.118-8.49 3.308.561 5.619 2.993 6.495 5.866z\" fill=\"#77B255\"/><path d=\"M8.49 9.232c.862 2.828 2.702 3.843 6.338 5.781v-.005c-.07-2.521-2.733-10.876-4.267-14.214C8.172 3.102 7.62 6.381 8.49 9.232zm-5.592 4.429c-.89 2.118-.371 4.362.943 5.965 1.34 1.632 2.826 1.777 5.795 2.071-.997-1.937-4.911-6.388-6.738-8.036z\" fill=\"#A6D388\"/><path d=\"M21.91 14.378c-2.563-.312-4.077.75-6.808 2.879 1.746.105 8.786.745 13.06 2.037.006-.01.015-.017.021-.027-1.023-2.873-3.563-4.557-6.273-4.889zm-.304 13.565c-1.091-2.637-3.545-4.094-6.094-4.279-2.5-.179-3.87.961-6.498 3.232 2.767-.305 7.905-.87 12.592 1.047z\" fill=\"#5C913B\"/><path d=\"M22.421 9.137c3.327 1.359 5.043 2.024 7.432 1.024 2.419-1.018 4.332-3.239 4.542-6.16-3.922.761-10.391 4.15-11.974 5.136z\" fill=\"#A6D388\"/><path d=\"M4.751 35.061c-.584-.091-1.363-.831-1.273-1.416.546-3.562 2.858-12.168 18.298-24.755.458-.375.976-.659 1.364-.212.391.447-.052.95-.498 1.339C9.354 21.587 7.128 30.751 6.619 34.082c-.091.585-1.283 1.067-1.868.979z\" fill=\"#A06253\"/></svg>"
+ },
+ {
+  "id": "emoji-1f355",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Pizza",
+  "keywords": [
+   "pizza",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Pizza",
+    "keywords": [
+     "mat"
+    ]
+   },
+   "da": {
+    "label": "Pizza",
+    "keywords": [
+     "mad"
+    ]
+   },
+   "no": {
+    "label": "Pizza",
+    "keywords": [
+     "mat"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><path d=\"M18 4c7.257 0 13 4 14.699 2 .197-.323.301-.657.301-1 0-2-6.716-5-15-5C9.716 0 3 3 3 5c0 .343.104.677.301 1C5 8 10.743 4 18 4z\" fill=\"#F4900C\"/><path d=\"M18 3C11.787 3 7.384 4.81 5.727 5.618c-.477.233-.539.84-.415 1.278S16 34 16 34s.896 2 2 2 2-2 2-2L30.704 6.779s.213-.842-.569-1.229C28.392 4.689 24.047 3 18 3z\" fill=\"#FFCC4D\"/><path d=\"M18 31a4 4 0 0 0-4-4c-.254 0-.5.029-.741.075L16 34s.071.14.19.342A3.992 3.992 0 0 0 18 31zm-1-11a4 4 0 0 0-4-4c-1.426 0-2.67.752-3.378 1.876l2.362 5.978A3.97 3.97 0 0 0 13 24c2.208 0 4-1.792 4-4z\" fill=\"#BE1931\"/><circle cx=\"16\" cy=\"8\" r=\"4\" fill=\"#BE1931\"/><path d=\"M25 9a4 4 0 0 0 0 8c.682 0 1.315-.187 1.877-.488l1.89-4.806C28.227 10.135 26.752 9 25 9zm-6 16a3.992 3.992 0 0 0 3.019 3.864l2.893-7.357A3.954 3.954 0 0 0 23 21c-2.208 0-4 1.792-4 4zm-9-13a4 4 0 0 0-4-4c-.087 0-.169.02-.255.026.55 1.412 1.575 4.016 2.775 7.057C9.416 14.349 10 13.248 10 12z\" fill=\"#BE1931\"/></svg>"
+ },
+ {
+  "id": "emoji-2615",
+  "lib": "emoji",
+  "category": "emojis",
+  "label": "Hot drink",
+  "keywords": [
+   "hot drink",
+   "emoji"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Varm dryck",
+    "keywords": [
+     "kaffe",
+     "te"
+    ]
+   },
+   "da": {
+    "label": "Varm drik",
+    "keywords": [
+     "kaffe",
+     "te"
+    ]
+   },
+   "no": {
+    "label": "Varm drikke",
+    "keywords": [
+     "kaffe",
+     "te"
+    ]
+   }
+  },
+  "paint": "none",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 36 36\"><ellipse cx=\"18\" cy=\"26\" rx=\"18\" ry=\"10\" fill=\"#99AAB5\"/><ellipse cx=\"18\" cy=\"24\" rx=\"18\" ry=\"10\" fill=\"#CCD6DD\"/><path d=\"M18 31C3.042 31 1 16 1 12h34c0 2-1.958 19-17 19z\" fill=\"#F5F8FA\"/><path d=\"M34.385 9.644c2.442-10.123-9.781-7.706-12.204-5.799A38.063 38.063 0 0 0 18 3.611c-9.389 0-17 3.229-17 8.444C1 17.271 8.611 21.5 18 21.5s17-4.229 17-9.444c0-.863-.226-1.664-.615-2.412zm-2.503-2.692c-1.357-.938-3.102-1.694-5.121-2.25 1.875-.576 4.551-.309 5.121 2.25z\" fill=\"#CCD6DD\"/><ellipse cx=\"18\" cy=\"13\" rx=\"15\" ry=\"7\" fill=\"#8A4B38\"/><path d=\"M20 17a.997.997 0 0 1-.707-.293c-2.337-2.337-2.376-4.885-.125-8.262.739-1.109.9-2.246.478-3.377-.461-1.236-1.438-1.996-1.731-2.077-.553 0-.958-.443-.958-.996 0-.552.491-.995 1.043-.995.997 0 2.395 1.153 3.183 2.625 1.034 1.933.91 4.039-.351 5.929-1.961 2.942-1.531 4.332-.125 5.738A.999.999 0 0 1 20 17zm-6-2a.997.997 0 0 1-.707-.293c-2.337-2.337-2.376-4.885-.125-8.262.727-1.091.893-2.083.494-2.947-.444-.961-1.431-1.469-1.684-1.499a.99.99 0 0 1-.989-1c0-.552.458-1 1.011-1 .997 0 2.585.974 3.36 2.423.481.899 1.052 2.761-.528 5.131-1.961 2.942-1.531 4.332-.125 5.738a.999.999 0 0 1 0 1.414A.991.991 0 0 1 14 15z\" fill=\"#D99E82\"/></svg>"
+ },
+ {
+  "id": "shape-square",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Square",
+  "keywords": [
+   "square"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Kvadrat",
+    "keywords": [
+     "fyrkant"
+    ]
+   },
+   "da": {
+    "label": "Kvadrat",
+    "keywords": [
+     "firkant"
+    ]
+   },
+   "no": {
+    "label": "Kvadrat",
+    "keywords": [
+     "firkant"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"100\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-rounded",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Rounded square",
+  "keywords": [
+   "rounded square"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Rundad kvadrat",
+    "keywords": [
+     "fyrkant",
+     "rundade hörn"
+    ]
+   },
+   "da": {
+    "label": "Afrundet kvadrat",
+    "keywords": [
+     "firkant",
+     "runde hjørner"
+    ]
+   },
+   "no": {
+    "label": "Avrundet kvadrat",
+    "keywords": [
+     "firkant",
+     "runde hjørner"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect rx=\"16\" ry=\"16\" x=\"0\" y=\"0\" width=\"100\" height=\"100\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-circle",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Circle",
+  "keywords": [
+   "circle"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Cirkel",
+    "keywords": [
+     "rund"
+    ]
+   },
+   "da": {
+    "label": "Cirkel",
+    "keywords": [
+     "rund"
+    ]
+   },
+   "no": {
+    "label": "Sirkel",
+    "keywords": [
+     "rund"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-ellipse",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Oval",
+  "keywords": [
+   "oval"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Oval",
+    "keywords": [
+     "ellips"
+    ]
+   },
+   "da": {
+    "label": "Oval",
+    "keywords": [
+     "ellipse"
+    ]
+   },
+   "no": {
+    "label": "Oval",
+    "keywords": [
+     "ellipse"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 64\"><ellipse cx=\"50\" cy=\"32\" rx=\"50\" ry=\"32\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-triangle",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Triangle",
+  "keywords": [
+   "triangle"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Triangel",
+    "keywords": [
+     "trekant"
+    ]
+   },
+   "da": {
+    "label": "Trekant",
+    "keywords": [
+     "triangel"
+    ]
+   },
+   "no": {
+    "label": "Trekant",
+    "keywords": [
+     "triangel"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 100,100 0,100\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-right-triangle",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Right triangle",
+  "keywords": [
+   "right triangle"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Rätvinklig triangel",
+    "keywords": [
+     "trekant"
+    ]
+   },
+   "da": {
+    "label": "Retvinklet trekant",
+    "keywords": [
+     "triangel"
+    ]
+   },
+   "no": {
+    "label": "Rettvinklet trekant",
+    "keywords": [
+     "triangel"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"0,0 100,100 0,100\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-diamond",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Diamond",
+  "keywords": [
+   "diamond"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Romb",
+    "keywords": [
+     "diamant",
+     "ruter"
+    ]
+   },
+   "da": {
+    "label": "Rombe",
+    "keywords": [
+     "diamant",
+     "ruder"
+    ]
+   },
+   "no": {
+    "label": "Rombe",
+    "keywords": [
+     "diamant",
+     "ruter"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 100,50 50,100 0,50\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-pentagon",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Pentagon",
+  "keywords": [
+   "pentagon"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Femhörning",
+    "keywords": [
+     "pentagon"
+    ]
+   },
+   "da": {
+    "label": "Femkant",
+    "keywords": [
+     "pentagon"
+    ]
+   },
+   "no": {
+    "label": "Femkant",
+    "keywords": [
+     "pentagon"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 97.55,34.55 79.39,90.45 20.61,90.45 2.45,34.55\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-hexagon",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Hexagon",
+  "keywords": [
+   "hexagon"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Sexhörning",
+    "keywords": [
+     "hexagon"
+    ]
+   },
+   "da": {
+    "label": "Sekskant",
+    "keywords": [
+     "heksagon"
+    ]
+   },
+   "no": {
+    "label": "Sekskant",
+    "keywords": [
+     "heksagon"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"100,50 75,93.3 25,93.3 0,50 25,6.7 75,6.7\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-octagon",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Octagon",
+  "keywords": [
+   "octagon"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Åttahörning",
+    "keywords": [
+     "oktagon"
+    ]
+   },
+   "da": {
+    "label": "Ottekant",
+    "keywords": [
+     "oktagon"
+    ]
+   },
+   "no": {
+    "label": "Åttekant",
+    "keywords": [
+     "oktagon"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"30.87,3.81 69.13,3.81 96.19,30.87 96.19,69.13 69.13,96.19 30.87,96.19 3.81,69.13 3.81,30.87\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-star",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Star",
+  "keywords": [
+   "star"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Stjärna",
+    "keywords": []
+   },
+   "da": {
+    "label": "Stjerne",
+    "keywords": []
+   },
+   "no": {
+    "label": "Stjerne",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 62.34,33.01 97.55,34.55 69.97,56.49 79.39,90.45 50,71 20.61,90.45 30.03,56.49 2.45,34.55 37.66,33.01\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-star-6",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Six-point star",
+  "keywords": [
+   "six-point star"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Sexuddig stjärna",
+    "keywords": [
+     "stjärna"
+    ]
+   },
+   "da": {
+    "label": "Sekstakket stjerne",
+    "keywords": [
+     "stjerne"
+    ]
+   },
+   "no": {
+    "label": "Sekstakket stjerne",
+    "keywords": [
+     "stjerne"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 63.75,26.18 93.3,25 77.5,50 93.3,75 63.75,73.82 50,100 36.25,73.82 6.7,75 22.5,50 6.7,25 36.25,26.18\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-heart",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Heart",
+  "keywords": [
+   "heart"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Hjärta",
+    "keywords": [
+     "kärlek"
+    ]
+   },
+   "da": {
+    "label": "Hjerte",
+    "keywords": [
+     "kærlighed"
+    ]
+   },
+   "no": {
+    "label": "Hjerte",
+    "keywords": [
+     "kjærlighet"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 90\"><path d=\"M50 90C22 68 0 50 0 26C0 11 12 0 26 0C37 0 45 6 50 14C55 6 63 0 74 0C88 0 100 11 100 26C100 50 78 68 50 90Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-cross",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Plus",
+  "keywords": [
+   "plus"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Plus",
+    "keywords": [
+     "kors"
+    ]
+   },
+   "da": {
+    "label": "Plus",
+    "keywords": [
+     "kors"
+    ]
+   },
+   "no": {
+    "label": "Pluss",
+    "keywords": [
+     "kors"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"35,0 65,0 65,35 100,35 100,65 65,65 65,100 35,100 35,65 0,65 0,35 35,35\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-bubble",
+  "lib": "shape",
+  "category": "shapes",
+  "label": "Speech bubble",
+  "keywords": [
+   "speech bubble"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Pratbubbla",
+    "keywords": [
+     "bubbla",
+     "citat"
+    ]
+   },
+   "da": {
+    "label": "Taleboble",
+    "keywords": [
+     "boble",
+     "citat"
+    ]
+   },
+   "no": {
+    "label": "Snakkeboble",
+    "keywords": [
+     "boble",
+     "sitat"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 90\"><path d=\"M12 0H88C95 0 100 5 100 12V58C100 65 95 70 88 70H40L18 90V70H12C5 70 0 65 0 58V12C0 5 5 0 12 0Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-line",
+  "lib": "shape",
+  "category": "lines",
+  "label": "Line",
+  "keywords": [
+   "line"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Linje",
+    "keywords": [
+     "streck"
+    ]
+   },
+   "da": {
+    "label": "Linje",
+    "keywords": [
+     "streg"
+    ]
+   },
+   "no": {
+    "label": "Linje",
+    "keywords": [
+     "strek"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 8\"><line x1=\"4\" y1=\"4\" x2=\"96\" y2=\"4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "shape-arrow",
+  "lib": "shape",
+  "category": "lines",
+  "label": "Arrow",
+  "keywords": [
+   "arrow"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Pil",
+    "keywords": []
+   },
+   "da": {
+    "label": "Pil",
+    "keywords": []
+   },
+   "no": {
+    "label": "Pil",
+    "keywords": []
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 40\"><polygon points=\"0,14 70,14 70,0 100,20 70,40 70,26 0,26\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-arrow-double",
+  "lib": "shape",
+  "category": "lines",
+  "label": "Double arrow",
+  "keywords": [
+   "double arrow"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Dubbelpil",
+    "keywords": [
+     "pil"
+    ]
+   },
+   "da": {
+    "label": "Dobbeltpil",
+    "keywords": [
+     "pil"
+    ]
+   },
+   "no": {
+    "label": "Dobbeltpil",
+    "keywords": [
+     "pil"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 40\"><polygon points=\"0,20 28,0 28,14 72,14 72,0 100,20 72,40 72,26 28,26 28,40\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-chevron",
+  "lib": "shape",
+  "category": "lines",
+  "label": "Chevron",
+  "keywords": [
+   "chevron"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Vinkel",
+    "keywords": [
+     "pil",
+     "chevron"
+    ]
+   },
+   "da": {
+    "label": "Vinkel",
+    "keywords": [
+     "pil",
+     "chevron"
+    ]
+   },
+   "no": {
+    "label": "Vinkel",
+    "keywords": [
+     "pil",
+     "chevron"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 60 100\"><polygon points=\"0,0 30,0 60,50 30,100 0,100 30,50\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-arrow-thin",
+  "lib": "shape",
+  "category": "lines",
+  "label": "Thin arrow",
+  "keywords": [
+   "thin arrow"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Smal pil",
+    "keywords": [
+     "pil"
+    ]
+   },
+   "da": {
+    "label": "Tynd pil",
+    "keywords": [
+     "pil"
+    ]
+   },
+   "no": {
+    "label": "Tynn pil",
+    "keywords": [
+     "pil"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 40\"><path d=\"M4 20H94M74 6L94 20L74 34\" fill=\"none\" stroke=\"#000000\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "shape-frame-square",
+  "lib": "shape",
+  "category": "frames",
+  "label": "Square frame",
+  "keywords": [
+   "square frame"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Fyrkantig ram",
+    "keywords": [
+     "ram"
+    ]
+   },
+   "da": {
+    "label": "Firkantet ramme",
+    "keywords": [
+     "ramme"
+    ]
+   },
+   "no": {
+    "label": "Firkantet ramme",
+    "keywords": [
+     "ramme"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect x=\"3\" y=\"3\" width=\"94\" height=\"94\" fill=\"none\" stroke=\"#000000\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "shape-frame-rounded",
+  "lib": "shape",
+  "category": "frames",
+  "label": "Rounded frame",
+  "keywords": [
+   "rounded frame"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Rundad ram",
+    "keywords": [
+     "ram"
+    ]
+   },
+   "da": {
+    "label": "Afrundet ramme",
+    "keywords": [
+     "ramme"
+    ]
+   },
+   "no": {
+    "label": "Avrundet ramme",
+    "keywords": [
+     "ramme"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect rx=\"14\" ry=\"14\" x=\"3\" y=\"3\" width=\"94\" height=\"94\" fill=\"none\" stroke=\"#000000\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "shape-frame-circle",
+  "lib": "shape",
+  "category": "frames",
+  "label": "Circle frame",
+  "keywords": [
+   "circle frame"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Rund ram",
+    "keywords": [
+     "ram",
+     "cirkel"
+    ]
+   },
+   "da": {
+    "label": "Rund ramme",
+    "keywords": [
+     "ramme",
+     "cirkel"
+    ]
+   },
+   "no": {
+    "label": "Rund ramme",
+    "keywords": [
+     "ramme",
+     "sirkel"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"47\" fill=\"none\" stroke=\"#000000\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "shape-frame-double",
+  "lib": "shape",
+  "category": "frames",
+  "label": "Double frame",
+  "keywords": [
+   "double frame"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Dubbel ram",
+    "keywords": [
+     "ram"
+    ]
+   },
+   "da": {
+    "label": "Dobbelt ramme",
+    "keywords": [
+     "ramme"
+    ]
+   },
+   "no": {
+    "label": "Dobbel ramme",
+    "keywords": [
+     "ramme"
+    ]
+   }
+  },
+  "paint": "stroke",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect x=\"2\" y=\"2\" width=\"96\" height=\"96\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"10\" y=\"10\" width=\"80\" height=\"80\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+ },
+ {
+  "id": "shape-burst",
+  "lib": "shape",
+  "category": "badges",
+  "label": "Burst",
+  "keywords": [
+   "burst"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Explosion",
+    "keywords": [
+     "stjärna",
+     "märke"
+    ]
+   },
+   "da": {
+    "label": "Eksplosion",
+    "keywords": [
+     "stjerne",
+     "mærke"
+    ]
+   },
+   "no": {
+    "label": "Eksplosjon",
+    "keywords": [
+     "stjerne",
+     "merke"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 60.09,12.33 75,6.7 77.58,22.42 93.3,25 87.67,39.91 100,50 87.67,60.09 93.3,75 77.58,77.58 75,93.3 60.09,87.67 50,100 39.91,87.67 25,93.3 22.42,77.58 6.7,75 12.33,60.09 0,50 12.33,39.91 6.7,25 22.42,22.42 25,6.7 39.91,12.33\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-seal",
+  "lib": "shape",
+  "category": "badges",
+  "label": "Seal",
+  "keywords": [
+   "seal"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Sigill",
+    "keywords": [
+     "märke",
+     "stämpel"
+    ]
+   },
+   "da": {
+    "label": "Segl",
+    "keywords": [
+     "mærke",
+     "stempel"
+    ]
+   },
+   "no": {
+    "label": "Segl",
+    "keywords": [
+     "merke",
+     "stempel"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path d=\"M94 50Q104.92 60.93 90.65 66.84Q96.56 81.11 81.11 81.11Q81.11 96.56 66.84 90.65Q60.93 104.92 50 94Q39.07 104.92 33.16 90.65Q18.89 96.56 18.89 81.11Q3.44 81.11 9.35 66.84Q-4.92 60.93 6 50Q-4.92 39.07 9.35 33.16Q3.44 18.89 18.89 18.89Q18.89 3.44 33.16 9.35Q39.07 -4.92 50 6Q60.93 -4.92 66.84 9.35Q81.11 3.44 81.11 18.89Q96.56 18.89 90.65 33.16Q104.92 39.07 94 50Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-starburst",
+  "lib": "shape",
+  "category": "badges",
+  "label": "Starburst",
+  "keywords": [
+   "starburst"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Stjärnexplosion",
+    "keywords": [
+     "stjärna",
+     "erbjudande"
+    ]
+   },
+   "da": {
+    "label": "Stjerneeksplosion",
+    "keywords": [
+     "stjerne",
+     "tilbud"
+    ]
+   },
+   "no": {
+    "label": "Stjerneeksplosjon",
+    "keywords": [
+     "stjerne",
+     "tilbud"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><polygon points=\"50,0 56.57,8.52 65.45,2.45 69.07,12.58 79.39,9.55 79.7,20.3 90.45,20.61 87.42,30.93 97.55,34.55 91.48,43.43 100,50 91.48,56.57 97.55,65.45 87.42,69.07 90.45,79.39 79.7,79.7 79.39,90.45 69.07,87.42 65.45,97.55 56.57,91.48 50,100 43.43,91.48 34.55,97.55 30.93,87.42 20.61,90.45 20.3,79.7 9.55,79.39 12.58,69.07 2.45,65.45 8.52,56.57 0,50 8.52,43.43 2.45,34.55 12.58,30.93 9.55,20.61 20.3,20.3 20.61,9.55 30.93,12.58 34.55,2.45 43.43,8.52\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-ribbon",
+  "lib": "shape",
+  "category": "badges",
+  "label": "Ribbon banner",
+  "keywords": [
+   "ribbon banner"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Banderoll",
+    "keywords": [
+     "band",
+     "banner"
+    ]
+   },
+   "da": {
+    "label": "Bånd",
+    "keywords": [
+     "banner",
+     "banderole"
+    ]
+   },
+   "no": {
+    "label": "Bånd",
+    "keywords": [
+     "banner",
+     "banderole"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 40\"><polygon points=\"0,0 120,0 108,20 120,40 0,40 12,20\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-tag",
+  "lib": "shape",
+  "category": "badges",
+  "label": "Price tag",
+  "keywords": [
+   "price tag"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Prislapp",
+    "keywords": [
+     "pris",
+     "etikett"
+    ]
+   },
+   "da": {
+    "label": "Prismærke",
+    "keywords": [
+     "pris",
+     "etiket"
+    ]
+   },
+   "no": {
+    "label": "Prislapp",
+    "keywords": [
+     "pris",
+     "etikett"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 60\"><path d=\"M20 0H96C98 0 100 2 100 4V56C100 58 98 60 96 60H20L0 30Z\" fill=\"#000000\"/></svg>"
+ },
+ {
+  "id": "shape-label",
+  "lib": "shape",
+  "category": "badges",
+  "label": "Label",
+  "keywords": [
+   "label"
+  ],
+  "i18n": {
+   "sv": {
+    "label": "Etikett",
+    "keywords": [
+     "märke"
+    ]
+   },
+   "da": {
+    "label": "Etiket",
+    "keywords": [
+     "mærkat"
+    ]
+   },
+   "no": {
+    "label": "Etikett",
+    "keywords": [
+     "merkelapp"
+    ]
+   }
+  },
+  "paint": "fill",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 50\"><rect rx=\"25\" ry=\"25\" x=\"0\" y=\"0\" width=\"100\" height=\"50\" fill=\"#000000\"/></svg>"
+ }
+]

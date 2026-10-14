@@ -1,0 +1,54 @@
+rules_version = '2';
+
+// Firebase Storage security rules.
+// Foundation for moving uploaded print artwork out of Firestore/localStorage
+// (base64) and into real object storage. Not yet wired into the UI.
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuthed() {
+      return request.auth != null;
+    }
+    function isOwner(userId) {
+      return isAuthed() && request.auth.uid == userId;
+    }
+    // Admin is decided by a custom auth claim, NOT by a Firestore lookup.
+    //
+    // This shop keeps its users in a NAMED Firestore database
+    // (ai-studio-67b3d2fe-...), while firestore.get() in Storage rules can only
+    // read the (default) database. The previous version looked up a user document
+    // in a database that does not hold any, so isAdmin() could never be true and
+    // every admin upload was denied.
+    //
+    // The claim is set server-side with the Firebase Admin SDK:
+    //   admin.auth().setCustomUserClaims(uid, { admin: true })
+    // which needs the service-account key. Until that runs, no account has the
+    // claim — the same practical state as before, but for an honest reason.
+    function isAdmin() {
+      return isAuthed() && request.auth.token.admin == true;
+    }
+    function isAllowedType() {
+      return request.resource.contentType.matches('image/.*') ||
+             request.resource.contentType == 'application/pdf' ||
+             request.resource.contentType == 'application/postscript'; // .eps / .ai
+    }
+    function isUnderSizeLimit() {
+      return request.resource.size < 50 * 1024 * 1024; // 50 MB
+    }
+
+    // Customer print artwork — private to the uploader (and admins).
+    match /uploads/{userId}/{allPaths=**} {
+      allow read:   if isOwner(userId) || isAdmin();
+      allow write:  if isOwner(userId) && isAllowedType() && isUnderSizeLimit();
+      allow delete: if isOwner(userId) || isAdmin();
+    }
+
+    // Public assets (product images, site media) — world-readable, admin-writable.
+    match /public/{allPaths=**} {
+      allow read:  if true;
+      allow write: if isAdmin() && isUnderSizeLimit();
+    }
+
+    // Everything else is denied by default.
+  }
+}

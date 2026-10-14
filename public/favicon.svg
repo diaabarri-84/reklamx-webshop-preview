@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- The shop's logo mark, as a tab icon: the same gold rounded square and
+       printer glyph the header draws (src/App.tsx). Kept as one small SVG so it
+       stays sharp at every size and needs no PNG set. #bb965b is the default
+       primaryColor; an owner who changes the brand colour in the dashboard is
+       changing a runtime setting, which a static file cannot follow. -->
+  <rect width="64" height="64" rx="16" fill="#bb965b"/>
+  <g fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="24,25 24,16 40,16 40,25"/>
+    <path d="M24 44h-3a4 4 0 0 1-4-4v-7a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4h-3"/>
+    <rect x="24" y="38" width="16" height="11" rx="1.5"/>
+  </g>
+</svg>

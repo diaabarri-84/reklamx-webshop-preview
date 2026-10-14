@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="sti-t">
+  <title id="sti-t">A single die-cut sticker with its backing peeling away</title>
+  <!-- Option icon for "Individual": one sticker, cut to shape, peeling off its
+       liner. Line art on the shop surface, matching the other product art. -->
+  <circle cx="60" cy="60" r="44" fill="#ffffff" stroke="#c7cbd6" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M60 26 l9.5 19.6 21.5 3-15.6 15.1 3.8 21.4L60 74.9 40.8 85.1l3.8-21.4L29 48.6l21.5-3z" fill="#1f2937"/>
+  <path d="M84 34c8 6 10 15 5 21-4 5-11 5-15 1z" fill="#ffffff" stroke="#c7cbd6" stroke-width="2" stroke-linejoin="round"/>
+</svg>

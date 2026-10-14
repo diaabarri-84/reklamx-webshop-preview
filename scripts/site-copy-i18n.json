@@ -1,0 +1,277 @@
+{
+  "announcementText": {
+    "sv": "🎉 15 % specialrabatt på allt kort- och banderolltryck med koden PRINT15",
+    "da": "🎉 Spar 15 % på alt kort- og bannertryk med koden: PRINT15",
+    "no": "🎉 15 % rabatt på alt trykk av kort og bannere med koden PRINT15"
+  },
+  "siteTagline": {
+    "sv": "Professionellt Web2Print-tryckeri",
+    "da": "Professionelt Web2Print-trykkeri",
+    "no": "Profesjonelt Web2Print-trykkeri"
+  },
+  "footerText": {
+    "sv": "Med ensamrätt © ReklamX 2026. Professionellt digitalt Web2Print-tryckeri.",
+    "da": "Alle rettigheder forbeholdes © ReklamX 2026. Professionelt digitalt Web2Print-trykkeri.",
+    "no": "Med enerett © ReklamX 2026. Profesjonelt digitalt Web2Print-trykkeri."
+  },
+  "heroTitle": {
+    "sv": "Din vision.. perfekt tryckt",
+    "da": "Din vision.. perfekt trykt",
+    "no": "Din visjon.. perfekt trykt"
+  },
+  "heroSubtitle": {
+    "sv": "Kompletta Web2Print-lösningar för företag och privatpersoner. Designa online, förhandsgranska direkt och få tryck av högsta kvalitet.",
+    "da": "Komplette Web2Print-løsninger til virksomheder og private. Design online, se resultatet med det samme, og få tryk af højeste kvalitet.",
+    "no": "Komplette Web2Print-løsninger for bedrifter og privatpersoner. Design på nett, se resultatet med en gang og få trykk av høyeste kvalitet."
+  },
+  "heroCta1Text": {
+    "sv": "Ladda upp egen tryckfil",
+    "da": "Upload din egen trykfil",
+    "no": "Last opp din egen trykkfil"
+  },
+  "heroCta2Text": {
+    "sv": "Se alla produkter",
+    "da": "Se alle produkter",
+    "no": "Se alle produkter"
+  },
+  "editorPromoTitle": {
+    "sv": "Designa som ett proffs.. direkt i webbläsaren",
+    "da": "Design som en professionel.. direkte i browseren",
+    "no": "Design som en proff.. rett i nettleseren"
+  },
+  "editorPromoSubtitle": {
+    "sv": "Avancerat dra-och-släpp-verktyg för design online, med redigerbara mallar som är färdiga för tryck.",
+    "da": "Avanceret træk-og-slip-designværktøj online med færdige skabeloner klar til tryk.",
+    "no": "Avansert dra-og-slipp-designverktøy på nett med ferdige maler klare for trykk."
+  },
+  "heroSlides[0].title": {
+    "sv": "NY REVOLUTION",
+    "da": "NY REVOLUTION",
+    "no": "NY REVOLUSJON"
+  },
+  "heroSlides[0].subtitle": {
+    "sv": "Högupplöst tryck i 300 DPI",
+    "da": "Højpræcisionstryk i 300 DPI",
+    "no": "300 DPI høypresisjonstrykk"
+  },
+  "heroSlides[0].badge": {
+    "sv": "NYA PRODUKTER FÖR MÄSS- OCH EVENEMANGSSÄSONGEN",
+    "da": "NYE PRODUKTER TIL MESSE- OG EVENTSÆSONEN",
+    "no": "NYHETER TIL MESSE- OG EVENTSESONGEN"
+  },
+  "heroSlides[1].title": {
+    "sv": "MÄSSMONTRAR",
+    "da": "MESSESTANDE",
+    "no": "MESSESTANDER"
+  },
+  "heroSlides[1].subtitle": {
+    "sv": "Redo för montering, transport och uppsättning",
+    "da": "Klar til montering, transport og opsætning",
+    "no": "Klare for montering, transport og oppsett"
+  },
+  "heroSlides[1].badge": {
+    "sv": "PREMIUMLÖSNINGAR FÖR MÄSSOR",
+    "da": "PREMIUMLØSNINGER TIL MESSER",
+    "no": "PREMIUMLØSNINGER FOR MESSER"
+  },
+  "heroSlides[2].title": {
+    "sv": "SPECIALETIKETTER",
+    "da": "SPECIALTRYKTE ETIKETTER",
+    "no": "SPESIALTRYKTE ETIKETTER"
+  },
+  "heroSlides[2].subtitle": {
+    "sv": "Laserstansade etiketter på rulle",
+    "da": "Laserstansede etiketter på rulle med høj præcision",
+    "no": "Laserstansede etiketter på rull, med laserpresisjon"
+  },
+  "heroSlides[2].badge": {
+    "sv": "ETIKETTER AV INDUSTRIKVALITET",
+    "da": "ETIKETTER I INDUSTRIKVALITET",
+    "no": "ETIKETTER I INDUSTRIKVALITET"
+  },
+  "heroSlides[3].title": {
+    "sv": "EXKLUSIVA PRESENTASKAR",
+    "da": "EKSKLUSIVE GAVEÆSKER",
+    "no": "EKSKLUSIVE GAVEESKER"
+  },
+  "heroSlides[3].subtitle": {
+    "sv": "Massiv kartong efter mått med folieprägling",
+    "da": "Massivt karton med folieprægning efter mål",
+    "no": "Stiv kartong etter mål og foliepreging"
+  },
+  "heroSlides[3].badge": {
+    "sv": "EXKLUSIV FÖRPACKNINGSSERIE",
+    "da": "EKSKLUSIV EMBALLAGESERIE",
+    "no": "EKSKLUSIV EMBALLASJESERIE"
+  },
+  "bentoCards[0].title": {
+    "sv": "PRESENTASKAR",
+    "da": "GAVEÆSKER",
+    "no": "GAVEESKER"
+  },
+  "bentoCards[1].title": {
+    "sv": "SPECIALETIKETTER",
+    "da": "ETIKETTER",
+    "no": "ETIKETTER"
+  },
+  "bentoCards[2].title": {
+    "sv": "MÄSSMONTRAR",
+    "da": "MESSESTANDE",
+    "no": "MESSESTANDER"
+  },
+  "bentoCards[3].title": {
+    "sv": "PAPPERSMUGGAR",
+    "da": "PAPKRUS",
+    "no": "PAPPKRUS"
+  },
+  "bentoCards[4].title": {
+    "sv": "DOYPACKS",
+    "da": "DOYPACKS",
+    "no": "DOYPACKS"
+  },
+  "bentoCards[5].title": {
+    "sv": "LJUSSKYLTAR",
+    "da": "LYSSKILTE",
+    "no": "LYSSKILT"
+  },
+  "aboutUsPageSettings.heroTitle": {
+    "sv": "Om ReklamX",
+    "da": "Om ReklamX",
+    "no": "Om ReklamX"
+  },
+  "aboutUsPageSettings.heroSubtitle": {
+    "sv": "Specialtryck för företag och privatpersoner — konfigurerat online, prissatt direkt, levererat till dörren.",
+    "da": "Specialtryk til virksomheder og private — konfigureret online, prissat med det samme, leveret til døren.",
+    "no": "Spesialtrykk for bedrifter og privatpersoner — konfigurert på nett, priset med en gang, levert til døren."
+  },
+  "aboutUsPageSettings.storyTitle": {
+    "sv": "Vilka vi är",
+    "da": "Hvem vi er",
+    "no": "Hvem vi er"
+  },
+  "aboutUsPageSettings.storyContent": {
+    "sv": "ReklamX är ett svenskt web-to-print-tryckeri. Välj en produkt, ange storlek och tillval, ladda upp din originalfil och se priset direkt — vi sköter tryckningen och leveransen.",
+    "da": "ReklamX er et svensk web-to-print-trykkeri. Vælg et produkt, angiv størrelse og tilvalg, upload din trykfil og se prisen med det samme — vi står for tryk og levering.",
+    "no": "ReklamX er et svensk web-to-print-trykkeri. Velg et produkt, angi størrelse og tilvalg, last opp trykkfilen din og se prisen med en gang — vi tar oss av trykking og levering."
+  },
+  "aboutUsPageSettings.mission": {
+    "sv": "Att göra professionellt tryck enkelt, transparent och rättvist prissatt.",
+    "da": "At gøre professionelt tryk enkelt, gennemskueligt og rimeligt i pris.",
+    "no": "Å gjøre profesjonelt trykk enkelt, oversiktlig og rettferdig priset."
+  },
+  "aboutUsPageSettings.vision": {
+    "sv": "Ett tryckeri du kan anförtro ditt varumärke, från den första dekalen till den sista banderollen.",
+    "da": "Et trykkeri, du kan betro dit brand — fra det første klistermærke til det sidste banner.",
+    "no": "Et trykkeri du kan betro merkevaren din, fra det første klistremerket til det siste banneret."
+  },
+  "contactPageSettings.heroTitle": {
+    "sv": "Kontakta våra tryckspecialister",
+    "da": "Kontakt vores trykspecialister",
+    "no": "Kontakt trykkspesialistene våre"
+  },
+  "contactPageSettings.heroSubtitle": {
+    "sv": "Har du en specialförfrågan, en stor företagsorder eller en teknisk fråga? Vi hjälper dig gärna.",
+    "da": "Har du en specialforespørgsel, en stor virksomhedsordre eller et teknisk spørgsmål? Vi hjælper dig gerne.",
+    "no": "Har du en spesialforespørsel, en stor bedriftsordre eller et teknisk spørsmål? Vi hjelper deg gjerne."
+  },
+  "servicesPageSettings.heroTitle": {
+    "sv": "Våra Web2Print-tjänster i världsklass",
+    "da": "Vores Web2Print-tjenester i verdensklasse",
+    "no": "Våre Web2Print-tjenester i verdensklasse"
+  },
+  "servicesPageSettings.heroSubtitle": {
+    "sv": "Från snabbt digitaltryck och offsettryck till laserskurna förpackningar och mässmontrar. Utforska hela vårt utbud av professionella trycktjänster.",
+    "da": "Fra hurtigt digitaltryk og offsettryk til laserskåret emballage og messestande. Udforsk hele vores udvalg af professionelle trykkeriydelser.",
+    "no": "Fra rask digitaltrykking og offsettrykk til laserskåret emballasje og messestander. Utforsk hele utvalget vårt av profesjonelle trykktjenester."
+  },
+  "servicesPageSettings.servicesList[0].title": {
+    "sv": "Digitaltryck och offsettryck",
+    "da": "Digitaltryk og offsettryk",
+    "no": "Digitaltrykk og offsettrykk"
+  },
+  "servicesPageSettings.servicesList[0].subtitle": {
+    "sv": "Digitaltryck och offsettryck",
+    "da": "Digitaltryk og offsettryk",
+    "no": "Digitaltrykk og offsettrykk"
+  },
+  "servicesPageSettings.servicesList[0].description": {
+    "sv": "Ultraskarpt tryck i 300 DPI för broschyrer, visitkort, flygblad, kataloger och marknadsföringsmaterial, med spot-UV-lack och folieprägling som tillval.",
+    "da": "Ultraskarpt tryk i 300 DPI til brochurer, visitkort, flyers, kataloger og markedsføringsmateriale, med spot-UV-lak og folieprægning som tilvalg.",
+    "no": "Ultraskarpt trykk i 300 DPI til brosjyrer, visittkort, flyere, kataloger og markedsføringsmateriell, med spot-UV-lakk og foliepreging som tilvalg."
+  },
+  "servicesPageSettings.servicesList[1].title": {
+    "sv": "Specialförpackningar och presentaskar",
+    "da": "Specialemballage og gaveæsker",
+    "no": "Spesialemballasje og gaveesker"
+  },
+  "servicesPageSettings.servicesList[1].subtitle": {
+    "sv": "Exklusiva förpackningar och presentaskar",
+    "da": "Eksklusiv emballage og gaveæsker",
+    "no": "Eksklusiv emballasje og gaveesker"
+  },
+  "servicesPageSettings.servicesList[1].description": {
+    "sv": "Specialtillverkade vikkartonger, exklusiva presentaskar, doypacks och wellpappförpackningar, formstansade efter dina mått och med skyddande laminering.",
+    "da": "Foldede specialæsker, eksklusive gaveæsker, doypacks og bølgepapemballage, stanset efter dine mål og med beskyttende laminering.",
+    "no": "Foldeesker etter mål, eksklusive gaveesker, doypacks og bølgepappesker, stanset etter dine mål og med beskyttende laminering."
+  },
+  "servicesPageSettings.servicesList[2].title": {
+    "sv": "Storformatsbanderoller och mässmaterial",
+    "da": "Storformatbannere og messemateriale",
+    "no": "Storformatbannere og messemateriell"
+  },
+  "servicesPageSettings.servicesList[2].subtitle": {
+    "sv": "Banderoller i storformat och mässgrafik",
+    "da": "Bannere i storformat og messegrafik",
+    "no": "Bannere i storformat og messegrafikk"
+  },
+  "servicesPageSettings.servicesList[2].description": {
+    "sv": "Rollups, ljuslådor, pop-up-väggar, beachflaggor och vinylskyltar för evenemang och för både inom- och utomhusbruk.",
+    "da": "Rollups, lysbokse, pop-up-vægge, beachflag og vinylskilte til events og til både indendørs og udendørs brug.",
+    "no": "Rollups, lyskasser, pop-up-vegger, beachflagg og vinylskilt til arrangementer og til bruk både innendørs og utendørs."
+  },
+  "servicesPageSettings.servicesList[3].title": {
+    "sv": "Etiketter, dekaler och rulltryck",
+    "da": "Etiketter, klistermærker og rulletryk",
+    "no": "Etiketter, klistremerker og rulletrykk"
+  },
+  "servicesPageSettings.servicesList[3].subtitle": {
+    "sv": "Etiketter och dekaler på rulle i hög upplösning",
+    "da": "Etiketter og klistermærker på rulle i høj opløsning",
+    "no": "Etiketter og klistremerker på rull, i høy oppløsning"
+  },
+  "servicesPageSettings.servicesList[3].description": {
+    "sv": "Laserstansade dekaler på rulle, vattentåliga vinyldekaler, produktetiketter med metallfolie och stansning i valfri form.",
+    "da": "Laserstansede klistermærker på rulle, vandtætte vinylklistermærker, produktetiketter med metalfolie og stansning efter din egen form.",
+    "no": "Laserstansede klistremerker på rull, vanntette vinyldekaler, produktetiketter med metallfolie og konturstansing etter din egen form."
+  },
+  "servicesPageSettings.servicesList[4].title": {
+    "sv": "Egen filuppladdning och tryckfilskontroll",
+    "da": "Upload og kontrol af trykfiler",
+    "no": "Egen opplasting og trykkfilkontroll"
+  },
+  "servicesPageSettings.servicesList[4].subtitle": {
+    "sv": "Ladda upp och kontrollera dina tryckfiler",
+    "da": "Upload og kontrollér dine trykfiler",
+    "no": "Last opp og kontroller trykkfilene dine"
+  },
+  "servicesPageSettings.servicesList[4].description": {
+    "sv": "Ladda upp dina vektorfiler i PDF, AI eller TIFF direkt. Vi kontrollerar upplösningen, konverterar färgerna till CMYK och verifierar utfall och marginaler.",
+    "da": "Upload dine vektorfiler i PDF, AI eller TIFF direkte. Vi kontrollerer opløsningen, konverterer farverne til CMYK og tjekker beskæring og margener.",
+    "no": "Last opp vektorfilene dine i PDF, AI eller TIFF direkte. Vi sjekker oppløsningen, konverterer fargene til CMYK og kontrollerer utfall og marger."
+  },
+  "servicesPageSettings.servicesList[5].title": {
+    "sv": "Expressfrakt och leverans till dörren",
+    "da": "Ekspreslevering til døren",
+    "no": "Ekspresslevering til døren"
+  },
+  "servicesPageSettings.servicesList[5].subtitle": {
+    "sv": "Frakt och expressleverans",
+    "da": "Fragt og ekspreslevering",
+    "no": "Frakt og ekspresslevering"
+  },
+  "servicesPageSettings.servicesList[5].description": {
+    "sv": "Följ din order i realtid, från kontroll av tryckfilen och tryckning till att expressbudet lämnar den vid din dörr.",
+    "da": "Følg din ordre i realtid, fra kontrol af trykfilen og trykning til ekspresbuddet leverer den til din dør.",
+    "no": "Følg ordren din i sanntid, fra kontroll av trykkfilen og trykking til ekspressbudet leverer den hjem til deg."
+  }
+}

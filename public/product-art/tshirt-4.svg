@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="tshirt4-t tshirt4-d">
+  <title id="tshirt4-t">Folded t-shirts, stacked</title>
+  <desc id="tshirt4-d">A stack of four folded t-shirts, the top one showing an orange printed logo.</desc>
+  <!--
+    Interim illustration, not a photograph of the shop's own product. Flat vector
+    art sitting on the shop surface (#e8eaf1) so an unphotographed product still
+    looks deliberate. Orange is reserved for the printing, because the printing
+    is what we sell. Replaced per product from the dashboard image field.
+  -->
+  <defs>
+    <radialGradient id="tshirt4-hi" cx=".2" cy=".16" r=".82">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tshirt4-lo" cx=".85" cy=".88" r=".8">
+      <stop offset="0" stop-color="#c9cdd8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9cdd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tshirt4-sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b4bbc9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b4bbc9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tshirt4-mat" x1="0" y1="0" x2=".55" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/>
+      <stop offset="1" stop-color="#dde1eb"/>
+    </linearGradient>
+    <linearGradient id="tshirt4-ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <rect width="800" height="800" fill="url(#tshirt4-hi)"/>
+  <rect width="800" height="800" fill="url(#tshirt4-lo)"/>
+  <ellipse cx="400" cy="682" rx="270" ry="36" fill="url(#tshirt4-sh)"/>
+  <g transform="rotate(-1.6 401 578)">
+    <rect x="200" y="534" width="402" height="112" rx="22" fill="#c6ccd8"/>
+    <rect x="200" y="522" width="402" height="112" rx="22" fill="#d6dae5" stroke="#c1c8d5" stroke-width="3"/>
+    <rect x="212" y="531" width="378" height="38" rx="15" fill="#ffffff" opacity=".45"/>
+    <g fill="none" stroke="#d0d6e0" stroke-width="3" stroke-linecap="round">
+      <path d="M224 538v80"/>
+      <path d="M321 540v52"/>
+      <path d="M481 616v-52"/>
+    </g>
+  </g>
+  <g transform="rotate(1.2 399 466)">
+    <rect x="186" y="422" width="426" height="112" rx="22" fill="#c6ccd8"/>
+    <rect x="186" y="410" width="426" height="112" rx="22" fill="#e1e5ee" stroke="#c1c8d5" stroke-width="3"/>
+    <rect x="198" y="419" width="402" height="38" rx="15" fill="#ffffff" opacity=".45"/>
+    <g fill="none" stroke="#d0d6e0" stroke-width="3" stroke-linecap="round">
+      <path d="M210 426v80"/>
+      <path d="M314 428v52"/>
+      <path d="M484 504v-52"/>
+    </g>
+  </g>
+  <g transform="rotate(-0.9 402 354)">
+    <rect x="206" y="310" width="392" height="112" rx="22" fill="#c6ccd8"/>
+    <rect x="206" y="298" width="392" height="112" rx="22" fill="#ebedf4" stroke="#c1c8d5" stroke-width="3"/>
+    <rect x="218" y="307" width="368" height="38" rx="15" fill="#ffffff" opacity=".45"/>
+    <g fill="none" stroke="#d0d6e0" stroke-width="3" stroke-linecap="round">
+      <path d="M230 314v80"/>
+      <path d="M324 316v52"/>
+      <path d="M480 392v-52"/>
+    </g>
+  </g>
+  <g transform="rotate(1.6 401 242)">
+    <rect x="192" y="196" width="418" height="116" rx="22" fill="#c6ccd8"/>
+    <rect x="192" y="184" width="418" height="116" rx="22" fill="url(#tshirt4-mat)" stroke="#c1c8d5" stroke-width="3"/>
+    <rect x="204" y="193" width="394" height="39" rx="15" fill="#ffffff" opacity=".45"/>
+    <g fill="none" stroke="#d0d6e0" stroke-width="3" stroke-linecap="round">
+      <path d="M216 200v84"/>
+      <path d="M317 202v53"/>
+      <path d="M485 282v-53"/>
+    </g>
+    <circle cx="384.28" cy="242.0" r="33" fill="url(#tshirt4-ink)"/>
+    <path d="M370 228L398 256M398 228L370 256" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+    <rect x="434" y="225" width="118" height="15" rx="8" fill="#c2410c"/>
+    <rect x="434" y="248" width="80" height="13" rx="6" fill="#f97316" opacity=".9"/>
+  </g>
+</svg>

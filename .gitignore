@@ -1,0 +1,42 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Firebase Admin credentials. Anyone holding this file has full read/write access
+# to the shop's database — orders, customers, prices — with security rules bypassed.
+# It must never be committed, and never leave this machine.
+# Match the name in any shape. A file downloaded from the Firebase console and
+# renamed on macOS arrives as `service-account.json.json`, which a single-extension
+# pattern misses — that is exactly how one of these got committed once.
+*service-account*
+*service_account*
+*serviceAccount*
+*adminsdk*
+smoke-*.png
+# Screenshots the verification scripts leave behind — evidence for a run,
+# not part of the shop.
+*-verify.png
+*-final.png
+finish-deploy.sh
+.backups/
+release/
+
+# Last-known-good catalogue and categories, written by the server so an
+# unreachable Firestore serves a stale shop instead of an empty one. Runtime
+# state, never source.
+.cache/
+
+# Hand tools written during a debugging session, and dumps of live data. One of
+# these — a script that minted an admin account with its password in the file —
+# reached a commit on 2026-09-20 and the account was live on the shop until it
+# was found by a review. Anything scratch belongs in the scratchpad, not here.
+.mk*.mjs
+.probe-*.mjs
+.check*.mjs
+.kill*.mjs
+tmp-products.json

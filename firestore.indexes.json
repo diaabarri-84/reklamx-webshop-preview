@@ -1,0 +1,39 @@
+{
+  "_comment": [
+    "Composite indexes the shop's queries need.",
+    "",
+    "Firestore creates single-field indexes on its own, but a query that filters",
+    "on one field and sorts on another needs a composite index declared here. The",
+    "customer's order list does exactly that (userId == me, newest first), and",
+    "without the index it does not return an empty list — it throws, and the",
+    "customer sees a dashboard with no orders at all.",
+    "",
+    "These already exist on the current database (verified against it directly).",
+    "This file is what makes them reproducible if the shop is ever rebuilt on a",
+    "fresh Firebase project. Deploy with:",
+    "  firebase deploy --only firestore:indexes",
+    "",
+    "IMPORTANT: this project uses a NAMED database, not (default) —",
+    "ai-studio-67b3d2fe-143f-469d-b3a4-49dcbdfef939. Point the CLI at it, or the",
+    "indexes land on an empty database nobody reads."
+  ],
+  "indexes": [
+    {
+      "collectionGroup": "orders",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "designs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "ASCENDING" },
+        { "fieldPath": "updatedAt", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

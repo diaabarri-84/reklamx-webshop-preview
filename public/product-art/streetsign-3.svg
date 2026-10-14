@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="sign3-t sign3-d">
+  <title id="sign3-t">Snap frame and poster area</title>
+  <desc id="sign3-d">Close-up of the top-left corner of a pavement sign's snap frame, with the poster's printable area marked out.</desc>
+  <!--
+    Interim illustration, not a photograph of the shop's own product. Flat vector
+    art sitting on the shop surface (#e8eaf1) so an unphotographed product still
+    looks deliberate. Orange is reserved for the printing, because the printing
+    is what we sell. Replaced per product from the dashboard image field.
+  -->
+  <defs>
+    <radialGradient id="sign3-hi" cx=".2" cy=".16" r=".82">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sign3-lo" cx=".85" cy=".88" r=".8">
+      <stop offset="0" stop-color="#c9cdd8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9cdd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sign3-sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b4bbc9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b4bbc9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sign3-mat" x1="0" y1="0" x2=".55" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/>
+      <stop offset="1" stop-color="#dde1eb"/>
+    </linearGradient>
+    <linearGradient id="sign3-ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <rect width="800" height="800" fill="url(#sign3-hi)"/>
+  <rect width="800" height="800" fill="url(#sign3-lo)"/>
+  <rect x="138" y="138" width="900" height="900" fill="#f8f9fc"/>
+  <rect x="110" y="110" width="1000" height="1000" rx="46" fill="none" stroke="#ccd2dd" stroke-width="56"/>
+  <rect x="134" y="134" width="960" height="960" rx="24" fill="none" stroke="#ffffff" stroke-width="6" opacity=".6"/>
+  <rect x="86" y="86" width="1040" height="1040" rx="60" fill="none" stroke="#b8bfcc" stroke-width="4"/>
+  <rect x="212" y="212" width="700" height="700" fill="none" stroke="url(#sign3-ink)" stroke-width="3" stroke-dasharray="15 12" opacity=".6"/>
+  <path d="M212 268v-56h56" fill="none" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="470" cy="470" r="118" fill="url(#sign3-ink)"/>
+  <rect x="433.0" y="433.0" width="74.0" height="74.0" rx="17.8" transform="rotate(45 470.0 470.0)" fill="none" stroke="#ffffff" stroke-width="28" stroke-linejoin="round"/>
+  <rect x="300" y="636" width="340" height="26" rx="13" fill="#c2410c"/>
+  <rect x="354" y="686" width="232" height="22" rx="11" fill="#f97316" opacity=".85"/>
+  <g transform="rotate(-16 168 470)">
+    <rect x="118" y="380" width="46" height="200" rx="14" fill="#d8dce6" stroke="#b8bfcc" stroke-width="3"/>
+    <path d="M141 410v140" stroke="#b8bfcc" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

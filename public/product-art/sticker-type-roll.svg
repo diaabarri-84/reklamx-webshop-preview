@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="str-t">
+  <title id="str-t">A roll of printed stickers</title>
+  <!-- Option icon for "Printed on a roll": the roll seen slightly from above,
+       with the printed labels running across its face. -->
+  <ellipse cx="60" cy="46" rx="42" ry="17" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+  <path d="M18 46v22c0 9.4 18.8 17 42 17s42-7.6 42-17V46" fill="#ffffff" stroke="#1f2937" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="46" rx="14" ry="5.5" fill="#1f2937"/>
+  <g fill="#1f2937">
+    <circle cx="34" cy="50" r="3.4"/><circle cx="47" cy="53" r="3.4"/>
+    <circle cx="60" cy="54" r="3.4"/><circle cx="73" cy="53" r="3.4"/><circle cx="86" cy="50" r="3.4"/>
+  </g>
+</svg>

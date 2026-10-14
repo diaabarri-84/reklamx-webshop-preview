@@ -1,0 +1,111 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "staff", "production", "client"] },
+        "accountType": { "type": "string", "enum": ["individual", "business"] },
+        "companyName": { "type": "string" },
+        "taxNumber": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "suspended"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "role", "status"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Product categories",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "parentId": { "type": "string" },
+        "image": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Print products",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "basePrice": { "type": "number" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "options": { "type": "array", "items": { "type": "string" } },
+        "isWeb2Print": { "type": "boolean" }
+      },
+      "required": ["name", "categoryId", "basePrice"]
+    },
+    "DesignTemplate": {
+      "title": "DesignTemplate",
+      "description": "Editable design templates",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "canvasData": { "type": "string", "description": "JSON string of fabric.js canvas" },
+        "isFree": { "type": "boolean" }
+      },
+      "required": ["name", "canvasData"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer orders",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "in_design", "in_print", "finishing", "shipped", "completed", "cancelled"] },
+        "totalAmount": { "type": "number" },
+        "paymentStatus": { "type": "string", "enum": ["unpaid", "paid", "partially_refunded", "refunded"] },
+        "shippingAddress": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "status", "totalAmount", "createdAt"]
+    },
+    "PrintSettings": {
+      "title": "PrintSettings",
+      "description": "Custom print upload settings",
+      "type": "object",
+      "properties": {
+        "maxWidthCm": { "type": "number" },
+        "pricePerLinearMeter": { "type": "number" },
+        "minPrice": { "type": "number" },
+        "allowedFormats": { "type": "array", "items": { "type": "string" } },
+        "currencySymbol": { "type": "string" }
+      },
+      "required": ["maxWidthCm", "pricePerLinearMeter", "minPrice", "allowedFormats"]
+    },
+    "Coupon": {
+      "title": "Coupon",
+      "description": "Discount coupon codes",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "percent": { "type": "number" },
+        "active": { "type": "boolean" },
+        "minOrderAmount": { "type": "number" },
+        "expiresAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["code", "percent", "active"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": { "schema": "User", "description": "User profiles" },
+    "/categories/{categoryId}": { "schema": "Category", "description": "Product categories" },
+    "/products/{productId}": { "schema": "Product", "description": "Print products" },
+    "/templates/{templateId}": { "schema": "DesignTemplate", "description": "Design templates" },
+    "/orders/{orderId}": { "schema": "Order", "description": "Customer orders" },
+    "/settings/{settingId}": { "schema": "PrintSettings", "description": "Global print settings" },
+    "/coupons/{couponId}": { "schema": "Coupon", "description": "Discount coupons" }
+  }
+}

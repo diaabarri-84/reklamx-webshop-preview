@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="stk1-t stk1-d">
+  <title id="stk1-t">A sheet of printed paper stickers</title>
+  <desc id="stk1-d">Round, square and rectangular paper stickers laid out on a sheet, one lifting at the corner.</desc>
+  <!-- Interim illustration, not a photograph of the shop's own product. Flat
+       vector art on the shop surface (#e8eaf1). Gold is reserved for the
+       printing, because the printing is what we sell. -->
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <g>
+    <rect x="150" y="130" width="500" height="560" rx="26" fill="#ffffff" stroke="#d3d8e4" stroke-width="4"/>
+    <g fill="#bb965b">
+      <circle cx="260" cy="250" r="66"/>
+      <rect x="464" y="184" width="132" height="132" rx="22"/>
+      <rect x="196" y="384" width="180" height="96" rx="18"/>
+      <ellipse cx="530" cy="432" rx="82" ry="52"/>
+      <circle cx="262" cy="580" r="58"/>
+      <rect x="446" y="530" width="152" height="98" rx="20"/>
+    </g>
+    <g fill="#ffffff" opacity=".92">
+      <circle cx="260" cy="250" r="34"/>
+      <rect x="498" y="230" width="64" height="18" rx="9"/>
+      <rect x="228" y="422" width="116" height="20" rx="10"/>
+    </g>
+    <path d="M650 690l-92 0 92-92z" fill="#f3f5f9" stroke="#d3d8e4" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+</svg>

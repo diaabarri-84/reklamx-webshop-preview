@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Declared explicitly, so browsers stop asking for /favicon.ico. There was
+         no icon at all: the request 404s, and before the SPA fallback was
+         narrowed it was answered with the whole page at 200, which hid it. -->
+    <!-- The ReklamX X (2026-10-13): a sharp 32px tab icon, the full mark for
+         high-density screens, and a 180px home-screen icon on white for iOS,
+         which does not draw transparent touch icons well. -->
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="343x343" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+    <!-- The webfont, started in the first bytes of the document instead of
+         after src/index.css has been downloaded and parsed. The two preconnects
+         matter as much as the link does: Google serves the CSS from one origin
+         and the font files from another, and each costs a DNS lookup, a TCP
+         handshake and a TLS negotiation that would otherwise happen only once
+         the stylesheet had been read. crossorigin on the gstatic one is
+         required — fonts are fetched in CORS mode, and without it the browser
+         opens a SECOND connection and the preconnect is wasted. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- The hero and the category tiles are served from here. Opening the
+         connection now saves the DNS + TLS round trips from the LCP image's
+         critical path; it costs nothing when a page has no such image. -->
+    <!-- No crossorigin here, unlike the font one: the hero is a plain <img>
+         fetched in no-CORS mode, and an anonymous-CORS preconnect keys a
+         DIFFERENT connection pool — the warmed socket would go unused and the
+         image would pay for a second handshake. -->
+    <link rel="preconnect" href="https://images.pexels.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    />
+    <!-- BETWEEN THESE MARKERS THE SERVER REWRITES EVERYTHING, per address.
+         A crawler asking for /products/rollup-standard used to be handed this
+         same generic block, because the real title and description are written
+         by react-helmet-async only after React has mounted — and Facebook,
+         LinkedIn, WhatsApp, Slack, Bing and Google's first pass do not run our
+         JavaScript. server-seo.ts replaces the block below with tags built for
+         the page that was actually asked for, product price and all. What is
+         written here is the fallback: what `vite dev` shows, and what is served
+         if the markers are ever lost. -->
+    <!--seo:start-->
+    <title>ReklamX — Web2Print Print Shop</title>
+
+    <!-- Site-level SEO and share tags live HERE, in the first byte of the HTML,
+         because the only other copy is injected by react-helmet-async once React
+         has mounted. Link crawlers and the unfurlers behind Facebook, LinkedIn,
+         WhatsApp and Slack do not run our JavaScript, so they saw a <title> and
+         nothing else: a link to the shop pasted into a chat showed a bare URL
+         with no description and no picture. Helmet still rewrites title,
+         description and og:title/og:description per route for real browsers,
+         which is what we want — these are the fallback a non-JS reader gets.
+         Absolute URLs are required: unfurlers do not resolve relative paths. -->
+    <meta name="description" content="Swedish web-to-print shop. Order business cards, stickers, banners, signs and branded merchandise online — upload your own artwork or design it in your browser." />
+    <meta property="og:site_name" content="ReklamX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shop.reklamx.se/" />
+    <meta property="og:title" content="ReklamX — Web2Print Print Shop" />
+    <meta property="og:description" content="Swedish web-to-print shop. Order business cards, stickers, banners, signs and branded merchandise online — upload your own artwork or design it in your browser." />
+    <!-- Sweden is the shop's home market; the storefront itself also ships in
+         en, da and no, which is what the alternates say. -->
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="da_DK" />
+    <meta property="og:locale:alternate" content="nb_NO" />
+    <!-- A real 1200x630 raster card, built from the shop's own logo. It used to
+         be favicon.svg: a 64px square, the wrong shape for a share card, and
+         ignored outright by several unfurlers — so a link to the shop pasted
+         into WhatsApp showed no picture at all. -->
+    <meta property="og:image" content="https://shop.reklamx.se/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ReklamX — print that looks like you meant it" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://shop.reklamx.se/og-image.png" />
+    <!--seo:end-->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+{
+  "textiles": {
+    "name": "Textiles",
+    "nameI18n": {
+      "sv": "Textil",
+      "da": null,
+      "no": null
+    },
+    "description": "",
+    "parentId": "",
+    "image": "https://images.pexels.com/photos/8146450/pexels-photo-8146450.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "isHidden": false,
+    "sortOrder": 10,
+    "productOrder": [
+      "prod-tshirt-round-neck"
+    ]
+  },
+  "cups": {
+    "name": "Mugs & bottles",
+    "nameI18n": {
+      "sv": "Muggar & flaskor",
+      "da": null,
+      "no": null
+    },
+    "description": "",
+    "parentId": "",
+    "image": "https://images.pexels.com/photos/31785816/pexels-photo-31785816.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "isHidden": false,
+    "sortOrder": 20,
+    "productOrder": [
+      "prod-bottle-sky-650"
+    ],
+    "hiddenOnHome": true
+  },
+  "cards": {
+    "name": "Print & cards",
+    "nameI18n": {
+      "sv": "Trycksaker",
+      "da": null,
+      "no": null
+    },
+    "description": "",
+    "parentId": "",
+    "image": "https://images.pexels.com/photos/5706020/pexels-photo-5706020.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "isHidden": false,
+    "sortOrder": 30,
+    "productOrder": [
+      "prod-pen-printed",
+      "prod-wall-calendar",
+      "test-business-cards",
+      "test-posters",
+      "test-flyers"
+    ]
+  },
+  "exhibition": {
+    "name": "Banners & displays",
+    "nameI18n": {
+      "sv": "Banderoller & mässmaterial",
+      "da": null,
+      "no": null
+    },
+    "description": "",
+    "parentId": "",
+    "image": "https://images.pexels.com/photos/12705461/pexels-photo-12705461.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "isHidden": true,
+    "sortOrder": 40,
+    "productOrder": [
+      "prod-street-sign-windtalker",
+      "test-rollup",
+      "test-pvc-banner"
+    ]
+  },
+  "labels": {
+    "name": "Stickers & labels",
+    "nameI18n": {
+      "sv": "Klistermärken & etiketter",
+      "da": null,
+      "no": null
+    },
+    "description": "",
+    "parentId": "",
+    "image": "https://images.pexels.com/photos/30101191/pexels-photo-30101191.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "isHidden": false,
+    "sortOrder": 50,
+    "productOrder": [
+      "prod-window-decals",
+      "test-stickers",
+      "test-roll-labels"
+    ]
+  },
+  "flags": {
+    "name": "Flags",
+    "nameI18n": {
+      "sv": "Flaggor",
+      "da": null,
+      "no": null
+    },
+    "description": "",
+    "parentId": "",
+    "image": "https://images.pexels.com/photos/35444199/pexels-photo-35444199.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "isHidden": true,
+    "sortOrder": 60,
+    "productOrder": [
+      "test-beach-flag"
+    ]
+  }
+}

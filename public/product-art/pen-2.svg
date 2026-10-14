@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="pen2-t pen2-d">
+  <title id="pen2-t">Pen imprint area</title>
+  <desc id="pen2-d">Close-up of a pen barrel showing the imprint area marked out and an orange printed logo.</desc>
+  <!--
+    Interim illustration, not a photograph of the shop's own product. Flat vector
+    art sitting on the shop surface (#e8eaf1) so an unphotographed product still
+    looks deliberate. Orange is reserved for the printing, because the printing
+    is what we sell. Replaced per product from the dashboard image field.
+  -->
+  <defs>
+    <radialGradient id="pen2-hi" cx=".2" cy=".16" r=".82">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pen2-lo" cx=".85" cy=".88" r=".8">
+      <stop offset="0" stop-color="#c9cdd8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9cdd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pen2-sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b4bbc9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b4bbc9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pen2-mat" x1="0" y1="0" x2=".55" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/>
+      <stop offset="1" stop-color="#dde1eb"/>
+    </linearGradient>
+    <linearGradient id="pen2-ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <rect width="800" height="800" fill="url(#pen2-hi)"/>
+  <rect width="800" height="800" fill="url(#pen2-lo)"/>
+  <rect x="0" y="258" width="800" height="292" fill="url(#pen2-mat)"/>
+  <rect x="0" y="278" width="800" height="56" fill="#ffffff" opacity=".55"/>
+  <rect x="0" y="492" width="800" height="42" fill="#c9cdd8" opacity=".5"/>
+  <path d="M0 258h800M0 550h800" stroke="#c3c9d6" stroke-width="3"/>
+  <g stroke="#c3c9d6" stroke-width="7" stroke-linecap="round" opacity=".8">
+    <path d="M24 288v232M56 288v232M88 288v232"/>
+  </g>
+  <rect x="140" y="316" width="542" height="176" rx="8" fill="none" stroke="url(#pen2-ink)" stroke-width="3" stroke-dasharray="14 11" opacity=".55"/>
+  <circle cx="228" cy="404" r="48" fill="url(#pen2-ink)"/>
+  <rect x="213.2" y="389.2" width="29.6" height="29.6" rx="7.1" transform="rotate(45 228.0 404.0)" fill="none" stroke="#ffffff" stroke-width="12" stroke-linejoin="round"/>
+  <rect x="310" y="358" width="292" height="26" rx="13" fill="#c2410c"/>
+  <rect x="310" y="396" width="216" height="22" rx="11" fill="#f97316" opacity=".9"/>
+  <rect x="310" y="432" width="138" height="18" rx="9" fill="#f97316" opacity=".65"/>
+  <g stroke="#9aa3b4" stroke-width="3" stroke-linecap="round">
+    <path d="M140 622h542M140 610v24M682 610v24"/>
+  </g>
+</svg>

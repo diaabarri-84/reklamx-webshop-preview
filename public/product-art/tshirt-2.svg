@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="tshirt2-t tshirt2-d">
+  <title id="tshirt2-t">Printed t-shirt, back</title>
+  <desc id="tshirt2-d">Flat-lay of a light t-shirt seen from the back, with a wide orange print across the shoulders.</desc>
+  <!--
+    Interim illustration, not a photograph of the shop's own product. Flat vector
+    art sitting on the shop surface (#e8eaf1) so an unphotographed product still
+    looks deliberate. Orange is reserved for the printing, because the printing
+    is what we sell. Replaced per product from the dashboard image field.
+  -->
+  <defs>
+    <radialGradient id="tshirt2-hi" cx=".2" cy=".16" r=".82">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tshirt2-lo" cx=".85" cy=".88" r=".8">
+      <stop offset="0" stop-color="#c9cdd8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9cdd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tshirt2-sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b4bbc9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b4bbc9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tshirt2-mat" x1="0" y1="0" x2=".55" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/>
+      <stop offset="1" stop-color="#dde1eb"/>
+    </linearGradient>
+    <linearGradient id="tshirt2-ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <rect width="800" height="800" fill="url(#tshirt2-hi)"/>
+  <rect width="800" height="800" fill="url(#tshirt2-lo)"/>
+  <ellipse cx="400" cy="672" rx="250" ry="40" fill="url(#tshirt2-sh)"/>
+  <path d="M345 198C365 216 435 216 455 198L560 224L636 306L586 372L520 314L520 648C470 660 330 660 280 648L280 314L214 372L164 306L240 224Z" fill="url(#tshirt2-mat)" stroke="#cbd0db" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M350 200C370 220 430 220 450 200" fill="none" stroke="#d5d9e3" stroke-width="9" stroke-linecap="round"/>
+  <rect x="378" y="222" width="44" height="30" rx="7" fill="#eef0f6" stroke="#cbd0db" stroke-width="2"/>
+  <path d="M388 232h24M388 242h16" stroke="#c3c9d6" stroke-width="2" stroke-linecap="round"/>
+  <g fill="none" stroke="#d7dbe4" stroke-width="3" stroke-linecap="round">
+    <path d="M268 216L280 314M532 216L520 314"/>
+    <path d="M227 382L177 316M573 382L623 316"/>
+    <path d="M280 630C330 642 470 642 520 630"/>
+  </g>
+  <path d="M292 382C340 346 460 346 508 382L508 424C460 388 340 388 292 424Z" fill="url(#tshirt2-ink)"/>
+  <rect x="306" y="452" width="188" height="17" rx="8" fill="#c2410c"/>
+  <rect x="334" y="484" width="132" height="14" rx="7" fill="#f97316"/>
+  <rect x="358" y="512" width="84" height="12" rx="6" fill="#f97316" opacity=".7"/>
+</svg>

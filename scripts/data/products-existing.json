@@ -1,0 +1,910 @@
+[
+  {
+    "id": "prod-001",
+    "nameI18n": {
+      "sv": "Premium visitkort",
+      "da": "Premium visitkort",
+      "no": "Premium visittkort"
+    },
+    "description": "Business cards printed on heavy 350 gsm silk board, with a matt or gloss finish and your choice of lamination, foil and corner shape. The standard European format is 85 × 55 mm; portrait, landscape and square are all available.",
+    "descriptionI18n": {
+      "sv": "Visitkort tryckta på kraftig 350 g silkeskartong, med matt eller blank yta och valfri laminering, folie och hörnform. Standardformatet är europeiska 85 × 55 mm; stående, liggande och kvadratiskt går alla att beställa.",
+      "da": "Visitkort trykt på kraftig 350 g silkekarton, med mat eller blank overflade og valgfri laminering, folie og hjørneform. Standardformatet er det europæiske 85 × 55 mm; stående, liggende og kvadratisk kan alle bestilles.",
+      "no": "Visittkort trykt på kraftig 350 g silkekartong, med matt eller blank overflate og valgfri laminering, folie og hjørneform. Standardformatet er det europeiske 85 × 55 mm; stående, liggende og kvadratisk kan alle bestilles."
+    },
+    "features": [
+      "350 gsm silk cardstock",
+      "Full colour on both sides",
+      "Matt, gloss or soft-touch lamination",
+      "Foil and spot finishes available",
+      "Square or rounded corners",
+      "From 100 cards"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "350 g silkeskartong",
+        "Fyrfärg på båda sidor",
+        "Matt, blank eller soft touch-laminering",
+        "Folie och specialeffekter kan väljas",
+        "Raka eller rundade hörn",
+        "Från 100 kort"
+      ],
+      "da": [
+        "350 g silkekarton",
+        "Firfarvet på begge sider",
+        "Mat, blank eller soft touch-laminering",
+        "Folie og specialeffekter kan vælges",
+        "Lige eller runde hjørner",
+        "Fra 100 kort"
+      ],
+      "no": [
+        "350 g silkekartong",
+        "Firefarget på begge sider",
+        "Matt, blank eller soft touch-laminering",
+        "Folie og spesialeffekter kan velges",
+        "Rette eller avrundede hjørner",
+        "Fra 100 kort"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Standard format",
+        "value": "85 × 55 mm (European). Portrait, landscape and square also available.",
+        "labelI18n": {
+          "sv": "Standardformat",
+          "da": "Standardformat",
+          "no": "Standardformat"
+        },
+        "valueI18n": {
+          "sv": "85 × 55 mm (europeiskt). Stående, liggande och kvadratiskt finns också.",
+          "da": "85 × 55 mm (europæisk). Stående, liggende og kvadratisk findes også.",
+          "no": "85 × 55 mm (europeisk). Stående, liggende og kvadratisk finnes også."
+        }
+      },
+      {
+        "label": "Board",
+        "value": "350 gsm silk coated as standard; other weights and uncoated, recycled and textured stocks are selectable.",
+        "labelI18n": {
+          "sv": "Kartong",
+          "da": "Karton",
+          "no": "Kartong"
+        },
+        "valueI18n": {
+          "sv": "350 g silkebestruket som standard; andra gramvikter samt obestruket, återvunnet och strukturpapper kan väljas.",
+          "da": "350 g silkebestrøget som standard; andre gramvægte samt ubestrøget, genbrugs- og struktureret karton kan vælges.",
+          "no": "350 g silkebestrøket som standard; andre gramvekter samt ubestrøket, resirkulert og strukturkartong kan velges."
+        }
+      },
+      {
+        "label": "Printing",
+        "value": "Full colour CMYK, single- or double-sided.",
+        "labelI18n": {
+          "sv": "Tryck",
+          "da": "Tryk",
+          "no": "Trykk"
+        },
+        "valueI18n": {
+          "sv": "Fyrfärg CMYK, enkel- eller dubbelsidigt.",
+          "da": "Firfarvet CMYK, enkelt- eller dobbeltsidet.",
+          "no": "Firefarget CMYK, enkelt- eller dobbeltsidig."
+        }
+      },
+      {
+        "label": "Finishing",
+        "value": "Matt, gloss, anti-scratch or soft-touch lamination, on the front, the back or both.",
+        "labelI18n": {
+          "sv": "Efterbehandling",
+          "da": "Efterbehandling",
+          "no": "Etterbehandling"
+        },
+        "valueI18n": {
+          "sv": "Matt, blank, reptålig eller soft touch-laminering, på fram-, bak- eller båda sidor.",
+          "da": "Mat, blank, ridsefast eller soft touch-laminering, på for-, bagside eller begge.",
+          "no": "Matt, blank, ripebestandig eller soft touch-laminering, på for-, bakside eller begge."
+        }
+      },
+      {
+        "label": "Corners",
+        "value": "Straight cut as standard; rounded corners are selectable.",
+        "labelI18n": {
+          "sv": "Hörn",
+          "da": "Hjørner",
+          "no": "Hjørner"
+        },
+        "valueI18n": {
+          "sv": "Raka som standard; rundade hörn kan väljas.",
+          "da": "Lige som standard; runde hjørner kan vælges.",
+          "no": "Rette som standard; avrundede hjørner kan velges."
+        }
+      },
+      {
+        "label": "Minimum order",
+        "value": "100 cards.",
+        "labelI18n": {
+          "sv": "Minsta beställning",
+          "da": "Mindste bestilling",
+          "no": "Minste bestilling"
+        },
+        "valueI18n": {
+          "sv": "100 kort.",
+          "da": "100 kort.",
+          "no": "100 kort."
+        }
+      },
+      {
+        "label": "Artwork",
+        "value": "Print-ready PDF, 3 mm bleed on every side, text at least 3 mm inside the trim, CMYK.",
+        "labelI18n": {
+          "sv": "Original",
+          "da": "Materiale",
+          "no": "Materiell"
+        },
+        "valueI18n": {
+          "sv": "Tryckfärdig PDF, 3 mm utfall runt om, text minst 3 mm innanför skärlinjen, CMYK.",
+          "da": "Trykklar PDF, 3 mm beskæring hele vejen rundt, tekst mindst 3 mm inden for skærelinjen, CMYK.",
+          "no": "Trykklar PDF, 3 mm utfall hele veien rundt, tekst minst 3 mm innenfor skjærelinjen, CMYK."
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "Matt or gloss — which lasts better?",
+        "a": "Matt silk is easier to write on and hides fingerprints; gloss makes photographs and strong colours look deeper. If the card will be handled a lot, anti-scratch or soft-touch lamination protects the surface far better than either finish on its own.",
+        "qI18n": {
+          "sv": "Matt eller blankt — vad håller bäst?",
+          "da": "Mat eller blank — hvad holder bedst?",
+          "no": "Matt eller blank — hva holder best?"
+        },
+        "aI18n": {
+          "sv": "Matt silke är lättare att skriva på och döljer fingeravtryck; blankt gör foton och starka färger djupare. Ska kortet hanteras mycket skyddar reptålig eller soft touch-laminering ytan betydligt bättre än någon av ytorna på egen hand.",
+          "da": "Mat silke er lettere at skrive på og skjuler fingeraftryk; blank gør fotos og stærke farver dybere. Skal kortet håndteres meget, beskytter ridsefast eller soft touch-laminering overfladen langt bedre end nogen af overfladerne alene.",
+          "no": "Matt silke er lettere å skrive på og skjuler fingeravtrykk; blank gjør foto og sterke farger dypere. Skal kortet håndteres mye, beskytter ripebestandig eller soft touch-laminering overflaten langt bedre enn noen av overflatene alene."
+        }
+      },
+      {
+        "q": "How should I set up the file?",
+        "a": "Supply a print-ready PDF in CMYK at the finished size plus 3 mm bleed on every side, and keep anything that must not be cut at least 3 mm inside the trim. Embed your fonts or convert the text to outlines.",
+        "qI18n": {
+          "sv": "Hur ska jag göra i ordning filen?",
+          "da": "Hvordan skal jeg klargøre filen?",
+          "no": "Hvordan skal jeg klargjøre filen?"
+        },
+        "aI18n": {
+          "sv": "Skicka en tryckfärdig PDF i CMYK i färdigt format plus 3 mm utfall runt om, och håll allt som inte får skäras minst 3 mm innanför skärlinjen. Bädda in typsnitten eller konvertera texten till banor.",
+          "da": "Send en trykklar PDF i CMYK i færdigt format plus 3 mm beskæring hele vejen rundt, og hold alt, der ikke må skæres, mindst 3 mm inden for skærelinjen. Indlejr skrifttyperne, eller konvertér teksten til kurver.",
+          "no": "Send en trykklar PDF i CMYK i ferdig format pluss 3 mm utfall hele veien rundt, og hold alt som ikke skal skjæres minst 3 mm innenfor skjærelinjen. Bygg inn skriftene eller konverter teksten til baner."
+        }
+      },
+      {
+        "q": "Can I have more than one design in the same run?",
+        "a": "Yes. Choose how many designs the run contains under \"Different designs in one run\" — from two split evenly up to variable data, where every single card carries its own name and details.",
+        "qI18n": {
+          "sv": "Kan jag ha flera motiv i samma upplaga?",
+          "da": "Kan jeg have flere motiver i samme oplag?",
+          "no": "Kan jeg ha flere motiver i samme opplag?"
+        },
+        "aI18n": {
+          "sv": "Ja. Välj hur många motiv upplagan innehåller under ”Olika motiv i samma upplaga” — från två som delas jämnt upp till variabeldata, där varje enskilt kort har eget namn och egna uppgifter.",
+          "da": "Ja. Vælg hvor mange motiver oplaget indeholder under »Forskellige motiver i samme oplag« — fra to, der deles ligeligt, op til variable data, hvor hvert enkelt kort har eget navn og egne oplysninger.",
+          "no": "Ja. Velg hvor mange motiver opplaget inneholder under «Ulike motiver i samme opplag» — fra to som deles likt, opp til variabeldata, der hvert enkelt kort har eget navn og egne opplysninger."
+        }
+      },
+      {
+        "q": "Why does the price per card drop so much with quantity?",
+        "a": "Most of the cost of a short run is setting the press up, and that is charged once no matter how many cards you order. Spread over 500 cards instead of 100 it barely registers, which is why the ladder falls steeply at first and then flattens out.",
+        "qI18n": {
+          "sv": "Varför sjunker priset per kort så mycket med antalet?",
+          "da": "Hvorfor falder prisen pr. kort så meget med antallet?",
+          "no": "Hvorfor synker prisen per kort så mye med antallet?"
+        },
+        "aI18n": {
+          "sv": "Det mesta av kostnaden för en liten upplaga är att ställa in pressen, och den avgiften tas ut en gång oavsett hur många kort du beställer. Fördelad på 500 kort i stället för 100 märks den knappt, och därför faller trappan brant i början och planar sedan ut.",
+          "da": "Det meste af omkostningen ved et lille oplag er at sætte pressen op, og det gebyr opkræves én gang, uanset hvor mange kort du bestiller. Fordelt på 500 kort i stedet for 100 mærkes det næsten ikke, og derfor falder trappen stejlt i starten og flader så ud.",
+          "no": "Mesteparten av kostnaden ved et lite opplag er å stille inn pressen, og det gebyret tas én gang uansett hvor mange kort du bestiller. Fordelt på 500 kort i stedet for 100 merkes det knapt, og derfor faller trappen bratt i starten og flater så ut."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-002",
+    "nameI18n": {
+      "sv": "Banderoller och skyltar i vinyl",
+      "da": "Bannere og skilte i vinyl",
+      "no": "Bannere og skilt i vinyl"
+    },
+    "description": "Weatherproof PVC banners printed in full colour and finished for outdoor use. Choose the substrate — standard 510 gsm PVC, windproof 270 gsm mesh, double-sided 610 gsm blockout or recycled RPET fabric — then a stock size up to 300 × 100 cm, or enter your own dimensions. Hems, eyelets, wind slits, pole pockets and fixing accessories are configured on the same page, so the banner arrives ready to hang.",
+    "descriptionI18n": {
+      "sv": "Väderbeständiga banderoller i PVC med tryck i fyrfärg, färdiga för utomhusbruk. Välj material — standard-PVC 510 g, vindnät 270 g, dubbelsidig blockout 610 g eller återvunnen RPET-väv — och sedan ett standardformat upp till 300 × 100 cm eller ange ett eget mått. Fåll, öljetter, vindslitsar, tunnelsöm och fästtillbehör väljer du på samma sida, så att banderollen kommer färdig att hänga upp.",
+      "da": "Vejrbestandige PVC-bannere med fuldfarvetryk, klar til udendørs brug. Vælg materiale — standard-PVC 510 g, vindnet 270 g, dobbeltsidet blockout 610 g eller genanvendt RPET-væv — og derefter et standardformat op til 300 × 100 cm eller indtast dit eget mål. Sømkant, øjer, vindslidser, stangkanaler og monteringstilbehør vælger du på samme side, så banneret ankommer klar til ophængning.",
+      "no": "Værbestandige PVC-bannere med firefargetrykk, klare for utendørs bruk. Velg materiale — standard-PVC 510 g, vindnett 270 g, dobbeltsidig blockout 610 g eller resirkulert RPET-vev — og deretter et standardformat opptil 300 × 100 cm, eller oppgi ditt eget mål. Fall, maljer, vindspalter, stanglommer og festetilbehør velger du på samme side, slik at banneret kommer klart til å henges opp."
+    },
+    "features": [
+      "510 gsm PVC as standard, up to 650 gsm heavy-duty",
+      "270 gsm windproof mesh for fences and facades",
+      "610 gsm double-sided blockout — nothing shows through",
+      "Welded hems and eyelets as close as every 25 cm",
+      "Stock sizes to 300 × 100 cm, construction fence 338 × 174 cm",
+      "Custom size from 30 × 30 up to 2000 × 500 cm"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "PVC 510 g som standard, upp till kraftig 650 g",
+        "Vindnät 270 g för staket och fasader",
+        "Dubbelsidig blockout 610 g — inget lyser igenom",
+        "Svetsad fåll och öljetter så tätt som var 25 cm",
+        "Standardformat upp till 300 × 100 cm, byggstängsel 338 × 174 cm",
+        "Eget mått från 30 × 30 upp till 2000 × 500 cm"
+      ],
+      "da": [
+        "PVC 510 g som standard, op til kraftig 650 g",
+        "Vindnet 270 g til hegn og facader",
+        "Dobbeltsidet blockout 610 g — intet skinner igennem",
+        "Svejset sømkant og øjer helt ned til hver 25 cm",
+        "Standardformater op til 300 × 100 cm, byggehegn 338 × 174 cm",
+        "Eget mål fra 30 × 30 op til 2000 × 500 cm"
+      ],
+      "no": [
+        "PVC 510 g som standard, opptil kraftig 650 g",
+        "Vindnett 270 g for gjerder og fasader",
+        "Dobbeltsidig blockout 610 g — ingenting skinner gjennom",
+        "Sveiset fall og maljer så tett som hver 25 cm",
+        "Standardformater opptil 300 × 100 cm, byggegjerde 338 × 174 cm",
+        "Eget mål fra 30 × 30 opptil 2000 × 500 cm"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Banner material",
+        "value": "PVC 450–650 gsm, windproof mesh 270 gsm, double-sided blockout PVC 610 gsm, canvas, backlit polyester or recycled RPET fabric",
+        "labelI18n": {
+          "sv": "Banderollmaterial",
+          "da": "Bannermateriale",
+          "no": "Bannermateriale"
+        },
+        "valueI18n": {
+          "sv": "PVC 450–650 g, vindnät 270 g, dubbelsidig blockout-PVC 610 g, canvas, backlit-polyester eller återvunnen RPET-väv",
+          "da": "PVC 450–650 g, vindnet 270 g, dobbeltsidet blockout-PVC 610 g, canvas, backlit-polyester eller genanvendt RPET-væv",
+          "no": "PVC 450–650 g, vindnett 270 g, dobbeltsidig blockout-PVC 610 g, canvas, backlit-polyester eller resirkulert RPET-vev"
+        }
+      },
+      {
+        "label": "Stock sizes",
+        "value": "120 × 60, 180 × 90, 200 × 100, 240 × 120 and 300 × 100 cm, plus 215 × 73 cm crowd barrier and 338 × 174 cm construction fence",
+        "labelI18n": {
+          "sv": "Standardstorlekar",
+          "da": "Standardstørrelser",
+          "no": "Standardstørrelser"
+        },
+        "valueI18n": {
+          "sv": "120 × 60, 180 × 90, 200 × 100, 240 × 120 och 300 × 100 cm, samt 215 × 73 cm för avspärrningsstaket och 338 × 174 cm för byggstängsel",
+          "da": "120 × 60, 180 × 90, 200 × 100, 240 × 120 og 300 × 100 cm samt 215 × 73 cm til afspærringshegn og 338 × 174 cm til byggehegn",
+          "no": "120 × 60, 180 × 90, 200 × 100, 240 × 120 og 300 × 100 cm, samt 215 × 73 cm for sperregjerde og 338 × 174 cm for byggegjerde"
+        }
+      },
+      {
+        "label": "Custom size",
+        "value": "30–2000 cm wide × 30–500 cm high, priced by printed area",
+        "labelI18n": {
+          "sv": "Eget mått",
+          "da": "Eget mål",
+          "no": "Eget mål"
+        },
+        "valueI18n": {
+          "sv": "30–2000 cm brett × 30–500 cm högt, pris efter tryckt yta",
+          "da": "30–2000 cm bredt × 30–500 cm højt, pris efter trykt areal",
+          "no": "30–2000 cm bredt × 30–500 cm høyt, pris etter trykt areal"
+        }
+      },
+      {
+        "label": "Printing",
+        "value": "Full colour, single-sided, double-sided or back side only",
+        "labelI18n": {
+          "sv": "Tryck",
+          "da": "Tryk",
+          "no": "Trykk"
+        },
+        "valueI18n": {
+          "sv": "Fyrfärg, enkelsidigt, dubbelsidigt eller endast baksida",
+          "da": "Fuldfarve, enkeltsidet, dobbeltsidet eller kun bagside",
+          "no": "Firefarger, enkeltsidig, dobbeltsidig eller kun bakside"
+        }
+      },
+      {
+        "label": "Hem and edge reinforcement",
+        "value": "No hem, welded hem on selected edges or all round, webbing-reinforced hem, or rope sewn into the hem",
+        "labelI18n": {
+          "sv": "Fåll och kantförstärkning",
+          "da": "Sømkant og kantforstærkning",
+          "no": "Fall og kantforsterkning"
+        },
+        "valueI18n": {
+          "sv": "Ingen fåll, svetsad fåll på valda kanter eller runt om, förstärkt fåll med vävband, eller rep isytt i fållen",
+          "da": "Ingen sømkant, svejset sømkant på valgte kanter eller hele vejen rundt, forstærket sømkant med vævet bånd, eller reb syet ind i sømkanten",
+          "no": "Ingen fall, sveiset fall på valgte kanter eller hele veien rundt, forsterket fall med vevbånd, eller tau sydd inn i fallen"
+        }
+      },
+      {
+        "label": "Eyelets",
+        "value": "None, corners only, or every 100 / 50 / 30 / 25 cm — always set in a welded hem",
+        "labelI18n": {
+          "sv": "Öljetter",
+          "da": "Øjer",
+          "no": "Maljer"
+        },
+        "valueI18n": {
+          "sv": "Inga, endast i hörnen, eller var 100 / 50 / 30 / 25 cm — alltid satta i en svetsad fåll",
+          "da": "Ingen, kun i hjørnerne, eller for hver 100 / 50 / 30 / 25 cm — altid sat i en svejset sømkant",
+          "no": "Ingen, kun i hjørnene, eller hver 100 / 50 / 30 / 25 cm — alltid satt i en sveiset fall"
+        }
+      },
+      {
+        "label": "Wind relief and pole pockets",
+        "value": "Half-moon or cross-cut wind slits, up to 4 per m²; pole pockets on one, two or all four edges",
+        "labelI18n": {
+          "sv": "Vindslitsar och tunnelsöm",
+          "da": "Vindslidser og stangkanaler",
+          "no": "Vindspalter og stanglommer"
+        },
+        "valueI18n": {
+          "sv": "Halvmåneformade eller korsskurna vindslitsar, upp till 4 per m²; tunnelsöm på en, två eller alla fyra kanter",
+          "da": "Halvmåneformede eller korsskårne vindslidser, op til 4 pr. m²; stangkanaler på en, to eller alle fire kanter",
+          "no": "Halvmåneformede eller krysskårne vindspalter, opptil 4 per m²; stanglommer på én, to eller alle fire kanter"
+        }
+      },
+      {
+        "label": "Fixing accessories",
+        "value": "Cable ties, S-hooks, ball bungees, carabiners, 6 mm tension rope, ratchet tensioners or a complete outdoor kit",
+        "labelI18n": {
+          "sv": "Fästtillbehör",
+          "da": "Monteringstilbehør",
+          "no": "Festetilbehør"
+        },
+        "valueI18n": {
+          "sv": "Buntband, S-krokar, gummisnoddar med kula, karbinhakar, spännlina 6 mm, spännband med spärr eller ett komplett utomhuskit",
+          "da": "Kabelbindere, S-kroge, elastikker med kugle, karabinhager, spændetov 6 mm, spændebånd med skralde eller et komplet udendørskit",
+          "no": "Strips, S-kroker, strikker med kule, karabinkroker, strammetau 6 mm, strammebånd med skralle eller et komplett utendørssett"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "Which banner material should I choose?",
+        "a": "For most outdoor signs the 510 gsm PVC banner is the sensible default — opaque, waterproof and stiff enough to hang flat. Choose the 270 gsm windproof mesh when the banner sits on a fence, scaffold or facade where wind can build up behind it, and the 610 gsm blockout PVC when both sides are printed and nothing should show through.",
+        "qI18n": {
+          "sv": "Vilket banderollmaterial ska jag välja?",
+          "da": "Hvilket bannermateriale skal jeg vælge?",
+          "no": "Hvilket bannermateriale bør jeg velge?"
+        },
+        "aI18n": {
+          "sv": "För de flesta utomhusskyltar är PVC-banderoll 510 g det självklara valet — ogenomskinlig, vattentät och tillräckligt styv för att hänga plant. Välj vindnät 270 g när banderollen sitter på ett staket, en ställning eller en fasad där vinden kan bygga upp tryck bakom den, och blockout-PVC 610 g när båda sidorna ska tryckas och inget får lysa igenom.",
+          "da": "Til de fleste udendørs skilte er PVC-banneret på 510 g det oplagte valg — uigennemsigtigt, vandtæt og stift nok til at hænge fladt. Vælg vindnet 270 g, når banneret sidder på et hegn, et stillads eller en facade, hvor vinden kan bygge tryk op bagved, og blockout-PVC 610 g, når begge sider skal trykkes, og intet må skinne igennem.",
+          "no": "For de fleste utendørsskilt er PVC-banneret på 510 g det naturlige valget — ugjennomsiktig, vanntett og stivt nok til å henge flatt. Velg vindnett 270 g når banneret sitter på et gjerde, et stillas eller en fasade der vinden kan bygge opp trykk bak det, og blockout-PVC 610 g når begge sider skal trykkes og ingenting skal skinne gjennom."
+        }
+      },
+      {
+        "q": "How many eyelets do I need?",
+        "a": "Corners only is enough for a small banner indoors. Outdoors we suggest eyelets every 50 cm, and every 30 or 25 cm on large or exposed banners — the tighter the spacing, the less the material works in the wind. Eyelets need something to grip, so pick a welded hem on the same edges.",
+        "qI18n": {
+          "sv": "Hur många öljetter behöver jag?",
+          "da": "Hvor mange øjer skal jeg bruge?",
+          "no": "Hvor mange maljer trenger jeg?"
+        },
+        "aI18n": {
+          "sv": "Enbart i hörnen räcker för en liten banderoll inomhus. Utomhus rekommenderar vi öljetter var 50 cm, och var 30 eller 25 cm på stora eller vindutsatta banderoller — ju tätare avstånd, desto mindre arbetar materialet i vinden. Öljetterna behöver något att sitta fast i, så välj svetsad fåll på samma kanter.",
+          "da": "Kun i hjørnerne er nok til et lille banner indendørs. Udendørs anbefaler vi øjer for hver 50 cm og for hver 30 eller 25 cm på store eller vindudsatte bannere — jo tættere afstand, jo mindre arbejder materialet i vinden. Øjerne skal have noget at sidde fast i, så vælg svejset sømkant på de samme kanter.",
+          "no": "Bare i hjørnene holder for et lite banner innendørs. Utendørs anbefaler vi maljer hver 50 cm, og hver 30 eller 25 cm på store eller vindutsatte bannere — jo tettere avstand, desto mindre arbeider materialet i vinden. Maljene trenger noe å sitte fast i, så velg sveiset fall på de samme kantene."
+        }
+      },
+      {
+        "q": "Can I order a size that is not on the list?",
+        "a": "Yes. Pick the custom size option in the size field and type your own width and height in centimetres — from 30 up to 2000 cm wide and 30 up to 500 cm high. The price follows the printed area, so a custom banner costs what its square metres cost.",
+        "qI18n": {
+          "sv": "Kan jag beställa ett mått som inte finns i listan?",
+          "da": "Kan jeg bestille et mål, der ikke står på listen?",
+          "no": "Kan jeg bestille et mål som ikke står på listen?"
+        },
+        "aI18n": {
+          "sv": "Ja. Välj alternativet för eget mått i storleksfältet och skriv in bredd och höjd i centimeter — från 30 upp till 2000 cm brett och 30 upp till 500 cm högt. Priset följer den tryckta ytan, så en specialbanderoll kostar vad dess kvadratmeter kostar.",
+          "da": "Ja. Vælg muligheden for eget mål i størrelsesfeltet, og indtast bredde og højde i centimeter — fra 30 op til 2000 cm bredt og 30 op til 500 cm højt. Prisen følger det trykte areal, så et specialmål koster, hvad dets kvadratmeter koster.",
+          "no": "Ja. Velg alternativet for eget mål i størrelsesfeltet og skriv inn bredde og høyde i centimeter — fra 30 opptil 2000 cm bredt og 30 opptil 500 cm høyt. Prisen følger det trykte arealet, så et spesialmål koster det kvadratmeterne koster."
+        }
+      },
+      {
+        "q": "How should I supply the artwork?",
+        "a": "A print-ready PDF in CMYK is the safest. Large banners are normally built at 1:10 scale, with 25–50 mm bleed on every edge and text and logos kept clear of the hem and eyelet zone. If you only have photos or a logo, choose the layout or full design option under artwork supply and we build the file for you.",
+        "qI18n": {
+          "sv": "Hur levererar jag mitt original?",
+          "da": "Hvordan leverer jeg mit materiale?",
+          "no": "Hvordan leverer jeg trykkfilen?"
+        },
+        "aI18n": {
+          "sv": "En tryckfärdig PDF i CMYK är säkrast. Stora banderoller sätts normalt i skala 1:10, med 25–50 mm utfall på varje kant och text och logotyper på säkert avstånd från fåll och öljetter. Har du bara bilder eller en logotyp väljer du layout- eller designtjänsten under original, så bygger vi filen åt dig.",
+          "da": "En trykklar PDF i CMYK er det sikreste. Store bannere opsættes normalt i skala 1:10 med 25–50 mm beskæring på hver kant, og tekst og logoer holdes i sikker afstand fra sømkant og øjer. Har du kun billeder eller et logo, vælger du layout- eller designydelsen under materialelevering, så bygger vi filen for dig.",
+          "no": "En trykklar PDF i CMYK er tryggest. Store bannere settes normalt i skala 1:10, med 25–50 mm utfall på hver kant og tekst og logoer i god avstand fra fall og maljer. Har du bare bilder eller en logo, velger du layout- eller designtjenesten under levering av trykkfil, så bygger vi filen for deg."
+        }
+      },
+      {
+        "q": "How long does a banner last outdoors?",
+        "a": "PVC banners are made for temporary and seasonal signage rather than permanent installation. How long one lasts depends on the site, the weather and how well it is tensioned — a slack banner that flaps wears at the eyelets long before the print fades. The UV varnish or a weatherproof laminate helps where the banner faces direct sun.",
+        "qI18n": {
+          "sv": "Hur länge håller en banderoll utomhus?",
+          "da": "Hvor længe holder et banner udendørs?",
+          "no": "Hvor lenge holder et banner utendørs?"
+        },
+        "aI18n": {
+          "sv": "PVC-banderoller är gjorda för tillfällig och säsongsbunden skyltning, inte för permanent montering. Hur länge en banderoll håller beror på platsen, vädret och hur hårt den är spänd — en slak banderoll som fladdrar slits vid öljetterna långt innan trycket bleknar. UV-lack eller ett väderbeständigt laminat hjälper där banderollen står i direkt sol.",
+          "da": "PVC-bannere er lavet til midlertidig og sæsonbetonet skiltning, ikke til permanent montering. Hvor længe et banner holder, afhænger af stedet, vejret og hvor stramt det er spændt op — et slapt banner, der blafrer, slides ved øjerne længe før trykket falmer. UV-lak eller en vejrbestandig laminering hjælper, hvor banneret står i direkte sol.",
+          "no": "PVC-bannere er laget for midlertidig og sesongbasert skilting, ikke for permanent montering. Hvor lenge et banner holder, avhenger av stedet, været og hvor stramt det er spent opp — et slakt banner som blafrer slites ved maljene lenge før trykket blekner. UV-lakk eller et værbestandig laminat hjelper der banneret står i direkte sol."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-roll-labels",
+    "nameI18n": {
+      "sv": "Etiketter på rulle",
+      "da": "Etiketter på rulle",
+      "no": "Etiketter på rull"
+    },
+    "description": "Full-colour labels delivered on a roll, ready to apply by hand or to run in a dispenser or labelling machine. Choose the shape and size, the face material — paper, white or transparent PP film, PE or silver PET — the finish, the number of labels per roll, the core diameter and the winding direction. The rolls are wound in the position your applicator expects, so they run straight off the machine.",
+    "descriptionI18n": {
+      "sv": "Etiketter i fyrfärg levererade på rulle, klara att sätta för hand eller att köra i dispenser eller etikettmaskin. Du väljer form och storlek, ytmaterial — papper, vit eller transparent PP-film, PE eller silverfärgad PET — ytbehandling, antal etiketter per rulle, hylsdiameter och upprullningsriktning. Rullarna lindas i den position din applikator förväntar sig, så att de kan köras direkt i maskinen.",
+      "da": "Etiketter i fuldfarve leveret på rulle, klar til påsætning i hånden eller til dispenser og etiketmaskine. Du vælger form og størrelse, overflademateriale — papir, hvid eller transparent PP-film, PE eller sølvfarvet PET — overfladebehandling, antal etiketter pr. rulle, kernediameter og oprulningsretning. Rullerne vikles i den position, din applikator forventer, så de kan køre direkte i maskinen.",
+      "no": "Etiketter i firefargetrykk levert på rull, klare til å settes på for hånd eller til dispenser og etikettmaskin. Du velger form og størrelse, overflatemateriale — papir, hvit eller transparent PP-film, PE eller sølvfarget PET — overflatebehandling, antall etiketter per rull, hylsediameter og opprullingsretning. Rullene vikles i den posisjonen applikatoren din forventer, slik at de kan kjøres rett i maskinen."
+    },
+    "features": [
+      "Round, square, rectangular, oval — or your own die-cut contour",
+      "Paper, waterproof PP film, transparent no-label look, PE or silver PET",
+      "100 to 10 000 labels per roll",
+      "25, 38, 40, 76 or 152 mm cores to fit your applicator",
+      "Eight winding positions, inside or outside wound",
+      "Optional gloss, matte or outdoor laminate"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "Runda, kvadratiska, rektangulära, ovala — eller egen stansad kontur",
+        "Papper, vattentålig PP-film, transparent utan synlig etikettkant, PE eller silver-PET",
+        "100 till 10 000 etiketter per rulle",
+        "Hylsa på 25, 38, 40, 76 eller 152 mm — passar din applikator",
+        "Åtta upprullningspositioner, in- eller utvänd lindning",
+        "Blankt, matt eller utomhuslaminat som tillval"
+      ],
+      "da": [
+        "Runde, kvadratiske, rektangulære, ovale — eller egen stanset kontur",
+        "Papir, vandfast PP-film, transparent uden synlig etiketkant, PE eller sølv-PET",
+        "100 til 10.000 etiketter pr. rulle",
+        "Kerne på 25, 38, 40, 76 eller 152 mm — passer til din applikator",
+        "Otte oprulningspositioner, ind- eller udvendig vikling",
+        "Blank, mat eller udendørslaminering som tilvalg"
+      ],
+      "no": [
+        "Runde, kvadratiske, rektangulære, ovale — eller egen stanset kontur",
+        "Papir, vanntett PP-film, transparent uten synlig etikettkant, PE eller sølv-PET",
+        "100 til 10 000 etiketter per rull",
+        "Hylse på 25, 38, 40, 76 eller 152 mm — passer applikatoren din",
+        "Åtte opprullingsposisjoner, inn- eller utvendig vikling",
+        "Blankt, matt eller utendørslaminat som tilvalg"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Shape",
+        "value": "Round, square, rectangular, oval, capsule, hexagon, star, heart — or your own die-cut contour",
+        "labelI18n": {
+          "sv": "Form",
+          "da": "Form",
+          "no": "Form"
+        },
+        "valueI18n": {
+          "sv": "Rund, kvadratisk, rektangulär, oval, kapsel, hexagon, stjärna, hjärta — eller egen stansad kontur",
+          "da": "Rund, kvadratisk, rektangulær, oval, kapsel, sekskant, stjerne, hjerte — eller egen stanset kontur",
+          "no": "Rund, kvadratisk, rektangulær, oval, kapsel, sekskant, stjerne, hjerte — eller egen stanset kontur"
+        }
+      },
+      {
+        "label": "Size",
+        "value": "Stock sizes 25 × 25 mm to 300 × 300 mm; custom sizes from 20 mm",
+        "labelI18n": {
+          "sv": "Storlek",
+          "da": "Størrelse",
+          "no": "Størrelse"
+        },
+        "valueI18n": {
+          "sv": "Standardstorlekar 25 × 25 mm till 300 × 300 mm; eget mått från 20 mm",
+          "da": "Standardstørrelser 25 × 25 mm til 300 × 300 mm; eget mål fra 20 mm",
+          "no": "Standardstørrelser 25 × 25 mm til 300 × 300 mm; eget mål fra 20 mm"
+        }
+      },
+      {
+        "label": "Face material",
+        "value": "Semi-gloss, matte and kraft paper, white and transparent PP film, PE, silver PET, thermal and freezer grades",
+        "labelI18n": {
+          "sv": "Ytmaterial",
+          "da": "Overflademateriale",
+          "no": "Overflatemateriale"
+        },
+        "valueI18n": {
+          "sv": "Halvblankt, matt och kraftpapper, vit och transparent PP-film, PE, silver-PET samt termo- och frysvarianter",
+          "da": "Halvblankt, mat og kraftpapir, hvid og transparent PP-film, PE, sølv-PET samt termo- og frostvarianter",
+          "no": "Halvblankt, matt og kraftpapir, hvit og transparent PP-film, PE, sølv-PET samt termo- og frysevarianter"
+        }
+      },
+      {
+        "label": "Finish",
+        "value": "None, gloss, matte, outdoor UV and anti-scratch, soft-touch or glitter laminate",
+        "labelI18n": {
+          "sv": "Ytbehandling",
+          "da": "Overfladebehandling",
+          "no": "Overflatebehandling"
+        },
+        "valueI18n": {
+          "sv": "Ingen, blank, matt, UV- och reptåligt utomhuslaminat, soft touch eller glitter",
+          "da": "Ingen, blank, mat, UV- og ridsefast udendørslaminering, soft touch eller glimmer",
+          "no": "Ingen, blank, matt, UV- og ripebestandig utendørslaminat, soft touch eller glitter"
+        }
+      },
+      {
+        "label": "Labels per roll",
+        "value": "100, 250, 500, 1 000, 1 500, 2 000, 2 500, 5 000 or 10 000",
+        "labelI18n": {
+          "sv": "Etiketter per rulle",
+          "da": "Etiketter pr. rulle",
+          "no": "Etiketter per rull"
+        },
+        "valueI18n": {
+          "sv": "100, 250, 500, 1 000, 1 500, 2 000, 2 500, 5 000 eller 10 000",
+          "da": "100, 250, 500, 1.000, 1.500, 2.000, 2.500, 5.000 eller 10.000",
+          "no": "100, 250, 500, 1 000, 1 500, 2 000, 2 500, 5 000 eller 10 000"
+        }
+      },
+      {
+        "label": "Roll core",
+        "value": "25 mm, 38 mm, 40 mm (standard), 76 mm or 152 mm",
+        "labelI18n": {
+          "sv": "Hylsdiameter",
+          "da": "Kernediameter",
+          "no": "Hylsediameter"
+        },
+        "valueI18n": {
+          "sv": "25 mm, 38 mm, 40 mm (standard), 76 mm eller 152 mm",
+          "da": "25 mm, 38 mm, 40 mm (standard), 76 mm eller 152 mm",
+          "no": "25 mm, 38 mm, 40 mm (standard), 76 mm eller 152 mm"
+        }
+      },
+      {
+        "label": "Winding direction",
+        "value": "Positions 1–8, outside or inside wound",
+        "labelI18n": {
+          "sv": "Upprullningsriktning",
+          "da": "Oprulningsretning",
+          "no": "Opprullingsretning"
+        },
+        "valueI18n": {
+          "sv": "Position 1–8, ut- eller invänd lindning",
+          "da": "Position 1–8, ud- eller indvendig vikling",
+          "no": "Posisjon 1–8, ut- eller innvendig vikling"
+        }
+      },
+      {
+        "label": "Order quantity",
+        "value": "From 100 labels, up to 100 000 per order",
+        "labelI18n": {
+          "sv": "Beställningsantal",
+          "da": "Bestillingsantal",
+          "no": "Bestillingsantall"
+        },
+        "valueI18n": {
+          "sv": "Från 100 etiketter, upp till 100 000 per order",
+          "da": "Fra 100 etiketter, op til 100.000 pr. ordre",
+          "no": "Fra 100 etiketter, opptil 100 000 per ordre"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "Which core and winding position do I need?",
+        "a": "That is decided by your applicator, not by the label. Desktop label printers normally take a 25 or 38 mm core, hand-held and table dispensers 40 mm, and labelling machines 76 mm. The winding position says which edge of the label leaves the roll first — check the machine manual, or send us a photo of an old roll and we match it.",
+        "qI18n": {
+          "sv": "Vilken hylsdiameter och upprullningsriktning behöver jag?",
+          "da": "Hvilken kernediameter og oprulningsretning skal jeg bruge?",
+          "no": "Hvilken hylsediameter og opprullingsretning trenger jeg?"
+        },
+        "aI18n": {
+          "sv": "Det avgörs av din applikator, inte av etiketten. Skrivbordsetikettskrivare tar normalt 25 eller 38 mm hylsa, hand- och bordsdispensrar 40 mm och etikettmaskiner 76 mm. Upprullningsriktningen anger vilken kant på etiketten som lämnar rullen först — läs i maskinens manual, eller skicka en bild på en gammal rulle så matchar vi den.",
+          "da": "Det afgøres af din applikator, ikke af etiketten. Bordetiketprintere tager normalt en kerne på 25 eller 38 mm, hånd- og borddispensere 40 mm og etiketmaskiner 76 mm. Oprulningsretningen angiver, hvilken kant af etiketten der forlader rullen først — se i maskinens manual, eller send os et billede af en gammel rulle, så matcher vi den.",
+          "no": "Det bestemmes av applikatoren din, ikke av etiketten. Bordetikettskrivere tar normalt hylse på 25 eller 38 mm, hånd- og borddispensere 40 mm og etikettmaskiner 76 mm. Opprullingsretningen sier hvilken kant av etiketten som forlater rullen først — sjekk maskinens manual, eller send oss et bilde av en gammel rull, så matcher vi den."
+        }
+      },
+      {
+        "q": "Paper or film?",
+        "a": "Paper is the cheaper choice and takes a pen or a stamp, so it suits boxes, dry goods and price marking. Choose white or transparent PP film for anything that gets wet, cold or handled a lot — bottles, jars, cosmetics and chilled food — because paper swells and tears once moisture reaches it.",
+        "qI18n": {
+          "sv": "Papper eller film?",
+          "da": "Papir eller film?",
+          "no": "Papir eller film?"
+        },
+        "aI18n": {
+          "sv": "Papper är det billigare valet och går att skriva och stämpla på, så det passar kartonger, torrvaror och prismärkning. Välj vit eller transparent PP-film till allt som blir blött, kallt eller hanteras mycket — flaskor, burkar, kosmetika och kylvaror — eftersom papper sväller och rivs så fort fukt tränger in.",
+          "da": "Papir er det billigste valg og kan skrives og stemples på, så det passer til kasser, tørvarer og prismærkning. Vælg hvid eller transparent PP-film til alt, der bliver vådt, koldt eller håndteres meget — flasker, glas, kosmetik og kølevarer — for papir buler og revner, så snart fugten trænger ind.",
+          "no": "Papir er det rimeligste valget og kan skrives og stemples på, så det passer til esker, tørrvarer og prismerking. Velg hvit eller transparent PP-film til alt som blir vått, kaldt eller håndteres mye — flasker, glass, kosmetikk og kjølevarer — fordi papir sveller og revner så snart fukt trenger inn."
+        }
+      },
+      {
+        "q": "Can I have more than one design in the same order?",
+        "a": "Yes. Under the field for different designs in one run you can split the order across 2 to 30 artworks, or choose variable data if every label has to carry something unique such as a number or a code. All the designs share the same material, size and finish; write in the order comments how the quantities should be split between the rolls.",
+        "qI18n": {
+          "sv": "Kan jag ha flera olika motiv i samma order?",
+          "da": "Kan jeg have flere forskellige motiver i samme ordre?",
+          "no": "Kan jeg ha flere ulike motiver i samme ordre?"
+        },
+        "aI18n": {
+          "sv": "Ja. I fältet för olika motiv i samma upplaga kan du dela ordern på 2 till 30 original, eller välja variabeldata om varje etikett ska bära något unikt, till exempel ett nummer eller en kod. Alla motiv delar material, storlek och ytbehandling; skriv i orderkommentaren hur antalet ska fördelas mellan rullarna.",
+          "da": "Ja. I feltet for forskellige motiver i samme oplag kan du dele ordren på 2 til 30 filer eller vælge variable data, hvis hver etiket skal have noget unikt, for eksempel et nummer eller en kode. Alle motiver deler materiale, størrelse og overflade; skriv i ordrekommentaren, hvordan antallet skal fordeles mellem rullerne.",
+          "no": "Ja. I feltet for ulike motiver i samme opplag kan du dele ordren på 2 til 30 filer, eller velge variable data hvis hver etikett skal ha noe unikt, for eksempel et nummer eller en kode. Alle motivene deler materiale, størrelse og overflate; skriv i ordrekommentaren hvordan antallet skal fordeles mellom rullene."
+        }
+      },
+      {
+        "q": "How should the artwork be supplied?",
+        "a": "Send a vector PDF at final size in CMYK, with 2 mm bleed all round and text and logos converted to outlines. Keep anything important at least 2 mm inside the cut line, because roll die-cutting has a small register tolerance. For a shape we do not stock, draw the cut line on its own layer as a 1 pt line in 100% magenta.",
+        "qI18n": {
+          "sv": "Hur ska originalet levereras?",
+          "da": "Hvordan skal materialet leveres?",
+          "no": "Hvordan skal trykkfilen leveres?"
+        },
+        "aI18n": {
+          "sv": "Skicka en vektor-PDF i slutformat och CMYK, med 2 mm utfall runt om och text och logotyper konverterade till kurvor. Håll allt viktigt minst 2 mm innanför skärlinjen, eftersom rullstansning har en liten passtolerans. För en form vi inte har som standard ritar du skärlinjen i ett eget lager som en 1 pt linje i 100 % magenta.",
+          "da": "Send en vektor-PDF i slutformat og CMYK med 2 mm beskæring hele vejen rundt og tekst og logoer konverteret til kurver. Hold alt vigtigt mindst 2 mm inden for skærelinjen, da rullestansning har en lille pastolerance. Til en form, vi ikke har som standard, tegner du skærelinjen i sit eget lag som en 1 pt linje i 100 % magenta.",
+          "no": "Send en vektor-PDF i sluttformat og CMYK, med 2 mm utfall rundt hele og tekst og logoer konvertert til kurver. Hold alt viktig minst 2 mm innenfor skjærelinjen, siden rullestansing har en liten passtoleranse. For en form vi ikke har som standard, tegner du skjærelinjen i et eget lag som en 1 pt linje i 100 % magenta."
+        }
+      },
+      {
+        "q": "What is the smallest order, and why is a big roll cheaper per label?",
+        "a": "The smallest order is 100 labels and the largest is 100 000. Setup — die and press make-ready — is charged once per order line no matter how many labels come off it, so the price per label falls steeply as the quantity rises. The quantity ladder on this page shows the price per label at each step.",
+        "qI18n": {
+          "sv": "Vad är minsta beställning, och varför blir en stor rulle billigare per etikett?",
+          "da": "Hvad er mindste bestilling, og hvorfor bliver en stor rulle billigere pr. etiket?",
+          "no": "Hva er minste bestilling, og hvorfor blir en stor rull billigere per etikett?"
+        },
+        "aI18n": {
+          "sv": "Minsta beställning är 100 etiketter och största 100 000. Uppstarten — stans och inställning av maskinen — debiteras en gång per orderrad oavsett hur många etiketter som körs, så priset per etikett sjunker kraftigt när antalet ökar. Antalstrappan på den här sidan visar priset per etikett för varje steg.",
+          "da": "Mindste bestilling er 100 etiketter og største 100.000. Opstarten — stans og indstilling af maskinen — faktureres én gang pr. ordrelinje uanset hvor mange etiketter der køres, så prisen pr. etiket falder markant, når antallet stiger. Antalstrappen på denne side viser prisen pr. etiket for hvert trin.",
+          "no": "Minste bestilling er 100 etiketter og største 100 000. Oppstarten — stanse og innstilling av maskinen — faktureres én gang per ordrelinje uansett hvor mange etiketter som kjøres, så prisen per etikett faller kraftig når antallet øker. Antallstrappen på denne siden viser prisen per etikett for hvert trinn."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-003",
+    "nameI18n": {
+      "sv": "Konturskurna klistermärken",
+      "da": "Konturskårne klistermærker",
+      "no": "Konturskårne klistremerker"
+    },
+    "description": "Stickers cut to your own outline and printed in full colour on paper or vinyl. Pick a stock shape — rectangle, square, circle, oval, hexagon, star — or supply a contour and we cut to it, kiss-cut on a sheet, on a roll, as singles, or cut clean through the backing. Monomer vinyl covers about a year outdoors and polymer vinyl three years or more, and a laminate protects the print from scratching and sun.",
+    "descriptionI18n": {
+      "sv": "Klistermärken skurna efter din egen kontur och tryckta i fyrfärg på papper eller vinyl. Välj en färdig form — rektangel, kvadrat, cirkel, oval, hexagon, stjärna — eller skicka in din egen kontur som vi skär efter, som kiss cut på ark, på rulle, som enstyck eller helt genomskurna. Monomervinyl håller ungefär ett år utomhus och polymervinyl tre år eller mer, och ett laminat skyddar trycket mot repor och sol.",
+      "da": "Klistermærker skåret efter din egen kontur og trykt i fuldfarve på papir eller vinyl. Vælg en færdig form — rektangel, kvadrat, cirkel, oval, sekskant, stjerne — eller send din egen kontur, som vi skærer efter, som kiss cut på ark, på rulle, som enkeltstykker eller helt gennemskåret. Monomervinyl holder cirka et år udendørs og polymervinyl tre år eller mere, og en laminering beskytter trykket mod ridser og sol.",
+      "no": "Klistremerker skåret etter din egen kontur og trykt i firefarger på papir eller vinyl. Velg en ferdig form — rektangel, kvadrat, sirkel, oval, sekskant, stjerne — eller send din egen kontur som vi skjærer etter, som kiss cut på ark, på rull, som enkeltstykker eller helt gjennomskåret. Monomervinyl holder omtrent ett år utendørs og polymervinyl tre år eller mer, og et laminat beskytter trykket mot riper og sol."
+    },
+    "features": [
+      "Cut to any outline you supply, or a stock shape",
+      "Kiss-cut on a sheet, on roll, as singles or through-cut",
+      "White, transparent, metallic, holographic and One-Way Vision materials",
+      "Monomer vinyl for about a year outdoors, polymer for 3 years or more",
+      "Gloss, matte, soft-touch or outdoor UV laminate",
+      "From 50 stickers per order"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "Skurna efter din egen kontur, eller en färdig form",
+        "Kiss cut på ark, på rulle, som enstyck eller genomskurna",
+        "Vitt, transparent, metallic, holografiskt och One-Way Vision",
+        "Monomervinyl för cirka ett år ute, polymer för 3 år eller mer",
+        "Blankt, matt, soft touch eller UV-laminat för utomhusbruk",
+        "Från 50 klistermärken per order"
+      ],
+      "da": [
+        "Skåret efter din egen kontur eller en færdig form",
+        "Kiss cut på ark, på rulle, som enkeltstykker eller gennemskåret",
+        "Hvid, transparent, metallic, holografisk og One-Way Vision",
+        "Monomervinyl til cirka et år ude, polymer til 3 år eller mere",
+        "Blank, mat, soft touch eller UV-laminering til udendørs brug",
+        "Fra 50 klistermærker pr. ordre"
+      ],
+      "no": [
+        "Skåret etter din egen kontur, eller en ferdig form",
+        "Kiss cut på ark, på rull, som enkeltstykker eller gjennomskåret",
+        "Hvit, transparent, metallic, holografisk og One-Way Vision",
+        "Monomervinyl for omtrent ett år ute, polymer for 3 år eller mer",
+        "Blankt, matt, soft touch eller UV-laminat for utendørs bruk",
+        "Fra 50 klistremerker per ordre"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Materials",
+        "value": "Gloss and matte paper, kraft, PP film, monomer and polymer vinyl, metallic, holographic, One-Way Vision and anti-slip floor vinyl",
+        "labelI18n": {
+          "sv": "Material",
+          "da": "Materialer",
+          "no": "Materialer"
+        },
+        "valueI18n": {
+          "sv": "Blankt och matt papper, kraft, PP-film, monomer- och polymervinyl, metallic, holografiskt, One-Way Vision och halkskyddad golvvinyl",
+          "da": "Blankt og mat papir, kraft, PP-film, monomer- og polymervinyl, metallic, holografisk, One-Way Vision og skridsikker gulvvinyl",
+          "no": "Blankt og matt papir, kraft, PP-film, monomer- og polymervinyl, metallic, holografisk, One-Way Vision og sklisikker gulvvinyl"
+        }
+      },
+      {
+        "label": "Shape",
+        "value": "Rectangle, square, circle, oval, capsule, hexagon, triangle, star, heart, seal — or your own contour",
+        "labelI18n": {
+          "sv": "Form",
+          "da": "Form",
+          "no": "Form"
+        },
+        "valueI18n": {
+          "sv": "Rektangel, kvadrat, cirkel, oval, kapsel, hexagon, triangel, stjärna, hjärta, sigill — eller egen kontur",
+          "da": "Rektangel, kvadrat, cirkel, oval, kapsel, sekskant, trekant, stjerne, hjerte, segl — eller egen kontur",
+          "no": "Rektangel, kvadrat, sirkel, oval, kapsel, sekskant, trekant, stjerne, hjerte, segl — eller egen kontur"
+        }
+      },
+      {
+        "label": "Size",
+        "value": "Stock sizes 25 × 25 mm to 300 × 300 mm; custom sizes from 20 mm",
+        "labelI18n": {
+          "sv": "Storlek",
+          "da": "Størrelse",
+          "no": "Størrelse"
+        },
+        "valueI18n": {
+          "sv": "Standardstorlekar 25 × 25 mm till 300 × 300 mm; eget mått från 20 mm",
+          "da": "Standardstørrelser 25 × 25 mm til 300 × 300 mm; eget mål fra 20 mm",
+          "no": "Standardstørrelser 25 × 25 mm til 300 × 300 mm; eget mål fra 20 mm"
+        }
+      },
+      {
+        "label": "Custom contour",
+        "value": "Priced by the smallest rectangle the outline fits inside, up to 500 × 500 mm as standard",
+        "labelI18n": {
+          "sv": "Egen kontur",
+          "da": "Egen kontur",
+          "no": "Egen kontur"
+        },
+        "valueI18n": {
+          "sv": "Prissätts efter den minsta rektangel som konturen får plats i, upp till 500 × 500 mm som standard",
+          "da": "Prissættes efter det mindste rektangel, konturen kan være i, op til 500 × 500 mm som standard",
+          "no": "Prises etter det minste rektangelet konturen får plass i, opptil 500 × 500 mm som standard"
+        }
+      },
+      {
+        "label": "Cut",
+        "value": "Kiss-cut on a sheet, kiss-cut with a 3 mm border, kiss-cut on roll, kiss-cut singles, through-cut singles, or through-cut with transfer tape",
+        "labelI18n": {
+          "sv": "Skärning",
+          "da": "Skæring",
+          "no": "Skjæring"
+        },
+        "valueI18n": {
+          "sv": "Kiss cut på ark, kiss cut med 3 mm kant, kiss cut på rulle, kiss cut som enstyck, genomskurna enstyck eller genomskurna med monteringstejp",
+          "da": "Kiss cut på ark, kiss cut med 3 mm kant, kiss cut på rulle, kiss cut som enkeltstykker, gennemskårne enkeltstykker eller gennemskåret med monteringstape",
+          "no": "Kiss cut på ark, kiss cut med 3 mm kant, kiss cut på rull, kiss cut som enkeltstykker, gjennomskårne enkeltstykker eller gjennomskåret med monteringstape"
+        }
+      },
+      {
+        "label": "Finish",
+        "value": "No laminate, gloss, matte, soft-touch, glitter, outdoor UV and anti-scratch, or anti-slip floor laminate",
+        "labelI18n": {
+          "sv": "Ytbehandling",
+          "da": "Overfladebehandling",
+          "no": "Overflatebehandling"
+        },
+        "valueI18n": {
+          "sv": "Utan laminat, blankt, matt, soft touch, glitter, UV- och reptåligt utomhuslaminat eller halkskyddat golvlaminat",
+          "da": "Uden laminering, blank, mat, soft touch, glimmer, UV- og ridsefast udendørslaminering eller skridsikker gulvlaminering",
+          "no": "Uten laminat, blankt, matt, soft touch, glitter, UV- og ripebestandig utendørslaminat eller sklisikkert gulvlaminat"
+        }
+      },
+      {
+        "label": "Outdoor durability",
+        "value": "Monomer vinyl up to about 1 year, polymer vinyl 3 years or more, PVC-free clear film 5 years or more indoors",
+        "labelI18n": {
+          "sv": "Hållbarhet utomhus",
+          "da": "Holdbarhed udendørs",
+          "no": "Holdbarhet utendørs"
+        },
+        "valueI18n": {
+          "sv": "Monomervinyl upp till cirka 1 år, polymervinyl 3 år eller mer, PVC-fri klarfilm 5 år eller mer inomhus",
+          "da": "Monomervinyl op til cirka 1 år, polymervinyl 3 år eller mere, PVC-fri klar film 5 år eller mere indendørs",
+          "no": "Monomervinyl opptil cirka 1 år, polymervinyl 3 år eller mer, PVC-fri klarfilm 5 år eller mer innendørs"
+        }
+      },
+      {
+        "label": "Print colours",
+        "value": "Full colour CMYK; Pantone matching, white, metallic and neon inks available",
+        "labelI18n": {
+          "sv": "Tryckfärger",
+          "da": "Trykfarver",
+          "no": "Trykkfarger"
+        },
+        "valueI18n": {
+          "sv": "Fyrfärg CMYK; Pantone-matchning samt vit, metallic och neonfärg som tillval",
+          "da": "Fuldfarve CMYK; Pantone-matchning samt hvid, metallic og neonfarve som tilvalg",
+          "no": "Firefarger CMYK; Pantone-matching samt hvit, metallic og neonfarge som tilvalg"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "What is the difference between kiss-cut and through-cut?",
+        "a": "Kiss-cut goes through the sticker but leaves the backing whole, so the stickers stay on a sheet and peel off one at a time — that is what you want for handouts, packs and giveaways. Through-cut goes through the backing as well and gives you loose individual stickers. Pick the roll option if the stickers are going into a dispenser.",
+        "qI18n": {
+          "sv": "Vad är skillnaden mellan kiss cut och genomskuret?",
+          "da": "Hvad er forskellen på kiss cut og gennemskåret?",
+          "no": "Hva er forskjellen på kiss cut og gjennomskåret?"
+        },
+        "aI18n": {
+          "sv": "Kiss cut skär igenom klistermärket men lämnar bärarket helt, så märkena sitter kvar på arket och lossas ett i taget — det är vad du vill ha till utdelning, paket och giveaways. Genomskuret skär även igenom bärarket och ger dig lösa enskilda märken. Välj rulle om märkena ska matas i en dispenser.",
+          "da": "Kiss cut skærer gennem klistermærket, men lader bagpapiret være helt, så mærkerne bliver siddende på arket og pilles af ét ad gangen — det er det, du vil have til uddeling, pakker og giveaways. Gennemskåret skærer også gennem bagpapiret og giver dig løse enkeltmærker. Vælg rulle, hvis mærkerne skal køres i en dispenser.",
+          "no": "Kiss cut skjærer gjennom klistremerket, men lar bærearket være helt, så merkene blir sittende på arket og løsnes ett om gangen — det er det du vil ha til utdeling, pakker og giveaways. Gjennomskåret skjærer også gjennom bærearket og gir deg løse enkeltmerker. Velg rull hvis merkene skal mates i en dispenser."
+        }
+      },
+      {
+        "q": "How do I supply a custom shape?",
+        "a": "Send a vector PDF with the artwork on one layer and the cut line on its own, drawn as a 1 pt line in 100% magenta and named cutcontour. Leave 3 mm of bleed outside the cut line and keep text 3 mm inside it. If all you have is a sketch, choose the die-line drawing service and our studio draws it for you — that is a paid option and its price is shown in the configurator.",
+        "qI18n": {
+          "sv": "Hur skickar jag in en egen form?",
+          "da": "Hvordan indsender jeg en egen form?",
+          "no": "Hvordan sender jeg inn en egen form?"
+        },
+        "aI18n": {
+          "sv": "Skicka en vektor-PDF med motivet i ett lager och skärlinjen i ett eget, ritad som en 1 pt linje i 100 % magenta och namngiven cutcontour. Lämna 3 mm utfall utanför skärlinjen och håll text 3 mm innanför den. Har du bara en skiss väljer du tjänsten där vi ritar stanslinjen åt dig — det är ett tillval och priset visas i konfiguratorn.",
+          "da": "Send en vektor-PDF med motivet i ét lag og skærelinjen i sit eget, tegnet som en 1 pt linje i 100 % magenta og navngivet cutcontour. Lad der være 3 mm beskæring uden for skærelinjen, og hold tekst 3 mm inden for den. Har du kun en skitse, vælger du ydelsen, hvor vi tegner stanselinjen for dig — det er et tilvalg, og prisen vises i konfiguratoren.",
+          "no": "Send en vektor-PDF med motivet i ett lag og skjærelinjen i sitt eget, tegnet som en 1 pt linje i 100 % magenta og navngitt cutcontour. La det være 3 mm utfall utenfor skjærelinjen, og hold tekst 3 mm innenfor den. Har du bare en skisse, velger du tjenesten der vi tegner stanselinjen for deg — det er et tilvalg, og prisen vises i konfiguratoren."
+        }
+      },
+      {
+        "q": "Which material should I choose for outdoor use?",
+        "a": "Monomer white or transparent vinyl is the economical outdoor choice and is rated for about a year. Polymer vinyl 75 µm is the one for vehicles, windows and anything that has to survive a few winters — three years or more. Add the outdoor UV and anti-scratch laminate to either if the stickers face direct sun or get washed.",
+        "qI18n": {
+          "sv": "Vilket material ska jag välja för utomhusbruk?",
+          "da": "Hvilket materiale skal jeg vælge til udendørs brug?",
+          "no": "Hvilket materiale bør jeg velge til utendørs bruk?"
+        },
+        "aI18n": {
+          "sv": "Monomervinyl, vit eller transparent, är det prisvärda utomhusvalet och räknas för ungefär ett år. Polymervinyl 75 µm är materialet för fordon, fönster och allt som ska klara några vintrar — tre år eller mer. Lägg till UV- och reptåligt utomhuslaminat på båda om märkena står i direkt sol eller tvättas.",
+          "da": "Monomervinyl, hvid eller transparent, er det prisvenlige udendørsvalg og regnes for cirka et år. Polymervinyl 75 µm er materialet til køretøjer, vinduer og alt, der skal klare et par vintre — tre år eller mere. Tilføj UV- og ridsefast udendørslaminering til begge, hvis mærkerne står i direkte sol eller bliver vasket.",
+          "no": "Monomervinyl, hvit eller transparent, er det rimelige utendørsvalget og regnes for omtrent ett år. Polymervinyl 75 µm er materialet for kjøretøy, vinduer og alt som skal tåle et par vintre — tre år eller mer. Legg til UV- og ripebestandig utendørslaminat på begge hvis merkene står i direkte sol eller vaskes."
+        }
+      },
+      {
+        "q": "Can I mix several designs in one order?",
+        "a": "Yes — set how many different designs the run contains, up to 30 for a standard order, and the quantity is split between them. All the designs share the same material, size, cut and finish, so if one of them needs a different specification, order it as its own line.",
+        "qI18n": {
+          "sv": "Kan jag blanda flera motiv i en och samma order?",
+          "da": "Kan jeg blande flere motiver i én ordre?",
+          "no": "Kan jeg blande flere motiver i én ordre?"
+        },
+        "aI18n": {
+          "sv": "Ja — ange hur många olika motiv upplagan innehåller, upp till 30 i en standardorder, så delas antalet mellan dem. Alla motiv delar material, storlek, skärning och ytbehandling, så om ett av dem behöver en annan specifikation lägger du det som en egen orderrad.",
+          "da": "Ja — angiv hvor mange forskellige motiver oplaget indeholder, op til 30 i en standardordre, så fordeles antallet mellem dem. Alle motiver deler materiale, størrelse, skæring og overflade, så hvis ét af dem kræver en anden specifikation, bestiller du det som sin egen ordrelinje.",
+          "no": "Ja — angi hvor mange ulike motiver opplaget inneholder, opptil 30 i en standardordre, så fordeles antallet mellom dem. Alle motivene deler materiale, størrelse, skjæring og overflate, så hvis ett av dem trenger en annen spesifikasjon, bestiller du det som sin egen ordrelinje."
+        }
+      },
+      {
+        "q": "What is the smallest order?",
+        "a": "50 stickers of one specification, and up to 5 000 per order line. The setup is charged once per order line, so the price per sticker drops quickly as the quantity goes up — the quantity ladder on this page shows what each step costs per piece.",
+        "qI18n": {
+          "sv": "Vad är minsta beställning?",
+          "da": "Hvad er mindste bestilling?",
+          "no": "Hva er minste bestilling?"
+        },
+        "aI18n": {
+          "sv": "50 klistermärken av en och samma specifikation, och upp till 5 000 per orderrad. Uppstarten debiteras en gång per orderrad, så priset per märke sjunker snabbt när antalet ökar — antalstrappan på den här sidan visar vad varje steg kostar per styck.",
+          "da": "50 klistermærker af én og samme specifikation og op til 5.000 pr. ordrelinje. Opstarten faktureres én gang pr. ordrelinje, så prisen pr. mærke falder hurtigt, når antallet stiger — antalstrappen på denne side viser, hvad hvert trin koster pr. stk.",
+          "no": "50 klistremerker av én og samme spesifikasjon, og opptil 5 000 per ordrelinje. Oppstarten faktureres én gang per ordrelinje, så prisen per merke faller raskt når antallet øker — antallstrappen på denne siden viser hva hvert trinn koster per stykk."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,437 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    // Collection: users
+    // Fields: uid, email, displayName, role, accountType, status, createdAt
+    //
+    // Collection: categories
+    // Fields: name, description, parentId, image
+    //
+    // Collection: products
+    // Fields: name, description, categoryId, basePrice, isWeb2Print
+    //
+    // Collection: templates
+    // Fields: name, canvasData, isFree
+    //
+    // Collection: orders
+    // Fields: userId, status, totalAmount, createdAt
+    //
+    // Collection: contact_inquiries
+    // Fields: name, email, message, createdAt
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    // Admin is decided ONLY by the stored role of the authenticated user.
+    // (No hardcoded backdoor emails. Escalating your own role is blocked below,
+    //  so this check is trustworthy.)
+    function isAdmin() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    function isValidUser(data) {
+      return data.keys().hasAll(['uid', 'email', 'role', 'status']) &&
+             data.role in ['admin', 'staff', 'production', 'client'] &&
+             data.status in ['active', 'suspended'];
+    }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+
+      // Self sign-up may create ONLY a plain client account, starting from zero.
+      // Admins may create any valid user (e.g. staff onboarding).
+      //
+      // The balance fields are pinned on CREATE as well as on update. Pinning
+      // only the update left the door wide open: a new customer's very first
+      // write is a create, so they could sign up with loyaltyPoints set to
+      // 100 000 — 10 000 kr of discount at the shop's own rate — and the update
+      // rule would then faithfully protect that balance from being corrected.
+      allow create: if isValidUser(request.resource.data) &&
+                       ( isAdmin() ||
+                         ( isOwner(userId) &&
+                           request.resource.data.role == 'client' &&
+                           request.resource.data.status == 'active' &&
+                           request.resource.data.uid == userId &&
+                           // The email is deliberately NOT compared against the
+                           // token here. Not every sign-in provider puts one in
+                           // the token, and a rule that is wrong on that point
+                           // blocks every new customer from creating an account
+                           // at all — a far worse failure than a display name
+                           // that does not match. isOwner already ties this
+                           // document to the authenticated uid, and the update
+                           // rule pins the email from then on.
+                           request.resource.data.get('loyaltyPoints', 0) == 0 &&
+                           request.resource.data.get('pointsHistory', []).size() == 0 &&
+                           request.resource.data.get('permissions', {}).keys().size() == 0 ) );
+
+    // THE POINTS LEDGER — every earn and every redemption, permanently.
+    //
+    // `pointsHistory` on the user document is capped at the last 50 and is a
+    // VIEW; this is the record. A customer may read their own — it is their
+    // money — and staff may read any, because a "where did my points go" call
+    // arrives at the shop and not at the server log.
+    //
+    // Written by the server only. A client that can write a ledger entry can
+    // write itself a balance, which is the same hole `loyaltyPoints` is pinned
+    // against on the user document.
+    match /users/{userId}/pointsLedger/{entryId} {
+      allow read: if isOwner(userId) || isStaff();
+      allow write: if false;
+    }
+
+    // What a user may never grant themselves. Role and status were pinned, but
+    // loyaltyPoints was not — so a customer could set their own balance to
+    // 100 000 and spend it. Nor were permissions, uid or email: a staff account
+    // could tick its own permission boxes, and anyone could point their document
+    // at a different identity.
+    function ownFieldsUnchanged() {
+      return request.resource.data.role == resource.data.role &&
+             request.resource.data.status == resource.data.status &&
+             request.resource.data.uid == resource.data.uid &&
+             request.resource.data.email == resource.data.email &&
+             request.resource.data.get('loyaltyPoints', 0) == resource.data.get('loyaltyPoints', 0) &&
+             request.resource.data.get('permissions', {}) == resource.data.get('permissions', {}) &&
+             request.resource.data.get('pointsHistory', []) == resource.data.get('pointsHistory', []) &&
+             // 4.25 — AND THE TWO FIELDS THE TIER IS MADE OF.
+             //
+             // The tier used to be computed from loyaltyPoints, which was already
+             // pinned. It now follows `lifetimeSpend`, written by the server on
+             // each paid order — and nothing stopped a customer writing it
+             // himself. A profile save with lifetimeSpend: 1000000 would have made
+             // him Platinum, which is priority proofing and production he has not
+             // paid for. Both the input and the answer are pinned: the server
+             // writes them through the Admin SDK, which these rules do not apply
+             // to.
+             request.resource.data.get('lifetimeSpend', 0) == resource.data.get('lifetimeSpend', 0) &&
+             request.resource.data.get('loyaltyTier', '') == resource.data.get('loyaltyTier', '');
+    }
+
+    // Owners may edit their own profile; admins may change anything.
+    allow update: if isValidUser(request.resource.data) &&
+                     ( isAdmin() || (isOwner(userId) && ownFieldsUnchanged()) );
+
+      allow delete: if isAdmin();
+    }
+
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // WHAT THE SHOP PAYS. Split out of the product documents on 2026-09-09.
+    //
+    // The supplier importer wrote the euro trade price, the exchange rate, the
+    // margin and the supplier's own order page onto the product itself — and
+    // `products` above is `allow read: if true`, because the storefront reads the
+    // catalogue straight out of Firestore whenever the API's cache is cold. So
+    // every one of the sixteen live products handed a stranger with no account
+    // the wholesale cost, the uniform 150% markup on top of it and the
+    // b2b.promediaplus.pl page to go and buy the same item from.
+    //
+    // Closed to everybody, admins included. The only thing that needs these
+    // figures is the importer's re-sync, which runs on the server through the
+    // Admin SDK, and the Admin SDK is not subject to these rules — the same
+    // reasoning as `secrets` and `counters` below. The products read rule is
+    // deliberately left open: closing it would take the browser's own catalogue
+    // fallback with it, which is a far larger change than this hole needed.
+    match /productCosts/{productId} {
+      allow read, write: if false;
+    }
+
+    // WHAT AN ORDER COST US, kept out of the order itself.
+    //
+    // The buyer can read their own order document (see /orders below), so a
+    // unitCost on an order line would hand every customer our trade price and
+    // the exact markup on what they just bought — the same leak productCosts
+    // above exists to close, pointed at a different document. It is snapshotted
+    // at checkout because a cost looked up LATER is the cost today, not the cost
+    // the job was sold at, and the margin on a six-month-old order is then
+    // fiction.
+    //
+    // Admin SDK only, like productCosts. The dashboard reads it through an
+    // admin endpoint, never directly.
+    match /orderCosts/{orderId} {
+      allow read, write: if false;
+    }
+
+    // THE SUPPLIERS THEMSELVES — who they are, and when they were last synced.
+    //
+    // Readable by staff, because knowing where a product comes from is part of
+    // producing it. NOT world-readable: which wholesalers a shop buys from is
+    // commercial information, and `products` already carries the display name
+    // for the one thing a customer might legitimately see.
+    //
+    // Credentials are NOT here. They stay in `secrets/integrations`, which no
+    // browser may open at all — a supplier record that carried a password would
+    // put it one leaked staff account away from the world.
+    match /suppliers/{supplierId} {
+      allow read: if isStaff();
+      allow write: if false;
+    }
+
+    // THE SUPPLIER INDEX — a slim row per supplier product, for the picker.
+    //
+    // CLOSED, and for the same reason productCosts is: every entry carries
+    // `sourcePrice`, the wholesale price. A world-readable index would publish
+    // the trade price of four thousand products, which is a more complete leak
+    // than the one that was closed on 2026-09-09.
+    //
+    // The dashboard reads it through an admin endpoint. It is written by the
+    // indexing job with the Admin SDK, never from a browser.
+    match /supplierIndex/{entryId} {
+      allow read, write: if false;
+    }
+
+    // KREDITNOTA. The customer's own copy of a refund document.
+    //
+    // Read like an order, and for the same reason: the buyer must be able to
+    // download the document for their own books, and staff must be able to see
+    // all of them. The `.get()` form with a default is deliberate — reading a
+    // key that is not on a document RAISES in rules, and an error is not
+    // "false"; it sinks the whole expression and would deny staff the very
+    // documents they need.
+    //
+    // Nobody writes one from a browser, ever. A credit note is an accounting
+    // record with its own number series, issued by the server when a refund is
+    // recorded; a client that could write one could write its amount.
+    match /creditNotes/{creditNoteId} {
+      allow read: if isAuthenticated() && (
+        isStaff() ||
+        resource.data.get('userId', '') == request.auth.uid ||
+        resource.data.get('customerAccountId', '') == request.auth.uid
+      );
+      allow write: if false;
+    }
+
+    match /templates/{templateId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // THE OWNER'S DESIGN TEMPLATES (round 16, item 5b). Customers never read
+    // these: the server serves them from its copy (GET /api/design-templates),
+    // so a product page costs no read. The design is capped so a document can
+    // never grow towards Firestore's 1 MiB; pictures live in Storage.
+    match /designTemplates/{templateId} {
+      allow read, delete: if isAdmin();
+      allow create, update: if isAdmin() &&
+                               request.resource.data.json is string &&
+                               request.resource.data.json.size() <= 200000;
+    }
+
+    function isStaff() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'staff', 'production'];
+    }
+
+    // Who may CHANGE an order from the dashboard: an admin, or a staff or
+    // production account the admin gave "manage orders". The screens hid their
+    // controls without that permission, but this rule never checked it, so any
+    // staff login could write to any order. Read with .get() and defaults: an
+    // account promoted with the role dropdown has no permissions map at all.
+    function canManageOrders() {
+      let u = get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+      let perms = u.get('permissions', null);
+      return u.get('role', '') == 'admin' ||
+        (u.get('role', '') in ['staff', 'production'] && perms is map && perms.get('canManageOrders', false) == true);
+    }
+
+    match /orders/{orderId} {
+      // Customers see their own orders; staff need to see all of them to actually
+      // produce the work. Previously only admins could, so the staff dashboard
+      // rendered empty for the very people it was built for.
+      //
+      // `customerAccountId` is the account the SERVER decided this order belongs
+      // to — the verified uid when the buyer was signed in, or the one user whose
+      // email matches on a guest checkout. Orders cannot be written from a
+      // browser at all (`allow create: if false` below, and updates are limited
+      // to staff), so nobody can award themselves someone else's orders by
+      // writing this field.
+      // isStaff() FIRST, and the new field read through .get() with a default.
+      // Reading a key that is not on the document raises an error in rules, and
+      // an error is not "false" — it can sink the whole expression. Every order
+      // written before customerAccountId existed lacks the field, so the naive
+      // form `resource.data.customerAccountId == …` would have denied staff the
+      // very orders they most need: the historical ones.
+      allow read: if isAuthenticated() && (
+        isStaff() ||
+        resource.data.userId == request.auth.uid ||
+        resource.data.get('customerAccountId', '') == request.auth.uid
+      );
+
+      // NOBODY creates an order from a browser. A client that can write an order
+      // can write its price — which is exactly how a 500 kr job could be bought
+      // for 1 kr. Orders are created by the server (POST /api/checkout/order),
+      // which prices the cart itself using the Admin SDK, and the Admin SDK is
+      // not subject to these rules.
+      allow create: if false;
+
+      // Likewise for updates: `paymentStatus` may only ever be set by the payment
+      // webhook, server-side, after the provider confirms the money moved — and
+      // the same goes for every other field that is money, says whose order it
+      // is, or decides whether it counts as revenue. Staff move an order through
+      // production (status, stages, dates, priority); everything else is the
+      // server's.
+      //
+      // diff().affectedKeys(), not `new.x == old.x`: reading a field the
+      // document does not have is an ERROR in rules, and an error denies. Orders
+      // from before netTotal existed lack it, so the old form refused every
+      // priority, print date and status change on them ("could not be saved").
+      // The list also closes what the old three fields left open: a staff login
+      // could set paymentMode 'test' (which drops an order out of revenue),
+      // refundedAmount, or userId / customerAccountId (who may read the order).
+      allow update: if isAuthenticated() && canManageOrders() &&
+                       !request.resource.data.diff(resource.data).affectedKeys().hasAny([
+                         'paymentStatus', 'paymentMode', 'molliePaymentId', 'paidAt',
+                         'grossTotal', 'netTotal', 'vatAmount', 'vatRate', 'goodsNet', 'shippingCost',
+                         'discountAmount', 'discountCode', 'pointsDiscountAmount', 'pointsRedeemed',
+                         'refundedAmount', 'creditNoteNumbers', 'currency', 'items',
+                         'userId', 'customerAccountId', 'customerEmail',
+                         // PAY ON DELIVERY (2026-10-07): set by the server only. A staff
+                         // login that could flag an abandoned checkout `payOnDelivery`
+                         // would send it into production unpaid.
+                         'payOnDelivery', 'paymentProvider', 'paymentMethodTitle',
+                         'paymentRecordedBy', 'paymentRecordedMethod', 'confirmedAt', 'checkoutAttemptId',
+                         // What the money steps read back (review 2026-10-11, RUL-01): the
+                         // points the payment credits (and a refund claws back), the flags
+                         // that say a step already ran, and the lifetime-spend marker. A
+                         // staff login that could write them could credit any customer
+                         // points, or make a paid order skip — or repeat — a step.
+                         'pointsEarned', 'sideEffects', 'lifetimeSpendAdded',
+                         // And the coupon and points records (review 2026-10-11, C): the
+                         // failure webhook gives a code's held use back only while
+                         // `couponHeld` says so — cleared, a failed order keeps its use
+                         // from other customers until the hold lapses (14 days) — and the
+                         // other two are the shop's own record that a code ran past its
+                         // limit, or that points were spent on two orders. The server
+                         // writes all three.
+                         'couponHeld', 'couponOverLimit', 'pointsShortfall'
+                       ]);
+      allow delete: if isAdmin();
+    }
+
+    // Designs made in the online editor. A customer's own work: theirs to read,
+    // write and delete, and nobody else's to see. Staff can read them because
+    // they have to print the thing.
+    match /designs/{designId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isStaff());
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update: if isAuthenticated() && resource.data.userId == request.auth.uid
+                       && request.resource.data.userId == resource.data.userId;
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // Order numbering. Allocated in a transaction, server-side only.
+    match /counters/{counterId} {
+      allow read, write: if false;
+    }
+
+    match /coupons/{couponId} {
+      // Closed to visitors. `allow read: if true` left every discount code in
+      // the shop — including ones not yet announced — listable by any visitor,
+      // who could simply dump the collection and take the largest. The checkout
+      // page no longer reads this collection at all: /api/checkout/quote
+      // validates the code server-side, which is where the price is decided
+      // anyway.
+      allow read: if isAdmin();
+
+      // AND CLOSED TO THE DASHBOARD TOO — 4.15.
+      //
+      // Writes go through /api/admin/coupons/save, /delete and /bulk, which
+      // write the coupon and its audit entry in ONE batch. A log its own
+      // subject can write around is not a log; and the rules that keep a
+      // 90% code from being uncapped (4.2) were in the form, where a paste
+      // into the browser console walked straight past them.
+      //
+      // The Admin SDK bypasses these rules, which is how the server writes.
+      allow write: if false;
+    }
+
+    match /abandonedCarts/{uid} {
+      // 5.7c. A SUMMARY of a signed-in customer's basket — product ids, names,
+      // quantities and line values — so the owner can see how much money walks
+      // away. Never the artwork, never a file name, never a storage path; the
+      // reduction happens in src/lib/cartSnapshot.ts before anything is sent.
+      //
+      // Written ONLY by the server, through /api/cart/snapshot, which takes the
+      // uid from a verified token and never from the body — otherwise anyone
+      // could write a basket into somebody else's name, and the report the owner
+      // makes decisions from would be whatever a stranger typed.
+      //
+      // Not readable by the customer either: there is no screen for it, and a
+      // collection nobody reads from a browser is one that cannot leak from one.
+      // The Admin SDK bypasses these rules, which is how the server works.
+      allow read, write: if false;
+    }
+
+    match /couponStats/{code} {
+      // 4.24. Frozen at redemption time by the payment webhook, through the
+      // Admin SDK, and read back through /api/admin/coupons/stats. It carries
+      // the COST of the goods sold under each code — the same figure
+      // productCosts exists to keep out of a browser.
+      allow read, write: if false;
+    }
+
+    match /couponAudit/{entryId} {
+      // 4.15. Written by the coupon endpoints through the Admin SDK, read back
+      // through /api/admin/coupons/audit. Nothing in a browser touches it —
+      // least of all to edit an entry about itself.
+      allow read, write: if false;
+    }
+
+    match /couponRedemptions/{redemptionId} {
+      // Written by the payment webhook through the Admin SDK, which bypasses
+      // these rules. Nobody else has any business here — least of all the
+      // customer whose single use it records.
+      allow read, write: if false;
+    }
+
+    match /secrets/{doc} {
+      // Dashboard-managed API keys (Mollie, Zendr). Written and read ONLY by
+      // the server through the Admin SDK, which bypasses these rules. To every
+      // browser — admin included — this collection does not exist: the panel
+      // talks to /api/admin/integrations, never to Firestore directly.
+      allow read, write: if false;
+    }
+
+    match /contact_inquiries/{inquiryId} {
+      // CLOSED, because the browser stopped writing here and never came back.
+      //
+      // `allow create: if true` was written when the contact form posted
+      // straight to Firestore. It does not any more — it posts to /api/contact,
+      // which validates the fields, rate-limits the caller and mails the shop
+      // (server.ts), then writes with the Admin SDK, which bypasses these rules.
+      // Nothing under src/ mentions this collection at all.
+      //
+      // What the open rule still allowed was everyone ELSE: any stranger could
+      // POST to the Firestore REST API and create documents in the live database
+      // at machine speed, up to 1 MiB each, with no validation, no rate limit and
+      // no authentication — flooding the owner's Messages inbox with content the
+      // server's validators never saw, and burning the free-plan write quota on a
+      // project whose READ quota has already taken this shop dark for seven hours.
+      //
+      // Same reasoning, and the same fix, as `coupons` and `couponRedemptions`
+      // above: once the server owns the operation, the door closes behind it.
+      allow create: if false;
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

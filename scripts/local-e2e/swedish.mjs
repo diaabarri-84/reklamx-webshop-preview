@@ -1,0 +1,18 @@
+import { launch, BASE, SHOTS, check, summary } from './lib.mjs';
+const { browser, context, page, errors } = await launch();
+await context.addInitScript(() => { try { localStorage.setItem('reklamx_language', 'sv'); } catch {} });
+await page.goto(`${BASE}/products/prod-pmp-696`, { waitUntil: 'domcontentloaded' });
+await page.getByRole('button', { name: /Jag förstår|Got it|OK/ }).first().click({ timeout: 4000 }).catch(() => {});
+const card = page.locator('[data-option-card="sv-dsgn-basic"]');
+await card.scrollIntoViewIfNeeded();
+const t = (await card.innerText()).replace(/\s+/g, ' ');
+check('Swedish card: "+995 kr engångsavgift"', /995 kr engångsavgift/.test(t), t);
+await card.click();
+await page.waitForTimeout(500);
+const body = (await page.locator('main').innerText()).replace(/\s+/g, ' ');
+check('Swedish price line: "engångsavgifter"', /engångsavgifter/.test(body));
+check('no English "one-off" leaks into the Swedish page', !/one-off/i.test(body));
+await card.screenshot({ path: `${SHOTS}/70-sv-card.png` });
+check('no page errors', errors.length === 0, errors.slice(0, 2).join(' | '));
+await browser.close();
+process.exit(summary() ? 1 : 0);

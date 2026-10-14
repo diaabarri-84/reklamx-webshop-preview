@@ -1,0 +1,955 @@
+[
+  {
+    "id": "prod-tshirt-round-neck",
+    "name": "Standard Round-Neck T-Shirt",
+    "nameI18n": {
+      "sv": "Standard t-shirt med rund hals",
+      "da": "Standard T-shirt med rund hals",
+      "no": "Standard T-skjorte med rund hals"
+    },
+    "description": "A classic short-sleeve cotton t-shirt with a ribbed round neck, printed with your own logo or design. Order from 10 pieces in sizes S to XXL, with XS and up to 5XL also selectable, and choose from over 30 stock colours. Pick digital direct-to-garment print for photographic artwork, or screen print when you want flat spot colours across a larger run.",
+    "descriptionI18n": {
+      "sv": "En klassisk kortärmad bomulls-t-shirt med ribbad rundhals, tryckt med din egen logotyp eller design. Beställ från 10 stycken i storlek S till XXL, med XS och upp till 5XL också valbara, och välj bland över 30 lagerfärger. Välj digitalt direkttryck (DTG) för fotografiska motiv, eller screentryck när du vill ha rena dekorfärger i en större upplaga.",
+      "da": "En klassisk kortærmet bomulds-T-shirt med ribbet rundhals, trykt med dit eget logo eller design. Bestil fra 10 stk. i størrelse S til XXL, hvor XS og op til 5XL også kan vælges, og vælg mellem over 30 lagerfarver. Vælg digitalt direkte tryk (DTG) til fotografiske motiver, eller serigrafi når du vil have rene spotfarver i et større oplag.",
+      "no": "En klassisk kortermet bomulls-T-skjorte med ribbet rundhals, trykt med din egen logo eller design. Bestill fra 10 stk. i størrelse S til XXL, der XS og opptil 5XL også kan velges, og velg mellom over 30 lagerfarger. Velg digitalt direktetrykk (DTG) for fotografiske motiver, eller silketrykk når du vil ha rene spotfarger i et større opplag."
+    },
+    "categoryId": "textiles",
+    "basePrice": 105,
+    "images": [
+      "/product-art/tshirt-1.svg",
+      "/product-art/tshirt-2.svg",
+      "/product-art/tshirt-3.svg",
+      "/product-art/tshirt-4.svg"
+    ],
+    "options": [],
+    "isWeb2Print": true,
+    "minQuantity": 10,
+    "maxQuantity": 2000,
+    "customUploadRules": {
+      "enabled": false,
+      "minPrice": 60,
+      "allowedFormats": [
+        "pdf",
+        "ai",
+        "eps",
+        "svg",
+        "png",
+        "jpg",
+        "jpeg",
+        "tiff",
+        "psd"
+      ],
+      "maxFileSizeMb": 100
+    },
+    "pricingRules": {
+      "baseSetupFee": 165,
+      "priceCalculationType": "tiered_volume",
+      "volumeDiscounts": [
+        {
+          "minQuantity": 25,
+          "discountPercentage": 8
+        },
+        {
+          "minQuantity": 50,
+          "discountPercentage": 15
+        },
+        {
+          "minQuantity": 100,
+          "discountPercentage": 22
+        },
+        {
+          "minQuantity": 250,
+          "discountPercentage": 30
+        },
+        {
+          "minQuantity": 500,
+          "discountPercentage": 36
+        }
+      ]
+    },
+    "deliverySpeedOptions": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "deliveryDays": "5 Working Days",
+        "priceSurcharge": 0
+      },
+      {
+        "id": "fast",
+        "name": "Fast",
+        "deliveryDays": "3 Working Days",
+        "priceSurcharge": 95
+      },
+      {
+        "id": "express",
+        "name": "Express",
+        "deliveryDays": "2 Working Days",
+        "priceSurcharge": 195
+      }
+    ],
+    "features": [
+      "Soft short-sleeve cotton jersey with a ribbed round neck",
+      "Over 30 stock colours, sizes XS to 5XL",
+      "DTG digital print for photographic artwork, screen print for spot colours",
+      "Print left chest, large front, full back or a combination",
+      "From 10 pieces per design, with names and squad numbers available",
+      "Wash at 40 °C inside out to keep the print sharp"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "Mjuk kortärmad bomullsjersey med ribbad rundhals",
+        "Över 30 lagerfärger, storlek XS till 5XL",
+        "DTG-digitaltryck för fotomotiv, screentryck för dekorfärger",
+        "Tryck på vänster bröst, stor framsida, hel rygg eller en kombination",
+        "Från 10 stycken per motiv, med namn och nummer som tillval",
+        "Tvätta i 40 °C ut och in så håller trycket sig skarpt"
+      ],
+      "da": [
+        "Blød kortærmet bomuldsjersey med ribbet rundhals",
+        "Over 30 lagerfarver, størrelse XS til 5XL",
+        "DTG-digitaltryk til fotomotiver, serigrafi til spotfarver",
+        "Tryk på venstre bryst, stor forside, hel ryg eller en kombination",
+        "Fra 10 stk. pr. motiv, med navn og nummer som tilvalg",
+        "Vask ved 40 °C med vrangen ud, så holder trykket sig skarpt"
+      ],
+      "no": [
+        "Myk kortermet bomullsjersey med ribbet rundhals",
+        "Over 30 lagerfarger, størrelse XS til 5XL",
+        "DTG-digitaltrykk for fotomotiver, silketrykk for spotfarger",
+        "Trykk på venstre bryst, stor forside, hel rygg eller en kombinasjon",
+        "Fra 10 stk. per motiv, med navn og nummer som tilvalg",
+        "Vask på 40 °C vrengt, så holder trykket seg skarpt"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Material",
+        "value": "100% cotton jersey, 150–180 g/m²",
+        "labelI18n": {
+          "sv": "Material",
+          "da": "Materiale",
+          "no": "Materiale"
+        },
+        "valueI18n": {
+          "sv": "100 % bomullsjersey, 150–180 g/m²",
+          "da": "100 % bomuldsjersey, 150–180 g/m²",
+          "no": "100 % bomullsjersey, 150–180 g/m²"
+        }
+      },
+      {
+        "label": "Neckline",
+        "value": "Ribbed round neck (crew neck)",
+        "labelI18n": {
+          "sv": "Halsringning",
+          "da": "Halsudskæring",
+          "no": "Halsutskjæring"
+        },
+        "valueI18n": {
+          "sv": "Ribbad rundhals",
+          "da": "Ribbet rundhals",
+          "no": "Ribbet rundhals"
+        }
+      },
+      {
+        "label": "Sizes",
+        "value": "XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL",
+        "labelI18n": {
+          "sv": "Storlekar",
+          "da": "Størrelser",
+          "no": "Størrelser"
+        },
+        "valueI18n": {
+          "sv": "XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL",
+          "da": "XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL",
+          "no": "XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL"
+        }
+      },
+      {
+        "label": "Colours",
+        "value": "Over 30 stock colours",
+        "labelI18n": {
+          "sv": "Färger",
+          "da": "Farver",
+          "no": "Farger"
+        },
+        "valueI18n": {
+          "sv": "Över 30 lagerfärger",
+          "da": "Over 30 lagerfarver",
+          "no": "Over 30 lagerfarger"
+        }
+      },
+      {
+        "label": "Print technique",
+        "value": "DTG digital print or screen print",
+        "labelI18n": {
+          "sv": "Tryckteknik",
+          "da": "Trykteknik",
+          "no": "Trykketeknikk"
+        },
+        "valueI18n": {
+          "sv": "DTG-digitaltryck eller screentryck",
+          "da": "DTG-digitaltryk eller serigrafi",
+          "no": "DTG-digitaltrykk eller silketrykk"
+        }
+      },
+      {
+        "label": "Standard print position",
+        "value": "Left chest, up to 10 × 10 cm",
+        "labelI18n": {
+          "sv": "Standardtryckplacering",
+          "da": "Standard trykplacering",
+          "no": "Standard trykkplassering"
+        },
+        "valueI18n": {
+          "sv": "Vänster bröst, upp till 10 × 10 cm",
+          "da": "Venstre bryst, op til 10 × 10 cm",
+          "no": "Venstre bryst, opptil 10 × 10 cm"
+        }
+      },
+      {
+        "label": "Minimum order",
+        "value": "10 pieces per design",
+        "labelI18n": {
+          "sv": "Minsta beställning",
+          "da": "Mindste bestilling",
+          "no": "Minste bestilling"
+        },
+        "valueI18n": {
+          "sv": "10 stycken per motiv",
+          "da": "10 stk. pr. motiv",
+          "no": "10 stk. per motiv"
+        }
+      },
+      {
+        "label": "Washing",
+        "value": "40 °C, inside out, do not tumble dry the print",
+        "labelI18n": {
+          "sv": "Tvätt",
+          "da": "Vask",
+          "no": "Vask"
+        },
+        "valueI18n": {
+          "sv": "40 °C, ut och in, torktumla inte trycket",
+          "da": "40 °C, med vrangen ud, tørretumbl ikke trykket",
+          "no": "40 °C, vrengt, ikke tørketrommel på trykket"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many pieces do I have to order?",
+        "a": "The minimum is 10 pieces per design. Inside that run you can mix sizes and colours freely, as long as the printed artwork stays the same.",
+        "qI18n": {
+          "sv": "Hur många plagg måste jag beställa?",
+          "da": "Hvor mange stk. skal jeg bestille?",
+          "no": "Hvor mange plagg må jeg bestille?"
+        },
+        "aI18n": {
+          "sv": "Minsta antal är 10 stycken per motiv. Inom den upplagan kan du blanda storlekar och färger fritt, så länge trycket är detsamma.",
+          "da": "Mindste antal er 10 stk. pr. motiv. Inden for det oplag kan du blande størrelser og farver frit, så længe trykket er det samme.",
+          "no": "Minste antall er 10 stk. per motiv. Innenfor det opplaget kan du blande størrelser og farger fritt, så lenge trykket er det samme."
+        }
+      },
+      {
+        "q": "Which print technique should I choose?",
+        "a": "DTG digital print handles photographs, gradients and many colours, and costs the same however many colours the design has. Screen print lays down a thicker, more hard-wearing ink film and becomes the cheaper choice once the run is large and the design is a few flat colours.",
+        "qI18n": {
+          "sv": "Vilken tryckteknik ska jag välja?",
+          "da": "Hvilken trykteknik skal jeg vælge?",
+          "no": "Hvilken trykketeknikk bør jeg velge?"
+        },
+        "aI18n": {
+          "sv": "DTG-digitaltryck klarar foton, toningar och många färger, och kostar lika mycket oavsett hur många färger motivet har. Screentryck lägger ett tjockare och tåligare färgskikt och blir det billigare valet när upplagan är stor och motivet består av några få rena färger.",
+          "da": "DTG-digitaltryk klarer fotos, forløb og mange farver og koster det samme, uanset hvor mange farver motivet har. Serigrafi lægger et tykkere og mere slidstærkt farvelag og bliver det billigste valg, når oplaget er stort, og motivet består af få rene farver.",
+          "no": "DTG-digitaltrykk takler foto, toninger og mange farger, og koster det samme uansett hvor mange farger motivet har. Silketrykk legger et tykkere og mer slitesterkt fargelag og blir det rimeligste valget når opplaget er stort og motivet består av noen få rene farger."
+        }
+      },
+      {
+        "q": "Can I print on the front and the back?",
+        "a": "Yes. Every print position is priced on its own, so choose left chest, large front, full back or a combination in the print position field and the price on the page updates as you choose.",
+        "qI18n": {
+          "sv": "Kan jag trycka både fram och bak?",
+          "da": "Kan jeg trykke både for og bag?",
+          "no": "Kan jeg trykke både foran og bak?"
+        },
+        "aI18n": {
+          "sv": "Ja. Varje tryckplacering prissätts för sig, så välj vänster bröst, stor framsida, hel rygg eller en kombination i fältet för tryckplacering — priset på sidan uppdateras medan du väljer.",
+          "da": "Ja. Hver trykplacering prissættes for sig, så vælg venstre bryst, stor forside, hel ryg eller en kombination i feltet for trykplacering — prisen på siden opdateres, mens du vælger.",
+          "no": "Ja. Hver trykkplassering prises for seg, så velg venstre bryst, stor forside, hel rygg eller en kombinasjon i feltet for trykkplassering — prisen på siden oppdateres mens du velger."
+        }
+      },
+      {
+        "q": "How should the artwork be supplied?",
+        "a": "Send vector artwork — PDF, AI, EPS or SVG — with the text converted to outlines wherever you can. For photographic prints supply at least 300 dpi at the finished print size.",
+        "qI18n": {
+          "sv": "Hur ska originalet levereras?",
+          "da": "Hvordan skal materialet leveres?",
+          "no": "Hvordan skal materiellet leveres?"
+        },
+        "aI18n": {
+          "sv": "Skicka vektoriserat original — PDF, AI, EPS eller SVG — med texten konverterad till banor när det går. För fotografiska tryck behöver filen minst 300 dpi i färdig tryckstorlek.",
+          "da": "Send vektoriseret materiale — PDF, AI, EPS eller SVG — med teksten konverteret til kurver, når det er muligt. Til fotografiske tryk skal filen være mindst 300 dpi i færdig trykstørrelse.",
+          "no": "Send vektorisert materiell — PDF, AI, EPS eller SVG — med teksten konvertert til baner der det er mulig. For fotografiske trykk må filen være minst 300 dpi i ferdig trykkstørrelse."
+        }
+      },
+      {
+        "q": "How do I wash the shirt?",
+        "a": "Turn the garment inside out and machine wash at 40 °C. Keep the print out of the tumble dryer and never iron directly on it.",
+        "qI18n": {
+          "sv": "Hur tvättar jag plagget?",
+          "da": "Hvordan vasker jeg tøjet?",
+          "no": "Hvordan vasker jeg plagget?"
+        },
+        "aI18n": {
+          "sv": "Vänd plagget ut och in och maskintvätta i 40 °C. Torktumla inte trycket och stryk aldrig direkt på det.",
+          "da": "Vend tøjet med vrangen ud og maskinvask ved 40 °C. Undgå tørretumbler på trykket, og stryg aldrig direkte på det.",
+          "no": "Vreng plagget og maskinvask på 40 °C. Hold trykket unna tørketrommelen, og stryk aldri direkte på det."
+        }
+      }
+    ],
+    "enabledFieldIds": [
+      "garment_style",
+      "garment_quality_tier",
+      "garment_fabric_composition",
+      "garment_fit",
+      "garment_colour",
+      "garment_size",
+      "garment_decoration_method",
+      "garment_print_position",
+      "garment_print_area_size",
+      "garment_imprint_colours",
+      "garment_naming_numbering",
+      "garment_packing_finishing",
+      "production_delivery_speed",
+      "artwork_check_service",
+      "artwork_supply_method"
+    ]
+  },
+  {
+    "id": "prod-bottle-sky-650",
+    "name": "Sky Recycled Plastic Water Bottle 650 ml",
+    "nameI18n": {
+      "sv": "Sky vattenflaska av återvunnen plast 650 ml",
+      "da": "Sky drikkedunk i genbrugsplast 650 ml",
+      "no": "Sky drikkeflaske i resirkulert plast 650 ml"
+    },
+    "description": "A 650 ml drinking bottle moulded from recycled plastic, with a screw lid and an integrated carry handle. It is BPA free and leak proof, so it travels in a bag without soaking what is around it. Your logo is pad printed on the bottle body inside a 30 × 70 mm area, in one to four spot colours or in full colour.",
+    "descriptionI18n": {
+      "sv": "En 650 ml dricksflaska formsprutad i återvunnen plast, med skruvlock och integrerat bärhandtag. Den är BPA-fri och läckagesäker, så den kan ligga i väskan utan att blöta ner allt runt omkring. Din logotyp trycks med tampongtryck på flaskans sida inom en yta på 30 × 70 mm, i en till fyra dekorfärger eller i fyrfärg.",
+      "da": "En 650 ml drikkedunk sprøjtestøbt i genbrugsplast, med skruelåg og integreret bærehåndtag. Den er BPA-fri og lækagesikker, så den kan ligge i tasken uden at gennemvæde alt omkring sig. Dit logo trykkes med tampontryk på flaskens side inden for et felt på 30 × 70 mm, i én til fire spotfarver eller i firfarve.",
+      "no": "En 650 ml drikkeflaske sprøytestøpt i resirkulert plast, med skrulokk og integrert bærehåndtak. Den er BPA-fri og lekkasjesikker, så den kan ligge i vesken uten å bløte alt rundt seg. Logoen din trykkes med tampongtrykk på flaskens side innenfor et felt på 30 × 70 mm, i én til fire spotfarger eller i firefarge."
+    },
+    "categoryId": "cups",
+    "basePrice": 36,
+    "images": [
+      "/product-art/bottle-1.svg",
+      "/product-art/bottle-2.svg",
+      "/product-art/bottle-3.svg",
+      "/product-art/bottle-4.svg"
+    ],
+    "options": [],
+    "isWeb2Print": true,
+    "minQuantity": 10,
+    "maxQuantity": 5000,
+    "customUploadRules": {
+      "enabled": false,
+      "minPrice": 20,
+      "allowedFormats": [
+        "pdf",
+        "ai",
+        "eps",
+        "svg",
+        "png",
+        "jpg",
+        "jpeg"
+      ],
+      "maxFileSizeMb": 100
+    },
+    "pricingRules": {
+      "baseSetupFee": 650,
+      "priceCalculationType": "tiered_volume",
+      "volumeDiscounts": [
+        {
+          "minQuantity": 50,
+          "discountPercentage": 17
+        },
+        {
+          "minQuantity": 100,
+          "discountPercentage": 29
+        },
+        {
+          "minQuantity": 250,
+          "discountPercentage": 35
+        },
+        {
+          "minQuantity": 500,
+          "discountPercentage": 39
+        },
+        {
+          "minQuantity": 2500,
+          "discountPercentage": 41
+        }
+      ]
+    },
+    "deliverySpeedOptions": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "deliveryDays": "5 Working Days",
+        "priceSurcharge": 0
+      },
+      {
+        "id": "fast",
+        "name": "Fast",
+        "deliveryDays": "3 Working Days",
+        "priceSurcharge": 95
+      },
+      {
+        "id": "express",
+        "name": "Express",
+        "deliveryDays": "2 Working Days",
+        "priceSurcharge": 195
+      }
+    ],
+    "features": [
+      "650 ml capacity, moulded from recycled plastic",
+      "BPA free and suitable for drinking water",
+      "Leak-proof screw lid with a built-in carry handle",
+      "Pad print area of 30 × 70 mm on the bottle body",
+      "One to four spot colours, or full-colour digital print",
+      "From 10 pieces, with the per-piece price falling sharply on volume"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "650 ml volym, formsprutad i återvunnen plast",
+        "BPA-fri och avsedd för dricksvatten",
+        "Läckagesäkert skruvlock med inbyggt bärhandtag",
+        "Tryckyta på 30 × 70 mm på flaskans sida",
+        "En till fyra dekorfärger, eller digitalt fyrfärgstryck",
+        "Från 10 stycken, med kraftigt fallande styckpris i större upplagor"
+      ],
+      "da": [
+        "650 ml volumen, sprøjtestøbt i genbrugsplast",
+        "BPA-fri og beregnet til drikkevand",
+        "Lækagesikkert skruelåg med indbygget bærehåndtag",
+        "Trykfelt på 30 × 70 mm på flaskens side",
+        "Én til fire spotfarver, eller digitalt firfarvetryk",
+        "Fra 10 stk., med kraftigt faldende stykpris i større oplag"
+      ],
+      "no": [
+        "650 ml volum, sprøytestøpt i resirkulert plast",
+        "BPA-fri og beregnet for drikkevann",
+        "Lekkasjesikkert skrulokk med innebygd bærehåndtak",
+        "Trykkfelt på 30 × 70 mm på flaskens side",
+        "Én til fire spotfarger, eller digitalt firefargetrykk",
+        "Fra 10 stk., med kraftig fallende stykkpris i større opplag"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "650 ml",
+        "labelI18n": {
+          "sv": "Volym",
+          "da": "Volumen",
+          "no": "Volum"
+        },
+        "valueI18n": {
+          "sv": "650 ml",
+          "da": "650 ml",
+          "no": "650 ml"
+        }
+      },
+      {
+        "label": "Material",
+        "value": "Recycled plastic, BPA free",
+        "labelI18n": {
+          "sv": "Material",
+          "da": "Materiale",
+          "no": "Materiale"
+        },
+        "valueI18n": {
+          "sv": "Återvunnen plast, BPA-fri",
+          "da": "Genbrugsplast, BPA-fri",
+          "no": "Resirkulert plast, BPA-fri"
+        }
+      },
+      {
+        "label": "Lid",
+        "value": "Screw lid with carry handle, leak proof",
+        "labelI18n": {
+          "sv": "Lock",
+          "da": "Låg",
+          "no": "Lokk"
+        },
+        "valueI18n": {
+          "sv": "Skruvlock med bärhandtag, läckagesäkert",
+          "da": "Skruelåg med bærehåndtag, lækagesikkert",
+          "no": "Skrulokk med bærehåndtak, lekkasjesikkert"
+        }
+      },
+      {
+        "label": "Print area",
+        "value": "30 × 70 mm on the bottle body",
+        "labelI18n": {
+          "sv": "Tryckyta",
+          "da": "Trykfelt",
+          "no": "Trykkfelt"
+        },
+        "valueI18n": {
+          "sv": "30 × 70 mm på flaskans sida",
+          "da": "30 × 70 mm på flaskens side",
+          "no": "30 × 70 mm på flaskens side"
+        }
+      },
+      {
+        "label": "Print technique",
+        "value": "Pad print (tampon print)",
+        "labelI18n": {
+          "sv": "Tryckteknik",
+          "da": "Trykteknik",
+          "no": "Trykketeknikk"
+        },
+        "valueI18n": {
+          "sv": "Tampongtryck",
+          "da": "Tampontryk",
+          "no": "Tampongtrykk"
+        }
+      },
+      {
+        "label": "Print colours",
+        "value": "1–4 spot colours, or full colour",
+        "labelI18n": {
+          "sv": "Tryckfärger",
+          "da": "Trykfarver",
+          "no": "Trykkfarger"
+        },
+        "valueI18n": {
+          "sv": "1–4 dekorfärger, eller fyrfärg",
+          "da": "1–4 spotfarver, eller firfarve",
+          "no": "1–4 spotfarger, eller firefarge"
+        }
+      },
+      {
+        "label": "Minimum order",
+        "value": "10 pieces",
+        "labelI18n": {
+          "sv": "Minsta beställning",
+          "da": "Mindste bestilling",
+          "no": "Minste bestilling"
+        },
+        "valueI18n": {
+          "sv": "10 stycken",
+          "da": "10 stk.",
+          "no": "10 stk."
+        }
+      },
+      {
+        "label": "Care",
+        "value": "Hand wash, cold drinks only",
+        "labelI18n": {
+          "sv": "Skötsel",
+          "da": "Vedligeholdelse",
+          "no": "Vedlikehold"
+        },
+        "valueI18n": {
+          "sv": "Handdiska, endast kalla drycker",
+          "da": "Håndvask, kun kolde drikke",
+          "no": "Håndvask, kun kalde drikker"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can the bottle go in the dishwasher?",
+        "a": "We recommend washing it by hand. Repeated dishwasher cycles wear the print down and dull the plastic, so both the bottle and the logo last longer if it is rinsed by hand.",
+        "qI18n": {
+          "sv": "Tål flaskan diskmaskin?",
+          "da": "Tåler flasken opvaskemaskine?",
+          "no": "Tåler flasken oppvaskmaskin?"
+        },
+        "aI18n": {
+          "sv": "Vi rekommenderar handdisk. Upprepade maskindiskar sliter på trycket och gör plasten matt, så både flaskan och logotypen håller längre om den sköljs för hand.",
+          "da": "Vi anbefaler håndvask. Gentagne maskinopvaske slider på trykket og gør plasten mat, så både flasken og logoet holder længere, hvis den skylles i hånden.",
+          "no": "Vi anbefaler håndvask. Gjentatte maskinvasker sliter på trykket og gjør plasten matt, så både flasken og logoen holder lenger hvis den skylles for hånd."
+        }
+      },
+      {
+        "q": "How large can the logo be?",
+        "a": "The standard pad print area on the body is 30 × 70 mm. Supply vector artwork so that thin lines and small type still hold at that size.",
+        "qI18n": {
+          "sv": "Hur stor kan logotypen vara?",
+          "da": "Hvor stort kan logoet være?",
+          "no": "Hvor stor kan logoen være?"
+        },
+        "aI18n": {
+          "sv": "Standardytan för tampongtryck på sidan är 30 × 70 mm. Skicka vektoriserat original så att tunna linjer och liten text håller ihop i den storleken.",
+          "da": "Standardfeltet til tampontryk på siden er 30 × 70 mm. Send vektoriseret materiale, så tynde streger og lille tekst holder i den størrelse.",
+          "no": "Standardfeltet for tampongtrykk på siden er 30 × 70 mm. Send vektorisert materiell slik at tynne streker og liten tekst holder i den størrelsen."
+        }
+      },
+      {
+        "q": "Can I have more than one colour in the print?",
+        "a": "Yes. Pad print runs up to four spot colours, each laid down in its own pass. For photographs or gradients choose the full-colour digital option in the imprint colours field instead.",
+        "qI18n": {
+          "sv": "Kan jag ha fler än en färg i trycket?",
+          "da": "Kan jeg have mere end én farve i trykket?",
+          "no": "Kan jeg ha mer enn én farge i trykket?"
+        },
+        "aI18n": {
+          "sv": "Ja. Tampongtryck klarar upp till fyra dekorfärger, där varje färg trycks i ett eget moment. För foton eller toningar väljer du i stället det digitala fyrfärgsalternativet i fältet för tryckfärger.",
+          "da": "Ja. Tampontryk klarer op til fire spotfarver, hvor hver farve trykkes i sit eget gennemløb. Til fotos eller forløb vælger du i stedet den digitale firfarveløsning i feltet for trykfarver.",
+          "no": "Ja. Tampongtrykk takler opptil fire spotfarger, der hver farge trykkes i sin egen omgang. For foto eller toninger velger du i stedet det digitale firefargealternativet i feltet for trykkfarger."
+        }
+      },
+      {
+        "q": "Can it hold hot drinks?",
+        "a": "No. This is a single-wall plastic bottle made for cold drinks. For coffee or tea, choose an insulated stainless steel bottle in the bottle type field.",
+        "qI18n": {
+          "sv": "Tål den varma drycker?",
+          "da": "Tåler den varme drikke?",
+          "no": "Tåler den varme drikker?"
+        },
+        "aI18n": {
+          "sv": "Nej. Det här är en enkelväggig plastflaska avsedd för kalla drycker. För kaffe eller te väljer du en isolerad flaska i rostfritt stål i fältet för flasktyp.",
+          "da": "Nej. Det er en enkeltvægget plastflaske beregnet til kolde drikke. Til kaffe eller te vælger du en isoleret flaske i rustfrit stål i feltet for flasketype.",
+          "no": "Nei. Dette er en enkeltvegget plastflaske beregnet for kalde drikker. For kaffe eller te velger du en isolert flaske i rustfritt stål i feltet for flasketype."
+        }
+      },
+      {
+        "q": "Why is the price per bottle so much lower at 500 pieces?",
+        "a": "The printing plate and machine set-up are a one-off cost charged once per order, not per bottle. Spread over ten bottles it dominates the price; spread over five hundred it almost disappears.",
+        "qI18n": {
+          "sv": "Varför är styckpriset så mycket lägre vid 500 stycken?",
+          "da": "Hvorfor er stykprisen så meget lavere ved 500 stk.?",
+          "no": "Hvorfor er stykkprisen så mye lavere ved 500 stk.?"
+        },
+        "aI18n": {
+          "sv": "Tryckplåten och riggningen av maskinen är en engångskostnad som tas ut en gång per order, inte per flaska. Fördelad på tio flaskor dominerar den priset; fördelad på femhundra försvinner den nästan.",
+          "da": "Trykpladen og opsætningen af maskinen er en engangsomkostning, der opkræves én gang pr. ordre, ikke pr. flaske. Fordelt på ti flasker dominerer den prisen; fordelt på fem hundrede forsvinder den næsten.",
+          "no": "Trykkplaten og riggingen av maskinen er en engangskostnad som belastes én gang per ordre, ikke per flaske. Fordelt på ti flasker dominerer den prisen; fordelt på fem hundre forsvinner den nesten."
+        }
+      }
+    ],
+    "enabledFieldIds": [
+      "promo_bottle_type",
+      "promo_bottle_capacity",
+      "promo_item_colour",
+      "promo_decoration_method",
+      "promo_print_position",
+      "promo_imprint_colours",
+      "artwork_designs_per_run",
+      "sample_service",
+      "order_packaging",
+      "production_delivery_speed",
+      "artwork_check_service",
+      "artwork_supply_method"
+    ],
+    "defaultOptionIds": {
+      "promo_bottle_type": "pd-bot-rpet",
+      "promo_bottle_capacity": "pd-botcap-650"
+    }
+  },
+  {
+    "id": "prod-pen-printed",
+    "name": "Printed Two-Tone Ballpoint Pen",
+    "nameI18n": {
+      "sv": "Tryckta delade pennor",
+      "da": "Trykte todelte kuglepenne",
+      "no": "Trykte todelte kulepenner"
+    },
+    "description": "A classic plastic ballpoint pen with a white barrel and a coloured grip section, held in eight grip colours. Your logo is pad printed along the barrel in one or more spot colours, and the pen writes in standard blue or black ballpoint ink. Ordered from 50 pieces upwards, it is the everyday giveaway for fairs, conferences and the reception desk.",
+    "descriptionI18n": {
+      "sv": "En klassisk kulspetspenna i plast med vit kropp och färgat greppparti, som finns i åtta greppfärger. Din logotyp trycks med tampongtryck längs pennkroppen i en eller flera dekorfärger, och pennan skriver med vanligt blått eller svart kulspetsbläck. Beställs från 50 stycken och är den självklara giveawayen till mässor, konferenser och receptionen.",
+      "da": "En klassisk kuglepen i plast med hvid krop og farvet grebsparti, som fås i otte grebsfarver. Dit logo trykkes med tampontryk langs pennens krop i én eller flere spotfarver, og pennen skriver med almindeligt blåt eller sort kuglepenblæk. Bestilles fra 50 stk. og er den oplagte giveaway til messer, konferencer og receptionen.",
+      "no": "En klassisk kulepenn i plast med hvit kropp og farget grepsparti, som finnes i åtte grepsfarger. Logoen din trykkes med tampongtrykk langs pennekroppen i én eller flere spotfarger, og pennen skriver med vanlig blått eller svart kulepennblekk. Bestilles fra 50 stk. og er den selvsagte giveawayen til messer, konferanser og resepsjonen."
+    },
+    "categoryId": "cards",
+    "basePrice": 7,
+    "images": [
+      "/product-art/pen-1.svg",
+      "/product-art/pen-2.svg",
+      "/product-art/pen-3.svg",
+      "/product-art/pen-4.svg"
+    ],
+    "options": [],
+    "isWeb2Print": true,
+    "minQuantity": 50,
+    "maxQuantity": 10000,
+    "customUploadRules": {
+      "enabled": false,
+      "minPrice": 2,
+      "allowedFormats": [
+        "pdf",
+        "ai",
+        "eps",
+        "svg",
+        "png",
+        "jpg",
+        "jpeg"
+      ],
+      "maxFileSizeMb": 100
+    },
+    "pricingRules": {
+      "baseSetupFee": 105,
+      "priceCalculationType": "tiered_volume",
+      "volumeDiscounts": [
+        {
+          "minQuantity": 100,
+          "discountPercentage": 15
+        },
+        {
+          "minQuantity": 250,
+          "discountPercentage": 30
+        },
+        {
+          "minQuantity": 500,
+          "discountPercentage": 40
+        },
+        {
+          "minQuantity": 2500,
+          "discountPercentage": 60
+        }
+      ]
+    },
+    "deliverySpeedOptions": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "deliveryDays": "5 Working Days",
+        "priceSurcharge": 0
+      },
+      {
+        "id": "fast",
+        "name": "Fast",
+        "deliveryDays": "3 Working Days",
+        "priceSurcharge": 95
+      },
+      {
+        "id": "express",
+        "name": "Express",
+        "deliveryDays": "2 Working Days",
+        "priceSurcharge": 195
+      }
+    ],
+    "features": [
+      "White barrel with a coloured grip section — eight grip colours",
+      "Logo pad printed along the barrel",
+      "Writes in standard blue or black ballpoint ink",
+      "From 50 pieces, with the per-piece price dropping fast on larger runs",
+      "Light enough to post — a natural insert for mailings and goodie bags"
+    ],
+    "featuresI18n": {
+      "sv": [
+        "Vit pennkropp med färgat greppparti — åtta greppfärger",
+        "Logotypen trycks med tampongtryck längs kroppen",
+        "Skriver med vanligt blått eller svart kulspetsbläck",
+        "Från 50 stycken, med snabbt fallande styckpris i större upplagor",
+        "Lätt nog att posta — en självklar bilaga i utskick och goodiebags"
+      ],
+      "da": [
+        "Hvid pennekrop med farvet grebsparti — otte grebsfarver",
+        "Logoet trykkes med tampontryk langs kroppen",
+        "Skriver med almindeligt blåt eller sort kuglepenblæk",
+        "Fra 50 stk., med hurtigt faldende stykpris i større oplag",
+        "Let nok til at sende med posten — et oplagt indstik i udsendelser og goodiebags"
+      ],
+      "no": [
+        "Hvit pennekropp med farget grepsparti — åtte grepsfarger",
+        "Logoen trykkes med tampongtrykk langs kroppen",
+        "Skriver med vanlig blått eller svart kulepennblekk",
+        "Fra 50 stk., med raskt fallende stykkpris i større opplag",
+        "Lett nok til å sende i posten — et selvsagt bilag i utsendelser og goodiebags"
+      ]
+    },
+    "specs": [
+      {
+        "label": "Pen type",
+        "value": "Plastic ballpoint pen, two-tone barrel",
+        "labelI18n": {
+          "sv": "Penntyp",
+          "da": "Pentype",
+          "no": "Penntype"
+        },
+        "valueI18n": {
+          "sv": "Kulspetspenna i plast, tvåfärgad kropp",
+          "da": "Kuglepen i plast, tofarvet krop",
+          "no": "Kulepenn i plast, tofarget kropp"
+        }
+      },
+      {
+        "label": "Barrel",
+        "value": "White, with a coloured grip section",
+        "labelI18n": {
+          "sv": "Pennkropp",
+          "da": "Pennekrop",
+          "no": "Pennekropp"
+        },
+        "valueI18n": {
+          "sv": "Vit, med färgat greppparti",
+          "da": "Hvid, med farvet grebsparti",
+          "no": "Hvit, med farget grepsparti"
+        }
+      },
+      {
+        "label": "Grip colours",
+        "value": "8 colours",
+        "labelI18n": {
+          "sv": "Greppfärger",
+          "da": "Grebsfarver",
+          "no": "Grepsfarger"
+        },
+        "valueI18n": {
+          "sv": "8 färger",
+          "da": "8 farver",
+          "no": "8 farger"
+        }
+      },
+      {
+        "label": "Print technique",
+        "value": "Pad print (tampon print)",
+        "labelI18n": {
+          "sv": "Tryckteknik",
+          "da": "Trykteknik",
+          "no": "Trykketeknikk"
+        },
+        "valueI18n": {
+          "sv": "Tampongtryck",
+          "da": "Tampontryk",
+          "no": "Tampongtrykk"
+        }
+      },
+      {
+        "label": "Print position",
+        "value": "Along the barrel, one side",
+        "labelI18n": {
+          "sv": "Tryckplacering",
+          "da": "Trykplacering",
+          "no": "Trykkplassering"
+        },
+        "valueI18n": {
+          "sv": "Längs pennkroppen, en sida",
+          "da": "Langs pennekroppen, én side",
+          "no": "Langs pennekroppen, én side"
+        }
+      },
+      {
+        "label": "Ink colour",
+        "value": "Blue or black",
+        "labelI18n": {
+          "sv": "Bläckfärg",
+          "da": "Blækfarve",
+          "no": "Blekkfarge"
+        },
+        "valueI18n": {
+          "sv": "Blått eller svart",
+          "da": "Blåt eller sort",
+          "no": "Blått eller svart"
+        }
+      },
+      {
+        "label": "Minimum order",
+        "value": "50 pieces per design",
+        "labelI18n": {
+          "sv": "Minsta beställning",
+          "da": "Mindste bestilling",
+          "no": "Minste bestilling"
+        },
+        "valueI18n": {
+          "sv": "50 stycken per motiv",
+          "da": "50 stk. pr. motiv",
+          "no": "50 stk. per motiv"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many pens do I have to order?",
+        "a": "The minimum is 50 pieces per design. Below 250 pieces the one-off print set-up is the largest part of what you pay, which is why the per-piece figure falls so steeply between 50 and 500.",
+        "qI18n": {
+          "sv": "Hur många pennor måste jag beställa?",
+          "da": "Hvor mange penne skal jeg bestille?",
+          "no": "Hvor mange penner må jeg bestille?"
+        },
+        "aI18n": {
+          "sv": "Minsta antal är 50 stycken per motiv. Under 250 stycken är engångskostnaden för tryckriggningen den största delen av priset, och det är därför styckpriset sjunker så brant mellan 50 och 500.",
+          "da": "Mindste antal er 50 stk. pr. motiv. Under 250 stk. udgør engangsomkostningen til trykopsætningen den største del af prisen, og derfor falder stykprisen så stejlt mellem 50 og 500.",
+          "no": "Minste antall er 50 stk. per motiv. Under 250 stk. utgjør engangskostnaden for trykkriggingen den største delen av prisen, og derfor faller stykkprisen så bratt mellom 50 og 500."
+        }
+      },
+      {
+        "q": "Which grip colours can I choose?",
+        "a": "Eight grip colours are stocked against the white barrel. Pick the closest one in the item colour field — the grip is moulded, not printed, so it cannot be matched to a Pantone.",
+        "qI18n": {
+          "sv": "Vilka greppfärger kan jag välja?",
+          "da": "Hvilke grebsfarver kan jeg vælge?",
+          "no": "Hvilke grepsfarger kan jeg velge?"
+        },
+        "aI18n": {
+          "sv": "Åtta greppfärger finns på lager mot den vita kroppen. Välj den som ligger närmast i fältet för produktfärg — greppet är formsprutat, inte tryckt, och kan därför inte matchas mot en Pantone.",
+          "da": "Otte grebsfarver findes på lager mod den hvide krop. Vælg den, der ligger tættest på, i feltet for produktfarve — grebet er sprøjtestøbt, ikke trykt, og kan derfor ikke matches mod en Pantone.",
+          "no": "Åtte grepsfarger finnes på lager mot den hvite kroppen. Velg den som ligger nærmest i feltet for produktfarge — grepet er sprøytestøpt, ikke trykt, og kan derfor ikke matches mot en Pantone."
+        }
+      },
+      {
+        "q": "How should I supply the logo?",
+        "a": "Vector artwork — PDF, AI, EPS or SVG — with the text converted to outlines. Pad print lays down a thin film of ink, so keep lines above roughly 0.3 mm and avoid fine tints and gradients.",
+        "qI18n": {
+          "sv": "Hur ska jag skicka in logotypen?",
+          "da": "Hvordan skal jeg sende logoet?",
+          "no": "Hvordan skal jeg sende inn logoen?"
+        },
+        "aI18n": {
+          "sv": "Vektoriserat original — PDF, AI, EPS eller SVG — med texten konverterad till banor. Tampongtryck lägger ett tunt färgskikt, så håll linjerna över cirka 0,3 mm och undvik fina raster och toningar.",
+          "da": "Vektoriseret materiale — PDF, AI, EPS eller SVG — med teksten konverteret til kurver. Tampontryk lægger et tyndt farvelag, så hold stregerne over ca. 0,3 mm, og undgå fine rastre og forløb.",
+          "no": "Vektorisert materiell — PDF, AI, EPS eller SVG — med teksten konvertert til baner. Tampongtrykk legger et tynt fargelag, så hold strekene over omtrent 0,3 mm og unngå fine raster og toninger."
+        }
+      },
+      {
+        "q": "Can I print in more than one colour?",
+        "a": "Yes, up to four spot colours. Each colour is a separate print pass with its own plate, so the set-up cost rises with every extra colour.",
+        "qI18n": {
+          "sv": "Kan jag trycka i fler än en färg?",
+          "da": "Kan jeg trykke i mere end én farve?",
+          "no": "Kan jeg trykke i mer enn én farge?"
+        },
+        "aI18n": {
+          "sv": "Ja, upp till fyra dekorfärger. Varje färg är ett eget tryckmoment med en egen plåt, så riggningskostnaden ökar för varje extra färg.",
+          "da": "Ja, op til fire spotfarver. Hver farve er et selvstændigt trykgennemløb med sin egen plade, så opsætningsomkostningen stiger for hver ekstra farve.",
+          "no": "Ja, opptil fire spotfarger. Hver farge er en egen trykkomgang med sin egen plate, så riggekostnaden øker for hver ekstra farge."
+        }
+      },
+      {
+        "q": "Can I have the logo on the clip as well?",
+        "a": "Yes. Choose the barrel-and-clip position, which is printed as two separate positions and priced accordingly.",
+        "qI18n": {
+          "sv": "Kan jag få logotypen även på clipset?",
+          "da": "Kan jeg også få logoet på clipsen?",
+          "no": "Kan jeg få logoen på klipsen også?"
+        },
+        "aI18n": {
+          "sv": "Ja. Välj placeringen pennkropp och clips, som trycks som två separata placeringar och prissätts därefter.",
+          "da": "Ja. Vælg placeringen pennekrop og clips, som trykkes som to separate placeringer og prissættes derefter.",
+          "no": "Ja. Velg plasseringen pennekropp og klips, som trykkes som to separate plasseringer og prises deretter."
+        }
+      }
+    ],
+    "enabledFieldIds": [
+      "promo_pen_model",
+      "promo_pen_body_finish",
+      "promo_item_colour",
+      "promo_pen_ink_colour",
+      "promo_decoration_method",
+      "promo_print_position",
+      "promo_imprint_colours",
+      "artwork_designs_per_run",
+      "order_packaging",
+      "production_delivery_speed",
+      "artwork_check_service",
+      "artwork_supply_method"
+    ],
+    "defaultOptionIds": {
+      "promo_pen_model": "pd-pen-grip"
+    }
+  }
+]

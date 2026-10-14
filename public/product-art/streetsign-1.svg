@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="sign1-t sign1-d">
+  <title id="sign1-t">Pavement sign, front</title>
+  <desc id="sign1-d">An A-frame pavement sign seen from the front, holding a poster printed with an orange header and logo.</desc>
+  <!--
+    Interim illustration, not a photograph of the shop's own product. Flat vector
+    art sitting on the shop surface (#e8eaf1) so an unphotographed product still
+    looks deliberate. Orange is reserved for the printing, because the printing
+    is what we sell. Replaced per product from the dashboard image field.
+  -->
+  <defs>
+    <radialGradient id="sign1-hi" cx=".2" cy=".16" r=".82">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sign1-lo" cx=".85" cy=".88" r=".8">
+      <stop offset="0" stop-color="#c9cdd8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9cdd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sign1-sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b4bbc9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b4bbc9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sign1-mat" x1="0" y1="0" x2=".55" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/>
+      <stop offset="1" stop-color="#dde1eb"/>
+    </linearGradient>
+    <linearGradient id="sign1-ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <rect width="800" height="800" fill="url(#sign1-hi)"/>
+  <rect width="800" height="800" fill="url(#sign1-lo)"/>
+  <ellipse cx="400" cy="650" rx="270" ry="30" fill="url(#sign1-sh)"/>
+  <rect x="216" y="146" width="396" height="450" rx="16" fill="#c9cfda" stroke="#b3bac8" stroke-width="3"/>
+  <rect x="578" y="578" width="66" height="26" rx="12" fill="#bcc3d0" stroke="#adb5c3" stroke-width="3"/>
+  <rect x="188" y="166" width="400" height="452" rx="16" fill="#d6dae4" stroke="#bcc3d0" stroke-width="3"/>
+  <rect x="366" y="152" width="72" height="20" rx="10" fill="#c2c8d4"/>
+  <rect x="218" y="196" width="340" height="392" rx="4" fill="#f8f9fc" stroke="#d2d7e1" stroke-width="2"/>
+  <path d="M218 290h340v-94h-340z" fill="url(#sign1-ink)"/>
+  <rect x="252" y="224" width="211" height="19" rx="9" fill="#ffffff" opacity=".95"/>
+  <rect x="252" y="254" width="136" height="15" rx="8" fill="#ffffff" opacity=".7"/>
+  <circle cx="388.0" cy="391.3728" r="54.4" fill="url(#sign1-ink)"/>
+  <rect x="371.0" y="374.5" width="34.0" height="34.0" rx="8.2" transform="rotate(45 388.0 391.5)" fill="none" stroke="#ffffff" stroke-width="13" stroke-linejoin="round"/>
+  <rect x="272" y="478" width="231" height="14" rx="7" fill="#c2410c"/>
+  <rect x="306" y="506" width="163" height="12" rx="6" fill="#f97316"/>
+  <rect x="334" y="531" width="109" height="10" rx="5" fill="#f97316" opacity=".7"/>
+  <rect x="174" y="606" width="76" height="26" rx="12" fill="#c6ccd8" stroke="#b3bac8" stroke-width="3"/>
+  <rect x="526" y="606" width="76" height="26" rx="12" fill="#c6ccd8" stroke="#b3bac8" stroke-width="3"/>
+</svg>

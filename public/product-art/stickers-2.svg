@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="stk2-t stk2-d">
+  <title id="stk2-t">Stickers printed on a roll in a dispenser</title>
+  <desc id="stk2-d">A roll of round printed labels feeding out of a dispenser box.</desc>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <g>
+    <rect x="170" y="220" width="330" height="430" rx="20" fill="#ffffff" stroke="#d3d8e4" stroke-width="5"/>
+    <path d="M170 220l120-70h330l-120 70z" fill="#f6f7fb" stroke="#d3d8e4" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M500 220l120-70v430l-120 70z" fill="#f1f3f8" stroke="#d3d8e4" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M262 528h150v40l-75 150-75-150z" fill="#ffffff" stroke="#d3d8e4" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="337" cy="612" r="46" fill="#bb965b"/>
+    <circle cx="337" cy="612" r="20" fill="#ffffff" opacity=".9"/>
+    <g fill="#bb965b" opacity=".85">
+      <circle cx="255" cy="330" r="26"/><circle cx="337" cy="330" r="26"/><circle cx="419" cy="330" r="26"/>
+      <circle cx="255" cy="410" r="26"/><circle cx="337" cy="410" r="26"/><circle cx="419" cy="410" r="26"/>
+    </g>
+  </g>
+</svg>

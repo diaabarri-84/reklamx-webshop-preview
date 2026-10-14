@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="stk3-t stk3-d">
+  <title id="stk3-t">A paper sticker sealing a parcel</title>
+  <desc id="stk3-d">A kraft parcel closed with a round printed paper sticker.</desc>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <g>
+    <rect x="170" y="250" width="460" height="330" rx="16" fill="#f4ede1" stroke="#d8cbb4" stroke-width="5"/>
+    <path d="M170 380h460" stroke="#d8cbb4" stroke-width="5"/>
+    <path d="M400 250v330" stroke="#d8cbb4" stroke-width="5"/>
+    <circle cx="400" cy="380" r="72" fill="#bb965b"/>
+    <path d="M368 380l22 24 44-48" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="214" y="452" width="132" height="20" rx="10" fill="#d8cbb4"/>
+    <rect x="214" y="490" width="88" height="20" rx="10" fill="#e2d8c6"/>
+  </g>
+</svg>

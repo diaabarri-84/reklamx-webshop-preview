@@ -1,0 +1,8 @@
+{
+  "name": "ReklamX Web2Print",
+  "description": "Professional Web2Print E-Commerce Platform with Online Editor, Production Workflow, and Advanced Analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

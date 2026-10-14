@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Photo not added yet">
+  <!--
+    The shipped placeholder for any product, category or promo tile that has no
+    photograph yet.
+
+    It replaces three Unsplash URLs that the theme shipped with and that now
+    return 404 — they were used about forty times as the default image, so a new
+    installation opened on a home page of broken-image icons. A file in the repo
+    cannot 404, does not send the visitor's IP to a third party, and weighs under
+    a kilobyte. The owner replaces it with a real photograph from the dashboard.
+  -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20252f"/>
+      <stop offset="1" stop-color="#12151b"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#g)"/>
+  <rect width="800" height="800" fill="url(#grid)"/>
+
+  <!-- Trim marks, the one motif that says "print shop" without any text. -->
+  <g stroke="#ffffff" stroke-opacity="0.22" stroke-width="2" fill="none">
+    <path d="M120 96v-40M96 120h-40"/>
+    <path d="M680 96v-40M704 120h40"/>
+    <path d="M120 704v40M96 680h-40"/>
+    <path d="M680 704v40M704 680h40"/>
+  </g>
+  <rect x="120" y="120" width="560" height="560" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="10 10"/>
+
+  <!-- A sheet coming off the press. -->
+  <g transform="translate(400 380)" fill="none" stroke="#f97316" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-84-96h120l48 48v96h-168z"/>
+    <path d="M36-96v48h48"/>
+    <path d="M-120 48h240v76h-240z" stroke="#ffffff" stroke-opacity="0.45"/>
+    <path d="M-60 88h120" stroke="#ffffff" stroke-opacity="0.45"/>
+  </g>
+</svg>

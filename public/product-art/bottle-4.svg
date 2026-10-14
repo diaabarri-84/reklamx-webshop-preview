@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="bottle4-t bottle4-d">
+  <title id="bottle4-t">Bottle with the lid off</title>
+  <desc id="bottle4-d">A drinks bottle with its screw lid lifted away above the neck, showing the threads and the orange print on the body.</desc>
+  <!--
+    Interim illustration, not a photograph of the shop's own product. Flat vector
+    art sitting on the shop surface (#e8eaf1) so an unphotographed product still
+    looks deliberate. Orange is reserved for the printing, because the printing
+    is what we sell. Replaced per product from the dashboard image field.
+  -->
+  <defs>
+    <radialGradient id="bottle4-hi" cx=".2" cy=".16" r=".82">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bottle4-lo" cx=".85" cy=".88" r=".8">
+      <stop offset="0" stop-color="#c9cdd8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c9cdd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bottle4-sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b4bbc9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b4bbc9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bottle4-mat" x1="0" y1="0" x2=".55" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/>
+      <stop offset="1" stop-color="#dde1eb"/>
+    </linearGradient>
+    <linearGradient id="bottle4-ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#e8eaf1"/>
+  <rect width="800" height="800" fill="url(#bottle4-hi)"/>
+  <rect width="800" height="800" fill="url(#bottle4-lo)"/>
+  <ellipse cx="400" cy="706" rx="140" ry="26" fill="url(#bottle4-sh)"/>
+  <path d="M318 372C318 330 336 306 366 290L366 246L434 246L434 290C464 306 482 330 482 372L482 656C482 678 466 692 444 692L356 692C334 692 318 678 318 656Z" fill="url(#bottle4-mat)" stroke="#c3c9d6" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#c3c9d6" stroke-width="3" stroke-linecap="round">
+    <path d="M368 258h64M368 272h64M368 286h64"/>
+  </g>
+  <rect x="318" y="430" width="164" height="140" fill="url(#bottle4-ink)"/>
+  <circle cx="400" cy="474" r="27" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <rect x="393.3" y="467.3" width="13.3" height="13.3" rx="3.2" transform="rotate(45 400.0 474.0)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="344" y="522" width="112" height="12" rx="6" fill="#ffffff" opacity=".95"/>
+  <rect x="364" y="542" width="72" height="10" rx="5" fill="#ffffff" opacity=".7"/>
+  <rect x="338" y="384" width="22" height="272" rx="11" fill="#ffffff" opacity=".38"/>
+  <rect x="456" y="384" width="16" height="272" rx="8" fill="#c9cdd8" opacity=".4"/>
+  <path d="M400 226v-24" stroke="#aeb6c4" stroke-width="3" stroke-dasharray="9 8" stroke-linecap="round"/>
+  <g transform="rotate(-8 400 152)">
+    <rect x="342" y="106" width="116" height="92" rx="20" fill="#cfd5e0" stroke="#b6bdcb" stroke-width="3"/>
+    <rect x="358" y="176" width="84" height="22" rx="8" fill="#b6bdcb"/>
+    <g stroke="#b6bdcb" stroke-width="3" stroke-linecap="round">
+      <path d="M364 128v40M388 128v40M412 128v40M436 128v40"/>
+    </g>
+  </g>
+</svg>
