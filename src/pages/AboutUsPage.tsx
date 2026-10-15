@@ -18,7 +18,6 @@ import {
   Trash2, 
   Sparkles,
   ShieldCheck,
-  CheckCircle2,
   Printer,
   Clock,
   TrendingUp
@@ -56,33 +55,6 @@ export default function AboutUsPage() {
   const [editForm, setEditForm] = useState<AboutUsPageSettings>(aboutData);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
-
-  // The contact form at the foot of the page — the contact page's own route.
-  const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', message: '' });
-  const [contactSending, setContactSending] = useState(false);
-  const [contactSent, setContactSent] = useState(false);
-  const [contactError, setContactError] = useState<string | null>(null);
-  const sendContact = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setContactSending(true);
-    setContactError(null);
-    try {
-      const resp = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...contactForm, subject: t('aboutUs'), language }),
-      });
-      const result = await resp.json().catch(() => ({}));
-      if (!resp.ok) throw new Error(result?.error || 'not sent');
-      setContactSent(true);
-      setContactForm({ name: '', email: '', phone: '', message: '' });
-    } catch {
-      // What they typed stays in the form; they are told where else to write.
-      setContactError(t('contactSendFailed').replace('{0}', settings.contactEmail || 'info@reklamx.se'));
-    } finally {
-      setContactSending(false);
-    }
-  };
 
   // A save can be refused (no connection, the database's daily limit): the editor
   // stays open with what he typed, and says so. updateSettings rethrows, and this
@@ -232,73 +204,6 @@ export default function AboutUsPage() {
           </section>
         )}
       </div>
-
-      {/* CONTACT, right before the footer: the page ends with a way to talk to
-          the people it has just introduced. The same route as the contact page
-          (/api/contact), so the message lands in the same inbox and dashboard. */}
-      <section className="bg-white border-t border-gray-200 mt-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          <div className="lg:col-span-5">
-            <p className="flex items-center gap-3 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-orange-700">
-              <span className="h-px w-8 bg-orange-400" aria-hidden />
-              {t('contact')}
-            </p>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-black text-gray-900 tracking-tight leading-tight text-balance">
-              {t('aboutContactTitle')}
-            </h2>
-            <p className="mt-5 text-base text-gray-600 leading-relaxed max-w-md">{t('aboutContactLead')}</p>
-          </div>
-
-          <div className="lg:col-span-7">
-            {contactSent ? (
-              <div className="rounded-3xl bg-[#f8f9fa] p-10 text-center" role="status">
-                <CheckCircle2 className="w-10 h-10 text-orange-600 mx-auto" strokeWidth={1.5} />
-                <p className="mt-4 text-lg font-bold text-gray-900">{t('contactSuccessTitle')}</p>
-                <p className="mt-2 text-sm text-gray-600">{t('contactSuccessBody')}</p>
-                <button type="button" onClick={() => setContactSent(false)} className="mt-6 text-sm font-semibold text-gray-700 hover:text-gray-900 underline underline-offset-4">
-                  {t('contactSendAnother')}
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={sendContact} className="grid grid-cols-1 sm:grid-cols-2 gap-5" noValidate={false}>
-                <label className="block">
-                  <span className="text-sm font-medium text-gray-800">{t('contactFormNameLabel')}</span>
-                  <input required name="name" autoComplete="name" value={contactForm.name} onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                    placeholder={t('contactFormNamePlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10" />
-                </label>
-                <label className="block">
-                  <span className="text-sm font-medium text-gray-800">{t('contactFormEmailLabel')}</span>
-                  <input required type="email" name="email" autoComplete="email" value={contactForm.email} onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                    placeholder={t('contactFormEmailPlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10" />
-                </label>
-                <label className="block sm:col-span-2">
-                  <span className="text-sm font-medium text-gray-800">{t('contactFormPhoneLabel')}</span>
-                  <input type="tel" name="phone" autoComplete="tel" value={contactForm.phone} onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
-                    placeholder={t('contactFormPhonePlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10" />
-                </label>
-                <label className="block sm:col-span-2">
-                  <span className="text-sm font-medium text-gray-800">{t('contactFormMessageLabel')}</span>
-                  <textarea required name="message" rows={5} value={contactForm.message} onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                    placeholder={t('contactFormMessagePlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10 resize-y" />
-                </label>
-                {contactError && (
-                  <p role="alert" className="sm:col-span-2 text-sm text-red-700 bg-red-50 rounded-xl px-4 py-3">{contactError}</p>
-                )}
-                <div className="sm:col-span-2">
-                  <button type="submit" disabled={contactSending}
-                    className="inline-flex items-center gap-2 bg-gray-900 hover:bg-orange-700 disabled:opacity-60 text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
-                    {contactSending ? '…' : t('aboutContactSend')}
-                  </button>
-                </div>
-              </form>
-            )}
-          </div>
-        </div>
-      </section>
 
       {/* Admin Edit Modal */}
       <AnimatePresence>

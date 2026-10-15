@@ -40,3 +40,8 @@ release/
 .check*.mjs
 .kill*.mjs
 tmp-products.json
+
+# Supplier exports (trade prices) and local upload storage: never in the public repo
+csv_shop_integration.csv
+*.integration.csv
+storage-files/
