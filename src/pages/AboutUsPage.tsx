@@ -70,7 +70,7 @@ export default function AboutUsPage() {
       const resp = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...contactForm, subject: t('aboutUs') }),
+        body: JSON.stringify({ ...contactForm, subject: t('aboutUs'), language }),
       });
       const result = await resp.json().catch(() => ({}));
       if (!resp.ok) throw new Error(result?.error || 'not sent');

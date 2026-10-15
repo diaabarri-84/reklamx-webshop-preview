@@ -1,4 +1,4 @@
-# Moving ReklamX off Firebase — design (step 1, for review)
+# Moving ReklamX off Firebase
 
 Goal: the shop at `shop.reklamx.se` runs entirely on the client's own cPanel —
 MySQL for data, our own logins, files on disk — and behaves exactly as it does today.
@@ -99,6 +99,11 @@ Changes that alter data are kept out of the copy and run afterwards as separate 
 
 1. ✅ Schema and mapping ([src/lib/db/tableMap.ts](../src/lib/db/tableMap.ts)), tested on MySQL and MariaDB.
 2. ✅ Data layer ([src/lib/db/docStore.ts](../src/lib/db/docStore.ts)) implementing the contract above. `npm run test:db` checks the Firestore behaviours, including 30 concurrent order numbers with no gaps, and passes on MySQL 8.4 and MariaDB 10.6. **Known difference:** a filter whose value is a different type from the indexed field (for example, a number against a text column) matches nothing. No query in the shop does that.
-3. Logins and sessions, then the file service.
-4. Switch `server.ts`, then the browser screens, area by area, with the existing tests.
-5. Write the export/import script; dry-run it on a copy of the real data.
+3. ✅ Logins and sessions ([src/lib/db/localAuth.ts](../src/lib/db/localAuth.ts)) and the file service ([src/lib/db/fileStore.ts](../src/lib/db/fileStore.ts)). Firebase password hashes are checked once and replaced; guest sessions replace anonymous sign-in; private files keep their download token, so old links keep working.
+4. ✅ The switch: `DATA_BACKEND=mysql` ([src/lib/firebaseAdmin.ts](../src/lib/firebaseAdmin.ts)). The server gets the DocStore, the shop's own logins and the disk file store from the same three getters it always called; the browser's `firebase/*` imports are pointed at small stand-ins ([src/lib/local/](../src/lib/local/)) that call `/api/auth`, `/api/data` and `/api/files` ([src/lib/db/localRoutes.ts](../src/lib/db/localRoutes.ts)), where firestore.rules and storage.rules are enforced ([src/lib/db/accessRules.ts](../src/lib/db/accessRules.ts)). `npm run check:local-backend` typechecks the screens against the stand-ins. Unset, nothing changes.
+   Checked end to end on MariaDB 10.6 (2026-10-14): storefront, admin sign-in and dashboard, customer sign-up under the rules (no self-promotion to admin), guest artwork upload with token-only access, password reset by e-mail (single use), and a pay-on-delivery order — number from the counter in one transaction, both e-mails, visible to the customer and first in the admin feed, staff may set priority but not the price. The production build carries no Firebase SDK.
+   Not on this backend yet: Google sign-in (needs a Google OAuth client the shop owns).
+5. ✅ Export/import script ([scripts/migrate/firestore-to-mysql.ts](../scripts/migrate/firestore-to-mysql.ts)): Storage, then every collection and subcollection, then Auth with password hashes; old Firebase file URLs rewritten; a report per collection. Dry-run on the local test data: clean. **The real data still needs the service-account key** (and the password hash parameters, for customers to keep their passwords).
+6. Next: cPanel — a MySQL database and user, the schema, the data, the built app (`DATA_BACKEND=mysql npm run build`) as a Node.js app with `DATA_BACKEND`, `MYSQL_URL`, `DB_SECRETS_KEY`, `PUBLIC_URL`, `FILES_DIR` and the SMTP settings.
+
+Local: `node scripts/local-mysql.mjs start` (MariaDB on 127.0.0.1:3307), copy the test data with `FIRESTORE_EMULATOR_HOST=127.0.0.1:8085 FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099 FIREBASE_STORAGE_EMULATOR_HOST=127.0.0.1:9199 MYSQL_URL=mysql://root@127.0.0.1:3307/reklamx npx tsx scripts/migrate/firestore-to-mysql.ts --reset`, then run the server with `DATA_BACKEND=mysql MYSQL_URL=…`.

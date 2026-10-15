@@ -1907,6 +1907,19 @@ export default function SiteCustomizerAdmin() {
                           onChange={(next) => setFormState((prev) => ({ ...prev, announcementTextI18n: Object.keys(next).length ? next : null }))}
                         />
                       </div>
+                      {/* The bar and its discount code switch off together (2026-10-15). */}
+                      <div>
+                        <label className="block text-xs font-black text-gray-700 mb-1">{t('scAnnouncementCoupon')}</label>
+                        <input
+                          type="text"
+                          value={formState.announcementCouponCode || ''}
+                          onChange={(e) => setFormState({ ...formState, announcementCouponCode: e.target.value.toUpperCase().replace(/\s+/g, '') })}
+                          placeholder="PRINT15"
+                          data-rx-announcement-coupon
+                          className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-xs font-bold text-gray-900 outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                        <p className="text-[0.625rem] text-gray-500 mt-1">{t('scAnnouncementCouponNote')}</p>
+                      </div>
                       <div className="flex items-center gap-3">
                         <label className="text-xs font-black text-gray-700">Background</label>
                         <input

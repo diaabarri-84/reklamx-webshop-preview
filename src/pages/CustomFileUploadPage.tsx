@@ -158,10 +158,11 @@ export default function CustomFileUploadPage() {
             maxFileSizeMb: data.maxFileSizeMb,
             vatRatePercent: data.vatRatePercent,
           });
-        } else {
-          // Initialize default settings in Firestore
-          setDoc(docRef, DEFAULT_SETTINGS).catch(() => {});
         }
+        // No document yet: the defaults above stand. This page used to WRITE them
+        // to the database — a write only an admin may make, so every visitor's
+        // and customer's attempt was refused (403, 2026-10-15). The owner saves
+        // his own values from Print Rules in the dashboard.
         setLoadingSettings(false);
       },
       (err) => {

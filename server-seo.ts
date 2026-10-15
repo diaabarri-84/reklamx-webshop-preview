@@ -316,6 +316,7 @@ const PRIVATE_PATHS = [
   '/editor',
   '/login',
   '/register',
+  '/reset-password',
   '/api/',
 ];
 
@@ -561,7 +562,7 @@ export interface MetaContext {
  * found" screen — and, now, a real 404 to go with it.
  */
 const APP_ROUTE =
-  /^\/(?:about|admin|admin\/login|admin-dashboard|checkout|contact|cookies|custom-upload|customer-dashboard|editor|login|order\/[^/]+|privacy|products|products\/[^/]+|register|services|staff-dashboard|terms)?\/?$/;
+  /^\/(?:about|admin|admin\/login|admin-dashboard|checkout|contact|cookies|custom-upload|customer-dashboard|editor|login|order\/[^/]+|privacy|products|products\/[^/]+|register|reset-password|services|staff-dashboard|terms)?\/?$/;
 
 /**
  * Turn a possibly-relative setting into something a crawler can fetch.

@@ -59,6 +59,9 @@ net
               subject: header(data, 'Subject'),
               replyTo: header(data, 'Reply-To'),
               size: data.length,
+              // The message itself (capped), so a test can follow a link in it —
+              // a password-reset or e-mail-check mail. Local only, like the rest.
+              body: data.split(/\r\n\r\n/).slice(1).join('\r\n\r\n').slice(0, 20000),
             })}\n`,
           );
           mail = { from: '', to: [] };

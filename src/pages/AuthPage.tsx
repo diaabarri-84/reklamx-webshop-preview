@@ -256,6 +256,9 @@ export default function AuthPage() {
         </NeoButton>
       </form>
 
+      {/* On the shop's own database there is no Google sign-in until it has its own
+          Google OAuth client (migration/PLAN.md, "Logins"), so the button is not offered. */}
+      {import.meta.env.VITE_DATA_BACKEND !== 'mysql' && (
       <button
         onClick={google}
         disabled={busy}
@@ -273,6 +276,7 @@ export default function AuthPage() {
         </svg>
         {t('authContinueWithGoogle')}
       </button>
+      )}
 
       <p className="mt-6 text-xs font-bold text-gray-500">
         {signin ? t('authNoAccount') : t('authHaveAccount')}{' '}

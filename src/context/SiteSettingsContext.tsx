@@ -212,6 +212,11 @@ export interface SiteSettings {
   showAnnouncementBar: boolean;
   announcementText: string;
   announcementTextI18n?: LocalizedText | null;
+  /**
+   * The discount code the bar advertises. Set, the bar shows only while that code
+   * can be used (GET /api/announcement): turning the coupon off takes the bar down.
+   */
+  announcementCouponCode?: string;
   announcementBg: string;
 
   showHero: boolean;
@@ -363,6 +368,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
 
   showAnnouncementBar: true,
   announcementText: '🎉 Special 15% discount on all card and banner printing with code: PRINT15',
+  announcementCouponCode: 'PRINT15',
   announcementBg: '#1e293b',
 
   showHero: true,
@@ -623,7 +629,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
 const CUSTOMIZER_RESET_KEYS: Array<keyof SiteSettings> = [
   'siteName', 'siteTagline', 'logoType', 'logoUrl',
   'primaryColor', 'accentColor', 'navbarBg', 'customNavbarBgHex',
-  'showAnnouncementBar', 'announcementText', 'announcementBg',
+  'showAnnouncementBar', 'announcementText', 'announcementBg', 'announcementCouponCode',
   'showHero', 'heroTitle', 'heroSubtitle', 'heroCta1Text', 'heroCta1Link', 'heroCta2Text', 'heroCta2Link',
   'heroImageUrl', 'heroBgOverlay', 'heroSlides', 'bentoCards',
   'showCategoriesSection', 'showEditorPromoSection', 'showStatsSection', 'productSuggestions',

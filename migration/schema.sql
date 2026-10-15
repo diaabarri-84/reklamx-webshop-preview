@@ -179,6 +179,7 @@ CREATE TABLE orders (                               -- orders/{orderNumber}
   shipment_open        TINYINT(1) NULL,             -- tracking sweep: shipmentOpen == true
   checkout_attempt_id  VARCHAR(255) NULL,           -- pay-on-delivery guard
   payment_mode         VARCHAR(64) NULL,            -- test-order cleanup script
+  order_no             VARCHAR(255) NULL,           -- where id == .. (the customer dashboard's order lookup)
   PRIMARY KEY (id),
   KEY ix_orders_user (user_id, created_at),
   KEY ix_orders_account (customer_account_id, created_at),
@@ -186,6 +187,7 @@ CREATE TABLE orders (                               -- orders/{orderNumber}
   KEY ix_orders_next_stage (next_stage_at),
   KEY ix_orders_shipment (shipment_open),
   KEY ix_orders_attempt (checkout_attempt_id),
+  KEY ix_orders_no (order_no),
   KEY ix_orders_mode (payment_mode)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 

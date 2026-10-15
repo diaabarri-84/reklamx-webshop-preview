@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "firebase/app": ["src/lib/local/app.ts"],
+      "firebase/auth": ["src/lib/local/auth.ts"],
+      "firebase/firestore": ["src/lib/local/firestore.ts"],
+      "firebase/storage": ["src/lib/local/storage.ts"]
+    }
+  }
+}

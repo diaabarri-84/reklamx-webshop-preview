@@ -1,17 +1,28 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, loadEnv} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({mode}) => {
+  // THE SHOP'S OWN DATABASE (DATA_BACKEND=mysql — src/lib/firebaseAdmin.ts): the
+  // screens' firebase/* imports are pointed at small stand-ins (src/lib/local/*)
+  // that talk to this server instead of Google. Unset, the build is unchanged.
+  const env = loadEnv(mode, process.cwd(), '');
+  const localBackend = (process.env.DATA_BACKEND || env.DATA_BACKEND) === 'mysql';
   return {
     plugins: [react(), tailwindcss()],
     // NOTE: GEMINI_API_KEY is intentionally NOT exposed to the client bundle.
     // The key is used only server-side in server.ts; the browser talks to /api/chat.
     resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
+      alias: [
+        { find: '@', replacement: path.resolve(__dirname, '.') },
+        ...(localBackend
+          ? [{ find: /^firebase\/(app|auth|firestore|storage)$/, replacement: path.resolve(__dirname, 'src/lib/local/$1.ts') }]
+          : []),
+      ],
+    },
+    define: {
+      'import.meta.env.VITE_DATA_BACKEND': JSON.stringify(localBackend ? 'mysql' : ''),
     },
     build: {
       rollupOptions: {

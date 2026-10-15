@@ -4,7 +4,9 @@ import fs from 'fs';
 import crypto from 'crypto';
 import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
-import { getAdminDb, getAdminAuth, getAdminBucket } from './src/lib/firebaseAdmin.js';
+import { getAdminDb, getAdminAuth, getAdminBucket, usingLocalBackend, getLocalAuth, getFileStore } from './src/lib/firebaseAdmin.js';
+import { registerLocalBackendRoutes } from './src/lib/db/localRoutes.js';
+import { fileUrl as localFileUrl } from './src/lib/db/fileStore.js';
 import {
   buildProductFeed,
   buildRobots,
@@ -32,7 +34,9 @@ import {
 } from './src/lib/supplierFeed.js';
 // Value classes, not the SDK itself: the app is initialised in firebaseAdmin.ts
 // and these are pure helpers, so importing them here starts nothing.
-import { FieldPath, FieldValue } from 'firebase-admin/firestore';
+// From the switch, not from firebase-admin: the right sentinels for whichever
+// database is in use (DATA_BACKEND — src/lib/firebaseAdmin.ts).
+import { FieldPath, FieldValue } from './src/lib/firebaseAdmin.js';
 import { slugify, uniqueSlug } from './src/lib/slug.js';
 import { parseCategoryFilter, normaliseQuery, matchesCatalogueFilters } from './src/lib/catalogueQuery.js';
 import { isPrivateAddress } from './src/lib/privateAddress.js';
@@ -78,7 +82,7 @@ import {
   LOYALTY_DEFAULTS, loyaltySettingsFrom, pointsEarnedOn, pointsValueSek,
   tierForSpend, pointsExpireAt, planPointsExpiry, type LoyaltySettings,
 } from './src/lib/loyalty.js';
-import { sendOrderEmails, sendArtworkNotification, sendInquiryNotification, sendCreditNoteEmail, mailSetup, cleanInboxList, sendTestOrderNotice } from './src/lib/email.js';
+import { sendOrderEmails, sendArtworkNotification, sendInquiryNotification, sendInquiryThanks, sendCreditNoteEmail, mailSetup, cleanInboxList, sendTestOrderNotice } from './src/lib/email.js';
 import {
   buildConsentUrl,
   exchangeCode,
@@ -705,6 +709,20 @@ app.use('/api', (req, res, next) => {
     .catch(() => {})
     .then(() => next());
 });
+
+// ── THE SHOP'S OWN DATABASE (DATA_BACKEND=mysql) ──
+// Sign-in, the browser's document reads and writes, and file uploads — the three
+// things the browser used to do with Google directly (src/lib/db/localRoutes.ts).
+if (usingLocalBackend()) {
+  const localAuth = getLocalAuth();
+  const fileStore = getFileStore();
+  if (!localAuth || !fileStore) {
+    console.error('DATA_BACKEND=mysql but no database is configured (MYSQL_URL) — sign-in and data are unavailable.');
+  } else {
+    registerLocalBackendRoutes(app, localAuth, fileStore, async () => String((await fetchSiteConfig().catch(() => ({} as Record<string, any>)))?.siteName ?? 'ReklamX'));
+    console.log('Data backend: MySQL (DATA_BACKEND=mysql)');
+  }
+}
 
 // API Health route
 /**
@@ -1425,6 +1443,38 @@ async function loadSiteSettingsCopy(): Promise<{ data: Record<string, any> | nul
   }
 }
 
+/**
+ * THE ANNOUNCEMENT BAR FOLLOWS ITS DISCOUNT CODE (2026-10-15).
+ *
+ * The bar advertised PRINT15 while no such code existed, so every customer who
+ * typed it was told it was not valid. The owner links the bar to a code in the
+ * UI Customizer (announcementCouponCode); this answers whether that code can be
+ * used right now — on, started, not expired, uses left — and the bar shows only
+ * while it can. Turning the coupon off in "Coupons & loyalty" takes the bar down
+ * with it. Only the LINKED code is ever looked up: answering for any code a
+ * visitor sends would let them test which codes exist.
+ */
+let announcementCache: { at: number; show: boolean; code: string } | null = null;
+app.get('/api/announcement', async (_req, res) => {
+  try {
+    const site = (await loadSiteSettingsCopy().catch(() => ({ data: null }))).data ?? {};
+    const code = String(site.announcementCouponCode ?? '').toUpperCase().replace(/\s+/g, '');
+    if (!code) return res.json({ show: true, linked: false });
+    if (announcementCache && announcementCache.code === code && Date.now() - announcementCache.at < 60_000) {
+      return res.json({ show: announcementCache.show, linked: true });
+    }
+    const c = await fetchCoupon(code) as (Awaited<ReturnType<typeof fetchCoupon>> & { startsAt?: string | null }) | null;
+    const started = !c?.startsAt || !Number.isFinite(Date.parse(String(c.startsAt))) || Date.parse(String(c.startsAt)) <= Date.now();
+    const usesLeft = !c || !c.maxUses || c.usedCount < c.maxUses;
+    const show = !!c && started && usesLeft;
+    announcementCache = { at: Date.now(), show, code };
+    return res.json({ show, linked: true });
+  } catch {
+    // Unsure: keep the bar hidden rather than advertise a code that may not work.
+    return res.json({ show: false, linked: true });
+  }
+});
+
 app.get('/api/site-settings', async (_req, res) => {
   try {
     const { data, at, stale } = await loadSiteSettingsCopy();
@@ -1880,6 +1930,8 @@ function isMediaPath(raw: unknown): raw is string {
 
 /** The public URL for an object, in the form the Firebase SDK produces. */
 function mediaPublicUrl(bucketName: string, objectPath: string, token: string): string {
+  // On the shop's own database the file is served by this server (/files/…).
+  if (usingLocalBackend()) return `${String(process.env.PUBLIC_URL ?? '').trim().replace(/\/+$/, '')}${localFileUrl(objectPath, token)}`;
   return `https://firebasestorage.googleapis.com/v0/b/${bucketName}/o/${encodeURIComponent(objectPath)}?alt=media&token=${token}`;
 }
 
@@ -4155,6 +4207,7 @@ function couponDocId(code: string): string {
 }
 
 app.post('/api/admin/coupons/save', async (req, res) => {
+  announcementCache = null; // the bar re-checks its linked code at once
   try {
     const { db, uid, email } = await requireAdmin(req);
     const parsed = parseCouponInput(req.body ?? {});
@@ -4205,6 +4258,7 @@ app.post('/api/admin/coupons/save', async (req, res) => {
 });
 
 app.post('/api/admin/coupons/delete', async (req, res) => {
+  announcementCache = null; // the bar re-checks its linked code at once
   try {
     const { db, uid, email } = await requireAdmin(req);
     const id = String(req.body?.id ?? '').trim();
@@ -4246,6 +4300,7 @@ app.post('/api/admin/coupons/delete', async (req, res) => {
  * one per code and a leaked code costs one redemption rather than the campaign.
  */
 app.post('/api/admin/coupons/bulk', async (req, res) => {
+  announcementCache = null; // the bar re-checks its linked code at once
   try {
     const { db, uid, email } = await requireAdmin(req);
 
@@ -4725,8 +4780,30 @@ const FS_BUCKET = process.env.FIREBASE_STORAGE_BUCKET || firebaseConfig.storageB
  * line reading "logo.pdf" that points somewhere else entirely is a phishing
  * page with the shop's own order number on it.
  */
+/**
+ * A file this server stores itself (DATA_BACKEND=mysql): /files/uploads/… or
+ * /files/public/… on THIS shop — PUBLIC_URL's host, or the machine itself while
+ * developing. Same purpose as the Firebase check below: a file link on an order
+ * must point at the shop's own storage, never anywhere a customer typed.
+ */
+function isOurLocalFileUrl(value: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(value, 'http://relative.invalid');
+  } catch {
+    return false;
+  }
+  if (!/^\/files\/(uploads|public)\//.test(url.pathname)) return false;
+  if (url.hostname === 'relative.invalid') return true;
+  const own = (() => { try { return new URL(String(process.env.PUBLIC_URL ?? '')).hostname; } catch { return ''; } })();
+  if (own && url.hostname === own && url.protocol === 'https:') return true;
+  return process.env.NODE_ENV !== 'production' && ['localhost', '127.0.0.1'].includes(url.hostname);
+}
+
 function isOurStorageUrl(value: unknown): boolean {
-  if (typeof value !== 'string' || !value || value.length > 2048 || !FS_BUCKET) return false;
+  if (typeof value !== 'string' || !value || value.length > 2048) return false;
+  if (usingLocalBackend() && isOurLocalFileUrl(value)) return true;
+  if (!FS_BUCKET) return false;
   let url: URL;
   try {
     url = new URL(value);
@@ -4922,6 +4999,19 @@ const PRODUCT_PRICING_FIELDS = [
  * the customer's, and must not be dressed up as a missing product.
  */
 async function fetchProduct(productId: string): Promise<Record<string, any> | null> {
+  // On the shop's own database (DATA_BACKEND=mysql): the same fields, read
+  // through the data layer — and the same promise: a failure is 503, never 404.
+  if (usingLocalBackend()) {
+    const db = getAdminDb();
+    if (!db) throw Object.assign(new Error('The shop is briefly unavailable. Please try again in a moment.'), { status: 503 });
+    const snap = await db.collection('products').doc(productId).get().catch(() => {
+      throw Object.assign(new Error('The shop is briefly unavailable. Please try again in a moment.'), { status: 503 });
+    });
+    if (!snap.exists) return null;
+    const data = snap.data() ?? {};
+    // The field mask, kept: only what the pricing code is meant to see.
+    return Object.fromEntries(PRODUCT_PRICING_FIELDS.filter((k) => k in data).map((k) => [k, data[k]]));
+  }
   const mask = PRODUCT_PRICING_FIELDS.map((f) => `mask.fieldPaths=${encodeURIComponent(f)}`).join('&');
   const url = `${FS_BASE}/products/${encodeURIComponent(productId)}?key=${FS_KEY}&${mask}`;
   let resp: Response;
@@ -5021,6 +5111,20 @@ async function getVatRate(): Promise<number> {
  * hiccuped. Same rule as fetchProduct beside it: unavailable, not "nothing".
  */
 async function fetchPrintSettings(opts: { strict?: boolean } = {}): Promise<Record<string, any>> {
+  // On the shop's own database: the same document through the data layer, with
+  // the same rule — a failed read in strict mode is 503, never a price on defaults.
+  if (usingLocalBackend()) {
+    const unavailable = () => Object.assign(new Error('The shop is briefly unavailable. Please try again in a moment.'), { status: 503 });
+    const db = getAdminDb();
+    if (!db) { if (opts.strict) throw unavailable(); return {}; }
+    try {
+      const snap = await db.collection('settings').doc('printSettings').get();
+      return snap.exists ? (snap.data() ?? {}) : {};
+    } catch (err) {
+      if (opts.strict) { console.error('fetchPrintSettings: the database did not answer — refusing to price on defaults.', err); throw unavailable(); }
+      return {};
+    }
+  }
   const url = `${FS_BASE}/settings/printSettings?key=${FS_KEY}` +
     '&mask.fieldPaths=pricePerLinearMeter&mask.fieldPaths=minPrice&mask.fieldPaths=maxWidthCm' +
     '&mask.fieldPaths=vatRatePercent' +
@@ -7014,6 +7118,9 @@ async function createOrder(
     customerName: [customer.firstName, customer.lastName].filter(Boolean).join(' '),
     customerEmail,
     customerDetails: storedCustomer,
+    // The language the customer shopped in — his confirmation e-mail is written
+    // in it (2026-10-15). The checkout sends it as `locale`.
+    language: (['sv', 'en', 'da', 'no'] as const).find((l) => l === body?.locale) ?? 'sv',
     status: 'pending',
     paymentStatus: 'unpaid',
     paymentMethod: typeof paymentMethod === 'string' ? paymentMethod : null,
@@ -9651,8 +9758,15 @@ app.post('/api/contact', rateLimit, async (req, res) => {
     // retry by the shop.
     const settings = await fetchSiteConfig();
     const shopName = settings.companyLegalName?.trim() || settings.siteName || 'ReklamX';
-    const mail = await sendInquiryNotification(inquiry, shopName, settings.logoUrl);
+    // To the owner, in Swedish, at the contact address he set in the dashboard
+    // (UI Customizer → contact e-mail); and a thank-you to the sender in the
+    // language they had chosen, whose reply comes back to that same address.
+    const site = (await loadSiteSettingsCopy().catch(() => ({ data: null }))).data ?? {};
+    const ownerInbox = String(site.contactEmail ?? '').trim() || null;
+    const mail = await sendInquiryNotification(inquiry, shopName, settings.logoUrl, ownerInbox);
     if (!mail.sent) console.error(`Contact enquiry from ${email}: no e-mail went out (${mail.reason}).`);
+    const thanks = await sendInquiryThanks(inquiry, req.body?.language, shopName, settings.logoUrl, ownerInbox);
+    if (!thanks.sent) console.error(`Contact enquiry from ${email}: no thank-you went out (${thanks.reason}).`);
 
     return res.json({ ok: true, stored, notified: mail.sent });
   } catch (err) {

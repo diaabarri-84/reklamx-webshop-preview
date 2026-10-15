@@ -17,7 +17,8 @@
     "check:models": "node scripts/check-ai-models.mjs --warn-if-unchecked",
     "verify": "npm run typecheck && npm run check:i18n && npm run check:dates && npm run test:units && npm run check:models && npm run build",
     "smoke": "node scripts/smoke.mjs",
-    "test:db": "node scripts/test-doc-store.mjs"
+    "test:db": "node scripts/test-doc-store.mjs",
+    "check:local-backend": "tsc --noEmit -p tsconfig.local.json"
   },
   "dependencies": {
     "@dnd-kit/core": "6.3.1",

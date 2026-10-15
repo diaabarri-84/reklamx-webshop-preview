@@ -139,7 +139,7 @@ export default function ContactPage() {
       const resp = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, language }),
       });
       const result = await resp.json().catch(() => ({}));
       if (!resp.ok) throw new Error(result?.error || 'The message could not be sent.');

@@ -16,7 +16,9 @@
 //   Collected at checkout: first/last name, company, org/VAT number, email,
 //     billing email, phone, street, postcode, city, country, separate delivery
 //     address, order contents, uploaded artwork, free-text comments.
-//   Accounts: email + password, or Google sign-in. Loyalty points, order history.
+//   Accounts: email + password (scrypt hash, MySQL). No Google sign-in since
+//     the move off Firebase (2026-10-15). Loyalty points, order history.
+//   Contact form: name, email, message (contact_inquiries).
 //   Browser storage: reklamx_cart, reklamx_checkout_form (the half-typed
 //     checkout — name, company, org/VAT number, both e-mails, phone, full
 //     address, comments; written on every keystroke, and until 2026-09-13
@@ -30,14 +32,15 @@
 //     designer keeps its drafts in IndexedDB on the device — texts and
 //     pictures the customer put in — and signing out deletes them,
 //     keeping only the owner's template drafts (2026-10-11),
-//     plus the Firebase Auth session and the visitor's answer to the consent
+//     plus the sign-in session and the visitor's answer to the consent
 //     banner. The shop's own code still sets no cookies (there is no
 //     document.cookie anywhere), but Google does: the Maps iframe on the
 //     contact page sets Google cookies the moment that page opens, and
 //     Analytics / Ads set theirs once the visitor has accepted measurement.
 //     Neither Analytics nor Ads is loaded before that acceptance, and neither
 //     is loaded at all while the measurement ids are unset.
-//   Processors: Google (Firebase Auth + Firestore), the chat assistant's AI
+//   Processors: HostX365 (server, MySQL database, files and mail; Hetzner,
+//     Helsinki, EU — since 2026-10-15, before that Google Firebase), the chat assistant's AI
 //     provider — Google unless the owner chose OpenAI, Anthropic or DeepSeek in
 //     the dashboard; the policy names the one in use (fillAiProvider) — and
 //     Mollie (payments).
@@ -63,7 +66,10 @@ export type LegalKind = 'privacy' | 'terms' | 'cookies';
 // the basket summary of 5.7c added with its basis and its retention.
 // 2026-10-05: the AI assistant's provider is the one in use (he may choose
 // DeepSeek), and a DeepSeek chat is said to be processed in China.
-const UPDATED = '2026-10-05';
+// 2026-10-15: off Google — the database, sign-in, files and e-mail now run on
+// our own host (HostX365, Helsinki), there is no Google sign-in, and the
+// contact form is disclosed with its retention.
+const UPDATED = '2026-10-15';
 
 /** Filled from site settings at render time. */
 export const SELLER_PLACEHOLDER = '[company details not yet set]';
@@ -149,8 +155,9 @@ const en: Record<LegalKind, LegalDocument> = {
         body: [
           'When you place an order: your name, email address, telephone number and delivery address; a billing email and a separate delivery address if you give us one; and, if you order as a business, your company name and organisation or VAT number. We need these to produce your order, deliver it, and issue an invoice that meets Swedish accounting rules. The legal basis is performance of our contract with you, and for the invoice itself our legal obligation.',
           'The files you upload for printing, together with the sizes, materials and options you chose, and any note you add to the order. We need these to print the job.',
-          'If you create an account: your email address and, if you sign in with Google, the name and email address Google gives us. Your order history and any loyalty points are attached to that account. The legal basis is performance of our contract, or your consent where you chose to create an account.',
+          'If you create an account: your email address and a password, which we store only in scrambled (hashed) form and can never read. Your order history and any loyalty points are attached to that account. The legal basis is performance of our contract, or your consent where you chose to create an account.',
           'If you write to our chat assistant, the messages you send it. The legal basis is our legitimate interest in answering customer questions. Please do not put sensitive personal information in the chat.',
+          'If you write to us through the contact form: your name, email address and message, so we can answer you. The legal basis is our legitimate interest in answering questions.',
           'If you are signed in and leave something in your basket without ordering, a summary of it: which products, how many, and what they came to. Not the files you uploaded, and not their names. We use it to see how often an order is not completed, so we can fix what is getting in the way. The legal basis is our legitimate interest in understanding where orders are lost. You can object at any time using the contact details above and we will delete it; it is deleted automatically after 30 days, and as soon as you place the order.',
           'If you accept measurement in the cookie banner, Google Analytics and Google Ads are told that you visited the shop and, after an order, that a purchase happened and what it was worth. If you refuse, or if we are not running those tools, nothing is collected for advertising. We do not build profiles of you ourselves and we do not sell your data.',
         ],
@@ -158,7 +165,7 @@ const en: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Who else processes your data',
         body: [
-          'Google Ireland Ltd — sign-in and the database in which your order is stored.',
+          'HostX365, our web host — the servers in Helsinki, Finland (within the EU) that run this shop, hold the database with your order, your account and your uploaded files, and send our e-mails.',
           '{AI_PROVIDER} — the AI assistant, which receives the messages you type into the chat.',
           'Google — Analytics and Ads, but only if you accept measurement in the cookie banner. Before you accept, nothing is sent to them; if you refuse, nothing is sent at all.',
           'Google — the map on our contact page, where one is set up. Opening that page loads the map from Google, which receives your IP address and sets its own cookies. That happens as the page opens, and your answer in the cookie banner does not switch it off.',
@@ -171,9 +178,10 @@ const en: Record<LegalKind, LegalDocument> = {
         heading: 'How long we keep it',
         body: [
           'Accounting records, including invoices and what they relate to: seven years, as required by the Swedish Bookkeeping Act (bokföringslagen).',
-          'Your uploaded print files: twelve months after your last order, so a reorder can use the same files, then deleted.',
+          'Your uploaded print files and the details of your orders: seven years, together with our accounting records — which also lets a reorder use the same files.',
           'Your account and its order history: until you ask us to close it.',
-          'Chat messages: ninety days, then deleted.',
+          'Chat messages: we do not keep them. Nothing of the conversation is saved on our side once the answer has been sent.',
+          'Messages sent through the contact form: kept with our customer records until you ask us to delete them.',
           'A summary of a basket you left without ordering: thirty days, then deleted — and deleted as soon as you place the order.',
         ],
       },
@@ -189,7 +197,7 @@ const en: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Security',
         body: [
-          'The site is served over an encrypted connection. Order data is held in Google Cloud with access restricted to the shop\'s own staff accounts. Payment details are handled entirely by Mollie and never reach us.',
+          'The site is served over an encrypted connection. Order data is held on our web host\'s servers in Finland, within the EU, with access restricted to the shop\'s own staff accounts. Passwords are stored only in scrambled form. Payment details are handled entirely by Mollie and never reach us.',
         ],
       },
     ],
@@ -226,8 +234,7 @@ const en: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Payment',
         body: [
-          'Payment is taken through Mollie. Your order enters production once payment is confirmed.',
-          'Business customers approved for invoicing pay within thirty days of the invoice date. Late payment accrues interest under the Swedish Interest Act (räntelagen).',
+          'Payment is taken online through Mollie, using the payment methods shown at checkout. Your order enters production once payment is confirmed.',
         ],
       },
       {
@@ -242,7 +249,7 @@ const en: Record<LegalKind, LegalDocument> = {
         body: [
           'Under the Swedish Distance Contracts Act (distansavtalslagen) a consumer normally has fourteen days to withdraw from a distance purchase.',
           'That right does NOT apply to goods made to your specification or clearly personalised — which covers most printed work in this shop. Once a personalised job has gone into production it cannot be cancelled or returned.',
-          'It does apply to any standard, non-personalised item you buy. To use it, contact us within fourteen days of receiving the goods.',
+          'It does apply to any standard, non-personalised item you buy. To use it, e-mail us at the address shown on this page within fourteen days of receiving the goods.',
         ],
       },
       {
@@ -320,8 +327,9 @@ const sv: Record<LegalKind, LegalDocument> = {
         body: [
           'När du beställer: namn, e-postadress, telefonnummer och leveransadress; en fakturaadress och en separat leveransadress om du anger en; och, om du beställer som företag, företagsnamn och organisations- eller momsregistreringsnummer. Vi behöver dessa för att tillverka och leverera din order och för att utfärda en faktura som uppfyller svenska bokföringsregler. Rättslig grund är fullgörande av avtal, och för fakturan vår rättsliga förpliktelse.',
           'De filer du laddar upp för tryck, tillsammans med de mått, material och alternativ du valt, samt eventuell notering du lämnar. Vi behöver dessa för att kunna trycka jobbet.',
-          'Om du skapar ett konto: din e-postadress och, om du loggar in med Google, det namn och den e-postadress Google lämnar till oss. Din orderhistorik och eventuella lojalitetspoäng knyts till kontot.',
+          'Om du skapar ett konto: din e-postadress och ett lösenord, som vi bara sparar i krypterad (hashad) form och aldrig kan läsa. Din orderhistorik och eventuella lojalitetspoäng knyts till kontot.',
           'Om du skriver till vår chattassistent, de meddelanden du skickar. Rättslig grund är vårt berättigade intresse av att besvara kundfrågor. Skriv inte känsliga personuppgifter i chatten.',
+          'Om du skriver till oss via kontaktformuläret: ditt namn, din e-postadress och ditt meddelande, så att vi kan svara dig. Rättslig grund är vårt berättigade intresse av att besvara frågor.',
           'Om du är inloggad och lämnar något i varukorgen utan att beställa, en sammanfattning av den: vilka produkter, hur många och vad de gick på. Inte filerna du laddade upp och inte deras namn. Vi använder den för att se hur ofta en order inte slutförs, så att vi kan åtgärda det som står i vägen. Rättslig grund är vårt berättigade intresse av att förstå var order går förlorade. Du kan när som helst invända via kontaktuppgifterna ovan, så raderar vi den; den raderas automatiskt efter 30 dagar och så snart du lägger ordern.',
           'Godkänner du mätning i rutan om kakor får Google Analytics och Google Ads veta att du besökt butiken och, efter en order, att ett köp har skett och vad det var värt. Nekar du, eller kör vi inte de verktygen, samlas ingenting in för annonsering. Vi bygger inga egna profiler av dig och vi säljer inte dina uppgifter.',
         ],
@@ -329,7 +337,7 @@ const sv: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Vilka fler behandlar dina uppgifter',
         body: [
-          'Google Ireland Ltd — inloggning och databasen där din order lagras.',
+          'HostX365, vårt webbhotell — servrarna i Helsingfors, Finland (inom EU) som driver butiken, lagrar databasen med din order, ditt konto och dina uppladdade filer, och skickar våra e-postmeddelanden.',
           '{AI_PROVIDER} — AI-assistenten, som tar emot det du skriver i chatten.',
           'Google — Analytics och Ads, men bara om du godkänner mätning i rutan om kakor. Innan du godkänner skickas ingenting dit, och nekar du skickas ingenting alls.',
           'Google — kartan på kontaktsidan, där en sådan är inlagd. När sidan öppnas hämtas kartan från Google, som får din IP-adress och sätter egna kakor. Det sker när sidan öppnas, och ditt svar i rutan om kakor stänger inte av det.',
@@ -342,9 +350,10 @@ const sv: Record<LegalKind, LegalDocument> = {
         heading: 'Hur länge vi sparar dem',
         body: [
           'Bokföringsunderlag, inklusive fakturor: sju år enligt bokföringslagen.',
-          'Dina uppladdade tryckfiler: tolv månader efter din senaste order, så att ett omtryck kan använda samma filer, därefter raderas de.',
+          'Dina uppladdade tryckfiler och uppgifterna om dina ordrar: sju år, tillsammans med vår bokföring — så kan ett omtryck även använda samma filer.',
           'Ditt konto och dess orderhistorik: tills du ber oss avsluta det.',
-          'Chattmeddelanden: nittio dagar, därefter raderas de.',
+          'Chattmeddelanden: vi sparar dem inte. Ingenting av samtalet lagras hos oss när svaret har skickats.',
+          'Meddelanden via kontaktformuläret: sparas i vårt kundregister tills du ber oss radera dem.',
           'En sammanfattning av en varukorg du lämnat utan att beställa: trettio dagar, därefter raderas den — och den raderas så snart du lägger ordern.',
         ],
       },
@@ -360,7 +369,7 @@ const sv: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Säkerhet',
         body: [
-          'Webbplatsen levereras över krypterad anslutning. Orderuppgifter lagras i Google Cloud med åtkomst begränsad till butikens egna personalkonton. Betaluppgifter hanteras helt av Mollie och når aldrig oss.',
+          'Webbplatsen levereras över krypterad anslutning. Orderuppgifter lagras på vårt webbhotells servrar i Finland, inom EU, med åtkomst begränsad till butikens egna personalkonton. Lösenord sparas bara i krypterad form. Betaluppgifter hanteras helt av Mollie och når aldrig oss.',
         ],
       },
     ],
@@ -397,8 +406,7 @@ const sv: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Betalning',
         body: [
-          'Betalning sker via Mollie. Din order går i produktion när betalningen är bekräftad.',
-          'Företagskunder som godkänts för faktura betalar inom trettio dagar från fakturadatum. Vid försenad betalning utgår dröjsmålsränta enligt räntelagen.',
+          'Betalning sker online via Mollie, med de betalsätt som visas i kassan. Din order går i produktion när betalningen är bekräftad.',
         ],
       },
       {
@@ -413,7 +421,7 @@ const sv: Record<LegalKind, LegalDocument> = {
         body: [
           'Enligt distansavtalslagen har en konsument normalt fjorton dagars ångerrätt vid distansköp.',
           'Ångerrätten gäller INTE varor som tillverkats enligt dina anvisningar eller som har en tydlig personlig prägel — vilket omfattar merparten av trycksakerna i butiken. När ett personligt anpassat jobb gått i produktion kan det inte avbeställas eller returneras.',
-          'Den gäller däremot standardvaror utan personlig anpassning. Kontakta oss inom fjorton dagar från det att du tagit emot varan.',
+          'Den gäller däremot standardvaror utan personlig anpassning. Mejla oss på adressen längst ned på sidan inom fjorton dagar från det att du tagit emot varan.',
         ],
       },
       {
@@ -492,8 +500,9 @@ const da: Record<LegalKind, LegalDocument> = {
         body: [
           'Når du bestiller: navn, e-mailadresse, telefonnummer og leveringsadresse; en fakturaadresse og en separat leveringsadresse, hvis du angiver en; og, hvis du bestiller som virksomhed, virksomhedsnavn og organisations- eller momsregistreringsnummer. Vi har brug for disse for at fremstille og levere din ordre og for at udstede en faktura, der opfylder svenske bogføringsregler. Retsgrundlaget er opfyldelse af aftalen, og for fakturaen vores retlige forpligtelse.',
           'De filer, du uploader til tryk, sammen med de mål, materialer og valgmuligheder, du har valgt, samt eventuelle bemærkninger, du tilføjer. Vi har brug for disse for at kunne trykke opgaven.',
-          'Hvis du opretter en konto: din e-mailadresse og, hvis du logger ind med Google, det navn og den e-mailadresse, Google giver os. Din ordrehistorik og eventuelle loyalitetspoint knyttes til kontoen.',
+          'Hvis du opretter en konto: din e-mailadresse og en adgangskode, som vi kun gemmer i krypteret (hashet) form og aldrig kan læse. Din ordrehistorik og eventuelle loyalitetspoint knyttes til kontoen.',
           'Hvis du skriver til vores chatassistent, de beskeder du sender. Retsgrundlaget er vores legitime interesse i at besvare kundespørgsmål. Skriv ikke følsomme personoplysninger i chatten.',
+          'Hvis du skriver til os via kontaktformularen: dit navn, din e-mailadresse og din besked, så vi kan svare dig. Retsgrundlaget er vores legitime interesse i at besvare spørgsmål.',
           'Hvis du er logget ind og efterlader noget i kurven uden at bestille, et sammendrag af den: hvilke produkter, hvor mange og hvad de løb op i. Ikke de filer, du uploadede, og ikke deres navne. Vi bruger det til at se, hvor ofte en ordre ikke fuldføres, så vi kan rette det, der står i vejen. Retsgrundlaget er vores legitime interesse i at forstå, hvor ordrer går tabt. Du kan til enhver tid gøre indsigelse via kontaktoplysningerne ovenfor, så sletter vi det; det slettes automatisk efter 30 dage og så snart du afgiver ordren.',
           'Accepterer du måling i cookiebanneret, får Google Analytics og Google Ads at vide, at du har besøgt butikken, og efter en ordre at der er sket et køb, og hvad det var værd. Afviser du, eller kører vi ikke de værktøjer, indsamles der intet til reklameformål. Vi laver ikke selv profiler af dig, og vi sælger ikke dine oplysninger.',
         ],
@@ -501,7 +510,7 @@ const da: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Hvem der ellers behandler dine oplysninger',
         body: [
-          'Google Ireland Ltd — login og databasen, hvor din ordre gemmes.',
+          'HostX365, vores webhotel — serverne i Helsinki, Finland (inden for EU), som driver butikken, opbevarer databasen med din ordre, din konto og dine uploadede filer og sender vores e-mails.',
           '{AI_PROVIDER} — AI-assistenten, som modtager det, du skriver i chatten.',
           'Google — Analytics og Ads, men kun hvis du accepterer måling i cookiebanneret. Før du accepterer, sendes der intet dertil, og afviser du, sendes der intet overhovedet.',
           'Google — kortet på kontaktsiden, hvor et sådant er sat op. Når siden åbnes, hentes kortet fra Google, som modtager din IP-adresse og sætter sine egne cookies. Det sker, når siden åbnes, og dit svar i cookiebanneret slår det ikke fra.',
@@ -514,9 +523,10 @@ const da: Record<LegalKind, LegalDocument> = {
         heading: 'Hvor længe vi gemmer dem',
         body: [
           'Regnskabsmateriale, herunder fakturaer: syv år i henhold til den svenske bogføringslov (bokföringslagen).',
-          'Dine uploadede trykfiler: tolv måneder efter din seneste ordre, så et genoptryk kan bruge de samme filer, hvorefter de slettes.',
+          'Dine uploadede trykfiler og oplysningerne om dine ordrer: syv år sammen med vores regnskab — så et genoptryk også kan bruge de samme filer.',
           'Din konto og dens ordrehistorik: indtil du beder os om at lukke den.',
-          'Chatbeskeder: halvfems dage, hvorefter de slettes.',
+          'Chatbeskeder: vi gemmer dem ikke. Intet af samtalen gemmes hos os, når svaret er sendt.',
+          'Beskeder via kontaktformularen: gemmes i vores kunderegister, indtil du beder os om at slette dem.',
           'Et sammendrag af en kurv, du har forladt uden at bestille: tredive dage, hvorefter det slettes — og det slettes, så snart du afgiver ordren.',
         ],
       },
@@ -532,7 +542,7 @@ const da: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Sikkerhed',
         body: [
-          'Webstedet leveres over en krypteret forbindelse. Ordreoplysninger opbevares i Google Cloud med adgang begrænset til butikkens egne personalekonti. Betalingsoplysninger håndteres udelukkende af Mollie og når aldrig frem til os.',
+          'Webstedet leveres over en krypteret forbindelse. Ordreoplysninger opbevares på vores webhotels servere i Finland, inden for EU, med adgang begrænset til butikkens egne personalekonti. Adgangskoder gemmes kun i krypteret form. Betalingsoplysninger håndteres udelukkende af Mollie og når aldrig frem til os.',
         ],
       },
     ],
@@ -569,8 +579,7 @@ const da: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Betaling',
         body: [
-          'Betaling sker via Mollie. Din ordre går i produktion, når betalingen er bekræftet.',
-          'Erhvervskunder, der er godkendt til fakturering, betaler inden tredive dage fra fakturadatoen. Ved forsinket betaling påløber der morarente i henhold til den svenske rentelov (räntelagen).',
+          'Betaling sker online via Mollie med de betalingsmetoder, der vises ved kassen. Din ordre går i produktion, når betalingen er bekræftet.',
         ],
       },
       {
@@ -585,7 +594,7 @@ const da: Record<LegalKind, LegalDocument> = {
         body: [
           'I henhold til den svenske lov om fjernsalg (distansavtalslagen) har en forbruger normalt fjorten dages fortrydelsesret ved fjernsalg.',
           'Fortrydelsesretten gælder IKKE varer, der er fremstillet efter dine anvisninger eller har et tydeligt personligt præg — hvilket omfatter størstedelen af tryksagerne i butikken. Når en personligt tilpasset opgave er gået i produktion, kan den ikke annulleres eller returneres.',
-          'Den gælder derimod standardvarer uden personlig tilpasning. Kontakt os inden fjorten dage efter, at du har modtaget varen.',
+          'Den gælder derimod standardvarer uden personlig tilpasning. Skriv til os på e-mailadressen nederst på siden inden fjorten dage efter, at du har modtaget varen.',
         ],
       },
       {
@@ -665,8 +674,9 @@ const no: Record<LegalKind, LegalDocument> = {
         body: [
           'Når du bestiller: navn, e-postadresse, telefonnummer og leveringsadresse; en fakturaadresse og en egen leveringsadresse hvis du oppgir en; og, hvis du bestiller som bedrift, firmanavn og organisasjons- eller mva-nummer. Vi trenger disse for å produsere og levere ordren din og for å utstede en faktura som oppfyller svenske bokføringsregler. Rettslig grunnlag er oppfyllelse av avtalen, og for fakturaen vår rettslige forpliktelse.',
           'Filene du laster opp for trykk, sammen med målene, materialene og alternativene du har valgt, samt eventuelle merknader du legger ved. Vi trenger disse for å kunne trykke jobben.',
-          'Hvis du oppretter en konto: e-postadressen din og, hvis du logger inn med Google, navnet og e-postadressen Google gir oss. Ordrehistorikken din og eventuelle lojalitetspoeng knyttes til kontoen.',
+          'Hvis du oppretter en konto: e-postadressen din og et passord, som vi bare lagrer i kryptert (hashet) form og aldri kan lese. Ordrehistorikken din og eventuelle lojalitetspoeng knyttes til kontoen.',
           'Hvis du skriver til chatassistenten vår, meldingene du sender. Rettslig grunnlag er vår berettigede interesse i å besvare kundespørsmål. Ikke skriv sensitive personopplysninger i chatten.',
+          'Hvis du skriver til oss via kontaktskjemaet: navnet ditt, e-postadressen din og meldingen din, slik at vi kan svare deg. Rettslig grunnlag er vår berettigede interesse i å besvare spørsmål.',
           'Hvis du er innlogget og lar noe ligge i handlekurven uten å bestille, et sammendrag av den: hvilke produkter, hvor mange og hva de kom på. Ikke filene du lastet opp, og ikke navnene deres. Vi bruker det til å se hvor ofte en ordre ikke fullføres, slik at vi kan rette det som står i veien. Rettslig grunnlag er vår berettigede interesse i å forstå hvor ordrer går tapt. Du kan når som helst protestere via kontaktopplysningene over, så sletter vi det; det slettes automatisk etter 30 dager og så snart du legger inn ordren.',
           'Godtar du måling i boksen om informasjonskapsler, får Google Analytics og Google Ads vite at du har besøkt butikken, og etter en ordre at et kjøp har skjedd og hva det var verdt. Avviser du, eller kjører vi ikke de verktøyene, samles ingenting inn til reklameformål. Vi lager ingen egne profiler av deg, og vi selger ikke opplysningene dine.',
         ],
@@ -674,7 +684,7 @@ const no: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Hvem andre som behandler opplysningene dine',
         body: [
-          'Google Ireland Ltd — innlogging og databasen der ordren din lagres.',
+          'HostX365, vårt webhotell — serverne i Helsingfors, Finland (innenfor EU) som driver butikken, lagrer databasen med ordren din, kontoen din og filene du har lastet opp, og sender e-postene våre.',
           '{AI_PROVIDER} — AI-assistenten, som mottar det du skriver i chatten.',
           'Google — Analytics og Ads, men bare hvis du godtar måling i boksen om informasjonskapsler. Før du godtar, sendes ingenting dit, og avviser du, sendes ingenting i det hele tatt.',
           'Google — kartet på kontaktsiden, der et slikt er lagt inn. Når siden åpnes, hentes kartet fra Google, som mottar IP-adressen din og setter sine egne informasjonskapsler. Det skjer når siden åpnes, og svaret ditt i boksen slår det ikke av.',
@@ -687,9 +697,10 @@ const no: Record<LegalKind, LegalDocument> = {
         heading: 'Hvor lenge vi lagrer dem',
         body: [
           'Regnskapsmateriale, inkludert fakturaer: sju år i henhold til den svenske bokføringsloven (bokföringslagen).',
-          'Trykkfilene du har lastet opp: tolv måneder etter din siste ordre, slik at et opptrykk kan bruke de samme filene, deretter slettes de.',
+          'Trykkfilene du har lastet opp og opplysningene om ordrene dine: sju år, sammen med regnskapet vårt — slik at et opptrykk også kan bruke de samme filene.',
           'Kontoen din og ordrehistorikken dens: til du ber oss avslutte den.',
-          'Chatmeldinger: nitti dager, deretter slettes de.',
+          'Chatmeldinger: vi lagrer dem ikke. Ingenting av samtalen lagres hos oss når svaret er sendt.',
+          'Meldinger via kontaktskjemaet: lagres i kunderegisteret vårt til du ber oss slette dem.',
           'Et sammendrag av en handlekurv du har forlatt uten å bestille: tretti dager, deretter slettes det — og det slettes så snart du legger inn ordren.',
         ],
       },
@@ -705,7 +716,7 @@ const no: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Sikkerhet',
         body: [
-          'Nettstedet leveres over en kryptert tilkobling. Ordreopplysninger lagres i Google Cloud med tilgang begrenset til butikkens egne personalkontoer. Betalingsopplysninger håndteres i sin helhet av Mollie og når aldri oss.',
+          'Nettstedet leveres over en kryptert tilkobling. Ordreopplysninger lagres på webhotellets servere i Finland, innenfor EU, med tilgang begrenset til butikkens egne personalkontoer. Passord lagres bare i kryptert form. Betalingsopplysninger håndteres i sin helhet av Mollie og når aldri oss.',
         ],
       },
     ],
@@ -742,8 +753,7 @@ const no: Record<LegalKind, LegalDocument> = {
       {
         heading: 'Betaling',
         body: [
-          'Betaling skjer via Mollie. Ordren din går i produksjon når betalingen er bekreftet.',
-          'Bedriftskunder som er godkjent for faktura, betaler innen tretti dager fra fakturadato. Ved forsinket betaling påløper forsinkelsesrente i henhold til den svenske renteloven (räntelagen).',
+          'Betaling skjer på nett via Mollie, med betalingsmåtene som vises i kassen. Ordren din går i produksjon når betalingen er bekreftet.',
         ],
       },
       {
@@ -758,7 +768,7 @@ const no: Record<LegalKind, LegalDocument> = {
         body: [
           'I henhold til den svenske loven om fjernsalg (distansavtalslagen) har en forbruker normalt fjorten dagers angrerett ved fjernkjøp.',
           'Angreretten gjelder IKKE varer som er fremstilt etter dine anvisninger eller har et tydelig personlig preg — noe som omfatter mesteparten av trykksakene i butikken. Når en personlig tilpasset jobb har gått i produksjon, kan den ikke avbestilles eller returneres.',
-          'Den gjelder derimot standardvarer uten personlig tilpasning. Kontakt oss innen fjorten dager etter at du har mottatt varen.',
+          'Den gjelder derimot standardvarer uten personlig tilpasning. Send oss en e-post til adressen nederst på siden innen fjorten dager etter at du har mottatt varen.',
         ],
       },
       {

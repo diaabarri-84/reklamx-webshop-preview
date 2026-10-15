@@ -45,6 +45,7 @@ export const TABLES: Record<string, TableSpec> = {
     shipment_open:       { field: 'shipmentOpen', type: 'bool' },
     checkout_attempt_id: { field: 'checkoutAttemptId', type: 'string' },
     payment_mode:        { field: 'paymentMode', type: 'string', max: 64 },
+    order_no:            { field: 'id', type: 'string' },
   } },
   orderCosts:        { table: 'order_costs' },
   creditNotes:       { table: 'credit_notes', copies: {
@@ -126,9 +127,17 @@ function copyValue(value: unknown, copy: Copy, warnings: string[], column: strin
   }
 }
 
-/** String.prototype.isWellFormed, which the ES2022 lib this project compiles against does not declare. */
+/** A UTF-16 surrogate half with no partner — what makes a string not well-formed. */
+const LONE_SURROGATE = /[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/;
+
+/**
+ * String.prototype.isWellFormed — which exists only from Node 20, and the
+ * shop's cPanel host runs Node 18 (2026-10-15): without the fallback every
+ * write would throw. Same answer either way.
+ */
 export function isWellFormed(s: string): boolean {
-  return (s as any).isWellFormed();
+  const native = (s as any).isWellFormed;
+  return typeof native === 'function' ? native.call(s) : !LONE_SURROGATE.test(s);
 }
 
 /** The table spec for a collection path key ('orders', or 'users/pointsLedger'). */

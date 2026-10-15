@@ -133,6 +133,7 @@ import VatTag from './components/VatTag';
 // visits; React fetches each the moment someone actually goes there.
 const AdminLoginPage = React.lazy(() => import('./pages/AdminLoginPage'));
 const AuthPage = React.lazy(() => import('./pages/AuthPage'));
+const ResetPasswordPage = React.lazy(() => import('./pages/ResetPasswordPage'));
 const OrderStatusPage = React.lazy(() => import('./pages/OrderStatusPage'));
 const LegalPage = React.lazy(() => import('./pages/LegalPage'));
 const DesignEditorPage = React.lazy(() => import('./pages/DesignEditorPage'));
@@ -323,6 +324,23 @@ const Navbar = () => {
     currencies
   } = useAuth();
   const { settings } = useSiteSettings();
+  // The bar advertises a discount code; while that code cannot be used (off,
+  // expired, used up) the bar stays down — see /api/announcement in server.ts.
+  // With no linked code it shows as it always did. Hidden until the answer comes,
+  // so a dead code is never on screen even for a moment.
+  const linkedCode = (settings.announcementCouponCode || '').trim();
+  const [announcementLive, setAnnouncementLive] = useState(!linkedCode);
+  useEffect(() => {
+    if (!linkedCode) { setAnnouncementLive(true); return; }
+    let cancelled = false;
+    const check = () => fetch('/api/announcement')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (!cancelled) setAnnouncementLive(d?.show === true); })
+      .catch(() => { if (!cancelled) setAnnouncementLive(false); });
+    void check();
+    const timer = window.setInterval(check, 5 * 60_000);
+    return () => { cancelled = true; window.clearInterval(timer); };
+  }, [linkedCode]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // The ☰ menu closes on a press anywhere outside it (or Escape), not only on its
   // own X: that is where a hand goes to dismiss a menu on a phone.
@@ -407,7 +425,7 @@ const Navbar = () => {
   return (
     <>
       {/* Dynamic Announcement Bar */}
-      {settings.showAnnouncementBar && settings.announcementText && (
+      {settings.showAnnouncementBar && settings.announcementText && announcementLive && (
         <div 
           className="px-4 py-1.5 text-[0.6875rem] font-extrabold text-center text-white transition-all shadow-2xs flex items-center justify-center space-x-2 space-x-reverse"
           style={{ backgroundColor: settings.announcementBg || '#1e293b' }}
@@ -3027,6 +3045,7 @@ export default function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={<AuthPage />} />
                   <Route path="/register" element={<AuthPage />} />
+                  <Route path="/reset-password" element={<ResetPasswordPage />} />
                   <Route path="/products" element={<ProductsPage />} />
                   {/* One product, one address — linkable, shareable, indexable. */}
                   <Route path="/products/:productId" element={<ProductPage />} />

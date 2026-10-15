@@ -18,8 +18,44 @@
 import fs from 'fs';
 import path from 'path';
 import { initializeApp, cert, getApps, type App } from 'firebase-admin/app';
-import { getFirestore, type Firestore } from 'firebase-admin/firestore';
+import { getFirestore, type Firestore, FieldValue as FirestoreFieldValue, FieldPath as FirestoreFieldPath } from 'firebase-admin/firestore';
 import type { Auth } from 'firebase-admin/auth';
+import { getDocStore, FieldValue as DocStoreFieldValue, FieldPath as DocStoreFieldPath } from './db/index';
+import { LocalAuth } from './db/localAuth';
+import { FileStore } from './db/fileStore';
+
+// ── THE SWITCH OFF FIREBASE (migration/PLAN.md) ──
+//
+// DATA_BACKEND=mysql: the three handles below come from the shop's own MySQL
+// database (src/lib/db) instead of Google — getAdminDb() a Firestore-shaped
+// DocStore, getAdminAuth() the shop's own logins, getAdminBucket() files on the
+// server's disk. Every caller in server.ts is unchanged; that was the point of
+// building the data layer in Firestore's shape. Unset, nothing here changes.
+export const usingLocalBackend = (): boolean => process.env.DATA_BACKEND === 'mysql';
+
+let localAuthHandle: LocalAuth | null = null;
+let fileStoreHandle: FileStore | null = null;
+/** The shop's own logins (DATA_BACKEND=mysql), or null without a database. */
+export function getLocalAuth(): LocalAuth | null {
+  const store = getDocStore();
+  if (!store) return null;
+  return (localAuthHandle ??= new LocalAuth(store.pool));
+}
+/** The server's own file store (DATA_BACKEND=mysql), or null without a database. */
+export function getFileStore(): FileStore | null {
+  const store = getDocStore();
+  if (!store) return null;
+  return (fileStoreHandle ??= new FileStore(store.pool));
+}
+
+/** FieldValue / FieldPath for whichever database is in use. server.ts imports these, not firebase-admin's. */
+export const FieldValue = {
+  delete: (): any => (usingLocalBackend() ? DocStoreFieldValue.delete() : FirestoreFieldValue.delete()),
+  arrayUnion: (...elements: unknown[]): any => (usingLocalBackend() ? DocStoreFieldValue.arrayUnion(...elements) : FirestoreFieldValue.arrayUnion(...elements)),
+};
+export const FieldPath = {
+  documentId: (): any => (usingLocalBackend() ? DocStoreFieldPath.documentId() : FirestoreFieldPath.documentId()),
+};
 
 let cached: { app: App; db: Firestore } | null = null;
 let attempted = false;
@@ -56,6 +92,7 @@ function loadServiceAccount(): Record<string, any> | null {
  * take orders right now" and a crash.
  */
 export function getAdminDb(): Firestore | null {
+  if (usingLocalBackend()) return getDocStore() as unknown as Firestore | null;
   if (cached) return cached.db;
   if (attempted) return null;
   attempted = true;
@@ -104,6 +141,7 @@ export function getAdminDb(): Firestore | null {
  * places because each one imported getAuth() afresh; this is now the one door.
  */
 export async function getAdminAuth(): Promise<Auth | null> {
+  if (usingLocalBackend()) return getLocalAuth() as unknown as Auth | null;
   if (!getAdminDb()) return null;
   // Imported lazily, not at module top. firebase-admin/auth drags in jwks-rsa,
   // and a static import made loading THIS MODULE — and with it the whole
@@ -129,6 +167,7 @@ export async function getAdminAuth(): Promise<Auth | null> {
  * like a permissions problem.
  */
 export async function getAdminBucket(): Promise<import('@google-cloud/storage').Bucket | null> {
+  if (usingLocalBackend()) return (getFileStore()?.bucket() ?? null) as unknown as import('@google-cloud/storage').Bucket | null;
   if (!getAdminDb()) return null;
   try {
     const appConfigPath = path.resolve(process.cwd(), 'firebase-applet-config.json');
