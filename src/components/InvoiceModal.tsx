@@ -1,27 +1,12 @@
 import React, { useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { 
-  X, 
-  Printer, 
-  Download, 
-  CheckCircle2, 
-  Building2, 
-  FileText, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Calendar,
-  ShieldCheck,
-  PackageCheck,
-  Receipt
-} from 'lucide-react';
+import { X, Printer } from 'lucide-react';
 import { Order } from '../types';
 import { formatCurrency } from '../lib/utils';
 import { logoSrc } from '../lib/brandLogo';
 import { useSiteSettings } from '../context/SiteSettingsContext';
 import { useAuth } from '../App';
 import LineChargesNote from './LineChargesNote';
-import { isOnDeliveryOpen, knownStageLabelKey, paymentTitleOf } from '../lib/orderQueue';
+import { isOnDeliveryOpen, paymentTitleOf } from '../lib/orderQueue';
 import { orderMoney } from '../lib/orderMoney';
 
 interface InvoiceModalProps {
@@ -33,7 +18,7 @@ interface InvoiceModalProps {
 export default function InvoiceModal({ isOpen, onClose, order}: InvoiceModalProps) {
   const printRef = useRef<HTMLDivElement>(null);
   const { settings } = useSiteSettings();
-  const { t } = useAuth();
+  const { t, language } = useAuth();
 
   if (!isOpen || !order) return null;
 
@@ -120,367 +105,202 @@ export default function InvoiceModal({ isOpen, onClose, order}: InvoiceModalProp
     window.print();
   };
 
-  const isOrderReady = ['finishing', 'shipped', 'completed', 'delivered'].includes(order.status);
+
+  /**
+   * A PLAIN INVOICE (2026-10-15, the owner's request: "regular boring invoice
+   * templates"). Black on white, thin rules, no badges, icons or coloured
+   * boxes — the layout of an ordinary Swedish faktura: seller's logo and the
+   * word FAKTURA, buyer on the left and invoice details on the right, the
+   * lines, the totals, and the seller's company details in the footer.
+   */
+  const bare = (s: string) => s.replace(/:\s*$/, '');
+  const L = ({
+    sv: { title: 'Faktura', phone: 'Telefon', email: 'E-post', fTax: 'Godkänd för F-skatt', status: 'Betalstatus' },
+    en: { title: 'Invoice', phone: 'Phone', email: 'Email', fTax: 'Approved for F-tax', status: 'Payment status' },
+    da: { title: 'Faktura', phone: 'Telefon', email: 'E-mail', fTax: 'Godkendt for F-skat (SE)', status: 'Betalingsstatus' },
+    no: { title: 'Faktura', phone: 'Telefon', email: 'E-post', fTax: 'Godkjent for F-skatt (SE)', status: 'Betalingsstatus' },
+  } as Record<string, { title: string; phone: string; email: string; fTax: string; status: string }>)[language] ?? {
+    title: 'Invoice', phone: 'Phone', email: 'Email', fTax: 'Approved for F-tax', status: 'Payment status',
+  };
+  const statusText = bare(
+    (isPaid ? t('docPaymentStatusPaidInFull')
+      : isRefunded ? t('docPaymentStatusRefunded')
+      : onDelivery ? t('docPaymentStatusOnDelivery')
+      : t('docPaymentStatusAwaiting')).replace(/^[^:]*:\s*/, ''),
+  );
+  const buyerAddress = [
+    order.customerDetails?.address1 || '',
+    [order.customerDetails?.postcode, order.customerDetails?.city].filter(Boolean).join(' '),
+    order.customerDetails?.country || '',
+  ].filter(Boolean);
+
+  const meta: [string, React.ReactNode][] = [
+    [bare(t('docInvoiceNoLabel')), invoiceNumber],
+    [bare(t('docInvoiceDate')), orderDate],
+    [bare(t('docOrderId')), order.id],
+    [bare(t('docPaymentMethod')), paymentTitleOf(order, t) || '—'],
+    [bare(t('docDeliveryMethod')), order.shippingMethodTitle || t('docShippingMethodFallback')],
+    ...(completionDate ? [[bare(t('docEstimatedDelivery')), completionDate] as [string, React.ReactNode]] : []),
+    [L.status, statusText],
+  ];
+
+  const money = (n: number) => `${n.toFixed(2)} ${currency}`;
 
   return (
-    <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-md overflow-y-auto print:p-0 print:bg-white print:static print:inset-auto">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 10 }}
-          className="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-gray-200 print:shadow-none print:border-none print:max-h-none print:rounded-none text-gray-900"
-          dir={'ltr'}
-        >
-          {/* Modal Top Action Bar (Hidden on Print) */}
-          <div className="bg-gray-900 text-white p-4 sm:px-8 sm:py-5 flex items-center justify-between sticky top-0 z-20 print:hidden border-b border-gray-800">
-            <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-10 h-10 rounded-xl bg-orange-600 text-white flex items-center justify-center font-black">
-                <FileText className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="flex items-center space-x-2 space-x-reverse">
-                  <h3 className="font-extrabold text-base">
-                    {t('docInvoiceTitle')}
-                  </h3>
-                  <span className="bg-orange-500/20 text-orange-400 border border-orange-500/30 text-[0.625rem] font-black px-2 py-0.5 rounded-full uppercase">
-                    {isOrderReady ? t('docStatusOrderReady') : t('docStatusInvoiceDraft')}
-                  </span>
-                </div>
-                <p className="text-xs text-gray-400 font-mono">
-                  {`#${invoiceNumber} • `}{t('docOrderId')}{`: #${order.id}`}
-                </p>
-              </div>
-            </div>
+    <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-6 bg-black/60 overflow-y-auto print:p-0 print:bg-white print:static print:inset-auto">
+      <div className="bg-white max-w-4xl w-full max-h-[92vh] overflow-y-auto rounded-lg shadow-xl print:shadow-none print:max-h-none print:rounded-none text-gray-900" dir="ltr">
+        {/* Toolbar — screen only. */}
+        <div className="flex items-center justify-between gap-3 border-b border-gray-200 px-4 sm:px-8 py-3 sticky top-0 bg-white z-10 print:hidden">
+          <p className="text-sm font-semibold text-gray-900">
+            {L.title} <span className="font-normal text-gray-500">{invoiceNumber}</span>
+          </p>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handlePrint}
+              className="inline-flex items-center gap-1.5 rounded-md bg-gray-900 px-3 py-2 text-xs font-semibold text-white hover:bg-black cursor-pointer"
+            >
+              <Printer className="w-4 h-4" />
+              {t('docPrintSavePdf')}
+            </button>
+            <button type="button" onClick={onClose} aria-label="Close" className="rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900">
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
 
-            <div className="flex items-center space-x-2 space-x-reverse">
-              <button
-                onClick={handlePrint}
-                className="bg-orange-600 hover:bg-orange-500 text-white font-black px-4 py-2 rounded-xl text-xs flex items-center space-x-1.5 space-x-reverse transition-all shadow-md active:scale-95 cursor-pointer"
-              >
-                <Printer className="w-4 h-4" />
-                <span>{t('docPrintSavePdf')}</span>
-              </button>
-
-              <button
-                onClick={onClose}
-                className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+        {/* THE DOCUMENT */}
+        <div ref={printRef} className="rx-print-sheet bg-white px-6 sm:px-12 py-8 sm:py-10 text-[0.8125rem] leading-relaxed" id="printable-invoice">
+          {/* Logo and title */}
+          <div className="flex items-start justify-between gap-6">
+            <img src={logoSrc(settings)} alt={sellerName} loading="eager" className="h-10 w-48 object-contain object-left" />
+            <h1 className="text-3xl font-semibold tracking-tight text-gray-900">{L.title}</h1>
           </div>
 
-          {/* PRINTABLE INVOICE CONTENT */}
-          <div ref={printRef} className="rx-print-sheet p-6 sm:p-10 space-y-5 bg-white" id="printable-invoice">
-            {/* Header: Company & Invoice Info */}
-            <div className="flex flex-col @lg:flex-row justify-between items-start gap-6 border-b border-gray-200 pb-5">
-              {/* Left: Company Logo & Details */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2.5 space-x-reverse">
-                  {/* The owner's own logo when one is uploaded (the shop header's
-                      rule); otherwise the initial of the seller's name. It was a
-                      hard-coded "P" from a name the shop no longer has. Fixed
-                      height, so the one-page measurement does not depend on
-                      whether the picture has loaded yet. */}
-                  {/* The wordmark alone (src/lib/brandLogo.ts): the name is in
-                      it. The seller's LEGAL name is still on the document — in
-                      the tax line and the footer — where an invoice needs it. */}
-                  <img src={logoSrc(settings)} alt={sellerName} loading="eager" className="h-11 w-52 object-contain object-left" />
-                </div>
-
-                <div className="text-xs text-gray-600 space-y-1 font-medium">
-                  <p className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-gray-400 shrink-0" />
-                    {sellerAddress}
-                  </p>
-                  <p className="flex items-center gap-1.5">
-                    <Phone className="w-3.5 h-3.5 text-gray-400 shrink-0" />
-                    {sellerPhone}
-                  </p>
-                  <p className="flex items-center gap-1.5">
-                    <Mail className="w-3.5 h-3.5 text-gray-400 shrink-0" />
-                    {sellerEmail}
-                  </p>
-                  <p className="text-[0.6875rem] text-gray-500 font-mono pt-1">
-                    {t('docOrgNrLabel')} {sellerOrgNr} | {t('docVatNrLabel')} {sellerVatNr}{sellerBankgiro ? ` | ${t('docBankgiroLabel')} ${sellerBankgiro}` : ''}
-                  </p>
-                </div>
-              </div>
-
-              {/* Right: Invoice Meta & Status */}
-              <div className="text-right @lg:text-left space-y-2 border-r @lg:border-r-0 @lg:border-l border-gray-100 @lg:pl-6">
-                <div className="inline-block bg-orange-50 border border-orange-200 text-orange-900 px-3 py-1 rounded-xl text-xs font-black uppercase tracking-wider mb-1">
-                  {t('docBadgeTaxInvoice')}
-                </div>
-                <h1 className="text-2xl font-black font-mono text-gray-900">{invoiceNumber}</h1>
-                
-                <div className="text-xs text-gray-600 space-y-1 font-semibold">
-                  <p><span className="text-gray-400">{t('docOrderId')}:</span> #{order.id}</p>
-                  <p><span className="text-gray-400">{t('docInvoiceDate')}</span> {orderDate}</p>
-                  {completionDate && (
-                    <p><span className="text-gray-400">{t('docEstimatedDelivery')}</span> {completionDate}</p>
-                  )}
-                  {/* A stage the shop does not know is left out, not printed as
-                      "Pending" on a customer's tax invoice. */}
-                  {knownStageLabelKey(order.status) && (
-                    <p><span className="text-gray-400">{t('docOrderStatus')}</span> <strong className="text-emerald-700 font-extrabold">{t(knownStageLabelKey(order.status)!)}</strong></p>
-                  )}
-                </div>
+          {/* Buyer and invoice details */}
+          <div className="mt-10 grid grid-cols-2 gap-10">
+            <div>
+              <p className="text-[0.6875rem] font-semibold uppercase tracking-wide text-gray-500">{bare(t('docBilledTo'))}</p>
+              <div className="mt-2 text-gray-900">
+                {buyerCompany && <p className="font-semibold">{buyerCompany}</p>}
+                <p className={buyerCompany ? '' : 'font-semibold'}>{order.customerName}</p>
+                {buyerAddress.length ? buyerAddress.map((line, i) => <p key={i}>{line}</p>) : <p>{t('docCustomerAddressFallback')}</p>}
+                {buyerTaxId && <p className="mt-2 text-gray-600">{t('docBuyerTaxIdLabel')} {buyerTaxId}</p>}
+                <p className="mt-2 text-gray-600">{order.customerEmail}</p>
+                {order.customerDetails?.phone && <p className="text-gray-600">{order.customerDetails.phone}</p>}
               </div>
             </div>
-
-            {/* Customer & Shipping Details Grid */}
-            <div className="grid grid-cols-1 @lg:grid-cols-2 gap-6 bg-gray-50/80 p-4 rounded-2xl border border-gray-200/80">
-              {/* Customer / Billed To */}
-              <div className="space-y-2">
-                <span className="text-xs font-black text-orange-600 uppercase tracking-wider block flex items-center gap-1.5">
-                  <Building2 className="w-3.5 h-3.5" />
-                  {t('docBilledTo')}
-                </span>
-                <p className="text-base font-extrabold text-gray-900">{order.customerName}</p>
-                {/* Checkout stores these as `company` / `taxId`. The invoice was
-                    reading `companyName` / `taxNumber`, so a business buyer's name
-                    and VAT number never appeared on their invoice. */}
-                {buyerCompany && (
-                  <p className="text-xs font-bold text-purple-800 bg-purple-50 px-2.5 py-0.5 rounded-md inline-block">
-                    {buyerCompany}
-                    {buyerTaxId && ` (${t('docBuyerTaxIdLabel')} ${buyerTaxId})`}
-                  </p>
-                )}
-                <div className="text-xs text-gray-600 space-y-0.5 font-medium">
-                  <p>{order.customerDetails?.address1 || t('docCustomerAddressFallback')}</p>
-                  <p>{order.customerDetails?.postcode} {order.customerDetails?.city}, {order.customerDetails?.country || t('docCountryFallback')}</p>
-                  <p className="font-mono text-gray-500">{order.customerEmail}</p>
-                  {order.customerDetails?.phone && <p>{t('contactCardPhoneTitle')}: {order.customerDetails.phone}</p>}
-                </div>
-              </div>
-
-              {/* Delivery & Payment Method */}
-              <div className="space-y-2 border-t @lg:border-t-0 @lg:border-l border-gray-200 @lg:pl-6 pt-4 @lg:pt-0">
-                <span className="text-xs font-black text-blue-600 uppercase tracking-wider block flex items-center gap-1.5">
-                  <PackageCheck className="w-3.5 h-3.5" />
-                  {t('docDeliveryAndPayment')}
-                </span>
-                <div className="text-xs text-gray-700 space-y-1.5 font-medium">
-                  <p>
-                    <strong className="text-gray-900">{t('docDeliveryMethod')}</strong>{' '}
-                    {order.shippingMethodTitle || t('docShippingMethodFallback')}
-                  </p>
-                  <p>
-                    <strong className="text-gray-900">{t('docPaymentMethod')}</strong>{' '}
-                    {paymentTitleOf(order, t) || '\u2014'}
-                  </p>
-                  {isPaid ? (
-                    <p className="flex items-center gap-1.5 text-emerald-700 font-extrabold">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span>{t('docPaymentStatusPaidInFull')}</span>
-                    </p>
-                  ) : isRefunded ? (
-                    <p className="flex items-center gap-1.5 text-gray-700 font-extrabold">
-                      <span>{t('docPaymentStatusRefunded')}</span>
-                    </p>
-                  ) : (
-                    <p className="flex items-center gap-1.5 text-amber-800 font-extrabold">
-                      <span>{onDelivery ? t('docPaymentStatusOnDelivery') : t('docPaymentStatusAwaiting')}</span>
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Line Items Table */}
-            <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
-              {/* Left to right like any invoice: the description reads from the
-                  left, the money lines up on the right. It was text-right
-                  throughout, so each product name sat flush right above options
-                  that started on the left. */}
-              <table className="w-full text-left text-xs" dir={'ltr'}>
-                <thead>
-                  <tr className="bg-gray-100/90 text-gray-800 font-black uppercase text-[0.6875rem] border-b border-gray-200">
-                    <th className="px-3 py-2.5 text-center w-10">#</th>
-                    <th className="px-3 py-2.5">{t('docColProductSpec')}</th>
-                    <th className="px-3 py-2.5 text-center">{t('docColQty')}</th>
-                    <th className="px-3 py-2.5 text-right">{t('docColUnitPriceExVat')}</th>
-                    <th className="px-3 py-2.5 text-right">{t('docColLineTotal')}</th>
+            <table className="self-start text-left">
+              <tbody>
+                {meta.map(([k, v]) => (
+                  <tr key={k} className="align-top">
+                    <td className="pr-4 py-0.5 text-gray-500 whitespace-nowrap">{k}</td>
+                    <td className="py-0.5 text-gray-900">{v}</td>
                   </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100 font-semibold text-gray-800">
-                  {(order.items ?? []).map((item, index) => {
-                    // `unitPrice` and `price` are both stored net of VAT, and
-                    // `price` is already the whole line. Dividing by 1.25 and
-                    // re-multiplying by the quantity made every printed line wrong
-                    // and stopped the lines from summing to the total.
-                    const itemUnitPriceExVat = (Number(item.unitPrice) || 0).toFixed(2);
-                    const itemLineTotalExVat = (Number(item.price) || 0).toFixed(2);
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-                    return (
-                      <tr key={index} className="hover:bg-gray-50/50 align-top">
-                        <td className="px-3 py-2 text-center font-mono text-gray-400 font-bold">{index + 1}</td>
-                        <td className="px-3 py-2 space-y-0.5">
-                          <span className="font-extrabold text-gray-900 block text-sm">{item.productName}</span>
-                          
-                          {/* File specs if custom print */}
-                          {item.fileSpecs && (
-                            <div className="flex flex-wrap items-center gap-2 text-[0.6875rem] text-gray-500 font-medium">
-                              <span className="bg-blue-50 text-blue-800 font-bold px-2 py-0.5 rounded border border-blue-200/60 uppercase">
-                                {item.fileSpecs.fileType}
-                              </span>
-                              {item.fileSpecs.widthCm && item.fileSpecs.heightCm ? (
-                                <span>{item.fileSpecs.widthCm}×{item.fileSpecs.heightCm} cm</span>
-                              ) : null}
-                              <span>• {t('docFileLabel')} {item.fileSpecs.fileName}</span>
-                            </div>
-                          )}
+          {/* Lines */}
+          <table className="mt-10 w-full text-left">
+            <thead>
+              <tr className="border-b border-gray-900 text-[0.6875rem] font-semibold uppercase tracking-wide text-gray-600">
+                <th className="py-2 pr-3">{t('docColProductSpec')}</th>
+                <th className="py-2 px-3 text-right">{t('docColQty')}</th>
+                <th className="py-2 px-3 text-right">{t('docColUnitPriceExVat')}</th>
+                <th className="py-2 pl-3 text-right">{t('docColLineTotal')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(order.items ?? []).map((item, index) => {
+                // `unitPrice` and `price` are both stored net of VAT, and `price`
+                // is already the whole line — see the note in git history.
+                const unit = Number(item.unitPrice) || 0;
+                const line = Number(item.price) || 0;
+                const details = [
+                  item.fileSpecs
+                    ? [item.fileSpecs.widthCm && item.fileSpecs.heightCm ? `${item.fileSpecs.widthCm}×${item.fileSpecs.heightCm} cm` : '', `${t('docFileLabel')} ${item.fileSpecs.fileName}`].filter(Boolean).join(', ')
+                    : '',
+                  item.options && Object.keys(item.options).length > 0
+                    ? Object.entries(item.options).map(([k, v]) => `${k}: ${typeof v === 'object' && v !== null ? (v as any).label : String(v)}`).join(' · ')
+                    : '',
+                ].filter(Boolean);
+                return (
+                  <tr key={index} className="border-b border-gray-200 align-top">
+                    <td className="py-2.5 pr-3">
+                      <p className="text-gray-900">{item.productName}</p>
+                      {details.map((d, i) => <p key={i} className="text-[0.6875rem] text-gray-500">{d}</p>)}
+                      <LineChargesNote item={item} currency="kr" t={t} />
+                    </td>
+                    <td className="py-2.5 px-3 text-right tabular-nums">{item.quantity}</td>
+                    <td className="py-2.5 px-3 text-right tabular-nums whitespace-nowrap">{unit.toFixed(2)}</td>
+                    <td className="py-2.5 pl-3 text-right tabular-nums whitespace-nowrap">{line.toFixed(2)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
 
-                          {/* Print options — one flowing line, not a chip each:
-                              six chips in a monospace face took two or three
-                              lines per product and pushed a 5-line order onto a
-                              second sheet. */}
-                          {item.options && Object.keys(item.options).length > 0 && (
-                            <p className="text-[0.625rem] text-gray-600 font-medium leading-snug">
-                              {Object.entries(item.options)
-                                .map(([k, v]) => `${k}: ${typeof v === 'object' && v !== null ? (v as any).label : String(v)}`)
-                                .join(' · ')}
-                            </p>
-                          )}
-
-                          <LineChargesNote item={item} currency="kr" t={t} />
-                        </td>
-                        <td className="px-3 py-2 text-center font-bold text-gray-900 text-sm">{item.quantity}</td>
-                        <td className="px-3 py-2 text-right font-mono font-bold text-gray-700 whitespace-nowrap">{itemUnitPriceExVat} kr</td>
-                        <td className="px-3 py-2 text-right font-mono font-black text-gray-900 text-sm whitespace-nowrap">{itemLineTotalExVat} kr</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Calculations & Totals Summary */}
-            <div className="flex flex-col @lg:flex-row justify-between items-start gap-6 pt-2">
-              {/* Notes & F-Skatt legal */}
-              <div className="max-w-md space-y-3 text-xs text-gray-500">
-                <div className="p-3.5 bg-amber-50/80 border border-amber-200/80 rounded-2xl text-amber-900 space-y-1">
-                  <p className="font-bold flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
-                    <span>{t('docLegalFTaxCompliance')}</span>
-                  </p>
-                  <p className="text-[0.6875rem] leading-relaxed">
-                    {t('docFTaxLine1')}{' '}
-                    {sellerName}{' '}{t('docFTaxLine2')}
-                  </p>
-                </div>
-              </div>
-
-              {/* Totals Box */}
-              <div className="w-full @lg:w-80 bg-gray-50 p-5 rounded-2xl border border-gray-200/90 space-y-2.5 text-xs font-semibold text-gray-700">
-                <div className="flex justify-between items-center pb-1">
-                  <span>{t('docGoodsExclVat')}</span>
-                  <span className="font-mono font-bold text-gray-900">{goodsBeforeDiscounts.toFixed(2)} {currency}</span>
-                </div>
-
-                {couponDiscount > 0 && (
-                  <div className="flex justify-between items-center pb-1 text-emerald-700 font-bold">
-                    <span>{t('docCouponDiscount')}</span>
-                    <span className="font-mono">-{couponDiscount.toFixed(2)} {currency}</span>
-                  </div>
-                )}
-
-                {pointsDiscount > 0 && (
-                  <div className="flex justify-between items-center pb-1 text-emerald-700 font-bold">
-                    <span>{t('docLoyaltyDiscount')}</span>
-                    <span className="font-mono">-{pointsDiscount.toFixed(2)} {currency}</span>
-                  </div>
-                )}
-
-                {shippingCost > 0 && (
-                  <div className="flex justify-between items-center pb-1">
-                    <span>{t('docShippingExclVat')}</span>
-                    <span className="font-mono font-bold text-gray-900">{shippingCost.toFixed(2)} {currency}</span>
-                  </div>
-                )}
-
-                <div className="flex justify-between items-center pb-1 border-t border-gray-200 pt-2">
-                  <span>{t('docNetTotalExclVat')}</span>
-                  <span className="font-mono font-bold text-gray-900">{netAmount.toFixed(2)} {currency}</span>
-                </div>
-
-                <div className="flex justify-between items-center pb-1">
-                  <span>
-                    {t('docVatLabel')} ({Math.round(vatRate * 100)}%):
-                  </span>
-                  <span className="font-mono font-bold text-gray-900">{vatAmount.toFixed(2)} {currency}</span>
-                </div>
-
-                <div className="border-t border-gray-300 pt-3 flex justify-between items-center text-base font-black text-gray-900">
-                  <span className="uppercase">{t('docTotalInclVat')}</span>
-                  <span className="font-mono text-orange-600 text-lg">
-                    {formatCurrency(totalAmount, currency)}
-                  </span>
-                </div>
-
-                {/* CREDITED BACK. A partial refund deliberately leaves the order
-                    at `paid`, so without this the invoice shows the full amount
-                    as owed and paid with no trace that some of it was returned. */}
+          {/* Totals */}
+          <div className="mt-6 flex justify-end">
+            <table className="w-72 text-left tabular-nums">
+              <tbody>
+                <tr><td className="py-1 text-gray-600">{bare(t('docGoodsExclVat'))}</td><td className="py-1 text-right">{money(goodsBeforeDiscounts)}</td></tr>
+                {couponDiscount > 0 && <tr><td className="py-1 text-gray-600">{bare(t('docCouponDiscount'))}</td><td className="py-1 text-right">−{money(couponDiscount)}</td></tr>}
+                {pointsDiscount > 0 && <tr><td className="py-1 text-gray-600">{bare(t('docLoyaltyDiscount'))}</td><td className="py-1 text-right">−{money(pointsDiscount)}</td></tr>}
+                {shippingCost > 0 && <tr><td className="py-1 text-gray-600">{bare(t('docShippingExclVat'))}</td><td className="py-1 text-right">{money(shippingCost)}</td></tr>}
+                <tr className="border-t border-gray-200"><td className="py-1 text-gray-600">{bare(t('docNetTotalExclVat'))}</td><td className="py-1 text-right">{money(netAmount)}</td></tr>
+                <tr><td className="py-1 text-gray-600">{t('docVatLabel')} {Math.round(vatRate * 100)} %</td><td className="py-1 text-right">{money(vatAmount)}</td></tr>
+                <tr className="border-t border-gray-900">
+                  <td className="pt-2 font-semibold text-gray-900">{bare(t('docTotalInclVat'))}</td>
+                  <td className="pt-2 text-right text-base font-semibold text-gray-900 whitespace-nowrap">{formatCurrency(totalAmount, currency)}</td>
+                </tr>
+                {/* CREDITED BACK. A partial refund leaves the order at `paid`, so
+                    without this the invoice shows the full amount with no trace
+                    that some of it was returned. */}
                 {(refundedTotal > 0 || creditNoteNumbers.length > 0) && (
-                  <div className="pt-2 mt-2 border-t border-gray-200 space-y-1">
-                    <div className="flex justify-between text-xs font-black text-gray-700">
-                      <span>{t('docCreditedBack')}</span>
-                      <span>−{formatCurrency(refundedTotal, currency)}</span>
-                    </div>
+                  <>
+                    <tr><td className="pt-3 text-gray-600">{bare(t('docCreditedBack'))}</td><td className="pt-3 text-right">−{formatCurrency(refundedTotal, currency)}</td></tr>
                     {creditNoteNumbers.length > 0 && (
-                      <p className="text-[0.625rem] text-gray-500 font-bold">
-                        {t('docCreditNoteRef')} {creditNoteNumbers.join(', ')}
-                      </p>
+                      <tr><td colSpan={2} className="text-[0.6875rem] text-gray-500">{t('docCreditNoteRef')} {creditNoteNumbers.join(', ')}</td></tr>
                     )}
-                    <div className="flex justify-between text-xs font-black text-gray-900">
-                      <span>{t('docNetPaid')}</span>
-                      <span>{formatCurrency(Math.max(0, totalAmount - refundedTotal), currency)}</span>
-                    </div>
-                  </div>
+                    <tr><td className="py-1 font-semibold">{bare(t('docNetPaid'))}</td><td className="py-1 text-right font-semibold">{formatCurrency(Math.max(0, totalAmount - refundedTotal), currency)}</td></tr>
+                  </>
                 )}
+              </tbody>
+            </table>
+          </div>
 
-                {/* The real payment state. This used to read "PAID IN FULL" on
-                    every invoice, including orders where nothing had been paid. */}
-                {isPaid ? (
-                  <div className="pt-2 text-[0.625rem] text-emerald-700 font-black uppercase text-center bg-emerald-50 py-1.5 rounded-xl border border-emerald-200">
-                    ✓ {t('docPaidInFull')}
-                  </div>
-                ) : isRefunded ? (
-                  <div className="pt-2 text-[0.625rem] text-gray-700 font-black uppercase text-center bg-gray-100 py-1.5 rounded-xl border border-gray-300">
-                    {t('docRefunded')}
-                  </div>
-                ) : (
-                  <div className="pt-2 text-[0.625rem] text-amber-800 font-black uppercase text-center bg-amber-50 py-1.5 rounded-xl border border-amber-300">
-                    {onDelivery ? t('docToPayOnDelivery') : t('docAwaitingPayment')}
-                  </div>
-                )}
-              </div>
+          {/* The sentence a reverse-charge or export invoice must carry. */}
+          {vatNote && (
+            <p className="mt-8 text-gray-700">
+              {vatNote}
+              {order.buyerVatNumber && <span className="block text-gray-500">{t('docBuyerVatNumber')} {order.buyerVatNumber}</span>}
+            </p>
+          )}
+
+          {/* Seller details — where a Swedish invoice keeps them. */}
+          <div className="mt-14 border-t border-gray-300 pt-4 grid grid-cols-4 gap-6 text-[0.6875rem] leading-relaxed text-gray-600">
+            <div>
+              <p className="font-semibold text-gray-900">{sellerName}</p>
+              <p>{sellerAddress}</p>
             </div>
-
-            {/* The sentence a reverse-charge or export invoice must carry. */}
-            {vatNote && (
-              <div className="border border-gray-300 rounded-2xl px-4 py-3 text-[0.6875rem] font-bold text-gray-700 bg-gray-50">
-                {vatNote}
-                {order.buyerVatNumber && (
-                  <span className="block text-gray-500 font-medium mt-1">
-                    {t('docBuyerVatNumber')} {order.buyerVatNumber}
-                  </span>
-                )}
-              </div>
-            )}
-
-            {/* Official Stamp Footer */}
-            <div className="border-t border-gray-200 pt-3 flex flex-col @lg:flex-row justify-between items-center text-[0.6875rem] text-gray-400 font-medium gap-4">
-              <p>© {invoiceYear} {sellerName} • {t('footerRightsReserved')}</p>
-              <div className="flex items-center space-x-2 space-x-reverse font-bold text-gray-600">
-                <span>{t('docInvoiceNoLabel')} {invoiceNumber}</span>
-              </div>
+            <div>
+              <p>{L.phone}: {sellerPhone}</p>
+              <p>{L.email}: {sellerEmail}</p>
+            </div>
+            <div>
+              <p>{t('docOrgNrLabel')} {sellerOrgNr}</p>
+              <p>{t('docVatNrLabel')} {sellerVatNr}</p>
+              <p>{L.fTax}</p>
+            </div>
+            <div>
+              {sellerBankgiro && <p>{t('docBankgiroLabel')} {sellerBankgiro}</p>}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </AnimatePresence>
+    </div>
   );
 }

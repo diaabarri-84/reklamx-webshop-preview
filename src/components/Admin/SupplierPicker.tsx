@@ -171,6 +171,10 @@ export default function SupplierPicker() {
   } | null>(null);
   const [apiKey, setApiKey] = useState('');
   const [savingKey, setSavingKey] = useState(false);
+  // Pro Media Plus signs in with a username and a password (HTTP Basic on its
+  // XML feed), not a key — the login from its B2B panel, My B2B account → Integration.
+  const [pmpUser, setPmpUser] = useState('');
+  const [pmpPass, setPmpPass] = useState('');
   const [testing, setTesting] = useState(false);
   const [statusNote, setStatusNote] = useState<string | null>(null);
   const [result, setResult] = useState<{ imported: number; skipped?: { productKey: string; reason: string }[] } | null>(null);
@@ -276,6 +280,32 @@ export default function SupplierPicker() {
       // appears once the key exists, so the moment it appears is the moment to
       // point at it. Without this the owner saves a key, sees "Saved and
       // working", and is left looking at the same empty grid he started with.
+      setStatusNote(t('spKeySavedNowBuild'));
+    } catch (err: any) {
+      setStatusNote(err?.message || t('spLoadFailed'));
+    } finally {
+      setSavingKey(false);
+    }
+  };
+
+  const saveLogin = async () => {
+    if (!pmpUser.trim() || !pmpPass) return;
+    setSavingKey(true);
+    setStatusNote(null);
+    try {
+      // The server checks the login against the live feed before it keeps it.
+      await authed('/api/admin/supplier/credentials', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user: pmpUser.trim(), pass: pmpPass }),
+      });
+      setStatus((prev) => ({
+        hasCredentials: true,
+        needsCredentials: prev?.needsCredentials ?? true,
+        adapterBuilt: prev?.adapterBuilt ?? true,
+        indexedProducts: prev?.indexedProducts ?? null,
+      }));
+      setPmpPass('');
       setStatusNote(t('spKeySavedNowBuild'));
     } catch (err: any) {
       setStatusNote(err?.message || t('spLoadFailed'));
@@ -525,6 +555,38 @@ export default function SupplierPicker() {
                   type="button"
                   onClick={saveKey}
                   disabled={savingKey || !apiKey.trim()}
+                  className="px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-[0.6875rem] font-black cursor-pointer"
+                >
+                  {t('spKeySave')}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {status.adapterBuilt && !status.hasCredentials && SUPPLIER === 'promediaplus' && (
+            <div className="space-y-2">
+              <p className="text-[0.6875rem] font-bold text-amber-800">{t('spKeyNeeded')}</p>
+              <div className="flex flex-wrap gap-2">
+                <input
+                  type="text"
+                  value={pmpUser}
+                  onChange={(e) => setPmpUser(e.target.value)}
+                  placeholder="Login (e-mail)"
+                  autoComplete="off"
+                  className="flex-1 min-w-[12rem] px-3 py-2 rounded-xl border border-gray-200 text-xs font-bold text-gray-900"
+                />
+                <input
+                  type="password"
+                  value={pmpPass}
+                  onChange={(e) => setPmpPass(e.target.value)}
+                  placeholder="Password"
+                  autoComplete="off"
+                  className="flex-1 min-w-[10rem] px-3 py-2 rounded-xl border border-gray-200 text-xs font-bold text-gray-900"
+                />
+                <button
+                  type="button"
+                  onClick={saveLogin}
+                  disabled={savingKey || !pmpUser.trim() || !pmpPass}
                   className="px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-[0.6875rem] font-black cursor-pointer"
                 >
                   {t('spKeySave')}

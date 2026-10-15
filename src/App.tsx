@@ -30,6 +30,7 @@ import NeoNavPill from './components/NeoNavPill';
 import PaymentIcons, { entriesFromMollieMethods } from './components/PaymentIcons';
 import BuildWatcher from './components/BuildWatcher';
 import CookieNotice from './components/CookieNotice';
+import WelcomeQuestions from './components/WelcomeQuestions';
 import SafeImage from './components/SafeImage';
 import { hasMarketing, loadTags, readConsent, resetConsent } from './lib/gtag';
 import { matchesCatalogueFilters, normaliseQuery } from './lib/catalogueQuery';
@@ -264,47 +265,32 @@ export function useAuth() {
  * read in full in the menu ("Med 25 %" / "Utan 25 %"), the current one ticked.
  * Closes on a choice, a press outside, or Escape.
  */
-function VatMenu({ includeVat, setIncludeVat, t }: { includeVat: boolean; setIncludeVat: (v: boolean) => void; t: (key: string) => string }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!open) return;
-    const onDown = (e: PointerEvent) => { if (!ref.current?.contains(e.target as Node)) setOpen(false); };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
-    document.addEventListener('pointerdown', onDown);
-    document.addEventListener('keydown', onKey);
-    return () => { document.removeEventListener('pointerdown', onDown); document.removeEventListener('keydown', onKey); };
-  }, [open]);
+/**
+ * VAT ("Moms") as a two-way switch at the top of the currency menu — the
+ * header no longer has a menu of its own for it (2026-10-15): the first visit
+ * answers it in WelcomeQuestions, and this is where it is changed afterwards.
+ */
+function VatToggle({ includeVat, setIncludeVat, t }: { includeVat: boolean; setIncludeVat: (v: boolean) => void; t: (key: string) => string }) {
   return (
-    <div ref={ref} className="relative shrink-0">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-haspopup="menu"
-        aria-expanded={open}
-        title={includeVat ? t('vatWith') : t('vatWithout')}
-        className="h-9 px-3 rounded-full bg-[#eceef4] shadow-[5px_5px_12px_#c9cdd8,-5px_-5px_12px_#ffffff] text-xs font-bold text-gray-700 hover:text-gray-900 flex items-center gap-1 transition-colors"
-      >
-        <span>{t('vatMenu')}</span>
-        <ChevronDown className={cn('w-3 h-3 text-gray-400 transition-transform', open && 'rotate-180')} />
-      </button>
-      {open && (
-        <div role="menu" className="absolute right-0 mt-2 w-44 bg-white rounded-2xl shadow-xl ring-1 ring-black/5 p-1.5 z-50">
-          {[true, false].map((v) => (
-            <button
-              key={String(v)}
-              type="button"
-              role="menuitemradio"
-              aria-checked={includeVat === v}
-              onClick={() => { setIncludeVat(v); setOpen(false); }}
-              className="w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl text-sm text-gray-800 hover:bg-gray-50 transition-colors"
-            >
-              <span>{v ? t('vatWith') : t('vatWithout')}</span>
-              {includeVat === v && <Check className="w-4 h-4 text-orange-700" />}
-            </button>
-          ))}
-        </div>
-      )}
+    <div className="px-3 pt-2 pb-2.5 border-b border-gray-100">
+      <span className="block text-[0.625rem] font-black uppercase text-gray-400 tracking-wider mb-1.5">{t('vatMenu')}</span>
+      <div role="radiogroup" aria-label={t('vatMenu')} className="grid grid-cols-2 gap-0.5 p-0.5 rounded-xl bg-gray-100">
+        {[true, false].map((v) => (
+          <button
+            key={String(v)}
+            type="button"
+            role="radio"
+            aria-checked={includeVat === v}
+            onClick={() => setIncludeVat(v)}
+            className={cn(
+              'min-h-[36px] px-2 rounded-lg text-[0.6875rem] font-black whitespace-nowrap transition-colors',
+              includeVat === v ? 'bg-white text-orange-600 shadow-sm ring-1 ring-gray-200' : 'text-gray-500 hover:text-gray-800',
+            )}
+          >
+            {v ? t('vatWith') : t('vatWithout')}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -424,17 +410,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Dynamic Announcement Bar */}
-      {settings.showAnnouncementBar && settings.announcementText && announcementLive && (
-        <div 
-          className="px-4 py-1.5 text-[0.6875rem] font-extrabold text-center text-white transition-all shadow-2xs flex items-center justify-center space-x-2 space-x-reverse"
-          style={{ backgroundColor: settings.announcementBg || '#1e293b' }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
-          <span>{localized(settings.announcementText, settings.announcementTextI18n, language)}</span>
-        </div>
-      )}
-
       {/* A signed-in account whose profile could not be read (the database refused):
           said plainly, with when it comes back — it used to show the owner a
           customer's account without a word. */}
@@ -527,52 +502,6 @@ const Navbar = () => {
                 <Phone className="w-4 h-4" />
               </a>
 
-              <VatMenu includeVat={includeVat} setIncludeVat={setIncludeVat} t={t} />
-
-              {/* Language Dropdown */}
-              <div className="relative">
-                <button 
-                  onClick={() => {
-                    setLangDropdownOpen(!langDropdownOpen);
-                    setCurrencyDropdownOpen(false);
-                    setUserDropdownOpen(false);
-                  }}
-                  className="h-9 flex items-center gap-1 text-gray-600 hover:text-orange-600 transition-colors px-3 rounded-full bg-[#eceef4] shadow-[5px_5px_12px_#c9cdd8,-5px_-5px_12px_#ffffff] text-xs font-black"
-                >
-                  <Globe className="w-3.5 h-3.5 text-orange-600 shrink-0" />
-                  <span className="uppercase font-black">{language}</span>
-                  <ChevronDown className="w-3 h-3 text-gray-400" />
-                </button>
-
-                <AnimatePresence>
-                  {langDropdownOpen && (
-                    <motion.div 
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      className="absolute right-0 mt-2 w-28 bg-white rounded-2xl shadow-xl border border-gray-200 py-1.5 z-50 overflow-hidden"
-                    >
-                      {LANGUAGES.map((lang) => (
-                        <button
-                          key={lang.code}
-                          onClick={() => {
-                            setLanguage(lang.code);
-                            setLangDropdownOpen(false);
-                          }}
-                          className={cn(
-                            "w-full text-right px-3 py-2 text-xs font-black flex items-center space-x-2 space-x-reverse hover:bg-orange-50 transition-colors justify-between",
-                            language === lang.code ? "bg-orange-50 text-orange-600 font-black" : "text-gray-700"
-                          )}
-                        >
-                          <span className="uppercase font-extrabold">{lang.code}</span>
-                          <span className="text-[0.625rem] text-gray-400 font-medium">{lang.name}</span>
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
               {/* Currency Selector Dropdown */}
               <div className="relative">
                 <button 
@@ -601,6 +530,7 @@ const Navbar = () => {
                         <span className="text-[0.625rem] font-black uppercase text-gray-400 tracking-wider">Currency</span>
                         <span className="text-[0.5625rem] font-bold text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded-md">Live Rates</span>
                       </div>
+                      <VatToggle includeVat={includeVat} setIncludeVat={setIncludeVat} t={t} />
                       {(Object.keys(currencies) as CurrencyCode[]).map((code) => {
                         const curr = currencies[code];
                         const isSelected = currency === code;
@@ -744,9 +674,11 @@ const Navbar = () => {
               ) : (
                 <button
                   onClick={login}
-                  className="h-9 whitespace-nowrap bg-gradient-to-br from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white px-4 rounded-full text-xs font-black transition-all shadow-[5px_5px_12px_rgba(194,65,12,.3),-5px_-5px_12px_#ffffff]"
+                  title={t('signIn')}
+                  aria-label={t('signIn')}
+                  className="w-9 h-9 shrink-0 flex items-center justify-center bg-gradient-to-br from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white rounded-full transition-all shadow-[5px_5px_12px_rgba(194,65,12,.3),-5px_-5px_12px_#ffffff]"
                 >
-                  {t('signIn')}
+                  <UserIcon className="w-4 h-4" />
                 </button>
               )}
             </div>
@@ -767,9 +699,6 @@ const Navbar = () => {
                   </span>
                 )}
               </button>
-
-              {/* VAT in the bar at every width, as the same compact menu. */}
-              <VatMenu includeVat={includeVat} setIncludeVat={setIncludeVat} t={t} />
 
               {/*
                 CURRENCY AND LANGUAGE ON A PHONE: A LIST, NOT A GUESSING GAME.
@@ -801,8 +730,9 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
-                      className="absolute right-0 mt-2 w-44 bg-white rounded-2xl shadow-xl border border-gray-200 py-1.5 z-50 overflow-hidden"
+                      className="absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-xl border border-gray-200 py-1.5 z-50 overflow-hidden"
                     >
+                      <VatToggle includeVat={includeVat} setIncludeVat={setIncludeVat} t={t} />
                       {(Object.keys(currencies) as CurrencyCode[]).map((code) => (
                         <button
                           key={code}
@@ -816,46 +746,6 @@ const Navbar = () => {
                         >
                           <span className="font-extrabold">{currencies[code].code}</span>
                           <span className="text-gray-400 font-medium">{currencies[code].symbol}</span>
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              <div className="relative shrink-0">
-                <button
-                  onClick={() => { setLangDropdownOpen(!langDropdownOpen); setCurrencyDropdownOpen(false); setUserDropdownOpen(false); }}
-                  aria-haspopup="listbox"
-                  aria-expanded={langDropdownOpen}
-                  aria-label="Choose language"
-                  className="h-9 px-1.5 min-[380px]:px-2 sm:px-3 bg-[#eceef4] shadow-[5px_5px_12px_#c9cdd8,-5px_-5px_12px_#ffffff] rounded-full text-xs font-black text-gray-700 flex items-center gap-0.5 shrink-0"
-                >
-                  <span className="uppercase font-black">{language}</span>
-                  <ChevronDown className={cn('w-3 h-3 text-gray-400 transition-transform', langDropdownOpen && 'rotate-180')} />
-                </button>
-                <AnimatePresence>
-                  {langDropdownOpen && (
-                    <motion.div
-                      role="listbox"
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      className="absolute right-0 mt-2 w-40 bg-white rounded-2xl shadow-xl border border-gray-200 py-1.5 z-50 overflow-hidden"
-                    >
-                      {LANGUAGES.map((lang) => (
-                        <button
-                          key={lang.code}
-                          role="option"
-                          aria-selected={language === lang.code}
-                          onClick={() => { setLanguage(lang.code); setLangDropdownOpen(false); }}
-                          className={cn(
-                            'w-full px-3 py-2.5 text-xs font-bold flex items-center justify-between hover:bg-orange-50 transition-colors',
-                            language === lang.code ? 'bg-orange-50 text-orange-600 font-black' : 'text-gray-700',
-                          )}
-                        >
-                          <span className="uppercase font-extrabold">{lang.code}</span>
-                          <span className="text-[0.6875rem] text-gray-400 font-medium">{lang.name}</span>
                         </button>
                       ))}
                     </motion.div>
@@ -992,32 +882,8 @@ const Navbar = () => {
                   </a>
                 </div>
 
-                {/* Mobile VAT Switcher & Auth */}
+                {/* Mobile Auth (language and VAT are chosen in WelcomeQuestions) */}
                 <div className="pt-2 border-t border-gray-100 flex items-center justify-between gap-3">
-                  <div className="flex items-center justify-between bg-gray-100 px-3 py-1.5 rounded-xl border border-gray-200 w-full">
-                    <span className="text-xs font-black text-gray-800">Tax 25%</span>
-                    <div className="flex items-center space-x-1 space-x-reverse bg-gray-200/80 p-0.5 rounded-lg">
-                      <button
-                        onClick={() => setIncludeVat(true)}
-                        className={cn(
-                          "px-3 py-1 text-xs font-black rounded-md transition-all text-center",
-                          includeVat ? "bg-orange-600 text-white shadow-xs" : "text-gray-600"
-                        )}
-                      >
-                        Yes
-                      </button>
-                      <button
-                        onClick={() => setIncludeVat(false)}
-                        className={cn(
-                          "px-3 py-1 text-xs font-black rounded-md transition-all text-center",
-                          !includeVat ? "bg-white text-gray-900 shadow-xs border border-gray-200" : "text-gray-600"
-                        )}
-                      >
-                        No
-                      </button>
-                    </div>
-                  </div>
-
                   {user ? (
                     <button 
                       onClick={() => { logout(); setIsMenuOpen(false); }}
@@ -1040,6 +906,17 @@ const Navbar = () => {
           )}
         </AnimatePresence>
       </nav>
+
+      {/* Dynamic Announcement Bar — under the navbar, not above it (owner, 2026-10-15). */}
+      {settings.showAnnouncementBar && settings.announcementText && announcementLive && (
+        <div 
+          className="px-4 py-1.5 text-[0.6875rem] font-extrabold text-center text-white transition-all shadow-2xs flex items-center justify-center space-x-2 space-x-reverse"
+          style={{ backgroundColor: settings.announcementBg || '#1e293b' }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+          <span>{localized(settings.announcementText, settings.announcementTextI18n, language)}</span>
+        </div>
+      )}
 
       {/* Cart Drawer */}
       <CartDrawer
@@ -2841,6 +2718,15 @@ const Footer = () => {
             <Link to="/cookies" className="inline-block py-1 text-gray-400 hover:text-white transition-colors">
               {getLegalDocument('cookies', language).title}
             </Link>
+            {/* The header no longer has a language or VAT menu — both are
+                answered in WelcomeQuestions, which this reopens. */}
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('reklamx:welcome'))}
+              className="inline-block py-1 text-left text-gray-400 hover:text-white transition-colors"
+            >
+              {({ sv: 'Språk & priser', en: 'Language & prices', da: 'Sprog & priser', no: 'Språk & priser' } as Record<string, string>)[language] ?? 'Language & prices'}
+            </button>
             {/* Withdrawing consent must be as easy as giving it. Shown only
                 where there is something to withdraw — with no measurement
                 configured the banner is an information notice with no answer
@@ -3074,6 +2960,7 @@ export default function App() {
               </main>
               <GeminiChatbot />
               <CookieNotice />
+              <WelcomeQuestions />
               <MarketingTags />
               <BuildWatcherMount />
               <Footer />

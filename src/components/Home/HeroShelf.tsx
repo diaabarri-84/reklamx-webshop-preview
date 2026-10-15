@@ -250,12 +250,19 @@ export default function HeroShelf() {
                     )}
                   </div>
 
-                  {/* The offer, across the card like a sticker on the print. */}
+                  {/* The offer, a sticker from the left edge that stops just past
+                      the price with a slanted cut (owner's mock-up, 2026-10-15).
+                      The shadow sits on the wrapper: clip-path would cut it off. */}
                   {card.price && (
-                    <p className="absolute z-10 left-0 right-0 bottom-24 lg:bottom-28 -rotate-3 origin-left bg-orange-600 px-7 lg:px-9 py-3.5 flex items-baseline gap-3 shadow-lg">
-                      <span className="text-lg font-medium text-white/90">{t('heroOfferFrom')}</span>
-                      <span className="text-4xl lg:text-5xl font-black tabular-nums tracking-tight">{card.price}</span>
-                    </p>
+                    <div className="absolute z-10 left-0 bottom-24 lg:bottom-28 -rotate-3 origin-left drop-shadow-lg">
+                      <p
+                        className="bg-orange-600 pl-7 lg:pl-9 pr-14 lg:pr-16 py-3.5 flex items-baseline gap-3"
+                        style={{ clipPath: 'polygon(0 0, 100% 0, calc(100% - 2.25rem) 100%, 0 100%)' }}
+                      >
+                        <span className="text-lg font-medium text-white/90">{t('heroOfferFrom')}</span>
+                        <span className="text-4xl lg:text-5xl font-black tabular-nums tracking-tight whitespace-nowrap">{card.price}</span>
+                      </p>
+                    </div>
                   )}
 
                   <span className="absolute z-10 left-7 bottom-7 lg:left-9 lg:bottom-9 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-gray-900 transition-colors group-hover:bg-orange-600 group-hover:text-white">
