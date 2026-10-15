@@ -188,6 +188,8 @@ export default function NeoOptionField({ field, selected, onSelect, unitPriceFor
           onSelect={onSelect}
           labelOf={optionLabel}
           t={t}
+          // The clothing template shows every colour at once, as a grid.
+          maxVisible={field.customSettings?.showAllSwatches ? field.options.length : undefined}
         />
       ) : specialised === 'size' ? (
         <NeoSizeGrid

@@ -13,6 +13,7 @@ import { artworkBoxShown } from '../../lib/artwork';
 import { designerCanOpenOn, isDesignerMethod } from '../../lib/onlineDesign';
 import { KIND_DEFAULTS, cleanSpecOverride, kindOfProduct } from '../../lib/printSpec';
 import { isOptionAvailable, withoutUnavailableOptions } from '../../lib/optionAvailability';
+import { clothingFields } from '../../lib/clothingTemplate';
 import { invalidateShopCache } from '../../lib/invalidateShopCache';
 import { MediaPickerModal } from './MediaLibrary';
 import ProductsBulkBar from './ProductsBulkBar';
@@ -35,6 +36,7 @@ import {
   Image as ImageIcon,
   Info,
   Layers,
+  Shirt,
   Link as LinkIcon,
   ListOrdered,
   Package,
@@ -275,8 +277,20 @@ const PAGE_BLOCK_ROWS: Record<string, { label: string; short: string; note?: str
   [PAGE_BLOCKS.delivery]: { label: 'Delivery time', short: 'the delivery time', drag: 'Drag the delivery time' },
 };
 
+/**
+ * The top of the product form — title, template box, clone box — in the admin's
+ * language (owner, 2026-10-15: the Swedish panel showed it in English).
+ */
+const FORM_TOP: Record<string, Record<string, string>> = {
+  en: { titleNew: 'Add New Print Product', titleEdit: 'Edit Product Specification', optional: 'Optional', tplTitle: 'Start from a template', tplClothing: 'Clothing (colour + quantity per size)', tplDone: "Added 27 colours and sizes S–5XL with a quantity box under each. Set the name and price, remove colours you don't sell, then Save.", cloneTitle: 'Clone an existing product', cloneLead: 'Fills this whole form from a product you already have — its price, images, delivery speeds, every printing option with its surcharges and translations, the specification table and the FAQ. It is saved as a new, hidden product; the one you copied from is not touched.', cloneSearch: 'Search products by name or SKU…', clonePick: 'Choose a product to clone…', cloneHidden: 'hidden', cloneBtn: 'Clone', cloning: 'Cloning…', cloneDone: 'Form filled from the product you chose. Rename it below, change what differs, then Save.' },
+  sv: { titleNew: 'Lägg till ny produkt', titleEdit: 'Redigera produkt', optional: 'Valfritt', tplTitle: 'Börja från en mall', tplClothing: 'Kläder (färg + antal per storlek)', tplDone: 'Lade till 27 färger och storlekarna S–5XL med en antalsruta under varje. Skriv namn och pris, ta bort färger ni inte säljer och spara.', cloneTitle: 'Kopiera en befintlig produkt', cloneLead: 'Fyller hela formuläret från en produkt ni redan har — pris, bilder, leveranstider, alla tryckval med tillägg och översättningar, specifikationstabellen och FAQ. Den sparas som en ny, dold produkt. Produkten ni kopierar från ändras inte.', cloneSearch: 'Sök produkt på namn eller artikelnr…', clonePick: 'Välj en produkt att kopiera…', cloneHidden: 'dold', cloneBtn: 'Kopiera', cloning: 'Kopierar…', cloneDone: 'Formuläret är ifyllt från produkten du valde. Byt namn nedan, ändra det som skiljer och spara.' },
+  da: { titleNew: 'Tilføj nyt produkt', titleEdit: 'Rediger produkt', optional: 'Valgfrit', tplTitle: 'Start fra en skabelon', tplClothing: 'Tøj (farve + antal pr. størrelse)', tplDone: 'Tilføjede 27 farver og størrelserne S–5XL med en antalsboks under hver. Skriv navn og pris, fjern farver I ikke sælger, og gem.', cloneTitle: 'Kopiér et eksisterende produkt', cloneLead: 'Udfylder hele formularen fra et produkt, I allerede har — pris, billeder, leveringstider, alle trykvalg med tillæg og oversættelser, specifikationstabellen og FAQ. Det gemmes som et nyt, skjult produkt. Produktet I kopierer fra, ændres ikke.', cloneSearch: 'Søg produkt på navn eller varenr…', clonePick: 'Vælg et produkt at kopiere…', cloneHidden: 'skjult', cloneBtn: 'Kopiér', cloning: 'Kopierer…', cloneDone: 'Formularen er udfyldt fra det valgte produkt. Omdøb det nedenfor, ret det der er anderledes, og gem.' },
+  no: { titleNew: 'Legg til nytt produkt', titleEdit: 'Rediger produkt', optional: 'Valgfritt', tplTitle: 'Start fra en mal', tplClothing: 'Klær (farge + antall per størrelse)', tplDone: 'La til 27 farger og størrelsene S–5XL med en antallsboks under hver. Skriv navn og pris, fjern farger dere ikke selger, og lagre.', cloneTitle: 'Kopier et eksisterende produkt', cloneLead: 'Fyller hele skjemaet fra et produkt dere allerede har — pris, bilder, leveringstider, alle trykkvalg med tillegg og oversettelser, spesifikasjonstabellen og FAQ. Det lagres som et nytt, skjult produkt. Produktet dere kopierer fra, endres ikke.', cloneSearch: 'Søk produkt på navn eller varenr…', clonePick: 'Velg et produkt å kopiere…', cloneHidden: 'skjult', cloneBtn: 'Kopier', cloning: 'Kopierer…', cloneDone: 'Skjemaet er fylt ut fra produktet du valgte. Gi det nytt navn nedenfor, endre det som er annerledes, og lagre.' },
+};
+
 export default function ProductsAdmin() {
   const { t, language, vatRate, user } = useAuth();
+  const ft = FORM_TOP[language] ?? FORM_TOP.en;
   const { settings: siteSettings } = useSiteSettings();
   // In-page dialogs, never window.confirm/alert — a browser that has been told
   // to stop prompting silences those, and the action then does nothing at all.
@@ -659,6 +673,7 @@ export default function ProductsAdmin() {
       setFormFeatures([]);
       setFormOptions([]);
       setFormPrintingFields([]);
+      setTemplateApplied(null);
     }
     setExpandedCustomFieldIds([]);
     setIsModalOpen(true);
@@ -1353,6 +1368,8 @@ export default function ProductsAdmin() {
    * merged back underneath the form's own values on save.
    */
   const [cloneCarryOver, setCloneCarryOver] = useState<Partial<Product> | null>(null);
+  // Which product template filled the form, for the confirmation line.
+  const [templateApplied, setTemplateApplied] = useState<'clothing' | null>(null);
 
   /** Everything the form owns; anything else on a product is carried over verbatim. */
   const FORM_OWNED_KEYS: (keyof Product)[] = [
@@ -2244,7 +2261,7 @@ export default function ProductsAdmin() {
               <div className="px-8 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
                 <div>
                   <h3 className="text-xl font-black text-gray-900">
-                    {editingProduct ? 'Edit Product Specification' : 'Add New Print Product'}
+                    {editingProduct ? ft.titleEdit : ft.titleNew}
                   </h3>
                   <p className="text-xs text-gray-500 mt-0.5">
                     Configure basic information, quantity limits, delivery speeds, and characteristics.
@@ -2265,20 +2282,54 @@ export default function ProductsAdmin() {
                     the same rollup in four sizes, the same card on three papers.
                     Starting each one from an empty form is how option lists drift
                     apart. Pick the product it is LIKE, then change what differs. */}
+                {/* START FROM A TEMPLATE (2026-10-15). Clothing: every colour as
+                    a swatch grid, and a quantity box under each size S–5XL — each
+                    size becomes its own basket line (src/lib/clothingTemplate.ts). */}
+                {!editingProduct && (
+                  <div className="space-y-3 p-4 rounded-2xl border border-sky-200 bg-sky-50/50">
+                    <div className="flex items-center space-x-2 text-sky-800 font-extrabold text-sm">
+                      <Layers className="w-4 h-4" />
+                      <span>{ft.tplTitle}</span>
+                      <span className="text-[0.625rem] font-bold text-sky-700 bg-white border border-sky-200 px-2 py-0.5 rounded-full uppercase">
+                        {ft.optional}
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const fields = clothingFields();
+                          const ids = new Set(fields.map((f) => f.id));
+                          setFormPrintingFields((prev) => [...prev.filter((f) => !ids.has(f.id)), ...fields]);
+                          setFormMinQty(1);
+                          setTemplateApplied('clothing');
+                        }}
+                        className="px-4 py-2 bg-sky-700 text-white rounded-xl text-xs font-black hover:bg-sky-800 transition-colors flex items-center gap-1.5"
+                      >
+                        <Shirt className="w-3.5 h-3.5" />
+                        {ft.tplClothing}
+                      </button>
+                    </div>
+                    {templateApplied === 'clothing' && (
+                      <p className="text-[0.6875rem] font-black text-sky-900 bg-white border border-sky-200 rounded-xl px-3 py-2 flex items-center gap-1.5">
+                        <Check className="w-3.5 h-3.5 text-sky-700" />
+                        {ft.tplDone}
+                      </p>
+                    )}
+                  </div>
+                )}
+
                 {!editingProduct && (
                   <div className="space-y-3 p-4 rounded-2xl border border-emerald-200 bg-emerald-50/50">
                     <div className="flex items-center space-x-2 text-emerald-700 font-extrabold text-sm">
                       <Copy className="w-4 h-4" />
-                      <span>Clone an existing product</span>
+                      <span>{ft.cloneTitle}</span>
                       <span className="text-[0.625rem] font-bold text-emerald-600 bg-white border border-emerald-200 px-2 py-0.5 rounded-full uppercase">
-                        Optional
+                        {ft.optional}
                       </span>
                     </div>
                     <p className="text-xs text-gray-600 font-bold">
-                      Fills this whole form from a product you already have &mdash; its price, images, delivery
-                      speeds, every printing option with its surcharges and translations, the specification table
-                      and the FAQ. It is saved as a <span className="text-gray-900">new, hidden</span> product;
-                      the one you copied from is not touched.
+                      {ft.cloneLead}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-2">
@@ -2286,7 +2337,7 @@ export default function ProductsAdmin() {
                         type="text"
                         value={cloneSearch}
                         onChange={(e) => setCloneSearch(e.target.value)}
-                        placeholder="Search products by name or SKU…"
+                        placeholder={ft.cloneSearch}
                         className="sm:w-56 px-3 py-2 border border-gray-200 rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                       />
                       <select
@@ -2294,7 +2345,7 @@ export default function ProductsAdmin() {
                         onChange={(e) => setCloneSourceId(e.target.value)}
                         className="flex-1 min-w-0 px-3 py-2 border border-gray-200 rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                       >
-                        <option value="">Choose a product to clone…</option>
+                        <option value="">{ft.clonePick}</option>
                         {products
                           .filter((p) => {
                             const q = cloneSearch.trim().toLowerCase();
@@ -2308,7 +2359,7 @@ export default function ProductsAdmin() {
                             <option key={p.id} value={p.id}>
                               {p.name}
                               {p.sku ? ` — ${p.sku}` : ''}
-                              {p.isHidden ? ' (hidden)' : ''}
+                              {p.isHidden ? ` (${ft.cloneHidden})` : ''}
                             </option>
                           ))}
                       </select>
@@ -2319,14 +2370,14 @@ export default function ProductsAdmin() {
                         className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-xs font-black hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5 shrink-0"
                       >
                         <Copy className="w-3.5 h-3.5" />
-                        {cloneLoading ? 'Cloning…' : 'Clone'}
+                        {cloneLoading ? ft.cloning : ft.cloneBtn}
                       </button>
                     </div>
 
                     {cloneCarryOver && (
                       <p className="text-[0.6875rem] font-black text-emerald-800 bg-white border border-emerald-200 rounded-xl px-3 py-2 flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-emerald-600" />
-                        Form filled from the product you chose. Rename it below, change what differs, then Save.
+                        {ft.cloneDone}
                       </p>
                     )}
                   </div>

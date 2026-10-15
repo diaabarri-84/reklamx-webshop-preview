@@ -39,6 +39,8 @@ import NeoQuantityLadder from './NeoQuantityLadder';
 import NeoDeliveryEstimate from './NeoDeliveryEstimate';
 import NeoArtworkStep, { methodNeedsArtwork } from './NeoArtworkStep';
 import { withoutUnavailableOptions } from '../../lib/optionAvailability';
+import { isSizeQuantityField } from '../../lib/clothingTemplate';
+import ClothingSizeQuantities from './ClothingSizeQuantities';
 import { PAGE_BLOCKS, pageRowsOf } from '../../lib/pageOrder';
 import { isChargedOnce } from '../../lib/chargeOnce';
 import { deleteUploadedFile, uploadFile } from '../../lib/uploadFile';
@@ -317,6 +319,9 @@ export default function ProductConfigurator({
 
   const minQty = product.minQuantity || 1;
   const [quantity, setQuantity] = useState<number>(minQty);
+  // The clothing template: how many of each size, by size option id.
+  const [sizeQty, setSizeQty] = useState<Record<string, number>>({});
+  useEffect(() => setSizeQty({}), [product.id]);
   const [addedSuccess, setAddedSuccess] = useState(false);
 
   // ---- configured size ---------------------------------------------------
@@ -558,6 +563,27 @@ export default function ProductConfigurator({
     dimensionSurcharge, rawUnitPrice, discountPercent, unitPrice, setupFee, totalPrice,
     isOnSale, listUnitPrice, listTotalPrice, onceCharges: lineOnceCharges,
   } = calcConfiguredItemPrice({ ...pricingInput, quantity });
+
+  // THE CLOTHING TEMPLATE — one basket line per size (src/lib/clothingTemplate.ts).
+  // Each size is priced as the line it becomes: the chosen options with that
+  // size's surcharge in place of the selected one, at that size's quantity —
+  // what the server will charge for the line.
+  const sizeQtyField = activeFields.find(isSizeQuantityField);
+  const sizeQtyChosen = sizeQtyField ? selectedOptions[fieldPathKey([sizeQtyField.id])] : undefined;
+  const sizeQtyOptions = sizeQtyField ? sizeQtyField.options : [];
+  const priceForSize = (option: PrintingFieldOption, qty: number) =>
+    calcConfiguredItemPrice({
+      ...pricingInput,
+      optionsSurcharge: optionsSurcharge - (Number(sizeQtyChosen?.priceModifier) || 0) + (Number(option.priceModifier) || 0),
+      quantity: qty,
+    });
+  const sizeLines = sizeQtyOptions
+    .map((option) => ({ option, qty: sizeQty[option.id] || 0 }))
+    .filter((line) => line.qty > 0)
+    .map((line) => ({ ...line, price: priceForSize(line.option, line.qty) }));
+  const sizePieces = sizeLines.reduce((sum, line) => sum + line.qty, 0);
+  const sizeTooFew = !!sizeQtyField && sizePieces < minQty;
+  const shownTotal = sizeQtyField ? sizeLines.reduce((sum, line) => sum + line.price.totalPrice, 0) : totalPrice;
 
   // THE BADGE IS A PROPERTY OF THE PRODUCT, not of this configuration.
   //
@@ -966,6 +992,7 @@ export default function ProductConfigurator({
   const addLine = (withoutDesign: boolean) => {
     // The button is disabled too; this guards keyboard/programmatic submits.
     if (customSizeInvalid || uploadInProgress) return;
+    if (sizeQtyField && (sizeLines.length === 0 || sizeTooFew)) return;
     if (withoutDesign ? !laterMarker : artworkMissing) return;
     // The cart carries the sentinel with the ENTERED size in its label, so the
     // cart panel and staff screens show what was ordered. The id stays
@@ -1005,7 +1032,7 @@ export default function ProductConfigurator({
     const lineTrim =
       requiredArtworkMm ?? (withoutDesign ? designTrim : travelling && uploadedSource === 'designer' ? designFit : null);
 
-    const accepted = onAddToCart?.({
+    const linePayload: ConfiguredCartLine = {
       product,
       selectedOptions: optionsForCart,
       quantity,
@@ -1039,7 +1066,26 @@ export default function ProductConfigurator({
       fileSides: travelling && uploadedPages ? uploadedPages.sides : null,
       filePageMm: travelling && uploadedPdfBox ? { wMm: uploadedPdfBox.pageWidthMm, hMm: uploadedPdfBox.pageHeightMm } : null,
       designLater: withoutDesign ? laterMarker : null,
-    });
+    };
+
+    // The clothing template: one line per size that has a quantity, each with
+    // its own size, quantity and price; everything else is the same line.
+    let accepted: boolean | void | undefined;
+    if (sizeQtyField) {
+      for (const line of sizeLines) {
+        accepted = onAddToCart?.({
+          ...linePayload,
+          selectedOptions: { ...optionsForCart, [sizeQtyField.id]: line.option },
+          quantity: line.qty,
+          totalUnitPrice: line.price.unitPrice,
+          totalPrice: line.price.totalPrice,
+        });
+        if (accepted === false) return;
+      }
+      setSizeQty({});
+    } else {
+      accepted = onAddToCart?.(linePayload);
+    }
 
     if (accepted === false) return;
     // Added without the design: said where he is (the designer step), with where to design it.
@@ -1469,11 +1515,13 @@ export default function ProductConfigurator({
   const orderedFields = activeFields.filter((f) => !isSpeciallyRendered(f));
 
 
-  const priceInfo = formatPriceWithVat(totalPrice);
+  const priceInfo = formatPriceWithVat(shownTotal);
+  const sizeQtyBlocked = !!sizeQtyField && (sizeLines.length === 0 || sizeTooFew);
 
   // The quantity ladder — the price curve, which is the point of the redesign.
   // A row of the page like any other: it goes where he dragged it (pageRows).
-  const quantitySection = (
+  // The clothing template asks for a quantity under each size instead.
+  const quantitySection = sizeQtyField ? null : (
     <section className="space-y-3" data-rx-block="quantity">
       <div className="flex items-baseline justify-between gap-2">
         <h3 className="text-[0.6875rem] font-black uppercase text-gray-400 tracking-wider">
@@ -1532,6 +1580,21 @@ export default function ProductConfigurator({
    * top-level field. There is no second, lesser kind of option in this shop.
    */
   const renderField = (field: PrintingField, path: string[] = [], depth = 0) => {
+    if (depth === 0 && sizeQtyField && field.id === sizeQtyField.id) {
+      return (
+        <ClothingSizeQuantities
+          key={field.id}
+          field={field}
+          options={sizeQtyOptions}
+          quantities={sizeQty}
+          onChange={(id, n) => setSizeQty((prev) => ({ ...prev, [id]: n }))}
+          unitPriceFor={(option, qty) => priceForSize(option, qty).unitPrice}
+          labelOf={labelOf}
+          productName={localized(product.name, product.nameI18n, language)}
+          language={language}
+        />
+      );
+    }
     const pathKey = fieldPathKey([...path, field.id]);
     const chosen = selectedOptions[pathKey];
     const inCustomMode = !!field.allowCustomSize && chosen?.id === CUSTOM_SIZE_OPTION_ID;
@@ -1885,6 +1948,15 @@ export default function ProductConfigurator({
                 {/* formatPrice follows the header's VAT toggle, so the old
                     "(excl. VAT)" label was a lie whenever the toggle was on.
                     The VatTag beside the Total is the one place that states it. */}
+                {sizeQtyField ? (
+                  // The clothing template: what each size line costs. The start
+                  // fee is per basket line, so it is said once per size.
+                  sizeLines.length > 0
+                    ? `${sizeLines.map((l) => `${labelOf(l.option)}: ${l.qty} × ${formatPrice(l.price.unitPrice)}`).join(' · ')}${
+                        setupFee > 0 ? ` + ${t('cfgSetupFee').replace('{0}', formatPrice(setupFee))} × ${sizeLines.length}` : ''
+                      }`
+                    : null
+                ) : <>
                 {t('ppUnitPrice')}: {formatPrice(unitPrice)}
                 {/* Every figure on this line goes through formatPrice, or the
                     "before discount" and "setup fee" numbers stay raw net SEK
@@ -1894,6 +1966,7 @@ export default function ProductConfigurator({
                   : ''}
                 {setupFee > 0 ? ` + ${t('cfgSetupFee').replace('{0}', formatPrice(setupFee))}` : ''}
                 {lineOnceCharges > 0 ? ` + ${t('cfgOnceCharges').replace('{0}', formatPrice(lineOnceCharges))}` : ''}
+                </>}
               </span>
             </div>
 
@@ -1914,7 +1987,7 @@ export default function ProductConfigurator({
                   here, so it follows the VAT toggle and the currency the shopper
                   chose. A struck-through number in a different currency to the
                   one beside it is worse than no struck-through number. */}
-              {isOnSale && (
+              {isOnSale && !sizeQtyField && (
                 <span className="text-sm font-bold text-gray-400 line-through tracking-tight">
                   {formatPrice(listTotalPrice)}
                 </span>
@@ -1935,7 +2008,7 @@ export default function ProductConfigurator({
 
           {/* The same total in the other VAT mode. Whichever way the toggle is
               set, the figure a crawler needs is on the page. */}
-          {totalPrice > 0 && (
+          {shownTotal > 0 && (
             <p className="text-[0.6875rem] font-bold text-gray-400 text-right -mt-1">
               {formatMoney(includeVat ? priceInfo.rawNetSEK : priceInfo.rawGrossSEK)}{' '}
               <VatTag mode={includeVat ? 'excl' : 'incl'} />
@@ -1954,6 +2027,13 @@ export default function ProductConfigurator({
               {t(designMissing || designStale ? 'dsgNeededToContinue' : 'ppArtworkNeededToContinue')}
             </p>
           )}
+          {sizeQtyBlocked && (
+            <p className="text-[0.625rem] font-black text-orange-700 text-center" data-rx-size-qty-missing>
+              {sizePieces === 0
+                ? ({ sv: 'Skriv hur många du vill ha under en storlek.', da: 'Skriv hvor mange du vil have under en størrelse.', no: 'Skriv hvor mange du vil ha under en størrelse.' } as Record<string, string>)[language] ?? 'Type how many you want under a size.'
+                : (({ sv: 'Minst {0} st totalt.', da: 'Mindst {0} stk i alt.', no: 'Minst {0} stk totalt.' } as Record<string, string>)[language] ?? 'At least {0} pieces in total.').replace('{0}', String(minQty))}
+            </p>
+          )}
           {uploadInProgress && (
             <p className="text-[0.625rem] font-black text-gray-500 text-center">
               {t('ppArtworkUploading').replace('{0}', String(uploadProgress ?? 0))}
@@ -1963,14 +2043,14 @@ export default function ProductConfigurator({
           <button
             type="button"
             onClick={handleAddToCart}
-            disabled={customSizeInvalid || artworkMissing || uploadInProgress}
+            disabled={customSizeInvalid || artworkMissing || uploadInProgress || sizeQtyBlocked}
             className={cn(
               'w-full py-3 px-6 rounded-full font-black text-xs text-white uppercase tracking-wider',
               'bg-gradient-to-br from-orange-500 to-orange-700',
               'shadow-[6px_6px_14px_#c9cdd8,-6px_-6px_14px_#ffffff]',
               'transition-all duration-300 flex items-center justify-center space-x-2',
               NEO.ease,
-              customSizeInvalid || artworkMissing || uploadInProgress
+              customSizeInvalid || artworkMissing || uploadInProgress || sizeQtyBlocked
                 ? 'opacity-50 cursor-not-allowed'
                 : 'cursor-pointer hover:shadow-[10px_10px_22px_#c9cdd8,-10px_-10px_22px_#ffffff] active:scale-95',
             )}

@@ -27,10 +27,20 @@ const NOT_YET_AVAILABLE = /online_template/i;
 /** The artwork step's "Design online from a ready-made template" — the designer. */
 export const ONLINE_DESIGN_OPTION_ID = 'af-supply-template';
 
+/**
+ * "HOW SHOULD YOUR ARTWORK REACH US?" — THREE ANSWERS ONLY (owner, 2026-10-15):
+ * a print-ready PDF, the online designer, or order now without a design. The
+ * other three (photos for us to lay out, reprint an old order, the design
+ * studio) are retired on every product, old and new. Left in the data rather
+ * than deleted, so taking an id out of this set brings it straight back.
+ */
+export const RETIRED_OPTION_IDS = new Set(['af-supply-images', 'af-supply-reprint', 'af-supply-designer']);
+
 /** Can a customer be offered this option today? Not if the owner has hidden it. */
 export function isOptionAvailable(option: Pick<PrintingFieldOption, 'id' | 'value' | 'hidden'> | null | undefined): boolean {
   if (!option) return false;
   if (option.hidden === true) return false;
+  if (RETIRED_OPTION_IDS.has(String(option.id ?? ''))) return false;
   if (String(option.id ?? '') === ONLINE_DESIGN_OPTION_ID) return true;
   return !NOT_YET_AVAILABLE.test(String(option.value ?? '')) && !NOT_YET_AVAILABLE.test(String(option.id ?? ''));
 }
